@@ -1,3 +1,5 @@
 package com.mango.movies.util
 
-sealed class State
+sealed class State{
+
+}
