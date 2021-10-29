@@ -1,4 +1,4 @@
-package com.mango.movies.model.repositiory
+package com.mango.movies.model.network
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -10,5 +10,5 @@ object API {
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
-    val apiService= retrofit.create(MovieApiService::Class.Java)
+    val apiService= retrofit.create(MovieApiService::class.java)
 }
