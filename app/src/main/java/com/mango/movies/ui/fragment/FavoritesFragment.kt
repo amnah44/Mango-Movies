@@ -1,5 +1,6 @@
-package com.mango.movies
+package com.mango.movies.ui.fragment
 
+import com.mango.movies.R
 import com.mango.movies.databinding.FragmentFavoritesBinding
 import com.mango.movies.ui.base.BaseFragment
 import com.mango.movies.util.Constant
