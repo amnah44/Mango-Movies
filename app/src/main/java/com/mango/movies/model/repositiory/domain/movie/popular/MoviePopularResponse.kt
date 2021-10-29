@@ -1,9 +1,9 @@
-package com.mango.movies.model.repositiory.domain.people.popular
+package com.mango.movies.model.repositiory.domain.movie.popular
 
 
 import com.google.gson.annotations.SerializedName
 
-data class PeoplePopular(
+data class MoviePopularResponse(
     @SerializedName("page")
     val page: Int?,
     @SerializedName("results")

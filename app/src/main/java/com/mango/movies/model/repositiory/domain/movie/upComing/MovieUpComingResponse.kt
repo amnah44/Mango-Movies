@@ -1,9 +1,11 @@
-package com.mango.movies.model.repositiory.domain.movie.topRated
+package com.mango.movies.model.repositiory.domain.movie.upComing
 
 
 import com.google.gson.annotations.SerializedName
 
-data class MovieTopRated(
+data class MovieUpComingResponse(
+    @SerializedName("dates")
+    val dates: Dates?,
     @SerializedName("page")
     val page: Int?,
     @SerializedName("results")

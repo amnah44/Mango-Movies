@@ -3,7 +3,7 @@ package com.mango.movies.model.repositiory.domain.tv.details
 
 import com.google.gson.annotations.SerializedName
 
-data class TvDetails(
+data class TvDetailsResponse(
     @SerializedName("backdrop_path")
     val backdropPath: String?,
     @SerializedName("created_by")

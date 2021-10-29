@@ -3,7 +3,7 @@ package com.mango.movies.model.repositiory.domain.movie.nowPlaying
 
 import com.google.gson.annotations.SerializedName
 
-data class MoveNowPlaying(
+data class MoveNowPlayingResponse(
     @SerializedName("dates")
     val dates: Dates?,
     @SerializedName("page")

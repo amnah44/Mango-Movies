@@ -1,9 +1,9 @@
-package com.mango.movies.model.repositiory.domain.tv.popular
+package com.mango.movies.model.repositiory.domain.tv.topRated
 
 
 import com.google.gson.annotations.SerializedName
 
-data class TvPopular(
+data class TvTopRatedResponse(
     @SerializedName("backdrop_path")
     val backdropPath: String?,
     @SerializedName("created_by")
