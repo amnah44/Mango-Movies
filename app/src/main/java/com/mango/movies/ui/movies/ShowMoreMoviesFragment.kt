@@ -1,4 +1,4 @@
-package com.mango.movies.ui.fragment
+package com.mango.movies.ui.movies
 
 import com.mango.movies.R
 import com.mango.movies.databinding.FragmentShowMoreMoviesBinding
