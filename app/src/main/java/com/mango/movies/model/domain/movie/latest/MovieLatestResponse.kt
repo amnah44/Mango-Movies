@@ -3,7 +3,7 @@ package com.mango.movies.model.domain.movie.latest
 
 import com.google.gson.annotations.SerializedName
 
-data class MoveLatestResponse(
+data class MovieLatestResponse(
     @SerializedName("adult")
     val adult: Boolean?,
     @SerializedName("backdrop_path")

@@ -1,9 +1,9 @@
-package com.mango.movies.model.domain.movie.upComing
+package com.mango.movies.model.domain.movie.topRated
 
 
 import com.google.gson.annotations.SerializedName
 
-data class Result(
+data class MovieTopRatedResult(
     @SerializedName("adult")
     val adult: Boolean?,
     @SerializedName("backdrop_path")

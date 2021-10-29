@@ -1,9 +1,9 @@
-package com.mango.movies.model.domain.movie.topRated
+package com.mango.movies.model.domain.movie.nowPlaying
 
 
 import com.google.gson.annotations.SerializedName
 
-data class Result(
+data class MovieNowPlayingResult(
     @SerializedName("adult")
     val adult: Boolean?,
     @SerializedName("backdrop_path")
@@ -29,7 +29,7 @@ data class Result(
     @SerializedName("video")
     val video: Boolean?,
     @SerializedName("vote_average")
-    val voteAverage: Double?,
+    val voteAverage: Int?,
     @SerializedName("vote_count")
     val voteCount: Int?
 )
