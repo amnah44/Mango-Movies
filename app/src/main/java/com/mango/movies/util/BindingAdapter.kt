@@ -26,3 +26,11 @@ fun <T>showOnSuccess(view: View, state: State<T>?){
     else
         view.visibility= View.GONE
 }
+@BindingAdapter(value = ["app:items"])
+fun <T> setRecyclerItems(view: RecyclerView, items: List<T>?) {
+    if (items != null) {
+        (view.adapter as BaseAdapter<T>?)?.setItems(items)
+    } else {
+        (view.adapter as BaseAdapter<T>?)?.setItems(emptyList())
+    }
+}
