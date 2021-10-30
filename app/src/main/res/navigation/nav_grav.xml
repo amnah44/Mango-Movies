@@ -17,7 +17,7 @@
         tools:layout="@layout/fragment_favorites"/>
     <fragment
         android:id="@+id/peopleFragment"
-        android:name="com.mango.movies.ui.people.PeopleFragment"
+        android:name="com.mango.movies.ui.person.PersonFragment"
         android:label="PeopleFragment"
         tools:layout="@layout/fragment_people"/>
     <fragment

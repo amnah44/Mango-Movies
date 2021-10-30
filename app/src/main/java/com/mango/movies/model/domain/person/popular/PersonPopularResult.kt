@@ -1,9 +1,9 @@
-package com.mango.movies.model.domain.people.popular
+package com.mango.movies.model.domain.person.popular
 
 
 import com.google.gson.annotations.SerializedName
 
-data class PeoplePopularResult(
+data class PersonPopularResult(
     @SerializedName("adult")
     val adult: Boolean?,
     @SerializedName("gender")
