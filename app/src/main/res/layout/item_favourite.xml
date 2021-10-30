@@ -5,13 +5,13 @@
 
     <data>
 
-        <variable
-            name="item"
-            type="com.example.footballapp.model.domain.specificCompetitionMatchesResponse.Matche" />
+<!--        <variable-->
+<!--            name="item"-->
+<!--            type="" />-->
 
-        <variable
-            name="listener"
-            type="com.example.footballapp.ui.league.matches.MatchInteractionListener" />
+<!--        <variable-->
+<!--            name="listener"-->
+<!--            type="" />-->
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
