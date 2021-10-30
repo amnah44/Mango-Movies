@@ -11,17 +11,18 @@ object MovieRepository {
     private fun <T> wrapWithFlow(endPointResponse: suspend () -> Response<T>): Flow<State<T?>> {
         return flow {
             emit(State.Loading)
-            emit(checkStateResponse(endPointResponse()))
+            try {
+                val result = endPointResponse()
+                if (result.isSuccessful) {
+                    emit(State.Success(result.body()))
+                } else {
+                    emit(State.Error(result.message()))
+                }
+            } catch (e: Exception) {
+                State.Error(e.message.toString())
+            }
         }
-    }
 
-    private fun <T> checkStateResponse(response: Response<T>): State<T?> {
-        return try {
-            if (response.isSuccessful) State.Success(response.body())
-            else State.Error(response.message())
-        } catch (e: Exception) {
-            State.Error(e.message.toString())
-        }
     }
 
 }
