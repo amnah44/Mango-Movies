@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/medium_margin"
             android:layout_marginStart="@dimen/medium_margin"
-            android:layout_marginTop="@dimen/medium_margin"
+            android:layout_marginTop="@dimen/small_margin"
             android:layout_marginEnd="@dimen/medium_margin"
             app:cardBackgroundColor="@color/dark_color"
             app:cardCornerRadius="25dp"
@@ -45,7 +45,7 @@
                     android:layout_marginTop="@dimen/medium_margin"
                     android:layout_marginBottom="@dimen/medium_margin"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/ic_launcher_background"
+                    android:src="@drawable/test"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintDimensionRatio="H,72:102"
                     app:layout_constraintStart_toStartOf="parent"
@@ -73,7 +73,7 @@
                     android:layout_marginBottom="@dimen/medium_margin"
                     android:fontFamily="@font/mplusrounded1c_bold"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/txt5"
+                    android:textSize="@dimen/txt3"
                     app:layout_constraintBottom_toTopOf="@+id/movieCategory"
                     app:layout_constraintStart_toStartOf="@+id/movieCategory"
                     tools:text="Chucky" />
@@ -92,8 +92,8 @@
 
                 <ImageView
                     android:id="@+id/delete"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
                     android:layout_marginEnd="@dimen/medium_margin"
                     android:backgroundTint="@color/white"
                     app:layout_constraintEnd_toEndOf="parent"
