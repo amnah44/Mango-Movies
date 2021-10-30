@@ -69,7 +69,7 @@
                     android:id="@+id/movieName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginTop="@dimen/small_margin"
                     android:textColor="@color/white"
                     android:textSize="@dimen/txt5"
                     app:layout_constraintStart_toStartOf="@+id/movieCategory"
