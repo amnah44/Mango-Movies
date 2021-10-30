@@ -1,4 +1,4 @@
-package com.mango.movies.ui.favorites
+package com.mango.movies.ui.favorite
 
 import com.mango.movies.R
 import com.mango.movies.databinding.FragmentFavoritesBinding

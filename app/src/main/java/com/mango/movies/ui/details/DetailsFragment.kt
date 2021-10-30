@@ -8,6 +8,5 @@ import com.mango.movies.util.Constant
 
 class DetailsFragment : BaseFragment<FragmentDetailsBinding>(R.layout.fragment_details) {
     override val LOG_TAG: String = Constant.DETAILS_FRAGMENT
-
     override fun setupView() {}
 }
