@@ -26,7 +26,7 @@
             android:layout_marginStart="@dimen/medium_margin"
             android:layout_marginTop="@dimen/medium_margin"
             android:layout_marginEnd="@dimen/medium_margin"
-            app:cardBackgroundColor="@color/dark_color"
+            app:cardBackgroundColor="@color/app_color"
             app:cardCornerRadius="25dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -38,7 +38,7 @@
 
                 <com.google.android.material.imageview.ShapeableImageView
 
-                    android:id="@+id/movieImg"
+                    android:id="@+id/actorImg"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_marginStart="@dimen/medium_margin"
@@ -47,58 +47,51 @@
                     android:scaleType="centerCrop"
                     android:src="@drawable/ic_launcher_background"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintDimensionRatio="H,72:102"
+                    app:layout_constraintDimensionRatio="H,77:84"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintWidth_percent="0.27"
+                    app:layout_constraintWidth_percent="0.22"
                     app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize20Percent" />
 
                 <TextView
-                    android:id="@+id/movieCategory"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/small_margin"
-                    android:fontFamily="@font/inika_regular"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/txt2"
-                    app:layout_constraintBottom_toBottomOf="@+id/movieImg"
-                    app:layout_constraintStart_toEndOf="@+id/movieImg"
-                    app:layout_constraintTop_toTopOf="@+id/movieImg"
-                    tools:text="Sci-Fi   Fantasy, Comedy, Crime  " />
-
-                <TextView
-                    android:id="@+id/movieName"
+                    android:id="@+id/actorName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/medium_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
                     android:fontFamily="@font/mplusrounded1c_bold"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/txt5"
-                    app:layout_constraintBottom_toTopOf="@+id/movieCategory"
-                    app:layout_constraintStart_toStartOf="@+id/movieCategory"
-                    tools:text="Chucky" />
+                    android:textSize="@dimen/txt3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/actorImg"
+                    app:layout_constraintTop_toTopOf="@+id/actorImg"
+                    tools:text="Tom Hardy" />
 
                 <TextView
-                    android:id="@+id/movieYear"
+                    android:id="@+id/seriesNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inika_regular"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/txt2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.8"
+                    app:layout_constraintStart_toEndOf="@+id/actorImg"
+                    app:layout_constraintTop_toTopOf="@+id/moviesNo"
+                    tools:text="Series:24" />
+
+                <TextView
+                    android:id="@+id/moviesNo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/medium_margin"
                     android:fontFamily="@font/inika_regular"
-                    android:textColor="@color/white"
+                    android:textColor="@color/gray"
                     android:textSize="@dimen/txt2"
-                    app:layout_constraintStart_toStartOf="@+id/movieCategory"
-                    app:layout_constraintTop_toBottomOf="@+id/movieCategory"
-                    tools:text="2021" />
-
-                <ImageView
-                    android:id="@+id/delete"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_marginEnd="@dimen/medium_margin"
-                    android:backgroundTint="@color/white"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/movieImg"
-                    app:srcCompat="@drawable/ic_delete" />
+                    app:layout_constraintHorizontal_bias="0.205"
+                    app:layout_constraintStart_toEndOf="@+id/actorImg"
+                    app:layout_constraintTop_toBottomOf="@+id/actorName"
+                    tools:text="Movies:24" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
