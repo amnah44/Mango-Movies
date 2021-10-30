@@ -73,7 +73,7 @@
                     android:layout_marginTop="@dimen/small_margin"
                     android:fontFamily="@font/mplusrounded1c_bold"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/txt5"
+                    android:textSize="@dimen/txt6"
                     app:layout_constraintStart_toStartOf="@+id/movieCategory"
                     app:layout_constraintTop_toTopOf="@+id/movieImg"
                     tools:text="Chucky" />
@@ -85,7 +85,7 @@
                     android:layout_marginStart="@dimen/small_margin"
                     android:fontFamily="@font/inika_regular"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/txt3"
+                    android:textSize="@dimen/txt4"
                     app:layout_constraintBottom_toBottomOf="@+id/movieYear2"
                     app:layout_constraintStart_toEndOf="@+id/movieYear2"
                     tools:text="2021" />
@@ -97,7 +97,7 @@
                     android:layout_marginBottom="@dimen/small_margin"
                     android:fontFamily="@font/inika_regular"
                     android:textColor="@color/gray"
-                    android:textSize="@dimen/txt3"
+                    android:textSize="@dimen/txt4"
                     app:layout_constraintBottom_toTopOf="@+id/movieCategory"
                     app:layout_constraintStart_toStartOf="@+id/movieCategory"
                     tools:text="Series" />

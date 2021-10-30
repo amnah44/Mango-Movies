@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/medium_margin"
             android:fontFamily="@font/mplusrounded1c_bold"
-            android:text="Favorites"
+            android:text="@string/favorites"
             android:textColor="@color/white"
             android:textSize="@dimen/txt5"
             app:layout_constraintEnd_toEndOf="parent"

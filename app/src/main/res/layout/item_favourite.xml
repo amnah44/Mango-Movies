@@ -73,7 +73,7 @@
                     android:layout_marginBottom="@dimen/medium_margin"
                     android:fontFamily="@font/mplusrounded1c_bold"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/txt3"
+                    android:textSize="@dimen/txt4"
                     app:layout_constraintBottom_toTopOf="@+id/movieCategory"
                     app:layout_constraintStart_toStartOf="@+id/movieCategory"
                     tools:text="Chucky" />

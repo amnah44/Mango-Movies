@@ -5,7 +5,8 @@
       <map>
         <entry key="..\:/Movies2/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
         <entry key="app/src/main/res/drawable/ic_delete.xml" value="0.2984375" />
-        <entry key="app/src/main/res/layout/fragment_favorites.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/fragment_favorites.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_people.xml" value="0.335" />
         <entry key="app/src/main/res/layout/item_favourite.xml" value="0.375" />
         <entry key="app/src/main/res/layout/item_people.xml" value="0.335" />
         <entry key="app/src/main/res/layout/item_search.xml" value="0.375" />
