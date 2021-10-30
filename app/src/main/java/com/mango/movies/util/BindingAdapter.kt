@@ -2,6 +2,8 @@ package com.mango.movies.util
 
 import android.view.View
 import androidx.databinding.BindingAdapter
+import androidx.recyclerview.widget.RecyclerView
+import com.mango.movies.ui.base.BaseAdapter
 
 @BindingAdapter(value = ["app:showOnLoading"])
 fun <T>showOnLoading(view: View, state: State<T>?){
