@@ -1,0 +1,17 @@
+<resources>
+    <dimen name="small_margin">8dp</dimen>
+    <dimen name="medium_margin">16dp</dimen>
+    <dimen name="large_margin">32dp</dimen>
+    <dimen name="xlarge_margin">64dp</dimen>
+    <dimen name="xxlarge_margin">128dp</dimen>
+
+
+
+    <dimen name="txt1">8sp</dimen>
+    <dimen name="txt2">12sp</dimen>
+    <dimen name="txt3">16sp</dimen>
+    <dimen name="txt4">20sp</dimen>
+    <dimen name="txt5">24sp</dimen>
+
+
+</resources>
