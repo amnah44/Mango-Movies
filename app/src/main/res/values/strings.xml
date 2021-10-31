@@ -4,4 +4,6 @@
     <string name="favorites">Favorites</string>
     <string name="movies">Movies</string>
     <string name="series">Series</string>
+    <string name="detail_movie">Detail Movie</string>
+    <string name="knownFor">Known for</string>
 </resources>

@@ -1,9 +1,14 @@
 package com.mango.movies.util
 
 import android.view.View
+import android.widget.TextView
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.mango.movies.ui.base.BaseAdapter
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
+import java.util.*
+
 
 @BindingAdapter(value = ["app:showOnLoading"])
 fun <T>showOnLoading(view: View, state: State<T>?){
@@ -35,4 +40,10 @@ fun <T> setRecyclerItems(view: RecyclerView, items: List<T>?) {
     } else {
         (view.adapter as BaseAdapter<T>?)?.setItems(emptyList())
     }
+}
+
+@BindingAdapter(value = ["setFormattedDate"])
+fun <T> getYearFromDateString(view: TextView, dateStr: String? ) {
+    val date = LocalDate.parse(dateStr)
+    view.text  = date.year.toString()
 }

@@ -4,14 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+        <variable
+            name="item"
+            type="com.mango.movies.model.domain.searchResponse.Result" />
 
-<!--        <variable-->
-<!--            name="item"-->
-<!--            type="" />-->
-
-<!--        <variable-->
-<!--            name="listener"-->
-<!--            type="" />-->
+        <variable
+            name="listener"
+            type="com.mango.movies.ui.search.SearchInteractionListener" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -75,6 +74,7 @@
                     android:textSize="@dimen/txt6"
                     app:layout_constraintStart_toStartOf="@+id/movieCategory"
                     app:layout_constraintTop_toTopOf="@+id/movieImg"
+                    android:text="@{item.title}"
                     tools:text="Chucky" />
 
                 <TextView
@@ -87,7 +87,8 @@
                     android:textSize="@dimen/txt4"
                     app:layout_constraintBottom_toBottomOf="@+id/movieCategory2"
                     app:layout_constraintStart_toEndOf="@+id/movieCategory2"
-                    tools:text="2021" />
+                    tools:text="2021"
+                    setFormattedDate="@{item.releaseDate}"/>
 
                 <TextView
                     android:id="@+id/movieCategory2"

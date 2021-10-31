@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_color"
+        tools:context=".ui.actorDetails.ActorDetailsFragment">
+
+
+        <ImageView
+            android:id="@+id/image_actor"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:srcCompat="@drawable/actor"
+            />
+
+        <ImageView
+            android:id="@+id/image_movie_shadow"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@id/guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/shadow_details" />
+
+        <ImageView
+            android:id="@+id/image_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="@dimen/medium_margin"
+            android:layout_marginTop="@dimen/medium_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_arrow_back" />
+
+        <TextView
+            android:id="@+id/text_actor_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mplusrounded1c_bold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image_back"
+            tools:text="Ryan Reynolds" />
+
+        <TextView
+            android:id="@+id/knownFor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt4"
+            android:text="@string/knownFor"
+            android:layout_marginTop="7dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guideline" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.7" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_known_for"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/knownFor"
+            tools:listitem="@layout/item_actor_details" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

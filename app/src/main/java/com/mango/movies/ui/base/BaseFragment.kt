@@ -5,23 +5,28 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModel
+import com.mango.movies.BR
 
-abstract class BaseFragment<T: ViewDataBinding>(private val fragmentLayoutId: Int): Fragment() {
+abstract class BaseFragment<VDB: ViewDataBinding>(private val fragmentLayoutId: Int): Fragment() {
+
     protected abstract val LOG_TAG: String
+    abstract val viewModel: ViewModel
 
-    private lateinit var _binding: T
-    val binding: T
-        get() = _binding
+    private lateinit var _binding: VDB
+    val binding: VDB get() = _binding
+    abstract val bindingInflater: (LayoutInflater, Int, ViewGroup?, Boolean) -> VDB
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = DataBindingUtil.inflate(inflater, fragmentLayoutId, container, false)
+        _binding = bindingInflater(inflater, fragmentLayoutId, container, false)
+        _binding.setVariable(BR.viewModel, viewModel)
+        _binding.lifecycleOwner = this
         return binding.root
     }
 
@@ -31,10 +36,6 @@ abstract class BaseFragment<T: ViewDataBinding>(private val fragmentLayoutId: In
     }
 
     abstract fun setupView()
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-    }
 
     protected fun log(value: Any) {
         Log.v(LOG_TAG, value.toString())
