@@ -6,6 +6,7 @@
         <entry key="..\:/Movies2/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
         <entry key="app/src/main/res/layout/activity_movie.xml" value="0.21331521739130435" />
         <entry key="app/src/main/res/layout/fragment_search.xml" value="0.21331521739130435" />
+        <entry key="app/src/main/res/layout/item_search.xml" value="0.25" />
         <entry key="app/src/main/res/menu/menu_bottom_navigation.xml" value="0.28229166666666666" />
       </map>
     </option>
