@@ -3,9 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Mango-Movies/app/src/main/res/drawable/favorite_action.xml" value="0.2169230769230769" />
         <entry key="..\:/Mango-Movies/app/src/main/res/drawable/home_action.xml" value="0.2169230769230769" />
         <entry key="..\:/Mango-Movies/app/src/main/res/drawable/ic_home_fill.xml" value="0.2169230769230769" />
         <entry key="..\:/Mango-Movies/app/src/main/res/drawable/ic_home_out_fill.xml" value="0.2169230769230769" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/drawable/ic_person_out_fill.xml" value="0.2169230769230769" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/drawable/people_action.xml" value="0.2169230769230769" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/drawable/person_action.xml" value="0.2169230769230769" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/drawable/setting_action.xml" value="0.2169230769230769" />
         <entry key="..\:/Mango-Movies/app/src/main/res/layout/activity_movie.xml" value="0.18425925925925926" />
         <entry key="..\:/Mango-Movies/app/src/main/res/menu/menu_bottom_navigation.xml" value="0.20416666666666666" />
         <entry key="..\:/Movies2/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />

@@ -7,15 +7,15 @@
         />
     <item android:id="@+id/favoritesFragment"
         android:title=""
-        android:icon="@drawable/home_action"
+        android:icon="@drawable/favorite_action"
         />
-    <item android:id="@+id/peopleFragment"
+    <item android:id="@+id/personFragment"
         android:title=""
-        android:icon="@drawable/home_action"
+        android:icon="@drawable/person_action"
         />
     <item android:id="@+id/settingsFragment"
         android:title=""
-        android:icon="@drawable/home_action"
+        android:icon="@drawable/settings_action"
         />
 
 </menu>
