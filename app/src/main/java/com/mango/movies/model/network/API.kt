@@ -10,5 +10,5 @@ object API {
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
-    val apiService= retrofit.create(MovieApiService::class.java)
+    val apiService: MovieApiService = retrofit.create(MovieApiService::class.java)
 }
