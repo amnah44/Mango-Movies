@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
             name="item"
             type="com.mango.movies.model.domain.searchResponse.Result" />
@@ -89,7 +88,7 @@
                     app:layout_constraintBottom_toBottomOf="@+id/movieCategory2"
                     app:layout_constraintStart_toEndOf="@+id/movieCategory2"
                     tools:text="2021"
-                    android:text="@{item.releaseDate}"/>
+                    setFormattedDate="@{item.releaseDate}"/>
 
                 <TextView
                     android:id="@+id/movieCategory2"
