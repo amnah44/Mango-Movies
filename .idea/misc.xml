@@ -3,47 +3,29 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Mango-Movie/app/src/main/res/drawable/add_favorite.xml" value="0.2703125" />
-        <entry key="..\:/Mango-Movie/app/src/main/res/drawable/calendar.xml" value="0.2703125" />
-        <entry key="..\:/Mango-Movie/app/src/main/res/drawable/details_.xml" value="0.2703125" />
-        <entry key="..\:/Mango-Movie/app/src/main/res/drawable/ic_arrow_back.xml" value="0.2703125" />
-        <entry key="..\:/Mango-Movie/app/src/main/res/drawable/ic_backarrow_details.xml" value="0.2703125" />
-        <entry key="..\:/Mango-Movie/app/src/main/res/drawable/ic_baseline_favorite_border_24.xml" value="0.2703125" />
-        <entry key="..\:/Mango-Movie/app/src/main/res/drawable/ic_calendar.xml" value="0.2703125" />
-        <entry key="..\:/Mango-Movie/app/src/main/res/drawable/ic_close.xml" value="0.2703125" />
-        <entry key="..\:/Mango-Movie/app/src/main/res/drawable/ic_dateicon.xml" value="0.2703125" />
-        <entry key="..\:/Mango-Movie/app/src/main/res/drawable/ic_delete.xml" value="0.2703125" />
-        <entry key="..\:/Mango-Movie/app/src/main/res/drawable/ic_favorite_border.xml" value="0.2703125" />
-        <entry key="..\:/Mango-Movie/app/src/main/res/drawable/ic_favorite_full.xml" value="0.2703125" />
-        <entry key="..\:/Mango-Movie/app/src/main/res/drawable/ic_icontime.xml" value="0.2703125" />
-        <entry key="..\:/Mango-Movie/app/src/main/res/drawable/ic_search.xml" value="0.2703125" />
-        <entry key="..\:/Mango-Movie/app/src/main/res/drawable/rounded_corner_view.xml" value="0.2703125" />
-        <entry key="..\:/Mango-Movie/app/src/main/res/drawable/shadow_details.xml" value="0.2703125" />
-        <entry key="..\:/Mango-Movie/app/src/main/res/drawable/time.xml" value="0.2703125" />
-        <entry key="..\:/Mango-Movie/app/src/main/res/layout/activity_movie.xml" value="0.25416666666666665" />
-        <entry key="..\:/Mango-Movie/app/src/main/res/layout/fragment_actor_details.xml" value="0.264" />
-        <entry key="..\:/Mango-Movie/app/src/main/res/layout/fragment_details.xml" value="0.264" />
-        <entry key="..\:/Mango-Movie/app/src/main/res/layout/fragment_favorites.xml" value="0.25416666666666665" />
-        <entry key="..\:/Mango-Movie/app/src/main/res/layout/fragment_home.xml" value="0.25416666666666665" />
-        <entry key="..\:/Mango-Movie/app/src/main/res/layout/fragment_people.xml" value="0.25416666666666665" />
-        <entry key="..\:/Mango-Movie/app/src/main/res/layout/fragment_search.xml" value="0.25416666666666665" />
-        <entry key="..\:/Mango-Movie/app/src/main/res/layout/fragment_settings.xml" value="0.25416666666666665" />
-        <entry key="..\:/Mango-Movie/app/src/main/res/layout/fragment_show_more_movies.xml" value="0.25416666666666665" />
-        <entry key="..\:/Mango-Movie/app/src/main/res/layout/fragment_show_more_series.xml" value="0.25416666666666665" />
-        <entry key="..\:/Mango-Movie/app/src/main/res/layout/item_actor_details.xml" value="0.25416666666666665" />
-        <entry key="..\:/Mango-Movie/app/src/main/res/layout/item_details.xml" value="0.25416666666666665" />
-        <entry key="..\:/Mango-Movie/app/src/main/res/layout/item_favourite.xml" value="0.25416666666666665" />
-        <entry key="..\:/Mango-Movie/app/src/main/res/layout/item_people.xml" value="0.25416666666666665" />
-        <entry key="..\:/Mango-Movie/app/src/main/res/layout/item_search.xml" value="0.25416666666666665" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/drawable/favorite_action.xml" value="0.2169230769230769" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/drawable/home_action.xml" value="0.2169230769230769" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/drawable/ic_home_fill.xml" value="0.2169230769230769" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/drawable/ic_home_out_fill.xml" value="0.2169230769230769" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/drawable/ic_person_out_fill.xml" value="0.2169230769230769" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/drawable/ic_search.xml" value="0.2203125" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/drawable/people_action.xml" value="0.2169230769230769" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/drawable/person_action.xml" value="0.2169230769230769" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/drawable/setting_action.xml" value="0.2169230769230769" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/drawable/settings_action.xml" value="0.2169230769230769" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/layout/activity_movie.xml" value="0.18425925925925926" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/layout/fragment_details.xml" value="0.20416666666666666" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/layout/fragment_favorites.xml" value="0.20416666666666666" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/layout/fragment_people.xml" value="0.20416666666666666" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/layout/fragment_search.xml" value="0.20416666666666666" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/layout/fragment_show_more.xml" value="0.1" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/layout/item_favourite.xml" value="0.1" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/layout/item_people.xml" value="0.20416666666666666" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/layout/item_search.xml" value="0.14" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/layout/item_show_more.xml" value="0.1" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/menu/menu_bottom_navigation.xml" value="0.20416666666666666" />
         <entry key="..\:/Movies2/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
-        <entry key="app/src/main/res/drawable/ic_delete.xml" value="0.2984375" />
-        <entry key="app/src/main/res/drawable/rounded_corner_view.xml" value="0.2984375" />
-        <entry key="app/src/main/res/layout/fragment_favorites.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_people.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_search.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/item_favourite.xml" value="0.375" />
-        <entry key="app/src/main/res/layout/item_people.xml" value="0.335" />
-        <entry key="app/src/main/res/layout/item_search.xml" value="0.375" />
       </map>
     </option>
   </component>
