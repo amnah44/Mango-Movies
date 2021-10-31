@@ -2,4 +2,5 @@
 <resources>
     <string name="popular_people">Popular People</string>
     <string name="favorites">Favorites</string>
+    <string name="detail_movie">Detail Movie</string>
 </resources>
