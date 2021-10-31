@@ -39,7 +39,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintWidth_percent="0.20"/>
+            app:layout_constraintWidth_percent="0.20"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize8Percent"/>
 
 
         <TextView
@@ -55,7 +56,6 @@
             android:ellipsize="end"
             app:layout_constraintStart_toEndOf="@+id/show_image"
             app:layout_constraintTop_toTopOf="@id/show_image"
-
             app:layout_constraintBottom_toTopOf="@id/views_image"
             tools:text="Chucky" />
 
@@ -118,14 +118,9 @@
             android:textColor="@color/white"
             android:textSize="@dimen/txt4"
             app:layout_constraintBottom_toBottomOf="@+id/rate_number"
-
             app:layout_constraintStart_toEndOf="@id/rate_number"
             app:layout_constraintTop_toTopOf="@id/views_image"
             tools:text="2021" />
-
-
-
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
