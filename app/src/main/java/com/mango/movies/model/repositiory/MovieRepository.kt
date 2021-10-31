@@ -1,7 +1,6 @@
 package com.mango.movies.model.repositiory
 
 import com.mango.movies.model.domain.searchResponse.SearchResponse
-import com.mango.movies.model.domain.tv.details.TvDetailsResponse
 import com.mango.movies.model.network.API
 import com.mango.movies.util.Constant
 import com.mango.movies.util.State
@@ -49,7 +48,6 @@ object MovieRepository {
     fun topRatedTvShow() = wrapWithFlow { API.apiService.getTopRatedTvShow(Constant.api_key) }
 
 
-
-    fun searchMovie(query: String): Flow<State<TvDetailsResponse?>>  =
-        wrapWithFlow { API.apiService.getTvShowDetails(0, Constant.api_key) }
+//    fun searchMovie(query: String): Flow<State<SearchResponse?>>  =
+//        wrapWithFlow { API.apiService.searchMovie(query, Constant.api_key) }
 }

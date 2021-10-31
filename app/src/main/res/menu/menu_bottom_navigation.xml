@@ -13,7 +13,7 @@
         android:title=""
         android:icon="@drawable/person_action"
         />
-    <item android:id="@+id/fragmentSearch"
+    <item android:id="@+id/fragmentSetting"
         android:title=""
         android:icon="@drawable/settings_action"
         />
