@@ -118,8 +118,7 @@
                 android:id="@+id/chipGroup"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                app:singleLine="true"
-                app:items="">
+                app:singleLine="true">
 
                 <com.google.android.material.chip.Chip
                     android:layout_width="wrap_content"
