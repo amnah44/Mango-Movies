@@ -1,5 +1,8 @@
 package com.mango.movies.ui.showmore
 
+import android.view.LayoutInflater
+import android.view.ViewGroup
+import androidx.lifecycle.ViewModel
 import com.mango.movies.R
 import com.mango.movies.databinding.FragmentShowMoreBinding
 import com.mango.movies.ui.base.BaseFragment
@@ -11,4 +14,9 @@ class ShowMoreFragment :
 
     override fun setupView() {
     }
+
+    override val viewModel: ViewModel
+        get() = TODO("Not yet implemented")
+    override val bindingInflater: (LayoutInflater, Int, ViewGroup?, Boolean) -> FragmentShowMoreBinding
+        get() = TODO("Not yet implemented")
 }
