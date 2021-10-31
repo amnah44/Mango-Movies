@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_grav"
-    app:startDestination="@id/fragmentSearch">
+    app:startDestination="@id/searchFragment">
 
     <fragment
         android:id="@+id/homeFragment"
@@ -29,7 +29,7 @@
         tools:layout="@layout/fragment_settings"/>
 
     <fragment
-        android:id="@+id/fragmentSearch"
+        android:id="@+id/searchFragment"
         android:name="com.mango.movies.ui.search.SearchFragment"
         android:label="SettingsFragment" />
 
