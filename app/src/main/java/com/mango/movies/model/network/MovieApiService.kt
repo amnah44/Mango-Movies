@@ -66,12 +66,12 @@ interface MovieApiService {
 
     @GET("/tv/top_rated")
     suspend fun getTopRatedTvShow(@Query("api_key") apiKey: String = Constant.api_key): Response<TvTopRatedResponse>
-
-    @GET("/search/movie/{query}")
-    suspend fun searchMovie(
-        @Query("query") query: String,
-        @Query("api_key") apiKey: String = Constant.api_key,
-    ): Response<SearchResponse>
-
+//
+//    @GET("/search/movie")
+//    suspend fun searchMovie(
+//        @Query("query") query: String,
+//        @Query("api_key") apiKey: String = Constant.api_key,
+//    ): Response<SearchResponse>
+//
 
 }
