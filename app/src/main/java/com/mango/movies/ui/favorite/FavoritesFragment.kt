@@ -5,10 +5,8 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
 import com.mango.movies.R
-import com.mango.movies.databinding.FragmentDetailsBinding
 import com.mango.movies.databinding.FragmentFavoritesBinding
 import com.mango.movies.ui.base.BaseFragment
-import com.mango.movies.ui.details.DetailsViewModel
 import com.mango.movies.util.Constant
 
 class FavoritesFragment : BaseFragment<FragmentFavoritesBinding>(R.layout.fragment_favorites) {

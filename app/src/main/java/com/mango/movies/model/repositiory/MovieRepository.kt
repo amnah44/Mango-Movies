@@ -48,6 +48,6 @@ object MovieRepository {
     fun topRatedTvShow() = wrapWithFlow { API.apiService.getTopRatedTvShow(Constant.api_key) }
 
 
-//    fun searchMovie(query: String): Flow<State<SearchResponse?>>  =
-//        wrapWithFlow { API.apiService.searchMovie(query, Constant.api_key) }
+    fun searchMovie(query: String): Flow<State<SearchResponse?>>  =
+        wrapWithFlow { API.apiService.searchMovie(query, Constant.api_key) }
 }

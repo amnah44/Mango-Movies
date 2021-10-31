@@ -5,10 +5,8 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
 import com.mango.movies.R
-import com.mango.movies.databinding.FragmentFavoritesBinding
 import com.mango.movies.databinding.FragmentHomeBinding
 import com.mango.movies.ui.base.BaseFragment
-import com.mango.movies.ui.favorite.FavoriteViewModel
 import com.mango.movies.util.Constant
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
