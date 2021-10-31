@@ -6,14 +6,17 @@
         <entry key="..\:/Movies2/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/mohammedmaher/Desktop/Mango/Mango-Movies/app/src/main/res/layout/activity_movie.xml" value="0.18923076923076923" />
         <entry key="..\:/Users/mohammedmaher/Desktop/Mango/Mango-Movies/app/src/main/res/layout/fragment_favorites.xml" value="0.1787037037037037" />
-        <entry key="..\:/Users/mohammedmaher/Desktop/Mango/Mango-Movies/app/src/main/res/layout/fragment_people.xml" value="0.16296296296296298" />
+        <entry key="..\:/Users/mohammedmaher/Desktop/Mango/Mango-Movies/app/src/main/res/layout/fragment_people.xml" value="0.25" />
         <entry key="..\:/Users/mohammedmaher/Desktop/Mango/Mango-Movies/app/src/main/res/layout/fragment_search.xml" value="0.1787037037037037" />
-        <entry key="..\:/Users/mohammedmaher/Desktop/Mango/Mango-Movies/app/src/main/res/layout/fragment_settings.xml" value="0.22" />
-        <entry key="..\:/Users/mohammedmaher/Desktop/Mango/Mango-Movies/app/src/main/res/layout/fragment_show_more_movies.xml" value="0.16770833333333332" />
+        <entry key="..\:/Users/mohammedmaher/Desktop/Mango/Mango-Movies/app/src/main/res/layout/fragment_settings.xml" value="0.33" />
+        <entry key="..\:/Users/mohammedmaher/Desktop/Mango/Mango-Movies/app/src/main/res/layout/fragment_show_more_movies.xml" value="0.25" />
+        <entry key="..\:/Users/mohammedmaher/Desktop/Mango/Mango-Movies/app/src/main/res/layout/fragment_show_more_series.xml" value="0.25" />
+        <entry key="..\:/Users/mohammedmaher/Desktop/Mango/Mango-Movies/app/src/main/res/layout/item_category.xml" value="0.33" />
         <entry key="..\:/Users/mohammedmaher/Desktop/Mango/Mango-Movies/app/src/main/res/layout/item_favourite.xml" value="0.1787037037037037" />
         <entry key="..\:/Users/mohammedmaher/Desktop/Mango/Mango-Movies/app/src/main/res/layout/item_movies_catgory.xml" value="0.25" />
         <entry key="..\:/Users/mohammedmaher/Desktop/Mango/Mango-Movies/app/src/main/res/layout/item_people.xml" value="0.1787037037037037" />
         <entry key="..\:/Users/mohammedmaher/Desktop/Mango/Mango-Movies/app/src/main/res/layout/item_search.xml" value="0.1787037037037037" />
+        <entry key="..\:/Users/mohammedmaher/Desktop/Mango/Mango-Movies/app/src/main/res/layout/item_series_catgory.xml" value="0.44155844155844154" />
       </map>
     </option>
   </component>
