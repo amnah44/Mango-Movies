@@ -3,18 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_grav"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/fragmentSearch">
 
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.mango.movies.ui.home.HomeFragment"
         android:label="HomeFragment"
         tools:layout="@layout/fragment_home"/>
+
     <fragment
         android:id="@+id/favoritesFragment"
         android:name="com.mango.movies.ui.favorite.FavoritesFragment"
         android:label="FavoritesFragment"
         tools:layout="@layout/fragment_favorites"/>
+
     <fragment
         android:id="@+id/personFragment"
         android:name="com.mango.movies.ui.person.PersonFragment"
@@ -25,4 +27,10 @@
         android:name="com.mango.movies.ui.settings.SettingsFragment"
         android:label="SettingsFragment"
         tools:layout="@layout/fragment_settings"/>
+
+    <fragment
+        android:id="@+id/fragmentSearch"
+        android:name="com.mango.movies.ui.search.SearchFragment"
+        android:label="SettingsFragment" />
+
 </navigation>

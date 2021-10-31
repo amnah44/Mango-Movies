@@ -45,4 +45,8 @@ object MovieRepository {
 
     fun popularTvShow() = wrapWithFlow { API.apiService.getLatestTvShow(Constant.api_key) }
     fun topRatedTvShow() = wrapWithFlow { API.apiService.getTopRatedTvShow(Constant.api_key) }
+
+
+    fun searchMovie(query: String) =
+        wrapWithFlow { API.apiService.searchMovie(query, Constant.api_key) }
 }
