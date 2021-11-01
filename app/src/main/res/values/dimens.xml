@@ -15,4 +15,7 @@
     <dimen name="txt6">24sp</dimen>
 
 
+    <dimen name="category_card_corner_radius">16dp</dimen>
+
+
 </resources>
