@@ -6,5 +6,5 @@ import com.mango.movies.model.domain.person.popular.PersonPopularResult
 
 class PersonAdapter(items: List<PersonPopularResult>, listener: PersonInteractionListener) :
     BaseAdapter<PersonPopularResult>(items, listener) {
-    override val layoutId: Int get() = R.layout.item_people
+    override val layoutId = R.layout.item_people
 }

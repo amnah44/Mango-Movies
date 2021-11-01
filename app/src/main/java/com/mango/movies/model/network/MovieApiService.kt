@@ -7,6 +7,8 @@ import com.mango.movies.model.domain.movie.popular.MoviePopularResponse
 import com.mango.movies.model.domain.movie.topRated.MovieTopRatedResponse
 import com.mango.movies.model.domain.movie.upComing.MovieUpComingResponse
 import com.mango.movies.model.domain.person.details.PersonDetailsResponse
+import com.mango.movies.model.domain.person.popular.PersonPopularResponse
+import com.mango.movies.model.domain.person.popular.PersonPopularResult
 import com.mango.movies.model.domain.searchResponse.SearchResponse
 import com.mango.movies.model.domain.tv.details.TvDetailsResponse
 import com.mango.movies.model.domain.tv.latest.TvLatestResponse
@@ -50,7 +52,7 @@ interface MovieApiService {
 
 
     @GET("person/popular")
-    suspend fun getPersonPopular(@Query("api_key") apiKey: String = Constant.api_key): Response<MoviePopularResponse>
+    suspend fun getPersonPopular(@Query("api_key") apiKey: String = Constant.api_key): Response<PersonPopularResponse>
 
     @GET("tv/{tv_id}")
     suspend fun getTvShowDetails(

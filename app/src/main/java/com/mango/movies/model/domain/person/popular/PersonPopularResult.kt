@@ -20,4 +20,6 @@ data class PersonPopularResult(
     val popularity: Double?,
     @SerializedName("profile_path")
     val profilePath: String?
-)
+){
+    fun getImageUrl() = "https://image.tmdb.org/t/p/w500$profilePath"
+}
