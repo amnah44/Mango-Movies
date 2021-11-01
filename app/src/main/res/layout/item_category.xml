@@ -43,7 +43,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintWidth_percent="0.2"
-                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize20Percent" />
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize15Percent" />
 
                 <TextView
                     android:id="@+id/movieCategory"
@@ -67,7 +67,7 @@
                     android:isIndicator="true"
                     android:max="5"
                     android:numStars="5"
-                    android:progressTint="@color/orange"
+                    android:progressTint="@color/orangeLight"
                     android:scaleX="0.7"
                     android:scaleY="0.7"
                     android:transformPivotX="0dp"
