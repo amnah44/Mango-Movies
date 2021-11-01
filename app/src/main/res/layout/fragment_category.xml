@@ -26,7 +26,7 @@
             android:textOn="@string/movies"
             android:textSize="@dimen/txt5"
             android:textStyle="bold"
-            android:trackTint="@color/orange"
+            android:trackTint="@color/orangeLight"
             app:layout_constraintStart_toStartOf="@+id/textView2"
             app:layout_constraintTop_toBottomOf="@+id/textView2"
             app:splitTrack="false"
