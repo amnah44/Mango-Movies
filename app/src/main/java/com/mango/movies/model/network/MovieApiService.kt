@@ -17,6 +17,7 @@ import com.mango.movies.model.domain.tv.topRated.TvTopRatedResponse
 import com.mango.movies.util.Constant
 import kotlinx.coroutines.flow.Flow
 import retrofit2.Response
+import retrofit2.http.Field
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query

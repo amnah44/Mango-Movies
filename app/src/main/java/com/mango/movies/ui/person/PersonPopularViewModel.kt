@@ -7,7 +7,7 @@ import com.mango.movies.model.domain.person.popular.PersonPopularResult
 import com.mango.movies.model.repositiory.MovieRepository
 
 class PersonPopularViewModel : ViewModel(),PersonInteractionListener {
-    val repository = MovieRepository
+    private val repository = MovieRepository
     val person = repository.personPopular().asLiveData()
 
     override fun onClickPerson(person: PersonPopularResult) {
