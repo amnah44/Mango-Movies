@@ -4,14 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
-<!--        <variable-->
-<!--            name="item"-->
-<!--            type="" />-->
-
-<!--        <variable-->
-<!--            name="listener"-->
-<!--            type="" />-->
+        <variable
+            name="item"
+            type="com.mango.movies.model.domain.person.popular.PersonPopularResult" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -23,7 +18,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:cardBackgroundColor="@color/app_color"
-
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -54,6 +48,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/medium_margin"
+                    android:text="@{item.name}"
                     android:fontFamily="@font/mplusrounded1c_bold"
                     android:textColor="@color/white"
                     android:textSize="@dimen/txt4"

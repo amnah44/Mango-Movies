@@ -15,7 +15,6 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(R.layout.fragment_sea
     override val bindingInflater: (LayoutInflater, Int, ViewGroup?, Boolean) -> FragmentSearchBinding = DataBindingUtil::inflate
 
     override fun setupView() {
-
-        binding.searchRecycler.adapter = SearchAdapter(mutableListOf(), viewModel)
+        binding.searchRecycler.adapter = SearchAdapter(mutableListOf(),viewModel)
     }
 }

@@ -16,5 +16,6 @@ class PersonFragment : BaseFragment<FragmentPeopleBinding>(R.layout.fragment_peo
     override val bindingInflater: (LayoutInflater, Int, ViewGroup?, Boolean) -> FragmentPeopleBinding = DataBindingUtil::inflate
 
     override fun setupView() {
+        binding.personRecyclerView.adapter = PersonAdapter(mutableListOf(),viewModel)
     }
 }
