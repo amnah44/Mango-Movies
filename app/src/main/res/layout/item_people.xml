@@ -7,31 +7,35 @@
         <variable
             name="item"
             type="com.mango.movies.model.domain.person.popular.PersonPopularResult" />
-    </data>
+        <variable
+            name="listener"
+            type="com.mango.movies.ui.person.PersonInteractionListener" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/app_color">
+    </data>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:cardBackgroundColor="@color/app_color"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/dark_color"
             app:layout_constraintEnd_toEndOf="parent"
+            app:cardElevation="@dimen/cardview_default_elevation"
+            android:layout_marginStart="@dimen/small_margin"
+            android:layout_marginEnd="@dimen/small_margin"
+            android:layout_marginBottom="@dimen/medium_margin"
+            app:cardCornerRadius="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
+                android:layout_height="match_parent"
+                android:layout_margin="8dp">
                 <com.google.android.material.imageview.ShapeableImageView
 
                     android:id="@+id/actorImg"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:layout_marginStart="@dimen/large_margin"
+                    android:layout_marginStart="@dimen/small_margin"
                     android:layout_marginTop="@dimen/small_margin"
                     android:layout_marginBottom="@dimen/small_margin"
                     android:scaleType="centerCrop"
@@ -89,5 +93,4 @@
 
 
         </androidx.cardview.widget.CardView>
-    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
