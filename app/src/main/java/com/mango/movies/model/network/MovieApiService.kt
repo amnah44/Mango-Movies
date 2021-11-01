@@ -1,11 +1,13 @@
 package com.mango.movies.model.network
 
+import com.mango.movies.model.domain.BaseResponse
 import com.mango.movies.model.domain.movie.details.MovieDetailsResponse
 import com.mango.movies.model.domain.movie.latest.MovieLatestResponse
-import com.mango.movies.model.domain.movie.nowPlaying.MovieNowPlayingResponse
+import com.mango.movies.model.domain.movie.nowPlaying.MovieNowPlayingResult
 import com.mango.movies.model.domain.movie.popular.MoviePopularResponse
-import com.mango.movies.model.domain.movie.topRated.MovieTopRatedResponse
-import com.mango.movies.model.domain.movie.upComing.MovieUpComingResponse
+import com.mango.movies.model.domain.movie.popular.MoviePopularResult
+import com.mango.movies.model.domain.movie.topRated.MovieTopRatedResult
+import com.mango.movies.model.domain.movie.upComing.MovieUpComingResult
 import com.mango.movies.model.domain.person.details.PersonDetailsResponse
 import com.mango.movies.model.domain.searchResponse.SearchResponse
 import com.mango.movies.model.domain.tv.details.TvDetailsResponse
@@ -13,7 +15,6 @@ import com.mango.movies.model.domain.tv.latest.TvLatestResponse
 import com.mango.movies.model.domain.tv.popular.TvPopularResponse
 import com.mango.movies.model.domain.tv.topRated.TvTopRatedResponse
 import com.mango.movies.util.Constant
-import kotlinx.coroutines.flow.Flow
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -28,19 +29,29 @@ interface MovieApiService {
     ): Response<MovieDetailsResponse>
 
     @GET("movie/latest")
-    suspend fun getLatestMovies(@Query("api_key") apiKey: String = Constant.api_key): Response<MovieLatestResponse>
+    suspend fun getLatestMovies(
+        @Query("api_key") apiKey: String = Constant.api_key
+    ): Response<MovieLatestResponse>
 
     @GET("movie/now_playing")
-    suspend fun getNowPlayingMovies(@Query("api_key") apiKey: String = Constant.api_key): Response<MovieNowPlayingResponse>
+    suspend fun getNowPlayingMovies(
+        @Query("api_key") apiKey: String = Constant.api_key
+    ): Response<BaseResponse<MovieNowPlayingResult>>
 
     @GET("movie/popular")
-    suspend fun getPopularMovies(@Query("api_key") apiKey: String = Constant.api_key): Response<MoviePopularResponse>
+    suspend fun getPopularMovies(
+        @Query("api_key") apiKey: String = Constant.api_key
+    ): Response<BaseResponse<MoviePopularResult>>
 
     @GET("movie/top_rated")
-    suspend fun getTopRatedMovies(@Query("api_key") apiKey: String = Constant.api_key): Response<MovieTopRatedResponse>
+    suspend fun getTopRatedMovies(
+        @Query("api_key") apiKey: String = Constant.api_key
+    ): Response<BaseResponse<MovieTopRatedResult>>
 
     @GET("movie/upcoming")
-    suspend fun getUpcomingMovies(@Query("api_key") apiKey: String = Constant.api_key): Response<MovieUpComingResponse>
+    suspend fun getUpcomingMovies(
+        @Query("api_key") apiKey: String = Constant.api_key
+    ): Response<BaseResponse<MovieUpComingResult>>
 
     @GET("person/{person_id}")
     suspend fun getPersonDetails(
@@ -50,7 +61,9 @@ interface MovieApiService {
 
 
     @GET("person/popular")
-    suspend fun getPersonPopular(@Query("api_key") apiKey: String = Constant.api_key): Response<MoviePopularResponse>
+    suspend fun getPersonPopular(
+        @Query("api_key") apiKey: String = Constant.api_key
+    ): Response<MoviePopularResponse>
 
     @GET("tv/{tv_id}")
     suspend fun getTvShowDetails(
@@ -59,13 +72,19 @@ interface MovieApiService {
     ): Response<TvDetailsResponse>
 
     @GET("tv/latest")
-    suspend fun getLatestTvShow(@Query("api_key") apiKey: String = Constant.api_key): Response<TvLatestResponse>
+    suspend fun getLatestTvShow(
+        @Query("api_key") apiKey: String = Constant.api_key
+    ): Response<TvLatestResponse>
 
     @GET("tv/popular")
-    suspend fun getPopularTvShow(@Query("api_key") apiKey: String = Constant.api_key): Response<TvPopularResponse>
+    suspend fun getPopularTvShow(
+        @Query("api_key") apiKey: String = Constant.api_key
+    ): Response<TvPopularResponse>
 
     @GET("tv/top_rated")
-    suspend fun getTopRatedTvShow(@Query("api_key") apiKey: String = Constant.api_key): Response<TvTopRatedResponse>
+    suspend fun getTopRatedTvShow(
+        @Query("api_key") apiKey: String = Constant.api_key
+    ): Response<TvTopRatedResponse>
 
     @GET("search/movie")
     suspend fun searchMovie(
