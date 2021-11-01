@@ -10,6 +10,7 @@ class SearchViewModel : ViewModel(),SearchInteractionListener {
     var searchTxt = ""
     var searchResult = MovieRepository.searchMovie(searchTxt).asLiveData()
 
+
     override fun onClickMovie(match: Result) {
 
     }
