@@ -2,6 +2,7 @@ package com.mango.movies.model.domain.movie.details
 
 
 import com.google.gson.annotations.SerializedName
+import com.mango.movies.model.domain.genre.Genre
 
 data class MovieDetailsResponse(
     @SerializedName("adult")
