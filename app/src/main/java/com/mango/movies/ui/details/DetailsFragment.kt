@@ -6,9 +6,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
 import com.mango.movies.R
 import com.mango.movies.databinding.FragmentDetailsBinding
-import com.mango.movies.databinding.FragmentSearchBinding
 import com.mango.movies.ui.base.BaseFragment
-import com.mango.movies.ui.search.SearchViewModel
 import com.mango.movies.util.Constant
 
 
