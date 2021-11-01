@@ -50,4 +50,6 @@ object MovieRepository {
 
     fun searchMovie(query: String): Flow<State<SearchResponse?>>  =
         wrapWithFlow { API.apiService.searchMovie(query, Constant.api_key) }
+
+    fun genres() = wrapWithFlow { API.apiService.getGenre(Constant.api_key) }
 }
