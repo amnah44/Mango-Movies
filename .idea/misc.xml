@@ -3,14 +3,33 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Mango-Movies/app/src/main/res/drawable/favorite_action.xml" value="0.2169230769230769" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/drawable/home_action.xml" value="0.2169230769230769" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/drawable/ic_home_fill.xml" value="0.2169230769230769" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/drawable/ic_home_out_fill.xml" value="0.2169230769230769" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/drawable/ic_person_out_fill.xml" value="0.2169230769230769" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/drawable/ic_search.xml" value="0.2203125" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/drawable/people_action.xml" value="0.2169230769230769" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/drawable/person_action.xml" value="0.2169230769230769" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/drawable/setting_action.xml" value="0.2169230769230769" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/drawable/settings_action.xml" value="0.2169230769230769" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/layout/activity_movie.xml" value="0.1" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/layout/fragment_category.xml" value="0.203125" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/layout/fragment_details.xml" value="0.20416666666666666" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/layout/fragment_favorites.xml" value="0.20416666666666666" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/layout/fragment_people.xml" value="0.1" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/layout/fragment_search.xml" value="0.1" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/layout/fragment_show_more.xml" value="0.1" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/layout/item_actor_details.xml" value="0.1" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/layout/item_category.xml" value="0.203125" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/layout/item_details.xml" value="0.20416666666666666" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/layout/item_favourite.xml" value="0.1" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/layout/item_people.xml" value="0.20416666666666666" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/layout/item_search.xml" value="0.14" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/layout/item_show_more.xml" value="0.1" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/menu/menu_bottom_navigation.xml" value="0.20416666666666666" />
         <entry key="..\:/Movies2/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
-        <entry key="..\:/The_Chance_Projects/Mango-Team/Team/Mango-Movies/app/src/main/res/layout/fragment_settings.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Basheer Developer/Desktop/Mango Movie App/Mango-Movies/app/src/main/res/layout/activity_movie.xml" value="0.2726449275362319" />
-        <entry key="..\:/Users/Basheer Developer/Desktop/Mango Movie App/Mango-Movies/app/src/main/res/layout/fragment_people.xml" value="0.25" />
-        <entry key="..\:/Users/Basheer Developer/Desktop/Mango Movie App/Mango-Movies/app/src/main/res/layout/fragment_show_more.xml" value="0.2726449275362319" />
-        <entry key="..\:/Users/Basheer Developer/Desktop/Mango Movie App/Mango-Movies/app/src/main/res/layout/item_details.xml" value="0.2726449275362319" />
-        <entry key="..\:/Users/Basheer Developer/Desktop/Mango Movie App/Mango-Movies/app/src/main/res/layout/item_people.xml" value="0.33" />
-        <entry key="..\:/Users/Basheer Developer/Desktop/Mango Movie App/Mango-Movies/app/src/main/res/layout/item_show_more.xml" value="0.2726449275362319" />
       </map>
     </option>
   </component>

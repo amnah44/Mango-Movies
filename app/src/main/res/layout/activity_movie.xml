@@ -28,7 +28,7 @@
             android:id="@+id/bottom_nav"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/dark_color"
+            android:background="@color/app_color"
             android:elevation="16dp"
             app:itemBackground="@color/dark_color"
             app:itemIconTint="@color/orange"
