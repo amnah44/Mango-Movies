@@ -1,10 +1,12 @@
 package com.mango.movies.util
 
 import android.view.View
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.widget.SearchView
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.mango.movies.ui.base.BaseAdapter
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
@@ -55,10 +57,16 @@ fun setQuery(searchView: SearchView, queryText: String?) {
     searchView.setQuery(queryText, false)
 }
 
+
 @BindingAdapter("queryTextListener")
 fun setOnQueryTextListener(
     searchView: SearchView,
     listener: SearchView.OnQueryTextListener?
 ) {
     searchView.setOnQueryTextListener(listener)
+}
+
+@BindingAdapter(value = ["imageUrl"])
+fun setImageFromUrl(view: ImageView,url: String){
+    Glide.with(view).load(url).into(view)
 }

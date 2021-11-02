@@ -22,8 +22,8 @@
             android:fontFamily="@font/mplusrounded1c_bold"
             android:switchMinWidth="66dp"
             android:textColor="@color/grayDark"
-            android:textOff="series"
-            android:textOn="movies"
+            android:textOff="@string/series"
+            android:textOn="@string/movies"
             android:textSize="@dimen/txt5"
             android:textStyle="bold"
             android:trackTint="@color/orangeLight"
@@ -32,7 +32,7 @@
             app:splitTrack="false"
             app:thumbTint="@color/white"
             tools:checked="true"
-            tools:text="series" />
+            tools:text="@string/series" />
 
         <TextView
             android:id="@+id/movie_or_series_tv"
@@ -46,7 +46,7 @@
             app:layout_constraintEnd_toEndOf="@+id/textView2"
             app:layout_constraintStart_toEndOf="@+id/switch1"
             app:layout_constraintTop_toTopOf="@+id/switch1"
-            tools:text="movies" />
+            tools:text="@string/movies" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_movies"

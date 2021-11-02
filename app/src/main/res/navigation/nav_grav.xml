@@ -9,7 +9,11 @@
         android:id="@+id/homeFragment"
         android:name="com.mango.movies.ui.home.HomeFragment"
         android:label="HomeFragment"
-        tools:layout="@layout/fragment_home"/>
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_categoryFragment4"
+            app:destination="@id/categoryFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/favoritesFragment"
@@ -32,5 +36,14 @@
         android:id="@+id/searchFragment"
         android:name="com.mango.movies.ui.search.SearchFragment"
         android:label="SettingsFragment" />
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.mango.movies.ui.categoris.CategoryFragment"
+        android:label="CategoryFragment"
+        tools:layout="@layout/fragment_category">
+        <argument
+            android:name="genreId"
+            app:argType="integer" />
+    </fragment>
 
 </navigation>

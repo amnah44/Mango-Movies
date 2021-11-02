@@ -31,11 +31,14 @@
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.27685185185185185" />
         <entry key="app/src/main/res/drawable/ic_close.xml" value="0.27685185185185185" />
         <entry key="app/src/main/res/drawable/ic_delete.xml" value="0.27685185185185185" />
+        <entry key="app/src/main/res/drawable/ic_error.xml" value="0.16510416666666666" />
         <entry key="app/src/main/res/drawable/ic_home_fill.xml" value="0.27685185185185185" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.27685185185185185" />
         <entry key="app/src/main/res/drawable/ic_person_fill.xml" value="0.27685185185185185" />
         <entry key="app/src/main/res/drawable/ic_search.xml" value="0.27685185185185185" />
         <entry key="app/src/main/res/layout/fragment_category.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/item_genre.xml" value="0.14895833333333333" />
+        <entry key="app/src/main/res/layout/item_people.xml" value="0.11548913043478261" />
         <entry key="app/src/main/res/layout/item_search.xml" value="0.1" />
       </map>
     </option>
