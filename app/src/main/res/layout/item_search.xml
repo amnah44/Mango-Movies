@@ -70,7 +70,7 @@
                     android:id="@+id/movieName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
                     android:layout_marginEnd="@dimen/small_margin"
                     android:fontFamily="@font/mplusrounded1c_bold"
                     android:text="@{item.title}"
@@ -107,7 +107,6 @@
                     app:layout_constraintBottom_toTopOf="@+id/movieCategory"
                     app:layout_constraintStart_toStartOf="@+id/movieCategory"
                     tools:text="Series"
-                    android:text="Series"
                     />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
