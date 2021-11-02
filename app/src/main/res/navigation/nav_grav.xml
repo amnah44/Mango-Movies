@@ -32,5 +32,10 @@
         android:id="@+id/searchFragment"
         android:name="com.mango.movies.ui.search.SearchFragment"
         android:label="SettingsFragment" />
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.mango.movies.ui.categoris.CategoryFragment"
+        android:label="CategoryFragment"
+        tools:layout="@layout/fragment_category"/>
 
 </navigation>
