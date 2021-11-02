@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
+import androidx.navigation.Navigation
 import com.mango.movies.R
 import com.mango.movies.databinding.FragmentHomeBinding
 import com.mango.movies.ui.base.BaseFragment
@@ -16,7 +17,11 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
         DataBindingUtil::inflate
 
     override fun setupView() {
-        binding.homeViewModel = viewModel
         binding.categoryRecycler.adapter = HomeAdapter(mutableListOf(), viewModel)
+
+        viewModel.genreId.observe(viewLifecycleOwner){
+            val action = HomeFragmentDirections.actionHomeFragmentToCategoryFragment4(requireNotNull(it.id))
+            Navigation.findNavController(binding.categoryRecycler).navigate(action)
+        }
     }
 }
