@@ -31,5 +31,7 @@ data class Result(
     @SerializedName("vote_average")
     var voteAverage: Double? = 0.0,
     @SerializedName("vote_count")
-    var voteCount: Int? = 0
+    var voteCount: Int? = 0,
+    @SerializedName("media_type")
+    var mediaType: Int? = 0
 )

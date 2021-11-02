@@ -71,10 +71,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/small_margin"
+                    android:layout_marginEnd="@dimen/small_margin"
                     android:fontFamily="@font/mplusrounded1c_bold"
                     android:text="@{item.title}"
                     android:textColor="@color/white"
                     android:textSize="@dimen/txt4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="@+id/movieCategory"
                     app:layout_constraintTop_toTopOf="@+id/movieImg"
                     tools:text="Chucky" />
@@ -103,7 +106,9 @@
                     android:textSize="@dimen/txt4"
                     app:layout_constraintBottom_toTopOf="@+id/movieCategory"
                     app:layout_constraintStart_toStartOf="@+id/movieCategory"
-                    tools:text="Series" />
+                    tools:text="Series"
+                    android:text="Series"
+                    />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
