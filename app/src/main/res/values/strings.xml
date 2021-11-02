@@ -6,4 +6,5 @@
     <string name="series">Series</string>
     <string name="detail_movie">Detail Movie</string>
     <string name="knownFor">Known for</string>
+    <string name="back_button">Back Button</string>
 </resources>

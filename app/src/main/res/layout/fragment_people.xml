@@ -27,10 +27,10 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+            app:layout_constraintTop_toBottomOf="@+id/title" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/medium_margin"
@@ -47,9 +47,9 @@
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginStart="@dimen/medium_margin"
-            app:layout_constraintBottom_toBottomOf="@+id/textView2"
+            app:layout_constraintBottom_toBottomOf="@+id/title"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView2"
+            app:layout_constraintTop_toTopOf="@+id/title"
             app:srcCompat="@drawable/ic_arrow_back" />
 
 
