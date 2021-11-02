@@ -17,6 +17,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
         DataBindingUtil::inflate
 
     override fun setupView() {
+        binding.homeViewModel = viewModel
         binding.categoryRecycler.adapter = HomeAdapter(mutableListOf(), viewModel)
 
         viewModel.genreId.observe(viewLifecycleOwner){
