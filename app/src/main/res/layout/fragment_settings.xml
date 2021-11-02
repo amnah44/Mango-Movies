@@ -50,7 +50,7 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/language_tv"
+                    android:id="@+id/theme_tv"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
@@ -61,21 +61,7 @@
                     android:textSize="@dimen/txt4"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    android:text="Language" />
-
-                <TextView
-                    android:id="@+id/theme_tv"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:paddingStart="8dp"
-                    android:paddingEnd="8dp"
-                    android:fontFamily="@font/mplusrounded1c_bold"
-                    android:textSize="@dimen/txt4"
-                    android:textColor="@color/white"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/language_tv"
-                    android:text="Light Theme" />
+                    android:text="Light Theme"  />
 
                 <TextView
                     android:id="@+id/website_tv"
@@ -84,9 +70,9 @@
                     android:layout_margin="16dp"
                     android:paddingStart="8dp"
                     android:paddingEnd="8dp"
-                    android:textColor="@color/white"
                     android:fontFamily="@font/mplusrounded1c_bold"
                     android:textSize="@dimen/txt4"
+                    android:textColor="@color/white"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/theme_tv"
                     android:text="Website" />
@@ -96,30 +82,17 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
+                    android:fontFamily="@font/mplusrounded1c_bold"
                     android:paddingStart="8dp"
                     android:paddingEnd="8dp"
+                    android:text="About"
                     android:textColor="@color/white"
-                    android:fontFamily="@font/mplusrounded1c_bold"
                     android:textSize="@dimen/txt4"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/website_tv"
-                    android:text="About" />
+                    app:layout_constraintTop_toBottomOf="@+id/website_tv" />
 
-                <TextView
-                    android:id="@+id/result_language_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="16dp"
-                    android:paddingStart="8dp"
-                    android:paddingEnd="8dp"
-                    android:fontFamily="@font/mplusrounded1c_bold"
-                    android:textColor="@color/grayDark"
-                    android:textSize="@dimen/txt2"
-                    app:layout_constraintBottom_toBottomOf="@+id/language_tv"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/language_tv"
-                    android:text="English" />
+
 
                 <androidx.appcompat.widget.SwitchCompat
                     android:id="@+id/switch1"
