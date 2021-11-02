@@ -33,7 +33,7 @@
                 android:text="@{item.name}"
                 android:layout_marginTop="@dimen/small_margin"
                 android:layout_marginStart="@dimen/small_margin"
-                android:layout_marginEnd="@dimen/small_margin"
+                android:paddingEnd="@dimen/small_padding"
                 android:layout_marginBottom="@dimen/small_margin"
                 android:fontFamily="@font/mplusrounded1c_bold"
                 android:textColor="@color/white"

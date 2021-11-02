@@ -50,6 +50,7 @@
             android:layout_marginTop="@dimen/medium_margin"
             android:layout_marginBottom="@dimen/medium_margin"
             android:padding="8dp"
+            app:showOnSuccess="@{homeViewModel.genres}"
             app:items="@{homeViewModel.genres.toData().genres}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             android:orientation="horizontal"
@@ -57,6 +58,28 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/home_fragment"
             tools:listitem="@layout/item_genre"/>
+
+        <ImageView
+            android:id="@+id/image_error"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:showOnError="@{homeViewModel.genres}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/progress_load"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:showOnLoading="@{homeViewModel.genres}"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.616" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

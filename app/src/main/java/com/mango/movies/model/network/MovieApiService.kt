@@ -1,6 +1,5 @@
 package com.mango.movies.model.network
 
-import com.mango.movies.model.domain.BaseResponse
 import com.mango.movies.model.domain.genre.GenerResponse
 import com.mango.movies.model.domain.movie.details.MovieDetailsResponse
 import com.mango.movies.model.domain.movie.latest.MovieLatestResponse
@@ -94,8 +93,6 @@ interface MovieApiService {
         @Query("api_key") apiKey: String?,
     ): Response<SearchResponse>
 
-    @GET("/genre/list")
-    suspend fun getGenre(
-        @Query("api_key") apiKey: String?,
-    ): Response<GenerResponse>
+    @GET("genre/list")
+    suspend fun getGenre(@Query("api_key") apiKey: String = Constant.api_key): Response<GenerResponse>
 }

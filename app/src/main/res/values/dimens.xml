@@ -16,6 +16,7 @@
 
 
     <dimen name="category_card_corner_radius">16dp</dimen>
+    <dimen name="small_padding">8dp</dimen>
 
 
 </resources>
