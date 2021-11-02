@@ -27,6 +27,8 @@
             app:layout_constraintTop_toBottomOf="@+id/searchView"
             tools:listitem="@layout/item_search"
             app:items= "@{viewModel.searchResult.toData().results}"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+
             />
 
 
@@ -38,6 +40,7 @@
             android:layout_marginTop="@dimen/medium_margin"
             android:layout_marginEnd="@dimen/medium_margin"
             android:background="@drawable/rounded_corner_view"
+
             android:fontFamily="@font/mplusrounded1c_bold"
             android:foregroundTint="@color/white"
             android:textColor="@color/white"
@@ -46,7 +49,9 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView"
             app:layout_constraintTop_toTopOf="parent"
-            app:searchIcon="@drawable/ic_search" />
+            app:searchIcon="@drawable/ic_search"
+
+            />
 
         <ImageView
             android:id="@+id/imageView"
