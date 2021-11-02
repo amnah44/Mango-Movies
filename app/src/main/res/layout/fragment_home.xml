@@ -15,19 +15,18 @@
         android:background="@color/app_color"
         tools:context=".ui.home.HomeFragment">
 
-        <androidx.appcompat.widget.SearchView
+        <ImageView
             android:id="@+id/search_view"
             android:layout_width="0dp"
             android:layout_height="0dp"
             app:layout_constraintDimensionRatio="H,32:32"
-            app:layout_constraintWidth_percent="0.10"
             android:layout_marginEnd="@dimen/medium_margin"
-            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginTop="@dimen/medium_margin"
             android:foregroundTint="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="@id/home_fragment"
-            app:searchIcon="@drawable/ic_search" />
+            android:src="@drawable/ic_search" />
 
         <TextView
             android:id="@+id/home_fragment"
