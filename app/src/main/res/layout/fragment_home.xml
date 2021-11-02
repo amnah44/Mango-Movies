@@ -63,6 +63,7 @@
             android:id="@+id/image_error"
             android:layout_width="40dp"
             android:layout_height="40dp"
+            android:src="@drawable/ic_error"
             app:showOnError="@{homeViewModel.genres}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
