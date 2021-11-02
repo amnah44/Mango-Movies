@@ -70,3 +70,8 @@ fun setOnQueryTextListener(
 fun setImageFromUrl(view: ImageView,url: String){
     Glide.with(view).load(url).into(view)
 }
+
+@BindingAdapter(value = ["movieImageUrl"])
+fun setMovieImageFromUrl(view: ImageView,url: String){
+    Glide.with(view).load(Constant.BASE_MOVIE_URL + url).into(view)
+}
