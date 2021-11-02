@@ -64,38 +64,38 @@ interface MovieApiService {
 
     @GET("person/popular")
     suspend fun getPersonPopular(
-        @Query("api_key") apiKey: String?
+        @Query("api_key") apiKey: String?,
     ): Response<BaseResponse<PersonPopularResult>>
 
     @GET("tv/{tv_id}")
     suspend fun getTvShowDetails(
         @Path("tv_id") tvId: Int,
-        @Query("api_key") apiKey: String = Constant.api_key
+        @Query("api_key") apiKey: String?,
     ): Response<TvDetailsResponse>
 
     @GET("tv/latest")
     suspend fun getLatestTvShow(
-        @Query("api_key") apiKey: String = Constant.api_key
+        @Query("api_key") apiKey: String?,
     ): Response<TvLatestResponse>
 
     @GET("tv/popular")
     suspend fun getPopularTvShow(
-        @Query("api_key") apiKey: String = Constant.api_key
+        @Query("api_key") apiKey: String?,
     ): Response<TvPopularResponse>
 
     @GET("tv/top_rated")
     suspend fun getTopRatedTvShow(
-        @Query("api_key") apiKey: String = Constant.api_key
+        @Query("api_key") apiKey: String?,
     ): Response<TvTopRatedResponse>
 
     @GET("search/movie")
     suspend fun searchMovie(
         @Query("query") query: String,
-        @Query("api_key") apiKey: String = Constant.api_key,
+        @Query("api_key") apiKey: String?,
     ): Response<SearchResponse>
 
     @GET("/genre/list")
     suspend fun getGenre(
-        @Query("api_key") apiKey: String = Constant.api_key
+        @Query("api_key") apiKey: String?,
     ): Response<GenerResponse>
 }
