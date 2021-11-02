@@ -24,7 +24,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="@string/app_setting" />
+            android:text="@string/app_setting" />
 
         <ImageView
             android:id="@+id/imageView"
@@ -61,7 +61,7 @@
                     android:textSize="@dimen/txt4"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:text="Language" />
+                    android:text="Language" />
 
                 <TextView
                     android:id="@+id/theme_tv"
@@ -75,7 +75,7 @@
                     android:textColor="@color/white"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/language_tv"
-                    tools:text="Light Theme" />
+                    android:text="Light Theme" />
 
                 <TextView
                     android:id="@+id/website_tv"
@@ -89,7 +89,7 @@
                     android:textSize="@dimen/txt4"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/theme_tv"
-                    tools:text="Website" />
+                    android:text="Website" />
 
                 <TextView
                     android:id="@+id/about_tv"
@@ -104,7 +104,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/website_tv"
-                    tools:text="About" />
+                    android:text="About" />
 
                 <TextView
                     android:id="@+id/result_language_tv"
@@ -119,7 +119,7 @@
                     app:layout_constraintBottom_toBottomOf="@+id/language_tv"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/language_tv"
-                    tools:text="English" />
+                    android:text="English" />
 
                 <androidx.appcompat.widget.SwitchCompat
                     android:id="@+id/switch1"
