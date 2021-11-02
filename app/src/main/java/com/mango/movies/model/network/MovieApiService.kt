@@ -58,13 +58,13 @@ interface MovieApiService {
     @GET("person/{person_id}")
     suspend fun getPersonDetails(
         @Path("person_id") personId: Int,
-        @Query("api_key") apiKey: String = Constant.api_key,
+        @Query("api_key") apiKey: String?,
     ): Response<PersonDetailsResponse>
 
 
     @GET("person/popular")
     suspend fun getPersonPopular(
-        @Query("api_key") apiKey: String = Constant.api_key
+        @Query("api_key") apiKey: String?
     ): Response<BaseResponse<PersonPopularResult>>
 
     @GET("tv/{tv_id}")
