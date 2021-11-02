@@ -74,6 +74,6 @@ interface MovieApiService {
         @Query("api_key") apiKey: String = Constant.api_key,
     ): Response<SearchResponse>
 
-    @GET("/genre/list")
+    @GET("genre/list")
     suspend fun getGenre(@Query("api_key") apiKey: String = Constant.api_key): Response<GenerResponse>
 }
