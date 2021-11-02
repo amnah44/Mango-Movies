@@ -21,7 +21,11 @@
         android:id="@+id/personFragment"
         android:name="com.mango.movies.ui.person.PersonFragment"
         android:label="PeopleFragment"
-        tools:layout="@layout/fragment_people"/>
+        tools:layout="@layout/fragment_people">
+        <action
+            android:id="@+id/action_personFragment_to_personDetailsFragment"
+            app:destination="@id/personDetailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.mango.movies.ui.settings.SettingsFragment"
@@ -33,4 +37,8 @@
         android:name="com.mango.movies.ui.search.SearchFragment"
         android:label="SettingsFragment" />
 
+    <fragment
+        android:id="@+id/personDetailsFragment"
+        android:name="com.mango.movies.ui.person.details.PersonDetailsFragment"
+        android:label="PersonDetailsFragment"/>
 </navigation>
