@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">سينما</string>
+    <string name="favorites">المفضلة</string>
+    <string name="movies">الأفلام</string>
+    <string name="series">مسلسلات</string>
+    <string name="detail_movie">تفاصيل الفيلم</string>
+    <string name="popular_people">الأكثر شعبية</string>
+    <string name="knownFor">معروف بـ</string>
+    <string name="app_setting">إعدادات التطبيق</string>
+</resources>
