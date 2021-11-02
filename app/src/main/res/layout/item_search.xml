@@ -89,7 +89,6 @@
                     app:layout_constraintStart_toEndOf="@+id/movieCategory2"
                     tools:text="2021"
                     android:text="@{item.releaseDate}"
-
                     />
 
                 <TextView
