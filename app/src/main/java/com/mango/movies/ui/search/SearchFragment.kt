@@ -18,4 +18,6 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(R.layout.fragment_sea
         binding.searchRecycler.adapter = SearchAdapter(mutableListOf(), viewModel)
     }
 
+
+
 }

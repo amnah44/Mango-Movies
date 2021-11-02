@@ -2,6 +2,7 @@ package com.mango.movies.util
 
 import android.view.View
 import android.widget.TextView
+import androidx.appcompat.widget.SearchView
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.mango.movies.ui.base.BaseAdapter
@@ -11,28 +12,29 @@ import java.util.*
 
 
 @BindingAdapter(value = ["app:showOnLoading"])
-fun <T>showOnLoading(view: View, state: State<T>?){
+fun <T> showOnLoading(view: View, state: State<T>?) {
     if (state is State.Loading)
-        view.visibility= View.VISIBLE
+        view.visibility = View.VISIBLE
     else
-        view.visibility= View.GONE
+        view.visibility = View.GONE
 }
 
 @BindingAdapter(value = ["app:showOnError"])
-fun <T>showOnError(view: View, state: State<T>?){
+fun <T> showOnError(view: View, state: State<T>?) {
     if (state is State.Error)
-        view.visibility= View.VISIBLE
+        view.visibility = View.VISIBLE
     else
-        view.visibility= View.GONE
+        view.visibility = View.GONE
 }
 
 @BindingAdapter(value = ["app:showOnSuccess"])
-fun <T>showOnSuccess(view: View, state: State<T>?){
+fun <T> showOnSuccess(view: View, state: State<T>?) {
     if (state is State.Success)
-        view.visibility= View.VISIBLE
+        view.visibility = View.VISIBLE
     else
-        view.visibility= View.GONE
+        view.visibility = View.GONE
 }
+
 @BindingAdapter(value = ["app:items"])
 fun <T> setRecyclerItems(view: RecyclerView, items: List<T>?) {
     if (items != null) {
@@ -43,7 +45,20 @@ fun <T> setRecyclerItems(view: RecyclerView, items: List<T>?) {
 }
 
 @BindingAdapter(value = ["setFormattedDate"])
-fun <T> getYearFromDateString(view: TextView, dateStr: String? ) {
+fun getYearFromDateString(view: TextView, dateStr: String? = "2021-11-01") {
     val date = LocalDate.parse(dateStr)
-    view.text  = date.year.toString()
+    view.text = date.year.toString()
+}
+
+@BindingAdapter("query")
+fun setQuery(searchView: SearchView, queryText: String?) {
+    searchView.setQuery(queryText, false)
+}
+
+@BindingAdapter("queryTextListener")
+fun setOnQueryTextListener(
+    searchView: SearchView,
+    listener: SearchView.OnQueryTextListener?
+) {
+    searchView.setOnQueryTextListener(listener)
 }

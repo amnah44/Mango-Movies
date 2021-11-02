@@ -88,7 +88,9 @@
                     app:layout_constraintBottom_toBottomOf="@+id/movieCategory2"
                     app:layout_constraintStart_toEndOf="@+id/movieCategory2"
                     tools:text="2021"
-                    setFormattedDate="@{item.releaseDate}"/>
+                    android:text="@{item.releaseDate}"
+
+                    />
 
                 <TextView
                     android:id="@+id/movieCategory2"
