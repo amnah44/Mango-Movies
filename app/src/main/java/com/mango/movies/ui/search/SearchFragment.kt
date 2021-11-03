@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
+import androidx.navigation.findNavController
 import com.mango.movies.R
 import com.mango.movies.databinding.FragmentSearchBinding
 import com.mango.movies.ui.base.BaseFragment
@@ -16,6 +17,10 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(R.layout.fragment_sea
 
     override fun setupView() {
         binding.searchRecycler.adapter = SearchAdapter(mutableListOf(), viewModel)
+
+        binding.returnArrow.setOnClickListener{ view ->
+            view.findNavController().popBackStack()
+        }
     }
 
 

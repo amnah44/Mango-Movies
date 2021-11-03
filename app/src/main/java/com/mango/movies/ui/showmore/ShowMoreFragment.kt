@@ -3,6 +3,7 @@ package com.mango.movies.ui.showmore
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModel
+import androidx.navigation.findNavController
 import com.mango.movies.R
 import com.mango.movies.databinding.FragmentShowMoreBinding
 import com.mango.movies.ui.base.BaseFragment
@@ -13,6 +14,9 @@ class ShowMoreFragment :
     override val LOG_TAG: String = Constant.SHOW_MORE_MOVIES_FRAGMENT
 
     override fun setupView() {
+        binding.returnArrow.setOnClickListener{ view ->
+            view.findNavController().popBackStack()
+        }
     }
 
     override val viewModel: ViewModel

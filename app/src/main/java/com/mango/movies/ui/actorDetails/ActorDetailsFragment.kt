@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
+import androidx.navigation.findNavController
 import com.mango.movies.R
 import com.mango.movies.databinding.FragmentActorDetailsBinding
 import com.mango.movies.ui.base.BaseFragment
@@ -18,6 +19,9 @@ class ActorDetailsFragment :
         DataBindingUtil::inflate
 
     override fun setupView() {
+        binding.returnArrow.setOnClickListener{ view ->
+            view.findNavController().popBackStack()
+        }
     }
 
 
