@@ -6,7 +6,7 @@
     <data>
         <variable
             name="personDetailsViewModel"
-            type="com.mango.movies.ui.person.details.PersonDetailsViewModel" />
+            type="com.mango.movies.ui.person.PersonPopularViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -33,7 +33,6 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:scaleType="centerCrop"
-            imageUrl="@{personDetailsViewModel.details.toData().imageUrl}"
             app:layout_constraintBottom_toTopOf="@id/guideline"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -58,7 +57,6 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/mplusrounded1c_bold"
             android:textColor="@color/white"
-            android:text="@{personDetailsViewModel.details.toData().name}"
             android:textSize="@dimen/txt6"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -91,6 +89,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
             android:orientation="horizontal"
+            app:items="@{personDetailsViewModel.personDetails.knownFor}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

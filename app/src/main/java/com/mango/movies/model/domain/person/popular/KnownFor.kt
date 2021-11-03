@@ -1,6 +1,8 @@
 package com.mango.movies.model.domain.person.popular
 
 
+import android.os.Parcel
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 
 data class KnownFor(

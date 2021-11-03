@@ -9,9 +9,9 @@ import com.mango.movies.BR
 
 interface BaseInteractionListener
 
-abstract class BaseAdapter<T> (
+abstract class BaseAdapter<T>(
     private var items: List<T>,
-    private var listener: BaseInteractionListener
+    private var listener: BaseInteractionListener?
     ) : RecyclerView.Adapter<BaseAdapter.BaseViewHolder>() {
 
     abstract val layoutId : Int

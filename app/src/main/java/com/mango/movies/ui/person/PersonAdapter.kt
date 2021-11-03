@@ -1,6 +1,5 @@
 package com.mango.movies.ui.person
 
-import android.util.Log
 import androidx.navigation.Navigation
 import com.mango.movies.ui.base.BaseAdapter
 import com.mango.movies.R
