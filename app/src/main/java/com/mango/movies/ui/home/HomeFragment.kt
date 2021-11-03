@@ -24,5 +24,10 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
             val action = HomeFragmentDirections.actionHomeFragmentToCategoryFragment4(requireNotNull(it.id))
             Navigation.findNavController(binding.categoryRecycler).navigate(action)
         }
+
+        binding.searchView.setOnClickListener{ view ->
+            val action = HomeFragmentDirections.actionHomeFragmentToSearchFragment()
+            Navigation.findNavController(view).navigate(action)
+        }
     }
 }
