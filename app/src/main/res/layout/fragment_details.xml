@@ -63,7 +63,7 @@
             tools:srcCompat="@drawable/ic_favorite_full" />
 
         <ImageView
-            android:id="@+id/goBack"
+            android:id="@+id/return_arrow"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginStart="@dimen/medium_margin"

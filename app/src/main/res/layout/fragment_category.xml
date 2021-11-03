@@ -27,8 +27,8 @@
             android:textSize="@dimen/txt5"
             android:textStyle="bold"
             android:trackTint="@color/orangeLight"
-            app:layout_constraintStart_toStartOf="@+id/textView2"
-            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintStart_toStartOf="@+id/genre_name"
+            app:layout_constraintTop_toBottomOf="@+id/genre_name"
             app:splitTrack="false"
             app:thumbTint="@color/white"
             tools:checked="true"
@@ -43,7 +43,7 @@
             android:textColor="@color/white"
             android:textSize="@dimen/txt5"
             app:layout_constraintBottom_toBottomOf="@+id/switch1"
-            app:layout_constraintEnd_toEndOf="@+id/textView2"
+            app:layout_constraintEnd_toEndOf="@+id/genre_name"
             app:layout_constraintStart_toEndOf="@+id/switch1"
             app:layout_constraintTop_toTopOf="@+id/switch1"
             tools:text="@string/movies" />
@@ -73,7 +73,7 @@
             tools:listitem="@layout/item_category" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/genre_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/medium_margin"
@@ -86,13 +86,13 @@
             tools:text="Category Name"/>
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/return_arrow"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginStart="@dimen/medium_margin"
-            app:layout_constraintBottom_toBottomOf="@+id/textView2"
+            app:layout_constraintBottom_toBottomOf="@+id/genre_name"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView2"
+            app:layout_constraintTop_toTopOf="@+id/genre_name"
             app:srcCompat="@drawable/ic_arrow_back" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

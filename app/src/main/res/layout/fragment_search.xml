@@ -68,12 +68,12 @@
             android:textSize="@dimen/txt2"
             app:closeIcon="@drawable/ic_close"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintStart_toEndOf="@+id/return_arrow"
             app:layout_constraintTop_toTopOf="parent"
             app:searchIcon="@drawable/ic_search" />
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/return_arrow"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginStart="@dimen/medium_margin"
