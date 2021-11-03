@@ -26,16 +26,6 @@
             app:layout_constraintTop_toTopOf="parent"
             android:text="@string/app_setting" />
 
-        <ImageView
-            android:id="@+id/return_arrow"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_marginStart="@dimen/medium_margin"
-            app:layout_constraintBottom_toBottomOf="@+id/title_fragment_tv"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/title_fragment_tv"
-            app:srcCompat="@drawable/ic_arrow_back" />
-
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
