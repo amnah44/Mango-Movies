@@ -1,5 +1,6 @@
 package com.mango.movies.ui.person
 
+import android.util.Log
 import androidx.navigation.Navigation
 import com.mango.movies.ui.base.BaseAdapter
 import com.mango.movies.R
@@ -15,8 +16,8 @@ class PersonAdapter(items: List<PersonPopularResult>, listener: PersonInteractio
         payloads: MutableList<Any>
     ) {
         super.onBindViewHolder(holder, position, payloads)
-        holder.itemView.setOnClickListener{ 
-                v -> Navigation.findNavController(v).navigate(R.id.action_personFragment_to_personDetailsFragment)
+        holder.itemView.setOnClickListener{v ->
+            Navigation.findNavController(v).navigate(R.id.action_personFragment_to_personDetailsFragment)
         }
     }
 }

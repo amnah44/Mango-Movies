@@ -40,5 +40,9 @@
     <fragment
         android:id="@+id/personDetailsFragment"
         android:name="com.mango.movies.ui.person.details.PersonDetailsFragment"
-        android:label="PersonDetailsFragment"/>
+        android:label="PersonDetailsFragment">
+        <argument
+            android:name="person"
+            app:argType="com.mango.movies.model.domain.person.popular.PersonPopularResult" />
+    </fragment>
 </navigation>

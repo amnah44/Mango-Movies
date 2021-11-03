@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-
+        <variable
+            name="item"
+            type="com.mango.movies.model.domain.person.popular.KnownFor" />
     </data>
 
     <androidx.cardview.widget.CardView
@@ -23,6 +25,7 @@
                 android:background="@color/app_color"
                 android:scaleType="centerCrop"
                 android:src="@drawable/test"
+                imageUrl="@{item.imageUrl}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

@@ -40,4 +40,6 @@ data class KnownFor(
     val voteAverage: Double?,
     @SerializedName("vote_count")
     val voteCount: Int?
-)
+){
+    fun getImageUrl() = "https://image.tmdb.org/t/p/w500$posterPath"
+}

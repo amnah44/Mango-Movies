@@ -14,6 +14,7 @@
     </data>
 
         <androidx.cardview.widget.CardView
+            android:onClick="@{()-> listener.onClickPerson(item)}"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardBackgroundColor="@color/dark_color"
@@ -31,7 +32,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="8dp">
                 <com.google.android.material.imageview.ShapeableImageView
-
+                    android:onClick="@{()-> listener.onClickPerson(item)}"
                     android:id="@+id/actorImg"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
