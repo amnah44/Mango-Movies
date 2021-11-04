@@ -32,14 +32,14 @@ class PersonDetailsFragment :
     @SuppressLint("CheckResult")
     override fun setupView() {
         binding.personDetailsViewModel = viewModel
-        binding.imageBack.setOnClickListener { view ->
+        binding.returnArrow.setOnClickListener { view ->
             view.findNavController().popBackStack()
         }
         binding.apply {
-            textActorName.text = args.person.name
-            view?.let { Glide.with(it).load(args.person.getImageUrl()).into(imageActor) }
-            recyclerKnownFor.adapter = args.person.knownFor?.let { KnownForAdapter(it,viewModel) }
-            Log.i(LOG_TAG,args.person.knownFor.toString())
+            textActorName.text = args.personDetails.name
+            view?.let { Glide.with(it).load(args.personDetails.getImageUrl()).into(imageActor) }
+            recyclerKnownFor.adapter = args.personDetails.knownFor?.let { KnownForAdapter(it,viewModel) }
+            Log.i(LOG_TAG,args.personDetails.knownFor.toString())
         }
     }
 }
