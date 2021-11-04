@@ -34,7 +34,7 @@
         android:id="@+id/personFragment"
         android:name="com.mango.movies.ui.person.PersonFragment"
         android:label="PeopleFragment"
-        tools:layout="@layout/fragment_people" >
+        tools:layout="@layout/fragment_person" >
         <action
             android:id="@+id/action_personFragment_to_actorDetailsFragment"
             app:destination="@id/actorDetailsFragment" />
