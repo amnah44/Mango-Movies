@@ -25,12 +25,6 @@
     </fragment>
 
     <fragment
-        android:id="@+id/favoritesFragment"
-        android:name="com.mango.movies.ui.favorite.FavoritesFragment"
-        android:label="FavoritesFragment"
-        tools:layout="@layout/fragment_favorites"/>
-
-    <fragment
         android:id="@+id/personFragment"
         android:name="com.mango.movies.ui.person.PersonFragment"
         android:label="PeopleFragment"
