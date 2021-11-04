@@ -1,8 +1,12 @@
 package com.mango.movies.model.domain.person.popular
 
 
+import android.annotation.SuppressLint
+import android.os.Parcel
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 
+@SuppressLint("ParcelCreator")
 data class PersonPopularResult(
     @SerializedName("adult")
     val adult: Boolean?,
@@ -20,6 +24,14 @@ data class PersonPopularResult(
     val popularity: Double?,
     @SerializedName("profile_path")
     val profilePath: String?
-){
+): Parcelable {
     fun getImageUrl() = "https://image.tmdb.org/t/p/w500$profilePath"
+
+    override fun describeContents(): Int {
+        TODO("Not yet implemented")
+    }
+
+    override fun writeToParcel(dest: Parcel?, flags: Int) {
+        TODO("Not yet implemented")
+    }
 }

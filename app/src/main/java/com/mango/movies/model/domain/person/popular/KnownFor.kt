@@ -1,6 +1,8 @@
 package com.mango.movies.model.domain.person.popular
 
 
+import android.os.Parcel
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 
 data class KnownFor(
@@ -40,4 +42,6 @@ data class KnownFor(
     val voteAverage: Double?,
     @SerializedName("vote_count")
     val voteCount: Int?
-)
+){
+    fun getImageUrl() = "https://image.tmdb.org/t/p/w500$posterPath"
+}

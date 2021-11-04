@@ -9,8 +9,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.mango.movies.ui.base.BaseAdapter
 import java.time.LocalDate
-import java.time.format.DateTimeFormatter
-import java.util.*
 
 
 @BindingAdapter(value = ["app:showOnLoading"])
@@ -67,7 +65,7 @@ fun setOnQueryTextListener(
 }
 
 @BindingAdapter(value = ["imageUrl"])
-fun setImageFromUrl(view: ImageView,url: String){
+fun setImageFromUrl(view: ImageView,url: String?){
     Glide.with(view).load(url).into(view)
 }
 
