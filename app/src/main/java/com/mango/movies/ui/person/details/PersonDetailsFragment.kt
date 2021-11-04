@@ -1,10 +1,12 @@
 package com.mango.movies.ui.person.details
 
 import android.annotation.SuppressLint
+import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.ViewModel
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
@@ -12,8 +14,10 @@ import com.mango.movies.R
 import com.mango.movies.databinding.FragmentPersonDetailsBinding
 import com.mango.movies.model.repositiory.MovieRepository
 import com.mango.movies.ui.base.BaseFragment
+import com.mango.movies.ui.person.PersonAdapter
 import com.mango.movies.ui.person.PersonPopularViewModel
 import com.mango.movies.util.Constant
+import com.mango.movies.util.setRecyclerItems
 
 class PersonDetailsFragment :
     BaseFragment<FragmentPersonDetailsBinding>(R.layout.fragment_person_details) {
@@ -34,9 +38,8 @@ class PersonDetailsFragment :
         binding.apply {
             textActorName.text = args.person.name
             view?.let { Glide.with(it).load(args.person.getImageUrl()).into(imageActor) }
-           recyclerKnownFor.adapter = KnownForAdapter(mutableListOf())
+            recyclerKnownFor.adapter = args.person.knownFor?.let { KnownForAdapter(it,viewModel) }
+            Log.i(LOG_TAG,args.person.knownFor.toString())
         }
     }
-
-
 }

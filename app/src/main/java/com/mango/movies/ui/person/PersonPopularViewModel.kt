@@ -19,12 +19,16 @@ import com.mango.movies.ui.person.details.KnownForInteractionListener
 import com.mango.movies.util.State
 import kotlinx.coroutines.launch
 
-class PersonPopularViewModel(val repository: MovieRepository) : ViewModel(),PersonInteractionListener{
+class PersonPopularViewModel(val repository: MovieRepository) : ViewModel(),PersonInteractionListener,KnownForInteractionListener{
     val person = repository.personPopular().asLiveData()
     val personDetails = MutableLiveData<PersonPopularResult?>()
-
 
     override fun onClickPerson(person: PersonPopularResult) {
         personDetails.postValue(person)
     }
+
+    override fun getKnownFor(movieDetails: MovieDetailsResponse?, tvDetails: TvDetailsResponse?) {
+        TODO("Not yet implemented")
+    }
+
 }
