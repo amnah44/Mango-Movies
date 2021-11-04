@@ -37,7 +37,7 @@
             android:fontFamily="@font/mplusrounded1c_bold"
             android:text="@string/popular_people"
             android:textColor="@color/white"
-            android:textSize="@dimen/txt5"
+            android:textSize="@dimen/txt4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
