@@ -17,13 +17,13 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
         DataBindingUtil::inflate
 
     override fun setupView() {
-        binding.homeViewModel = viewModel
-        binding.categoryRecycler.adapter = HomeAdapter(mutableListOf(), viewModel)
-
-        viewModel.genreId.observe(viewLifecycleOwner){
-            val action = HomeFragmentDirections.actionHomeFragmentToCategoryFragment4(requireNotNull(it.id))
-            Navigation.findNavController(binding.categoryRecycler).navigate(action)
-        }
+//        binding.homeViewModel = viewModel
+//        binding.categoryRecycler.adapter = HomeAdapter(mutableListOf(), viewModel)
+//
+//        viewModel.genreId.observe(viewLifecycleOwner){
+//            val action = HomeFragmentDirections.actionHomeFragmentToCategoryFragment4(requireNotNull(it.id))
+//            Navigation.findNavController(binding.categoryRecycler).navigate(action)
+//        }
 
         binding.searchView.setOnClickListener{ view ->
             val action = HomeFragmentDirections.actionHomeFragmentToSearchFragment()
