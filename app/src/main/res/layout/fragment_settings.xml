@@ -19,12 +19,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/medium_margin"
             android:fontFamily="@font/mplusrounded1c_bold"
+            android:text="@string/app_setting"
             android:textColor="@color/white"
-            android:textSize="@dimen/txt6"
+            android:textSize="@dimen/txt4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:text="@string/app_setting" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -44,28 +44,28 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
+                    android:fontFamily="@font/mplusrounded1c_bold"
                     android:paddingStart="8dp"
                     android:paddingEnd="8dp"
+                    android:text="Light Theme"
                     android:textColor="@color/white"
-                    android:fontFamily="@font/mplusrounded1c_bold"
                     android:textSize="@dimen/txt4"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:text="Light Theme"  />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/website_tv"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
+                    android:fontFamily="@font/mplusrounded1c_bold"
                     android:paddingStart="8dp"
                     android:paddingEnd="8dp"
-                    android:fontFamily="@font/mplusrounded1c_bold"
-                    android:textSize="@dimen/txt4"
+                    android:text="Website"
                     android:textColor="@color/white"
+                    android:textSize="@dimen/txt4"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/theme_tv"
-                    android:text="Website" />
+                    app:layout_constraintTop_toBottomOf="@+id/theme_tv" />
 
                 <TextView
                     android:id="@+id/about_tv"
@@ -83,15 +83,14 @@
                     app:layout_constraintTop_toBottomOf="@+id/website_tv" />
 
 
-
                 <androidx.appcompat.widget.SwitchCompat
                     android:id="@+id/switch1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/mplusrounded1c_bold"
                     android:paddingStart="8dp"
                     android:paddingEnd="8dp"
-                    android:fontFamily="@font/mplusrounded1c_bold"
                     android:switchMinWidth="66dp"
                     android:textColor="@color/grayDark"
                     android:textOff="Light Theme"
@@ -102,11 +101,11 @@
                     app:layout_constraintBottom_toBottomOf="@+id/theme_tv"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/theme_tv"
-                    tools:ignore="UseSwitchCompatOrMaterialXml"
                     app:splitTrack="false"
                     app:thumbTint="@color/white"
+                    app:track="@drawable/track"
                     tools:checked="true"
-                    app:track="@drawable/track"/>
+                    tools:ignore="UseSwitchCompatOrMaterialXml" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
