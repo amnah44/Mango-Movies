@@ -12,7 +12,7 @@ import com.mango.movies.util.Constant
 
 class PersonFragment : BaseFragment<FragmentPersonBinding>(R.layout.fragment_person) {
     override val LOG_TAG: String = Constant.PEOPLE_FRAGMENT
-    override val viewModel = PersonPopularViewModel(repository = MovieRepository)
+    override val viewModel = PersonPopularViewModel()
 
     override val bindingInflater: (LayoutInflater, Int, ViewGroup?, Boolean) -> FragmentPersonBinding =
         DataBindingUtil::inflate
@@ -20,17 +20,10 @@ class PersonFragment : BaseFragment<FragmentPersonBinding>(R.layout.fragment_per
     override fun setupView() {
         binding.personViewModel = viewModel
         binding.personRecyclerView.adapter = PersonAdapter(mutableListOf(), viewModel)
-
-        viewModel.personDetails.observe(viewLifecycleOwner) {
-            if(it!=null){
-                val nav = PersonFragmentDirections.actionPersonFragmentToPersonDetailsFragment(it)
-                Navigation.findNavController(requireView()).navigate(nav)
-            }
-        }
     }
 
     override fun onStop() {
         super.onStop()
-        viewModel.personDetails.value = null
+//        viewModel.personDetails.value = null
     }
 }
