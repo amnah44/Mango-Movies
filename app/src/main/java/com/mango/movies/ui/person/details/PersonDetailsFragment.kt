@@ -22,7 +22,7 @@ import com.mango.movies.util.setRecyclerItems
 class PersonDetailsFragment :
     BaseFragment<FragmentPersonDetailsBinding>(R.layout.fragment_person_details) {
 
-    override val viewModel = PersonPopularViewModel(repository = MovieRepository)
+    override val viewModel = PersonPopularViewModel()
     private val args: PersonDetailsFragmentArgs by navArgs()
 
     override val LOG_TAG: String = Constant.PERSON_DETAILS_FRAGMENT
@@ -38,9 +38,8 @@ class PersonDetailsFragment :
         binding.apply {
             textActorName.text = args.personDetails.name
             view?.let { Glide.with(it).load(args.personDetails.getImageUrl()).into(imageActor) }
-            recyclerKnownFor.adapter =
-                args.personDetails.knownFor?.let { KnownForAdapter(it, viewModel) }
-            Log.i(LOG_TAG, args.personDetails.knownFor.toString())
+            recyclerKnownFor.adapter = args.personDetails.knownFor?.let { KnownForAdapter(it,viewModel) }
+            Log.i(LOG_TAG,args.personDetails.knownFor.toString())
         }
     }
 }

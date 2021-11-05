@@ -55,6 +55,7 @@
         <entry key="app/src/main/res/drawable/shadow_details.xml" value="0.2984375" />
         <entry key="app/src/main/res/drawable/track.xml" value="0.2984375" />
         <entry key="app/src/main/res/layout/fragment_category.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.15572916666666667" />
         <entry key="app/src/main/res/layout/fragment_person_details.xml" value="0.15572916666666667" />
         <entry key="app/src/main/res/layout/item_genre.xml" value="0.14895833333333333" />
         <entry key="app/src/main/res/layout/item_people.xml" value="0.11548913043478261" />
