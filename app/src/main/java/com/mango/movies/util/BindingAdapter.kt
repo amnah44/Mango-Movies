@@ -5,6 +5,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.widget.SearchView
 import androidx.databinding.BindingAdapter
+import androidx.navigation.NavDirections
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.mango.movies.R
@@ -77,4 +79,11 @@ fun setMovieImageFromUrl(view: ImageView,url: String?){
         .placeholder(R.drawable.ic_place_holder)
         .error(R.drawable.ic_error)
         .into(view)
+}
+
+@BindingAdapter("navigate")
+fun View.navigate(action: NavDirections) {
+    this.setOnClickListener {
+        Navigation.findNavController(this).navigate(action)
+    }
 }
