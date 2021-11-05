@@ -7,6 +7,7 @@ import androidx.appcompat.widget.SearchView
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.mango.movies.R
 import com.mango.movies.ui.base.BaseAdapter
 import java.time.LocalDate
 
@@ -71,5 +72,9 @@ fun setImageFromUrl(view: ImageView,url: String?){
 
 @BindingAdapter(value = ["movieImageUrl"])
 fun setMovieImageFromUrl(view: ImageView,url: String){
-    Glide.with(view).load(Constant.BASE_MOVIE_URL + url).into(view)
+    Glide.with(view)
+        .load(Constant.BASE_MOVIE_URL + url)
+        .placeholder(R.drawable.ic_place_holder)
+        .error(R.drawable.ic_error)
+        .into(view)
 }
