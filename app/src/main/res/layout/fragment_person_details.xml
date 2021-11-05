@@ -4,9 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
-            name="personDetailsViewModel"
+            name="viewModel"
             type="com.mango.movies.ui.person.PersonPopularViewModel" />
+
+        <variable
+            name="listener"
+            type="com.mango.movies.ui.person.details.KnownForInteractionListener" />
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -18,15 +24,15 @@
 
         <ImageView
             android:id="@+id/image_actor"
+            personImageUrl="@{viewModel.personDetails.profilePath}"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:scaleType="centerCrop"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toTopOf="@id/guideline"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            tools:srcCompat="@drawable/actor"
-            />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/actor" />
 
         <ImageView
             android:id="@+id/image_movie_shadow"
@@ -56,6 +62,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/mplusrounded1c_bold"
+            android:text="@{viewModel.personDetails.name}"
             android:textColor="@color/white"
             android:textSize="@dimen/txt6"
             app:layout_constraintEnd_toEndOf="parent"
@@ -67,14 +74,15 @@
             android:id="@+id/knownFor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
             android:fontFamily="@font/roboto_regular"
+            android:text="@string/knownFor"
             android:textColor="@color/white"
             android:textSize="@dimen/txt4"
-            android:text="@string/knownFor"
-            android:layout_marginTop="7dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/guideline" />
+            app:layout_constraintTop_toBottomOf="@id/guideline"
+            tools:text="@string/knownFor" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline"
@@ -89,6 +97,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
             android:orientation="horizontal"
+            app:items="@{viewModel.personDetails.knownFor}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -106,6 +115,6 @@
             app:layout_constraintStart_toStartOf="@+id/image_actor"
             app:layout_constraintTop_toTopOf="@+id/image_actor"
             app:layout_constraintVertical_bias="0.903"
-            app:showOnLoading="@{personDetailsViewModel.person}" />
+            />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
