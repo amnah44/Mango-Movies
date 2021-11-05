@@ -1,12 +1,9 @@
 package com.mango.movies.model.domain.person.popular
-
-
-import android.annotation.SuppressLint
-import android.os.Parcel
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
-@SuppressLint("ParcelCreator")
+@Parcelize
 data class PersonPopularResult(
     @SerializedName("adult")
     val adult: Boolean?,
@@ -24,4 +21,4 @@ data class PersonPopularResult(
     val popularity: Double?,
     @SerializedName("profile_path")
     val profilePath: String?
-)
+): Parcelable
