@@ -24,8 +24,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:src="@drawable/ic_launcher_foreground"
-            app:showOnError="@{viewModel.searchResult}" />
+            android:src="@drawable/ic_error"
+            app:showOnError="@{viewModel.searchResult}"
+
+            />
 
         <ProgressBar
             android:id="@+id/progressBar"
@@ -49,6 +51,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/searchView"
+            tools:listitem="@layout/item_search"
             />
 
 

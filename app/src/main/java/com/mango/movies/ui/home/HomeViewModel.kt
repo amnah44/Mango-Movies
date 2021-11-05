@@ -12,6 +12,7 @@ class HomeViewModel: ViewModel(), HomeInteractionListener {
     val action : NavDirections get() = HomeFragmentDirections.actionHomeFragmentToSearchFragment()
     val nowPlayingMovies = MovieRepository.nowPlayingMovies().asLiveData()
     val topRateMovies = MovieRepository.ratedMovies().asLiveData()
+
     override fun onClickMovie(movieNowPlayingResult: MovieNowPlayingResult) {
         TODO("Not yet implemented")
     }

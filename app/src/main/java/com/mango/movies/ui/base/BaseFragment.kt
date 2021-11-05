@@ -7,10 +7,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.SavedStateViewModelFactory
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import com.mango.movies.BR
 
 abstract class BaseFragment<VDB: ViewDataBinding>(private val fragmentLayoutId: Int): Fragment() {
+
+    override fun getDefaultViewModelProviderFactory(): ViewModelProvider.Factory = SavedStateViewModelFactory(requireActivity().application, this, arguments ?: Bundle())
 
     protected abstract val LOG_TAG: String
     abstract val viewModel: ViewModel

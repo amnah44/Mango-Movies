@@ -1,5 +1,8 @@
 package com.mango.movies.model.repositiory
 
+import com.mango.movies.model.domain.person.details.PersonDetailsResponse
+import com.mango.movies.model.domain.person.popular.PersonPopularResponse
+import com.mango.movies.model.domain.person.popular.PersonPopularResult
 import com.mango.movies.model.domain.searchResponse.SearchResponse
 import com.mango.movies.model.network.API
 import com.mango.movies.util.Constant
@@ -37,10 +40,9 @@ object MovieRepository {
     fun popularMovies() = wrapWithFlow { API.apiService.getPopularMovies(Constant.api_key) }
     fun ratedMovies() = wrapWithFlow { API.apiService.getTopRatedMovies(Constant.api_key) }
     fun upcomingMovies() = wrapWithFlow { API.apiService.getUpcomingMovies(Constant.api_key) }
-    fun personDetails(personId: Int) =
-        wrapWithFlow { API.apiService.getPersonDetails(personId, Constant.api_key) }
 
-    fun personPopular() = wrapWithFlow { API.apiService.getPersonPopular(Constant.api_key) }
+
+
     fun tvShowDetails(tvId: Int) =
         wrapWithFlow { API.apiService.getTvShowDetails(tvId, Constant.api_key) }
 
@@ -48,8 +50,16 @@ object MovieRepository {
     fun topRatedTvShow() = wrapWithFlow { API.apiService.getTopRatedTvShow(Constant.api_key) }
 
 
-    fun searchMovie(query: String): Flow<State<SearchResponse?>>  =
+    fun searchMovie(query: String): Flow<State<SearchResponse?>> =
         wrapWithFlow { API.apiService.searchMovie(query, Constant.api_key) }
+
+    fun personPopular(): Flow<State<PersonPopularResponse?>> =
+        wrapWithFlow { API.apiService.getPersonPopular(Constant.api_key) }
+
+
+    fun personDetails(personId: Int): Flow<State<PersonDetailsResponse?>> =
+        wrapWithFlow { API.apiService.getPersonDetails(personId, Constant.api_key) }
+
 
     fun genres() = wrapWithFlow { API.apiService.getGenre(Constant.api_key) }
 }

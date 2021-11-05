@@ -4,7 +4,9 @@ package com.mango.movies.model.domain.person.popular
 import android.os.Parcel
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 data class KnownFor(
     @SerializedName("adult")
     val adult: Boolean?,
@@ -42,6 +44,6 @@ data class KnownFor(
     val voteAverage: Double?,
     @SerializedName("vote_count")
     val voteCount: Int?
-){
+):Parcelable {
     fun getImageUrl() = "https://image.tmdb.org/t/p/w500$posterPath"
 }
