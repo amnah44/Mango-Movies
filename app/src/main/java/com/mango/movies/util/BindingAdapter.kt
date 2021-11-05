@@ -71,7 +71,7 @@ fun setImageFromUrl(view: ImageView,url: String?){
 }
 
 @BindingAdapter(value = ["movieImageUrl"])
-fun setMovieImageFromUrl(view: ImageView,url: String){
+fun setMovieImageFromUrl(view: ImageView,url: String?){
     Glide.with(view)
         .load(Constant.BASE_MOVIE_URL + url)
         .placeholder(R.drawable.ic_place_holder)
