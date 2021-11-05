@@ -38,8 +38,9 @@ class PersonDetailsFragment :
         binding.apply {
             textActorName.text = args.personDetails.name
             view?.let { Glide.with(it).load(args.personDetails.getImageUrl()).into(imageActor) }
-            recyclerKnownFor.adapter = args.personDetails.knownFor?.let { KnownForAdapter(it,viewModel) }
-            Log.i(LOG_TAG,args.personDetails.knownFor.toString())
+            recyclerKnownFor.adapter =
+                args.personDetails.knownFor?.let { KnownForAdapter(it, viewModel) }
+            Log.i(LOG_TAG, args.personDetails.knownFor.toString())
         }
     }
 }
