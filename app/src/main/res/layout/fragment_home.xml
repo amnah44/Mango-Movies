@@ -30,7 +30,7 @@
             app:layout_constraintTop_toBottomOf="@+id/home_fragment" />
 
         <ImageView
-            android:id="@+id/search_view"
+            android:id="@+id/searchViewBtn"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginTop="@dimen/medium_margin"
@@ -40,7 +40,10 @@
             app:layout_constraintBottom_toBottomOf="@id/home_fragment"
             app:layout_constraintDimensionRatio="H,32:32"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            navigate="@{homeViewModel.action}"
+
+            />
 
         <TextView
             android:id="@+id/home_fragment"

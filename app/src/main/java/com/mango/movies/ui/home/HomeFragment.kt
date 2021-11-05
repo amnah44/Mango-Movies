@@ -21,15 +21,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
         binding.homeViewModel = viewModel
         binding.nowPlayingMovies.adapter = NowPlayingMovieAdapter(mutableListOf(), viewModel)
         binding.topRateMovie.adapter = TopRateMovieAdapter(mutableListOf(), viewModel)
-//        binding.categoryRecycler.adapter = HomeAdapter(mutableListOf(), viewModel)
-//
-//        viewModel.genreId.observe(viewLifecycleOwner){
-//            val action = HomeFragmentDirections.actionHomeFragmentToCategoryFragment4(requireNotNull(it.id))
-//            Navigation.findNavController(binding.categoryRecycler).navigate(action)
-//        }
-        binding.searchView.setOnClickListener { view ->
-            val action = HomeFragmentDirections.actionHomeFragmentToSearchFragment()
-            Navigation.findNavController(view).navigate(action)
-        }
     }
+
 }
