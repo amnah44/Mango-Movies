@@ -1,8 +1,12 @@
 package com.mango.movies.model.domain.movie.nowPlaying
 
 
+import android.annotation.SuppressLint
+import android.os.Parcel
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 
+@SuppressLint("ParcelCreator")
 data class MovieNowPlayingResult(
     @SerializedName("adult")
     val adult: Boolean?,
@@ -32,4 +36,14 @@ data class MovieNowPlayingResult(
     val voteAverage: Int?,
     @SerializedName("vote_count")
     val voteCount: Int?
-)
+): Parcelable {
+    fun getImageUrl() = "https://image.tmdb.org/t/p/w500$posterPath"
+
+    override fun describeContents(): Int {
+        TODO("Not yet implemented")
+    }
+
+    override fun writeToParcel(dest: Parcel?, flags: Int) {
+        TODO("Not yet implemented")
+    }
+}

@@ -79,19 +79,24 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:showOnError="@{homeViewModel.genres}" />
+            app:showOnError="@{homeViewModel.nowPlayingMovies}" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/now_playing_movies"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:orientation="horizontal"
+            app:items="@{homeViewModel.nowPlayingMovies.toData().movieResult}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintDimensionRatio="H,47:28"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            app:layout_constraintVertical_bias="0.0"
+            app:showOnSuccess="@{homeViewModel.nowPlayingMovies}"
+            tools:listitem="@layout/item_now_playing_movie" />
 
         <ProgressBar
             android:id="@+id/progress_load"
@@ -103,7 +108,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.616"
-            app:showOnLoading="@{homeViewModel.genres}" />
+            app:showOnLoading="@{homeViewModel.nowPlayingMovies}" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
