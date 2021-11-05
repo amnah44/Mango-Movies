@@ -7,6 +7,7 @@ import androidx.appcompat.widget.SearchView
 import androidx.databinding.BindingAdapter
 import androidx.navigation.NavDirections
 import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.mango.movies.R
@@ -81,9 +82,20 @@ fun setMovieImageFromUrl(view: ImageView,url: String?){
         .into(view)
 }
 
+
+@BindingAdapter(value = ["personImageUrl"])
+fun ImageView.setPersonImageFromUrl(url: String?){
+    Glide.with(this)
+        .load(Constant.BASE_PERSON_IMAGE_URL + url)
+        .placeholder(R.drawable.ic_place_holder)
+        .error(R.drawable.ic_error)
+        .into(this)
+}
+
 @BindingAdapter("navigate")
 fun View.navigate(action: NavDirections) {
     this.setOnClickListener {
         Navigation.findNavController(this).navigate(action)
     }
 }
+
