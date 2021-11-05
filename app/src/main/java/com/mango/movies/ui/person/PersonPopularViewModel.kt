@@ -36,11 +36,11 @@ class PersonPopularViewModel : ViewModel(),
         Log.v("Ali", person.toString())
         Log.v("Ali", person.name.toString())
 
-        viewModelScope.launch {
+//        viewModelScope.launch {
             personDetails.postValue(person)
-        }
-        val action = PersonFragmentDirections.actionPersonFragmentToPersonDetailsFragment(person)
-        Navigation.createNavigateOnClickListener(action)
+//        }
+//        val action = PersonFragmentDirections.actionPersonFragmentToPersonDetailsFragment(person)
+//        Navigation.createNavigateOnClickListener(action)
     }
 
 

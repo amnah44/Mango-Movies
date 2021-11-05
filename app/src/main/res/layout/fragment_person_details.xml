@@ -6,8 +6,9 @@
     <data>
 
         <variable
-            name="viewModel"
-            type="com.mango.movies.ui.person.PersonPopularViewModel" />
+            name="item"
+            type="com.mango.movies.model.domain.person.popular.PersonPopularResult" />
+
 
         <variable
             name="listener"
@@ -24,7 +25,7 @@
 
         <ImageView
             android:id="@+id/image_actor"
-            personImageUrl="@{viewModel.personDetails.profilePath}"
+            personImageUrl="@{item.profilePath}"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:scaleType="centerCrop"
@@ -62,7 +63,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/mplusrounded1c_bold"
-            android:text="@{viewModel.personDetails.name}"
+            android:text="@{item.name}"
             android:textColor="@color/white"
             android:textSize="@dimen/txt6"
             app:layout_constraintEnd_toEndOf="parent"
@@ -97,7 +98,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
             android:orientation="horizontal"
-            app:items="@{viewModel.personDetails.knownFor}"
+            app:items="@{item.knownFor}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

@@ -8,6 +8,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
 import com.mango.movies.R
 import com.mango.movies.databinding.FragmentPersonDetailsBinding
+import com.mango.movies.model.domain.person.popular.PersonPopularResult
 import com.mango.movies.ui.base.BaseFragment
 import com.mango.movies.ui.person.PersonPopularViewModel
 import com.mango.movies.util.Constant
@@ -20,8 +21,10 @@ class PersonDetailsFragment :
     override val bindingInflater: (LayoutInflater, Int, ViewGroup?, Boolean) -> FragmentPersonDetailsBinding =
         DataBindingUtil::inflate
 
-    private val args: PersonDetailsFragmentArgs by navArgs()
+    private val args: PersonDetailsFragmentArgs by navArgs() as PersonPopularResult
     override fun setupView() {
+
+        binding.item = args
         binding.returnArrow.setOnClickListener { view ->
             view.findNavController().popBackStack()
         }
