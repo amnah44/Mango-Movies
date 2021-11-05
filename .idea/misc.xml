@@ -45,7 +45,7 @@
         <entry key="..\:/Mango-Movies/app/src/main/res/drawable/shadow_details.xml" value="0.18981481481481483" />
         <entry key="..\:/Mango-Movies/app/src/main/res/layout/fragment_category.xml" value="0.20416666666666666" />
         <entry key="..\:/Mango-Movies/app/src/main/res/layout/fragment_details.xml" value="0.1" />
-        <entry key="..\:/Mango-Movies/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/layout/fragment_home.xml" value="0.13333333333333333" />
         <entry key="..\:/Mango-Movies/app/src/main/res/layout/fragment_person.xml" value="0.14722222222222223" />
         <entry key="..\:/Mango-Movies/app/src/main/res/layout/fragment_person_details.xml" value="0.1" />
         <entry key="..\:/Mango-Movies/app/src/main/res/layout/fragment_series.xml" value="0.20416666666666666" />
@@ -58,6 +58,7 @@
         <entry key="..\:/Mango-Movies/app/src/main/res/layout/item_people.xml" value="0.20416666666666666" />
         <entry key="..\:/Mango-Movies/app/src/main/res/layout/item_search.xml" value="0.15555555555555556" />
         <entry key="..\:/Mango-Movies/app/src/main/res/layout/item_show_more.xml" value="0.15555555555555556" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/layout/item_top_rate_movie.xml" value="0.1" />
         <entry key="..\:/Mango-Movies/app/src/main/res/menu/menu_bottom_navigation.xml" value="0.14722222222222223" />
         <entry key="..\:/Movies2/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
         <entry key="app/src/main/res/layout/activity_movie.xml" value="0.21331521739130435" />

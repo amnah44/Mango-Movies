@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="item"
+            type="com.mango.movies.model.domain.movie.topRated.MovieTopRatedResult" />
+        <variable
+            name="listener"
+            type="com.mango.movies.ui.home.HomeInteractionListener" />
+
+    </data>
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginStart="@dimen/large_margin"
+        >
+        <ImageView
+            android:id="@+id/now_playing_movies_poster"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            movieImageUrl="@{item.posterPath}"
+            app:layout_constraintDimensionRatio="H,62:83"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/test_deatil_movie" />
+    </androidx.cardview.widget.CardView>
+
+</layout>

@@ -20,6 +20,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
     override fun setupView() {
         binding.homeViewModel = viewModel
         binding.nowPlayingMovies.adapter = NowPlayingMovieAdapter(mutableListOf(), viewModel)
+        binding.topRateMovie.adapter = TopRateMovieAdapter(mutableListOf(), viewModel)
 //        binding.categoryRecycler.adapter = HomeAdapter(mutableListOf(), viewModel)
 //
 //        viewModel.genreId.observe(viewLifecycleOwner){

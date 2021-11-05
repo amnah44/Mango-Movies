@@ -12,7 +12,12 @@ class HomeViewModel() : ViewModel(), HomeInteractionListener {
 //    val genreId = MutableLiveData<Genre>()
 
     val nowPlayingMovies = MovieRepository.nowPlayingMovies().asLiveData()
+    val topRateMovies = MovieRepository.ratedMovies().asLiveData()
     override fun onClickMovie(movieNowPlayingResult: MovieNowPlayingResult) {
+        TODO("Not yet implemented")
+    }
+
+    override fun onTopRateClick(movieTopRate: MovieTopRatedResult) {
         TODO("Not yet implemented")
     }
 
