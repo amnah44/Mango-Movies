@@ -24,14 +24,4 @@ data class PersonPopularResult(
     val popularity: Double?,
     @SerializedName("profile_path")
     val profilePath: String?
-): Parcelable {
-    fun getImageUrl() = "https://image.tmdb.org/t/p/w500$profilePath"
-
-    override fun describeContents(): Int {
-        TODO("Not yet implemented")
-    }
-
-    override fun writeToParcel(dest: Parcel?, flags: Int) {
-        TODO("Not yet implemented")
-    }
-}
+)
