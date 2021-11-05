@@ -2,15 +2,14 @@ package com.mango.movies.ui.home
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
+import androidx.navigation.NavDirections
 import com.mango.movies.model.domain.movie.nowPlaying.MovieNowPlayingResult
 import com.mango.movies.model.domain.movie.topRated.MovieTopRatedResult
 import com.mango.movies.model.repositiory.MovieRepository
 
-class HomeViewModel() : ViewModel(), HomeInteractionListener {
-//    private val repository = MovieRepository
-//    val genres = MovieRepository.genres().asLiveData()
-//    val genreId = MutableLiveData<Genre>()
+class HomeViewModel: ViewModel(), HomeInteractionListener {
 
+    val action : NavDirections get() = HomeFragmentDirections.actionHomeFragmentToSearchFragment()
     val nowPlayingMovies = MovieRepository.nowPlayingMovies().asLiveData()
     val topRateMovies = MovieRepository.ratedMovies().asLiveData()
     override fun onClickMovie(movieNowPlayingResult: MovieNowPlayingResult) {
@@ -20,11 +19,5 @@ class HomeViewModel() : ViewModel(), HomeInteractionListener {
     override fun onTopRateClick(movieTopRate: MovieTopRatedResult) {
         TODO("Not yet implemented")
     }
-
-
-//    override fun onClickCategory(genre: Genre) {
-////        genreId.postValue(genre)
-//    }
-
 
 }
