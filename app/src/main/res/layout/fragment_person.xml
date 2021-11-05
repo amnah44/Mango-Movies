@@ -5,7 +5,7 @@
 
     <data>
         <variable
-            name="personViewModel"
+            name="viewModel"
             type="com.mango.movies.ui.person.PersonPopularViewModel" />
     </data>
 
@@ -17,17 +17,19 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/person_recycler_view"
-            app:items="@{personViewModel.person.toData().movieResult}"
+            app:items="@{viewModel.persons.toData().peoplePopularResults}"
             android:layout_width="0dp"
             android:layout_height="0dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             android:orientation="vertical"
-            app:showOnSuccess="@{personViewModel.person}"
+            app:showOnSuccess="@{viewModel.persons}"
             android:layout_marginTop="@dimen/medium_margin"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            tools:listitem="@layout/item_people"
+            />
 
         <TextView
             android:id="@+id/textView2"
@@ -47,7 +49,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:background="@color/red"
-            app:showOnError="@{personViewModel.person}"
+            app:showOnError="@{viewModel.persons}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -59,7 +61,7 @@
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:showOnLoading="@{personViewModel.person}"
+            app:showOnLoading="@{viewModel.persons}"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
