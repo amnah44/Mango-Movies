@@ -63,32 +63,21 @@
                     app:layout_constraintTop_toTopOf="@+id/actorImg"
                     tools:text="Tom Hardy" />
 
-                <TextView
-                    android:id="@+id/seriesNo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/inika_regular"
-                    android:textColor="@color/gray"
-                    android:textSize="@dimen/txt3"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.65"
-                    app:layout_constraintStart_toEndOf="@+id/actorImg"
-                    app:layout_constraintTop_toTopOf="@+id/moviesNo"
-                    tools:text="Series:24" />
-
-                <TextView
-                    android:id="@+id/moviesNo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/medium_margin"
-                    android:fontFamily="@font/inika_regular"
-                    android:textColor="@color/gray"
-                    android:textSize="@dimen/txt3"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.35"
-                    app:layout_constraintStart_toEndOf="@+id/actorImg"
-                    app:layout_constraintTop_toBottomOf="@+id/actorName"
-                    tools:text="Movies:24" />
+                <antonkozyriatskyi.circularprogressindicator.CircularProgressIndicator
+                    android:id="@+id/person_rating_progress"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="@dimen/small_margin"
+                    android:scrollbarSize="16dp"
+                    app:indicatorSize="5dp"
+                    app:dotColor="@color/red"
+                    android:value="50dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/actorName"
+                    app:layout_constraintHorizontal_bias="0.523"
+                    app:layout_constraintStart_toStartOf="@+id/actorName"
+                    app:textColor="@color/orange"
+                    app:textSize="@dimen/txt3" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

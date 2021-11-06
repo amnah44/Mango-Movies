@@ -2,6 +2,7 @@ package com.mango.movies.ui.person
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.os.persistableBundleOf
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
 import com.mango.movies.R
