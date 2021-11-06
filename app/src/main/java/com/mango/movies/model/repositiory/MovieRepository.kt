@@ -35,7 +35,7 @@ object MovieRepository {
     fun movieDetails(movieId: Int) =
         wrapWithFlow { API.apiService.getMovieDetails(movieId, Constant.api_key) }
 
-    fun latestMovies() = wrapWithFlow { API.apiService.getLatestMovies(Constant.api_key) }
+    fun latestMovies() = wrapWithFlow { API.apiService.getLatestMovies(Constant.api_key,"en-US") }
     fun nowPlayingMovies() = wrapWithFlow { API.apiService.getNowPlayingMovies(Constant.api_key) }
     fun popularMovies() = wrapWithFlow { API.apiService.getPopularMovies(Constant.api_key) }
     fun ratedMovies() = wrapWithFlow { API.apiService.getTopRatedMovies(Constant.api_key) }

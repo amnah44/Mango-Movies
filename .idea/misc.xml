@@ -25,10 +25,11 @@
         <entry key="..\:/Mango-Movies/app/src/main/res/layout/item_details.xml" value="0.20416666666666666" />
         <entry key="..\:/Mango-Movies/app/src/main/res/layout/item_favourite.xml" value="0.1" />
         <entry key="..\:/Mango-Movies/app/src/main/res/layout/item_genre.xml" value="0.33" />
-        <entry key="..\:/Mango-Movies/app/src/main/res/layout/item_now_playing_movie.xml" value="0.20416666666666666" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/layout/item_now_playing_movie.xml" value="0.1" />
         <entry key="..\:/Mango-Movies/app/src/main/res/layout/item_people.xml" value="0.20416666666666666" />
         <entry key="..\:/Mango-Movies/app/src/main/res/layout/item_search.xml" value="0.14" />
         <entry key="..\:/Mango-Movies/app/src/main/res/layout/item_show_more.xml" value="0.1" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/layout/item_top_rate_movie.xml" value="0.1" />
         <entry key="..\:/Mango-Movies/app/src/main/res/menu/menu_bottom_navigation.xml" value="0.20416666666666666" />
         <entry key="..\:/Movies2/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.27685185185185185" />

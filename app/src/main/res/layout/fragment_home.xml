@@ -107,14 +107,14 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:showOnError="@{homeViewModel.nowPlayingMovies}" />
+            app:showOnError="@{homeViewModel.upComingMovie}" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/now_playing_movies"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:orientation="horizontal"
-            app:items="@{homeViewModel.nowPlayingMovies.toData().movieResult}"
+            app:items="@{homeViewModel.upComingMovie.toData().movieResult}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintDimensionRatio="H,47F:28"
@@ -123,8 +123,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView4"
             app:layout_constraintVertical_bias="0.0"
-            app:layout_constraintWidth_percent="0.20"
-            app:showOnSuccess="@{homeViewModel.nowPlayingMovies}"
+            app:showOnSuccess="@{homeViewModel.upComingMovie}"
             tools:listitem="@layout/item_now_playing_movie" />
 
         <androidx.recyclerview.widget.RecyclerView
@@ -152,7 +151,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.616"
-            app:showOnLoading="@{homeViewModel.nowPlayingMovies}" />
+            app:showOnLoading="@{homeViewModel.upComingMovie}" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

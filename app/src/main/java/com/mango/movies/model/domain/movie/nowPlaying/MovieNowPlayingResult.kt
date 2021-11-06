@@ -3,7 +3,6 @@ package com.mango.movies.model.domain.movie.nowPlaying
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 import com.google.gson.annotations.SerializedName
-import com.mango.movies.util.Constant
 
 @Parcelize
 data class MovieNowPlayingResult(
