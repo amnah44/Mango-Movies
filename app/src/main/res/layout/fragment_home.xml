@@ -124,7 +124,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView4"
             app:layout_constraintVertical_bias="0.0"
             app:showOnSuccess="@{homeViewModel.upComingMovie}"
-            tools:listitem="@layout/item_now_playing_movie" />
+            tools:listitem="@layout/item_up_coming_movie" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/top_rate_movie"
@@ -139,7 +139,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView3"
             app:showOnSuccess="@{homeViewModel.topRateMovies}"
-            tools:listitem="@layout/item_now_playing_movie" />
+            tools:listitem="@layout/item_up_coming_movie" />
 
         <ProgressBar
             android:id="@+id/progress_load"
