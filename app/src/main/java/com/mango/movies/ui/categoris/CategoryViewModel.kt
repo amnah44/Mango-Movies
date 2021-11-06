@@ -10,7 +10,6 @@ class CategoryViewModel() : ViewModel() {
     var requiredGenre: Genre?=null
     var flag=true
     val  genreMovieList= MutableLiveData<State<MovieAndTvByGenreResponse?>>()
-
     init {
         requiredGenre=Genre(28,"action")
     }
