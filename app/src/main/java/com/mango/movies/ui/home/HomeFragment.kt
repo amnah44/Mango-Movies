@@ -1,11 +1,9 @@
 package com.mango.movies.ui.home
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
-import androidx.navigation.Navigation
 import com.mango.movies.R
 import com.mango.movies.databinding.FragmentHomeBinding
 import com.mango.movies.ui.base.BaseFragment

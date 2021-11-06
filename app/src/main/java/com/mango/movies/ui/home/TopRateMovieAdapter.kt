@@ -4,7 +4,6 @@ import com.mango.movies.R
 import com.mango.movies.model.domain.movie.topRated.MovieTopRatedResult
 import com.mango.movies.ui.base.BaseAdapter
 
-
 class TopRateMovieAdapter(
     item: List<MovieTopRatedResult>,
     listener: HomeInteractionListener

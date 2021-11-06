@@ -7,9 +7,8 @@ import com.mango.movies.model.domain.movie.nowPlaying.MovieNowPlayingResult
 import com.mango.movies.model.domain.movie.topRated.MovieTopRatedResult
 import com.mango.movies.model.repositiory.MovieRepository
 
-class HomeViewModel: ViewModel(), HomeInteractionListener {
-
-    val action : NavDirections get() = HomeFragmentDirections.actionHomeFragmentToSearchFragment()
+class HomeViewModel : ViewModel(), HomeInteractionListener {
+    val action: NavDirections get() = HomeFragmentDirections.actionHomeFragmentToSearchFragment()
     val nowPlayingMovies = MovieRepository.nowPlayingMovies().asLiveData()
     val topRateMovies = MovieRepository.ratedMovies().asLiveData()
 

@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
             name="homeViewModel"
             type="com.mango.movies.ui.home.HomeViewModel" />
@@ -31,6 +30,7 @@
 
         <ImageView
             android:id="@+id/searchViewBtn"
+            navigate="@{homeViewModel.action}"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginTop="@dimen/medium_margin"
@@ -41,7 +41,6 @@
             app:layout_constraintDimensionRatio="H,32:32"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            navigate="@{homeViewModel.action}"
 
             />
 
@@ -79,10 +78,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="260dp"
             android:layout_marginEnd="@dimen/medium_margin"
+            android:fontFamily="@font/mplusrounded1c_bold"
             android:text="Show More"
             android:textColor="@color/grayDark"
             android:textSize="@dimen/txt2"
-            android:fontFamily="@font/mplusrounded1c_bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
@@ -115,16 +114,16 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:orientation="horizontal"
-            app:layout_constraintWidth_percent="0.20"
             app:items="@{homeViewModel.nowPlayingMovies.toData().movieResult}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintDimensionRatio="H,47:28"
+            app:layout_constraintDimensionRatio="H,47F:28"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView4"
             app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintWidth_percent="0.20"
             app:showOnSuccess="@{homeViewModel.nowPlayingMovies}"
             tools:listitem="@layout/item_now_playing_movie" />
 
