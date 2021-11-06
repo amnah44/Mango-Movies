@@ -16,6 +16,19 @@
         android:background="@color/app_color"
         tools:context=".ui.categoris.CategoryFragment">
 
+        <TextView
+        android:id="@+id/genre_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/medium_margin"
+        android:fontFamily="@font/mplusrounded1c_bold"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Category Name"
+        android:text="@{viewModel.requiredGenre.name}"/>
 
         <androidx.appcompat.widget.SwitchCompat
             android:id="@+id/switch1"
@@ -75,18 +88,6 @@
             app:layout_constraintTop_toBottomOf="@+id/switch1"
             tools:listitem="@layout/item_category" />
 
-        <TextView
-            android:id="@+id/genre_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/medium_margin"
-            android:fontFamily="@font/mplusrounded1c_bold"
-            android:text="@string/category_name"
-            android:textColor="@color/white"
-            android:textSize="@dimen/txt4"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
