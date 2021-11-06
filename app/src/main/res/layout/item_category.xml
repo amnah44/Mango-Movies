@@ -36,7 +36,7 @@
 
                 <com.google.android.material.imageview.ShapeableImageView
 
-                    android:id="@+id/movie_image"
+                    android:id="@+id/image_movie"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_marginStart="@dimen/medium_margin"
@@ -62,8 +62,8 @@
                     android:textColor="@color/grayDark"
                     android:textSize="@dimen/txt2"
                     android:text="@{item.title  + item.release_date}"
-                    app:layout_constraintBottom_toBottomOf="@+id/movie_image"
-                    app:layout_constraintStart_toEndOf="@+id/movie_image"
+                    app:layout_constraintBottom_toBottomOf="@+id/image_movie"
+                    app:layout_constraintStart_toEndOf="@+id/image_movie"
                     tools:text="Text,text" />
 
                 <RatingBar
@@ -95,7 +95,7 @@
                     android:textSize="@dimen/txt3"
                     android:text="@{item.title}"
                     app:layout_constraintStart_toStartOf="@+id/text_release_date"
-                    app:layout_constraintTop_toTopOf="@+id/text_release_date"
+                    app:layout_constraintTop_toTopOf="@+id/image_movie"
                     tools:text="Chucky" />
 
 
