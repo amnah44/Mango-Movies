@@ -3,6 +3,7 @@ package com.mango.movies.ui.categoris
 import com.mango.movies.R
 import com.mango.movies.ui.base.BaseAdapter
 import com.mango.movies.ui.base.BaseInteractionListener
+import com.mango.movies.model.domain.category.Result
 
 class CategoryAdapter(
     item:List<Result>,
