@@ -27,36 +27,81 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_arrow_back"/>
-        <com.google.android.material.chip.Chip
-            app:chipBackgroundColor="@color/dark_color"
-            android:id="@+id/text_series"
-            android:onClick="@{() -> viewModel.changeMovieOrSeries()}"
-            android:layout_marginRight="128dp"
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_series"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_width="@dimen/chip_width"
-            android:layout_height="@dimen/chip_height"
-            android:textAlignment="center"
-            android:fontFamily="@font/mplusrounded1c_bold"
-            android:textColor="@color/white"
-            android:textSize="@dimen/txt5"
-            android:layout_marginTop="48dp"
-            android:text="@string/series"
-            app:layout_constraintStart_toStartOf="parent" />
-        <com.google.android.material.chip.Chip
-            app:chipBackgroundColor="@color/dark_color"
-            android:id="@+id/text_movies"
-            android:layout_width="@dimen/chip_width"
-            android:layout_height="@dimen/chip_height"
-            android:layout_marginLeft="32dp"
-            android:textAlignment="center"
-            android:fontFamily="@font/mplusrounded1c_bold"
-            android:textColor="@color/white"
-            android:textSize="@dimen/txt5"
-            android:text="@string/movies"
-            android:onClick="@{() -> viewModel.changeMovieOrSeries()}"
-            app:layout_constraintBottom_toBottomOf="@+id/text_series"
-            app:layout_constraintStart_toEndOf="@+id/text_series"
-            app:layout_constraintTop_toTopOf="@+id/text_series" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="128dp"
+            android:layout_height="wrap_content"
+            app:contentPaddingLeft="10dp"
+            app:contentPaddingRight="10dp"
+            app:contentPaddingTop="8dp"
+            app:contentPaddingBottom="8dp"
+            android:layout_marginStart="@dimen/small_margin"
+            android:layout_marginEnd="128dp"
+            android:layout_marginTop="8dp"
+            app:cardBackgroundColor="@color/dark_color"
+            app:cardCornerRadius="32dp">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/text_series"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mplusrounded1c_bold"
+                android:lines="1"
+                android:onClick="@{() -> viewModel.changeMovieOrSeries()}"
+                android:text="@string/series"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_movie"
+            app:layout_constraintStart_toEndOf="@id/card_series"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/card_series"
+            android:layout_width="128dp"
+            android:layout_height="wrap_content"
+            app:contentPaddingLeft="10dp"
+            app:contentPaddingRight="10dp"
+            app:contentPaddingTop="8dp"
+            app:contentPaddingBottom="8dp"
+            android:layout_marginStart="@dimen/small_margin"
+            app:cardBackgroundColor="@color/dark_color"
+            app:cardCornerRadius="32dp">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/text_movies"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mplusrounded1c_bold"
+                    android:lines="1"
+                    android:onClick="@{() -> viewModel.changeMovieOrSeries()}"
+                    android:text="@string/movies"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt5"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_movies"
