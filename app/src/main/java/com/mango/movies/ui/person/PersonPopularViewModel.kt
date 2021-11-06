@@ -32,15 +32,7 @@ class PersonPopularViewModel : ViewModel(),
     val persons = MovieRepository.personPopular().asLiveData()
     val personDetails = MutableLiveData<PersonPopularResult?>()
     override fun onClickPerson(person: PersonPopularResult) {
-        Log.v("Ali", "onClickPerson")
-        Log.v("Ali", person.toString())
-        Log.v("Ali", person.name.toString())
-
-//        viewModelScope.launch {
-            personDetails.postValue(person)
-//        }
-//        val action = PersonFragmentDirections.actionPersonFragmentToPersonDetailsFragment(person)
-//        Navigation.createNavigateOnClickListener(action)
+        personDetails.postValue(person)
     }
 
 

@@ -17,13 +17,8 @@ class PersonFragment : BaseFragment<FragmentPersonBinding>(R.layout.fragment_per
     override val bindingInflater: (LayoutInflater, Int, ViewGroup?, Boolean) -> FragmentPersonBinding =
         DataBindingUtil::inflate
 
-
-
-
     override fun setupView() {
-        binding.viewModel = viewModel
         binding.personRecyclerView.adapter = PersonAdapter(mutableListOf(), viewModel)
-
         viewModel.personDetails.observe(viewLifecycleOwner) {
             if(it!=null){
                 val nav = PersonFragmentDirections.actionPersonFragmentToPersonDetailsFragment(it)
@@ -31,7 +26,6 @@ class PersonFragment : BaseFragment<FragmentPersonBinding>(R.layout.fragment_per
             }
         }
     }
-
 
     override fun onStop() {
         super.onStop()
