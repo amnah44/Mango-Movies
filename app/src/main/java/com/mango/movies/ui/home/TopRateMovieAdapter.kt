@@ -9,4 +9,5 @@ class TopRateMovieAdapter(
     listener: HomeInteractionListener
 ) : BaseAdapter<MovieTopRatedResult>(item, listener) {
     override val layoutId: Int = R.layout.item_top_rate_movie
+    override fun getItemCount(): Int = 8
 }
