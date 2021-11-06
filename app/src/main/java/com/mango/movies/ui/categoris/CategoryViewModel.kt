@@ -10,7 +10,7 @@ import com.mango.movies.util.State
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
-class CategoryViewModel() : ViewModel() {
+class CategoryViewModel() : ViewModel(),CategoryInteractionListener {
     var requiredGenre: Genre?=null
     var flag=true
     val  genreMovieList= MutableLiveData<State<MovieAndTvByGenreResponse?>>()
@@ -29,6 +29,10 @@ class CategoryViewModel() : ViewModel() {
     fun changeMovieOrSeries(){
         flag=flag?.not()
         getMovie()
+    }
+
+    override fun onClickItem() {
+        TODO("Not yet implemented")
     }
 
 }

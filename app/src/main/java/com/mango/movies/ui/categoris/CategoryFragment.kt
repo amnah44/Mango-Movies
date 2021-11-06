@@ -17,7 +17,8 @@ class CategoryFragment : BaseFragment<FragmentCategoryBinding>(R.layout.fragment
         DataBindingUtil::inflate
 
     override fun setupView() {
-
+        binding.viewModel=viewModel
+        binding.recyclerMovies.adapter=CategoryAdapter(mutableListOf(), viewModel)
     }
 
 }

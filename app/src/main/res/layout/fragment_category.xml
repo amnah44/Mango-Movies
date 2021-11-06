@@ -16,33 +16,21 @@
         android:background="@color/app_color"
         tools:context=".ui.categoris.CategoryFragment">
 
-        <TextView
-        android:id="@+id/text_genre_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/medium_margin"
-        android:fontFamily="@font/mplusrounded1c_bold"
-        android:textColor="@color/white"
-        android:textSize="@dimen/txt6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="Category Name"
-        android:text="@{viewModel.requiredGenre.name}"/>
+
 
         <ImageView
             android:id="@+id/image_back"
             android:layout_width="24dp"
             android:layout_height="24dp"
+            android:layout_margin="@dimen/medium_margin"
             android:layout_marginStart="@dimen/medium_margin"
-            app:layout_constraintBottom_toBottomOf="@+id/text_genre_name"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/text_genre_name"
+            app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_arrow_back"/>
         <com.google.android.material.chip.Chip
             app:chipBackgroundColor="@color/dark_color"
             android:id="@+id/text_series"
-            android:onClick="@{}"
+            android:onClick="@{() -> viewModel.changeMovieOrSeries()}"
             android:layout_marginRight="128dp"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_width="@dimen/chip_width"
@@ -53,8 +41,7 @@
             android:textSize="@dimen/txt5"
             android:layout_marginTop="48dp"
             android:text="@string/series"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text_genre_name" />
+            app:layout_constraintStart_toStartOf="parent" />
         <com.google.android.material.chip.Chip
             app:chipBackgroundColor="@color/dark_color"
             android:id="@+id/text_movies"
@@ -66,7 +53,7 @@
             android:textColor="@color/white"
             android:textSize="@dimen/txt5"
             android:text="@string/movies"
-            android:onClick="@{}"
+            android:onClick="@{() -> viewModel.changeMovieOrSeries()}"
             app:layout_constraintBottom_toBottomOf="@+id/text_series"
             app:layout_constraintStart_toEndOf="@+id/text_series"
             app:layout_constraintTop_toTopOf="@+id/text_series" />
