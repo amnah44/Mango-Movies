@@ -67,7 +67,7 @@
                     tools:text="Text,text" />
 
                 <RatingBar
-                    android:id="@+id/ratingBar"
+                    android:id="@+id/rating_progressBar"
                     style="@android:style/Widget.Holo.Light.RatingBar.Indicator"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
@@ -75,6 +75,7 @@
                     android:isIndicator="true"
                     android:max="5"
                     android:numStars="5"
+                    android:rating="@{Float.valueOf(String.valueOf(item.vote_average/2))}"
                     android:progressTint="@color/orangeLight"
                     android:scaleX="0.7"
                     android:scaleY="0.7"
@@ -91,9 +92,9 @@
                     android:layout_marginTop="@dimen/small_margin"
                     android:fontFamily="@font/mplusrounded1c_bold"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/txt6"
-                    app:layout_constraintStart_toStartOf="@+id/movieCategory"
-                    app:layout_constraintTop_toTopOf="@+id/movieImg"
+                    android:textSize="@dimen/txt3"
+                    app:layout_constraintStart_toStartOf="@+id/text_release_date"
+                    app:layout_constraintTop_toTopOf="@+id/text_release_date"
                     tools:text="Chucky" />
 
 
