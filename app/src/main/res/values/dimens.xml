@@ -14,6 +14,8 @@
 
     <dimen name="category_card_corner_radius">16dp</dimen>
     <dimen name="small_padding">8dp</dimen>
+    <dimen name="chip_width">100dp</dimen>
+    <dimen name="chip_height">64dp</dimen>
 
 
 </resources>

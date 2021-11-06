@@ -30,63 +30,36 @@
         tools:text="Category Name"
         android:text="@{viewModel.requiredGenre.name}"/>
 
-        <androidx.appcompat.widget.SwitchCompat
-            android:id="@+id/switch1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:fontFamily="@font/mplusrounded1c_bold"
-            android:switchMinWidth="66dp"
-            android:textColor="@color/grayDark"
-            android:textOff="@string/series"
-            android:textOn="@string/movies"
-            android:textSize="@dimen/txt5"
-            android:textStyle="bold"
-            android:trackTint="@color/orangeLight"
-            app:layout_constraintStart_toStartOf="@+id/genre_name"
-            app:layout_constraintTop_toBottomOf="@+id/genre_name"
-            app:splitTrack="false"
-            app:thumbTint="@color/white"
-            tools:checked="true"
-            tools:text="@string/series" />
-
-        <TextView
-            android:id="@+id/movie_or_series_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+        <ImageView
+            android:id="@+id/image_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="@dimen/medium_margin"
+            app:layout_constraintBottom_toBottomOf="@+id/text_genre_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/text_genre_name"
+            app:srcCompat="@drawable/ic_arrow_back"/>
+        <com.google.android.material.chip.Chip
+            app:chipBackgroundColor="@color/dark_color"
+            android:id="@+id/text_series"
+            android:onClick="@{}"
+            android:layout_marginRight="128dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="@dimen/chip_width"
+            android:layout_height="@dimen/chip_height"
+            android:textAlignment="center"
             android:fontFamily="@font/mplusrounded1c_bold"
             android:textColor="@color/white"
             android:textSize="@dimen/txt5"
-            app:layout_constraintBottom_toBottomOf="@+id/switch1"
-            app:layout_constraintEnd_toEndOf="@+id/genre_name"
-            app:layout_constraintStart_toEndOf="@+id/switch1"
-            app:layout_constraintTop_toTopOf="@+id/switch1"
-            tools:text="@string/movies" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_movies"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="32dp"
-            android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="48dp"
+            android:text="@string/series"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/switch1"
-            tools:listitem="@layout/item_category" />
+            app:layout_constraintTop_toBottomOf="@id/text_genre_name" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_series"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="32dp"
-            android:visibility="gone"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/switch1"
-            tools:listitem="@layout/item_category" />
+
+
+
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
