@@ -39,6 +39,6 @@ class PersonFragment : BaseFragment<FragmentPersonBinding>(R.layout.fragment_per
 
     override fun onStop() {
         super.onStop()
-//        viewModel.personDetails.value = null
+        viewModel.personDetails.value = null
     }
 }

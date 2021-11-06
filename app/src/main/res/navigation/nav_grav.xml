@@ -27,7 +27,7 @@
     <fragment
         android:id="@+id/personFragment"
         android:name="com.mango.movies.ui.person.PersonFragment"
-        android:label="PeopleFragment"
+        android:label="PersonFragment"
         tools:layout="@layout/fragment_person">
         <action
             android:id="@+id/action_personFragment_to_personDetailsFragment"
@@ -79,6 +79,7 @@
         android:name="com.mango.movies.ui.MovieActivity"
         android:label="MovieActivity"
         tools:layout="@layout/activity_movie" />
+
     <fragment
         android:id="@+id/personDetailsFragment"
         android:name="com.mango.movies.ui.person.details.PersonDetailsFragment"
