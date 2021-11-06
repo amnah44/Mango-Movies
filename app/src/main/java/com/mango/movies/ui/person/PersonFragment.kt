@@ -22,8 +22,11 @@ class PersonFragment : BaseFragment<FragmentPersonBinding>(R.layout.fragment_per
 
 
     override fun setupView() {
-        binding.viewModel = viewModel
-        binding.personRecyclerView.adapter = PersonAdapter(mutableListOf(), viewModel)
+        binding.apply {
+            viewModel = viewModel
+            personRecyclerView.adapter = PersonAdapter(mutableListOf(), viewModel)
+        }
+
 
         viewModel.personDetails.observe(viewLifecycleOwner) {
             if(it!=null){
