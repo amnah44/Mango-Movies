@@ -7,6 +7,9 @@
         <variable
         name="item"
         type="com.mango.movies.model.domain.category.Result"/>
+        <variable
+            name="listener"
+            type="com.mango.movies.ui.categoris.CategoryInteractionListener" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
