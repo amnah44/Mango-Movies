@@ -33,6 +33,7 @@
             android:id="@+id/action_personFragment_to_personDetailsFragment"
             app:destination="@id/personDetailsFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.mango.movies.ui.settings.SettingsFragment"
@@ -44,10 +45,12 @@
         android:name="com.mango.movies.ui.search.SearchFragment"
         android:label="SettingsFragment"
         tools:layout="@layout/fragment_search">
+
         <action
             android:id="@+id/action_searchFragment_to_detailsFragment"
             app:destination="@id/detailsFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/categoryFragment"
         android:name="com.mango.movies.ui.categoris.CategoryFragment"
@@ -60,11 +63,8 @@
             android:id="@+id/action_categoryFragment_to_detailsFragment"
             app:destination="@id/detailsFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/detailsFragment"
-        android:name="com.mango.movies.ui.details.DetailsFragment"
-        android:label="DetailsFragment"
-        tools:layout="@layout/fragment_details" />
+
+
     <fragment
         android:id="@+id/showMoreFragment"
         android:name="com.mango.movies.ui.showmore.ShowMoreFragment"
@@ -91,4 +91,13 @@
             app:argType="com.mango.movies.model.domain.person.popular.PersonPopularResult" />
     </fragment>
 
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.mango.movies.ui.details.DetailsFragment"
+        android:label="DetailsFragment"
+        tools:layout="@layout/fragment_details">
+        <argument
+            android:name="selectedMovie"
+            app:argType="com.mango.movies.model.domain.searchResponse.Result" />
+    </fragment>
 </navigation>

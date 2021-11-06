@@ -31,6 +31,7 @@ class PersonPopularViewModel : ViewModel(),
     PersonInteractionListener, KnownForInteractionListener {
     val persons = MovieRepository.personPopular().asLiveData()
     val personDetails = MutableLiveData<PersonPopularResult?>()
+
     override fun onClickPerson(person: PersonPopularResult) {
         personDetails.postValue(person)
     }

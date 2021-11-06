@@ -10,6 +10,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.mango.movies.R
 import com.mango.movies.ui.base.BaseAdapter
+import android.widget.RatingBar
+
+
+
 
 
 @BindingAdapter(value = ["app:showOnLoading"])
@@ -69,3 +73,10 @@ fun View.navigate(action: NavDirections) {
     }
 }
 
+@BindingAdapter("android:rating")
+fun setRating(view: RatingBar?, rating: String) {
+    if (view != null) {
+        val rate = rating.toFloat()
+        view.rating = rate
+    }
+}
