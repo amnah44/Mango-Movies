@@ -25,4 +25,9 @@ class CategoryViewModel() : ViewModel() {
         }
     }
 
+    fun changeMovieOrSeries(){
+        flag=flag?.not()
+        getMovie()
+    }
+
 }
