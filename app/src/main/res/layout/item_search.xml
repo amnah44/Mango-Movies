@@ -49,7 +49,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintWidth_percent="0.2"
                     app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize15Percent"
-                    movieImageUrl="@{item.posterPath}"
+                    imageUrl="@{item.posterPath}"
 
                     />
 

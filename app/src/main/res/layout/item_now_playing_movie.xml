@@ -23,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:scaleType="fitXY"
-            movieImageUrl="@{item.posterPath}"
+            imageUrl="@{item.posterPath}"
             app:layout_constraintDimensionRatio="H,62:83"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

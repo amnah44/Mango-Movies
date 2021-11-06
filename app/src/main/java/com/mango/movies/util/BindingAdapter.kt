@@ -2,17 +2,14 @@ package com.mango.movies.util
 
 import android.view.View
 import android.widget.ImageView
-import android.widget.TextView
 import androidx.appcompat.widget.SearchView
 import androidx.databinding.BindingAdapter
 import androidx.navigation.NavDirections
 import androidx.navigation.Navigation
-import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.mango.movies.R
 import com.mango.movies.ui.base.BaseAdapter
-import java.time.LocalDate
 
 
 @BindingAdapter(value = ["app:showOnLoading"])
@@ -48,18 +45,6 @@ fun <T> setRecyclerItems(view: RecyclerView, items: List<T>?) {
     }
 }
 
-@BindingAdapter(value = ["setFormattedDate"])
-fun getYearFromDateString(view: TextView, dateStr: String? = "2021-11-01") {
-    val date = LocalDate.parse(dateStr)
-    view.text = date.year.toString()
-}
-
-@BindingAdapter("query")
-fun setQuery(searchView: SearchView, queryText: String?) {
-    searchView.setQuery(queryText, false)
-}
-
-
 @BindingAdapter("queryTextListener")
 fun setOnQueryTextListener(
     searchView: SearchView,
@@ -69,22 +54,7 @@ fun setOnQueryTextListener(
 }
 
 @BindingAdapter(value = ["imageUrl"])
-fun setImageFromUrl(view: ImageView,url: String?){
-    Glide.with(view).load(url).into(view)
-}
-
-@BindingAdapter(value = ["movieImageUrl"])
-fun setMovieImageFromUrl(view: ImageView,url: String?){
-    Glide.with(view)
-        .load(Constant.BASE_MOVIE_URL + url)
-        .placeholder(R.drawable.ic_place_holder)
-        .error(R.drawable.ic_error)
-        .into(view)
-}
-
-
-@BindingAdapter(value = ["personImageUrl"])
-fun ImageView.setPersonImageFromUrl(url: String?){
+fun ImageView.seImageFromUrl(url: String?) {
     Glide.with(this)
         .load(Constant.BASE_PERSON_IMAGE_URL + url)
         .placeholder(R.drawable.ic_place_holder)
