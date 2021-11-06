@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
             name="item"
             type="com.mango.movies.model.domain.person.popular.PersonPopularResult" />
@@ -14,6 +13,9 @@
             name="listener"
             type="com.mango.movies.ui.person.details.KnownForInteractionListener" />
 
+        <variable
+            name="viewModel"
+            type="com.mango.movies.ui.person.PersonPopularViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -110,6 +112,7 @@
             android:id="@+id/recycler_progress_bar"
             android:layout_width="80dp"
             android:layout_height="80dp"
+            app:showOnLoading="@{viewModel.persons}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/image_actor"
             app:layout_constraintHorizontal_bias="0.498"

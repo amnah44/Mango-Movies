@@ -26,8 +26,8 @@ class PersonDetailsFragment :
         DataBindingUtil::inflate
 
     private val args: PersonDetailsFragmentArgs by navArgs()
-    override fun setupView() {
 
+    override fun setupView() {
         binding.item = args.personDetails
         binding.returnArrow.setOnClickListener { view ->
             view.findNavController().popBackStack()
