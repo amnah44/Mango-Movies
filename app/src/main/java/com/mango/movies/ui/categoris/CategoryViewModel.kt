@@ -16,6 +16,7 @@ class CategoryViewModel() : ViewModel() {
     val  genreMovieList= MutableLiveData<State<MovieAndTvByGenreResponse?>>()
     init {
         requiredGenre=Genre(28,"action")
+        getMovie()
     }
     fun getMovie(){
         viewModelScope.launch {
