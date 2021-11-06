@@ -20,4 +20,6 @@ data class Result(
     val video: Boolean,
     val vote_average: Double,
     val vote_count: Int
-)
+){
+    fun getImageUrl() = "https://image.tmdb.org/t/p/w500$poster_path"
+}
