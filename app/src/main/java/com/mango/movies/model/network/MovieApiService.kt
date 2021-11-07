@@ -15,6 +15,7 @@ import com.mango.movies.model.domain.tv.details.TvDetailsResponse
 import com.mango.movies.model.domain.tv.latest.TvLatestResponse
 import com.mango.movies.model.domain.tv.popular.TvPopularResponse
 import com.mango.movies.model.domain.tv.topRated.TvTopRatedResponse
+import com.mango.movies.model.domain.tv.trending.TVTrendingResult
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -80,6 +81,13 @@ interface MovieApiService {
     suspend fun getTopRatedTvShow(
         @Query("api_key") apiKey: String?,
     ): Response<TvTopRatedResponse>
+
+    @GET("trending/{media_type}/{time_window}")
+    suspend fun getTrendingTV(
+        @Query("api_key") apiKey: String?,
+        @Path("media_type") mediaType: String?,
+        @Path("time_window") timeWindow: String?
+    ): Response<BaseResponse<TVTrendingResult>>
 
     @GET("search/movie")
     suspend fun searchMovie(
