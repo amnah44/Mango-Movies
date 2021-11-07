@@ -84,9 +84,9 @@ interface MovieApiService {
 
     @GET("trending/{media_type}/{time_window}")
     suspend fun getTrendingTV(
-        @Query("api_key") apiKey: String?,
         @Path("media_type") mediaType: String?,
-        @Path("time_window") timeWindow: String?
+        @Path("time_window") timeWindow: String?,
+        @Query("api_key") apiKey: String?
     ): Response<BaseResponse<TVTrendingResult>>
 
     @GET("search/movie")

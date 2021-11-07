@@ -5,7 +5,7 @@
     <data>
         <variable
             name="item"
-            type="com.mango.movies.model.domain.movie.upComing.MovieUpComingResult" />
+            type="com.mango.movies.model.domain.tv.trending.TVTrendingResult" />
         <variable
             name="listener"
             type="com.mango.movies.ui.home.HomeInteractionListener" />
@@ -13,7 +13,7 @@
     </data>
     <androidx.cardview.widget.CardView
         android:layout_width="219dp"
-        android:layout_height="102dp"
+        android:layout_height="122dp"
         app:cardCornerRadius="10dp"
         android:layout_marginTop="@dimen/small_margin"
         android:layout_marginStart="@dimen/medium_margin"

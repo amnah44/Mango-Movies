@@ -138,12 +138,12 @@
             android:layout_marginStart="@dimen/medium_margin"
             android:layout_marginTop="@dimen/medium_margin"
             android:fontFamily="@font/mplusrounded1c_bold"
-            android:text="@string/now_playing_movies"
+            android:text="Tv trending"
             android:textColor="@color/white"
             android:textSize="@dimen/txt2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/recycler_top_rate_movies"
-            app:showOnSuccess="@{homeViewModel.topRateMovies}" />
+            app:showOnSuccess="@{homeViewModel.trendingTV}" />
 
         <TextView
             android:id="@+id/trending_series_show_more"
@@ -157,18 +157,18 @@
             android:textSize="@dimen/txt2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/recycler_top_rate_movies"
-            app:showOnSuccess="@{homeViewModel.topRateMovies}" />
+            app:showOnSuccess="@{homeViewModel.trendingTV}" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_trending_series"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:items="@{homeViewModel.topRateMovies.toData().movieResult}"
+            app:items="@{homeViewModel.trendingTV.toData().movieResult}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/trending_series_title"
-            app:showOnSuccess="@{homeViewModel.topRateMovies}"
+            app:showOnSuccess="@{homeViewModel.trendingTV}"
             tools:ignore="SpeakableTextPresentCheck"
             tools:listitem="@layout/item_trending_series" />
 

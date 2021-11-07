@@ -70,7 +70,7 @@ object MovieRepository {
     }
 
     fun tvTrending() = wrapWithFlow {
-        API.apiService.getTrendingTV(Constant.api_key, "tv", "week")
+        API.apiService.getTrendingTV(mediaType = "tv", timeWindow = "week", Constant.api_key)
     }
 
     fun searchMovie(query: String): Flow<State<SearchResponse?>> = wrapWithFlow {
