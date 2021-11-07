@@ -5,15 +5,15 @@ import com.mango.movies.ui.base.BaseAdapter
 import com.mango.movies.ui.base.BaseInteractionListener
 import com.mango.movies.model.domain.category.Result
 
-class CategoryAdapter(
+class MovieAndTvResultAdapter(
     item:List<Result>,
-    listener:CategoryInteractionListener
+    listener:ResultInteractionListener
 ):BaseAdapter<Result>(item,listener){
     override val layoutId: Int = R.layout.item_category
 
 }
 
 
-interface CategoryInteractionListener: BaseInteractionListener {
+interface ResultInteractionListener: BaseInteractionListener {
     fun onClickItem()
 }

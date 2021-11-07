@@ -6,7 +6,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.mango.movies.ui.categoris.CategoryViewModel" />
+            type="com.mango.movies.ui.categoris.ResultViewModel" />
 
     </data>
 
