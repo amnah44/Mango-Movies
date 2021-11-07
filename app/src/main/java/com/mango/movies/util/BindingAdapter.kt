@@ -64,11 +64,3 @@ fun View.navigate(action: NavDirections) {
         Navigation.findNavController(this).navigate(action)
     }
 }
-
-@BindingAdapter("android:rating")
-fun setRating(view: RatingBar?, rating: String) {
-    if (view != null) {
-        val rate = rating.toFloat()
-        view.rating = rate
-    }
-}

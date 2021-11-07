@@ -63,7 +63,8 @@
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.15572916666666667" />
         <entry key="app/src/main/res/layout/fragment_person.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_person_details.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_search.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_search.xml" value="0.14473684210526316" />
+        <entry key="app/src/main/res/layout/item_category.xml" value="0.13728470111448834" />
         <entry key="app/src/main/res/layout/item_genre.xml" value="0.14895833333333333" />
         <entry key="app/src/main/res/layout/item_now_playing_movie.xml" value="0.14895833333333333" />
         <entry key="app/src/main/res/layout/item_people.xml" value="0.11548913043478261" />
