@@ -1,7 +1,7 @@
 package com.mango.movies.model.domain
 
 import com.google.gson.annotations.SerializedName
-import com.mango.movies.model.domain.movie.nowPlaying.Dates
+import com.mango.movies.model.domain.movie.upComing.Dates
 
 data class BaseResponse<T>(
     @SerializedName("dates")

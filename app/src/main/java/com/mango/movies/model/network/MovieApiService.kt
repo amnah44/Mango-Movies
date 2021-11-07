@@ -5,7 +5,6 @@ import com.mango.movies.model.domain.category.MovieAndTvByGenreResponse
 import com.mango.movies.model.domain.genre.GenerResponse
 import com.mango.movies.model.domain.movie.details.MovieDetailsResponse
 import com.mango.movies.model.domain.movie.latest.MovieLatestResponse
-import com.mango.movies.model.domain.movie.popular.MoviePopularResult
 import com.mango.movies.model.domain.movie.topRated.MovieTopRatedResult
 import com.mango.movies.model.domain.movie.upComing.MovieUpComingResult
 import com.mango.movies.model.domain.person.details.PersonDetailsResponse
@@ -14,7 +13,7 @@ import com.mango.movies.model.domain.searchResponse.SearchResponse
 import com.mango.movies.model.domain.tv.details.TvDetailsResponse
 import com.mango.movies.model.domain.tv.latest.TvLatestResponse
 import com.mango.movies.model.domain.tv.popular.TvPopularResponse
-import com.mango.movies.model.domain.tv.topRated.TvTopRatedResponse
+import com.mango.movies.model.domain.tv.topRated.TVTopRatedResult
 import com.mango.movies.model.domain.tv.trending.TVTrendingResult
 import retrofit2.Response
 import retrofit2.http.GET
@@ -34,11 +33,6 @@ interface MovieApiService {
         @Query("api_key") apiKey: String?,
         @Query("language") language: String?,
     ): Response<MovieLatestResponse>
-
-    @GET("movie/popular")
-    suspend fun getPopularMovies(
-        @Query("api_key") apiKey: String?,
-    ): Response<BaseResponse<MoviePopularResult>>
 
     @GET("movie/top_rated")
     suspend fun getTopRatedMovies(
@@ -75,7 +69,7 @@ interface MovieApiService {
     @GET("tv/top_rated")
     suspend fun getTopRatedTvShow(
         @Query("api_key") apiKey: String?,
-    ): Response<TvTopRatedResponse>
+    ): Response<BaseResponse<TVTopRatedResult>>
 
     @GET("trending/{media_type}/{time_window}")
     suspend fun getTrendingTV(

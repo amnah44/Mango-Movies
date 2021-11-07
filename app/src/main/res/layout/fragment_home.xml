@@ -49,7 +49,9 @@
             android:layout_marginTop="16dp"
             android:fillViewport="true"
             android:scrollIndicators="none"
-            app:layout_constraintTop_toBottomOf="@+id/home_fragment">
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/home_fragment"
+            tools:layout_editor_absoluteX="-91dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -106,7 +108,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="@dimen/medium_margin"
                     android:fontFamily="@font/mplusrounded1c_bold"
-                    android:text="@string/now_playing_movies"
+                    android:text="@string/top_rating_movies"
                     android:textColor="@color/white"
                     android:textSize="@dimen/txt2"
                     app:layout_constraintStart_toStartOf="parent"
@@ -183,17 +185,43 @@
                     tools:ignore="SpeakableTextPresentCheck"
                     tools:listitem="@layout/item_trending_series" />
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recycler_trending_movie"
-                    android:layout_width="0dp"
+                <TextView
+                    android:id="@+id/popular_movies_title"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="24dp"
-                    android:orientation="horizontal"
-                    app:items="@{homeViewModel.trendingTV.toData().movieResult}"
-                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginStart="@dimen/medium_margin"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/mplusrounded1c_bold"
+                    android:text="Popular Movies"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/recycler_trending_series"
+                    app:showOnSuccess="@{homeViewModel.trendingTV}" />
+
+                <TextView
+                    android:id="@+id/trending_series_show_more2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/mplusrounded1c_bold"
+                    android:text="@string/show_more"
+                    android:textColor="@color/grayDark"
+                    android:textSize="@dimen/txt2"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/recycler_trending_series"
+                    app:showOnSuccess="@{homeViewModel.trendingTV}" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_latest_series"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:items="@{homeViewModel.topRateSeries.toData().movieResult}"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/popular_movies_title"
                     app:showOnSuccess="@{homeViewModel.trendingTV}"
                     tools:ignore="SpeakableTextPresentCheck"
                     tools:listitem="@layout/item_trending_series" />

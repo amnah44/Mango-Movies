@@ -12,7 +12,6 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import retrofit2.Response
 
-
 object MovieRepository {
 
     private fun <T> wrapWithFlow(endPointResponse: suspend () -> Response<T>): Flow<State<T?>> {
@@ -32,7 +31,6 @@ object MovieRepository {
 
     }
 
-
     fun movieDetails(movieId: Int) =
         wrapWithFlow {
             API.apiService.getMovieDetails(movieId, Constant.api_key)
@@ -40,14 +38,6 @@ object MovieRepository {
 
     fun latestMovies() = wrapWithFlow {
         API.apiService.getLatestMovies(Constant.api_key, "en-US")
-    }
-
-    fun nowPlayingMovies() = wrapWithFlow {
-        API.apiService.getNowPlayingMovies(Constant.api_key)
-    }
-
-    fun popularMovies() = wrapWithFlow {
-        API.apiService.getPopularMovies(Constant.api_key)
     }
 
     fun ratedMovies() = wrapWithFlow {
@@ -62,6 +52,10 @@ object MovieRepository {
         wrapWithFlow {
             API.apiService.getTvShowDetails(tvId, Constant.api_key)
         }
+
+    fun latestTV() = wrapWithFlow {
+        API.apiService.getLatestTvShow(Constant.api_key)
+    }
 
     fun popularTvShow() = wrapWithFlow {
         API.apiService.getLatestTvShow(Constant.api_key)
