@@ -5,7 +5,6 @@ import com.mango.movies.model.domain.category.MovieAndTvByGenreResponse
 import com.mango.movies.model.domain.genre.GenerResponse
 import com.mango.movies.model.domain.movie.details.MovieDetailsResponse
 import com.mango.movies.model.domain.movie.latest.MovieLatestResponse
-import com.mango.movies.model.domain.movie.nowPlaying.MovieNowPlayingResult
 import com.mango.movies.model.domain.movie.popular.MoviePopularResult
 import com.mango.movies.model.domain.movie.topRated.MovieTopRatedResult
 import com.mango.movies.model.domain.movie.upComing.MovieUpComingResult
@@ -35,11 +34,6 @@ interface MovieApiService {
         @Query("api_key") apiKey: String?,
         @Query("language") language: String?,
     ): Response<MovieLatestResponse>
-
-    @GET("movie/now_playing")
-    suspend fun getNowPlayingMovies(
-        @Query("api_key") apiKey: String?,
-    ): Response<BaseResponse<MovieNowPlayingResult>>
 
     @GET("movie/popular")
     suspend fun getPopularMovies(
