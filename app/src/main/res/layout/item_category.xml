@@ -4,7 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <variable
+        name="item"
+        type="com.mango.movies.model.domain.category.Result"/>
+        <variable
+            name="listener"
+            type="com.mango.movies.ui.categoris.ResultInteractionListener" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -24,13 +29,14 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <com.google.android.material.imageview.ShapeableImageView
 
-                    android:id="@+id/movieImg"
+                    android:id="@+id/image_movie"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_marginStart="@dimen/medium_margin"
@@ -38,6 +44,7 @@
                     android:layout_marginBottom="@dimen/medium_margin"
                     android:scaleType="centerCrop"
                     android:src="@drawable/test"
+                    imageUrl="@{item.imageUrl}"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintDimensionRatio="H,56:84"
                     app:layout_constraintStart_toStartOf="parent"
@@ -46,7 +53,7 @@
                     app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize15Percent" />
 
                 <TextView
-                    android:id="@+id/movieCategory"
+                    android:id="@+id/text_release_date"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/small_margin"
@@ -54,12 +61,13 @@
                     android:fontFamily="@font/inika_regular"
                     android:textColor="@color/grayDark"
                     android:textSize="@dimen/txt2"
-                    app:layout_constraintBottom_toBottomOf="@+id/movieImg"
-                    app:layout_constraintStart_toEndOf="@+id/movieImg"
+                    android:text="@{item.title  + item.release_date}"
+                    app:layout_constraintBottom_toBottomOf="@+id/image_movie"
+                    app:layout_constraintStart_toEndOf="@+id/image_movie"
                     tools:text="Text,text" />
 
                 <RatingBar
-                    android:id="@+id/ratingBar"
+                    android:id="@+id/progressBar_rating"
                     style="@android:style/Widget.Holo.Light.RatingBar.Indicator"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
@@ -67,25 +75,27 @@
                     android:isIndicator="true"
                     android:max="5"
                     android:numStars="5"
+                    android:rating="@{Float.valueOf(String.valueOf(item.vote_average/2))}"
                     android:progressTint="@color/orangeLight"
                     android:scaleX="0.7"
                     android:scaleY="0.7"
                     android:transformPivotX="0dp"
                     android:transformPivotY="0dp"
-                    app:layout_constraintStart_toStartOf="@+id/movie_name_tv"
-                    app:layout_constraintTop_toBottomOf="@id/movie_name_tv"
+                    app:layout_constraintStart_toStartOf="@+id/text_movie_tv_name"
+                    app:layout_constraintTop_toBottomOf="@id/text_movie_tv_name"
                     tools:rating="3.5" />
 
                 <TextView
-                    android:id="@+id/movie_name_tv"
+                    android:id="@+id/text_movie_tv_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/small_margin"
                     android:fontFamily="@font/mplusrounded1c_bold"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/txt6"
-                    app:layout_constraintStart_toStartOf="@+id/movieCategory"
-                    app:layout_constraintTop_toTopOf="@+id/movieImg"
+                    android:textSize="@dimen/txt3"
+                    android:text="@{item.title}"
+                    app:layout_constraintStart_toStartOf="@+id/text_release_date"
+                    app:layout_constraintTop_toTopOf="@+id/image_movie"
                     tools:text="Chucky" />
 
 

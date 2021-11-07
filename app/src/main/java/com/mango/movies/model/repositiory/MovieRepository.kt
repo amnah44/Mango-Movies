@@ -1,5 +1,8 @@
 package com.mango.movies.model.repositiory
 
+import android.util.Log
+import com.mango.movies.model.domain.category.MovieAndTvByGenreResponse
+import com.mango.movies.model.domain.genre.GenerResponse
 import com.mango.movies.model.domain.person.details.PersonDetailsResponse
 import com.mango.movies.model.domain.person.popular.PersonPopularResponse
 import com.mango.movies.model.domain.person.popular.PersonPopularResult
@@ -61,5 +64,15 @@ object MovieRepository {
         wrapWithFlow { API.apiService.getPersonDetails(personId, Constant.api_key) }
 
 
-    fun genres() = wrapWithFlow { API.apiService.getGenre(Constant.api_key) }
+    fun genres(flag:Boolean): Flow<State<GenerResponse?>> {
+        return if(flag)  wrapWithFlow { API.apiService.getMovieGenre(Constant.api_key) }
+        else  wrapWithFlow { API.apiService.getTvGenre(Constant.api_key) }
+    }
+
+
+    fun getGenreMovieOrTv(genre: Int?, flag: Boolean): Flow<State<MovieAndTvByGenreResponse?>> {
+        Log.i("Hamada", "inside repository ${genre.toString()}")
+        return if(flag) wrapWithFlow { API.apiService.getGenreMovie(genre, Constant.api_key) }
+        else wrapWithFlow { API.apiService.getGenreTv(genre, Constant.api_key) }
+    }
 }

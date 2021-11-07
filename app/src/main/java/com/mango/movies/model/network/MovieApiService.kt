@@ -1,6 +1,7 @@
 package com.mango.movies.model.network
 
 import com.mango.movies.model.domain.BaseResponse
+import com.mango.movies.model.domain.category.MovieAndTvByGenreResponse
 import com.mango.movies.model.domain.genre.GenerResponse
 import com.mango.movies.model.domain.movie.details.MovieDetailsResponse
 import com.mango.movies.model.domain.movie.latest.MovieLatestResponse
@@ -94,8 +95,24 @@ interface MovieApiService {
     ): Response<PersonPopularResponse>
 
 
-    @GET("genre/list")
-    suspend fun getGenre(
+    @GET("genre/movie/list")
+    suspend fun getMovieGenre(
         @Query("api_key") apiKey: String?
     ): Response<GenerResponse>
+
+    @GET("genre/tv/list")
+    suspend fun getTvGenre(
+        @Query("api_key") apiKey: String?
+    ): Response<GenerResponse>
+
+    @GET("discover/movie")
+    suspend fun getGenreMovie(@Query("with_genres") genreId: Int?,
+                              @Query("api_key") apiKey: String?,
+    ):Response<MovieAndTvByGenreResponse>
+
+    @GET("discover/tv")
+    suspend fun getGenreTv(@Query("with_genres") genreId: Int?,
+                           @Query("api_key") apiKey: String?,
+    ):Response<MovieAndTvByGenreResponse>
+
 }
