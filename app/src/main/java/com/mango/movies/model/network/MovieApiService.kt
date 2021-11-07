@@ -99,8 +99,8 @@ interface MovieApiService {
     ): Response<PersonPopularResponse>
 
 
-    @GET("genre/list")
-    suspend fun getGenre(
+    @GET("/genre/movie/list")
+    suspend fun getMovieGenre(
         @Query("api_key") apiKey: String?
     ): Response<GenerResponse>
 
