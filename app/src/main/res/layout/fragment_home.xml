@@ -13,8 +13,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/app_color"
-        android:isScrollContainer="true">
+        android:background="@color/app_color">
 
         <TextView
             android:id="@+id/home_fragment"
@@ -44,157 +43,189 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/up_coming_movies_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/medium_margin"
-            android:layout_marginTop="16dp"
-            android:fontFamily="@font/mplusrounded1c_bold"
-            android:text="@string/upcoming_movies"
-            android:textColor="@color/white"
-            android:textSize="@dimen/txt2"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/home_fragment"
-            app:showOnSuccess="@{homeViewModel.upComingMovie}" />
-
-        <TextView
-            android:id="@+id/up_coming_show_more_movies"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="@dimen/medium_margin"
-            android:fontFamily="@font/mplusrounded1c_bold"
-            android:text="@string/show_more"
-            android:textColor="@color/grayDark"
-            android:textSize="@dimen/txt2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/home_fragment"
-            app:showOnSuccess="@{homeViewModel.upComingMovie}" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_up_coming_movies"
-            android:layout_width="0dp"
+        <ScrollView
+            android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:orientation="horizontal"
-            app:items="@{homeViewModel.upComingMovie.toData().movieResult}"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintDimensionRatio="H,83:40"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/up_coming_movies_title"
-            app:showOnSuccess="@{homeViewModel.upComingMovie}"
-            tools:ignore="SpeakableTextPresentCheck"
-            tools:listitem="@layout/item_up_coming_movie" />
-
-        <TextView
-            android:id="@+id/top_rate_movies_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="@dimen/medium_margin"
-            android:fontFamily="@font/mplusrounded1c_bold"
-            android:text="@string/now_playing_movies"
-            android:textColor="@color/white"
-            android:textSize="@dimen/txt2"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/recycler_up_coming_movies"
-            app:showOnSuccess="@{homeViewModel.topRateMovies}" />
-
-        <TextView
-            android:id="@+id/top_rate_movies_show_more"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/medium_margin"
-            android:layout_marginEnd="@dimen/medium_margin"
-            android:fontFamily="@font/mplusrounded1c_bold"
-            android:text="@string/show_more"
-            android:textColor="@color/grayDark"
-            android:textSize="@dimen/txt2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/recycler_up_coming_movies"
-            app:showOnSuccess="@{homeViewModel.topRateMovies}" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_top_rate_movies"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:items="@{homeViewModel.topRateMovies.toData().movieResult}"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/top_rate_movies_title"
-            app:showOnSuccess="@{homeViewModel.topRateMovies}"
-            tools:ignore="SpeakableTextPresentCheck"
-            tools:listitem="@layout/item_top_rate_movie" />
-
-        <TextView
-            android:id="@+id/trending_series_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/medium_margin"
-            android:layout_marginTop="@dimen/medium_margin"
-            android:fontFamily="@font/mplusrounded1c_bold"
-            android:text="Tv trending"
-            android:textColor="@color/white"
-            android:textSize="@dimen/txt2"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/recycler_top_rate_movies"
-            app:showOnSuccess="@{homeViewModel.trendingTV}" />
-
-        <TextView
-            android:id="@+id/trending_series_show_more"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:fontFamily="@font/mplusrounded1c_bold"
-            android:text="@string/show_more"
-            android:textColor="@color/grayDark"
-            android:textSize="@dimen/txt2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/recycler_top_rate_movies"
-            app:showOnSuccess="@{homeViewModel.trendingTV}" />
+            android:fillViewport="true"
+            android:scrollIndicators="none"
+            app:layout_constraintTop_toBottomOf="@+id/home_fragment">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_trending_series"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:items="@{homeViewModel.trendingTV.toData().movieResult}"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/trending_series_title"
-            app:showOnSuccess="@{homeViewModel.trendingTV}"
-            tools:ignore="SpeakableTextPresentCheck"
-            tools:listitem="@layout/item_trending_series" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/app_color"
+                android:isScrollContainer="true">
 
-        <ImageView
-            android:id="@+id/image_error"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/ic_error"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:showOnError="@{homeViewModel.upComingMovie}" />
+                <TextView
+                    android:id="@+id/up_coming_movies_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/medium_margin"
+                    android:fontFamily="@font/mplusrounded1c_bold"
+                    android:text="@string/upcoming_movies"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:showOnSuccess="@{homeViewModel.upComingMovie}" />
 
-        <ProgressBar
-            android:id="@+id/progress_load"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.616"
-            app:showOnLoading="@{homeViewModel.upComingMovie}" />
+                <TextView
+                    android:id="@+id/up_coming_show_more_movies"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/medium_margin"
+                    android:fontFamily="@font/mplusrounded1c_bold"
+                    android:text="@string/show_more"
+                    android:textColor="@color/grayDark"
+                    android:textSize="@dimen/txt2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:showOnSuccess="@{homeViewModel.upComingMovie}" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_up_coming_movies"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    app:items="@{homeViewModel.upComingMovie.toData().movieResult}"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintDimensionRatio="H,83:40"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/up_coming_movies_title"
+                    app:showOnSuccess="@{homeViewModel.upComingMovie}"
+                    tools:ignore="SpeakableTextPresentCheck"
+                    tools:listitem="@layout/item_up_coming_movie" />
+
+                <TextView
+                    android:id="@+id/top_rate_movies_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:fontFamily="@font/mplusrounded1c_bold"
+                    android:text="@string/now_playing_movies"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/recycler_up_coming_movies"
+                    app:showOnSuccess="@{homeViewModel.topRateMovies}" />
+
+                <TextView
+                    android:id="@+id/top_rate_movies_show_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="@dimen/medium_margin"
+                    android:fontFamily="@font/mplusrounded1c_bold"
+                    android:text="@string/show_more"
+                    android:textColor="@color/grayDark"
+                    android:textSize="@dimen/txt2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/recycler_up_coming_movies"
+                    app:showOnSuccess="@{homeViewModel.topRateMovies}" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_top_rate_movies"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:items="@{homeViewModel.topRateMovies.toData().movieResult}"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/top_rate_movies_title"
+                    app:showOnSuccess="@{homeViewModel.topRateMovies}"
+                    tools:ignore="SpeakableTextPresentCheck"
+                    tools:listitem="@layout/item_top_rate_movie" />
+
+                <TextView
+                    android:id="@+id/trending_series_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/medium_margin"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:fontFamily="@font/mplusrounded1c_bold"
+                    android:text="Tv trending"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/recycler_top_rate_movies"
+                    app:showOnSuccess="@{homeViewModel.trendingTV}" />
+
+                <TextView
+                    android:id="@+id/trending_series_show_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/mplusrounded1c_bold"
+                    android:text="@string/show_more"
+                    android:textColor="@color/grayDark"
+                    android:textSize="@dimen/txt2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/recycler_top_rate_movies"
+                    app:showOnSuccess="@{homeViewModel.trendingTV}" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_trending_series"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:items="@{homeViewModel.trendingTV.toData().movieResult}"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/trending_series_title"
+                    app:showOnSuccess="@{homeViewModel.trendingTV}"
+                    tools:ignore="SpeakableTextPresentCheck"
+                    tools:listitem="@layout/item_trending_series" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_trending_movie"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:orientation="horizontal"
+                    app:items="@{homeViewModel.trendingTV.toData().movieResult}"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/recycler_trending_series"
+                    app:showOnSuccess="@{homeViewModel.trendingTV}"
+                    tools:ignore="SpeakableTextPresentCheck"
+                    tools:listitem="@layout/item_trending_series" />
+
+                <ImageView
+                    android:id="@+id/image_error"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_error"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:showOnError="@{homeViewModel.upComingMovie}" />
+
+                <ProgressBar
+                    android:id="@+id/progress_load"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.616"
+                    app:showOnLoading="@{homeViewModel.upComingMovie}" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </layout>
