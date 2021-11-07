@@ -41,7 +41,8 @@ class ResultViewModel() : ViewModel(),ResultInteractionListener ,GenreInteractio
     }
 
     override fun onClickCategory(genre: Genre) {
-        genreId.postValue(genre)
+        requiredGenre=genre
+        getMovie()
     }
 
 }
