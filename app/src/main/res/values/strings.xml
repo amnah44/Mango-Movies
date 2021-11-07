@@ -15,4 +15,5 @@
     <string name="now_playing_movies">Now Playing Movies</string>
     <string name="home">Home</string>
     <string name="actor_rating">Rating</string>
+    <string name="actor_popularity">Actor Popularity</string>
 </resources>

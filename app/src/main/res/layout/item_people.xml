@@ -10,6 +10,7 @@
         <variable
             name="listener"
             type="com.mango.movies.ui.person.PersonInteractionListener" />
+
     </data>
 
         <androidx.cardview.widget.CardView
@@ -35,7 +36,7 @@
                     android:id="@+id/actorImg"
                     android:layout_width="120dp"
                     android:layout_height="0dp"
-                    android:layout_marginStart="@dimen/medium_margin"
+                    android:layout_marginStart="@dimen/small_margin"
                     android:layout_marginTop="@dimen/small_margin"
                     android:layout_marginBottom="@dimen/small_margin"
                     android:scaleType="centerCrop"
@@ -52,28 +53,29 @@
                     android:id="@+id/actorName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="24dp"
                     android:fontFamily="@font/mplusrounded1c_bold"
                     android:text="@{item.name}"
                     android:textColor="@color/white"
                     android:textSize="@dimen/txt4"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.503"
+                    app:layout_constraintHorizontal_bias="0.502"
                     app:layout_constraintStart_toEndOf="@+id/actorImg"
                     app:layout_constraintTop_toTopOf="@+id/actorImg"
                     tools:text="Tom Hardy" />
 
                 <TextView
-                    android:id="@+id/person_rating"
+                    android:id="@+id/text_person_popularity"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/medium_margin"
-                    android:text="@string/actor_rating"
+                    android:text="@string/actor_popularity"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/txt3"
+                    android:textSize="@dimen/txt2"
+                    app:layout_constraintBottom_toBottomOf="@+id/progress_layout"
                     app:layout_constraintEnd_toEndOf="@+id/actorName"
-                    app:layout_constraintStart_toStartOf="@+id/actorName"
-                    app:layout_constraintTop_toBottomOf="@+id/actorName" />
+                    app:layout_constraintHorizontal_bias="0.225"
+                    app:layout_constraintStart_toEndOf="@+id/actorImg"
+                    app:layout_constraintTop_toTopOf="@+id/progress_layout" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/progress_layout"
@@ -81,18 +83,19 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/medium_margin"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/actorName"
-                    app:layout_constraintStart_toStartOf="@+id/actorName">
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/text_person_popularity"
+                    app:layout_constraintTop_toBottomOf="@+id/actorName">
 
                     <com.google.android.material.progressindicator.CircularProgressIndicator
                         android:id="@+id/circularProgressIndicator"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
                         android:foregroundGravity="center"
                         android:max="100"
                         android:min="0"
                         android:progress="@{item.popularity.intValue()}"
-                        app:indicatorColor="@color/white"
+                        app:indicatorColor="@color/orange"
                         app:indicatorDirectionCircular="counterclockwise"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
