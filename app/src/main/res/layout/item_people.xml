@@ -10,19 +10,19 @@
         <variable
             name="listener"
             type="com.mango.movies.ui.person.PersonInteractionListener" />
-
     </data>
 
         <androidx.cardview.widget.CardView
             android:onClick="@{()-> listener.onClickPerson(item)}"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="120dp"
             app:cardBackgroundColor="@color/dark_color"
             app:layout_constraintEnd_toEndOf="parent"
             app:cardElevation="@dimen/cardview_default_elevation"
-            android:layout_marginStart="@dimen/small_margin"
-            android:layout_marginEnd="@dimen/small_margin"
-            android:layout_marginBottom="@dimen/medium_margin"
+            android:layout_marginStart="@dimen/medium_margin"
+            android:layout_marginEnd="@dimen/medium_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginBottom="@dimen/small_margin"
             app:cardCornerRadius="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -34,7 +34,7 @@
                 <com.google.android.material.imageview.ShapeableImageView
                     android:onClick="@{()-> listener.onClickPerson(item)}"
                     android:id="@+id/actorImg"
-                    android:layout_width="120dp"
+                    android:layout_width="80dp"
                     android:layout_height="0dp"
                     android:layout_marginStart="@dimen/small_margin"
                     android:layout_marginTop="@dimen/small_margin"
@@ -53,50 +53,42 @@
                     android:id="@+id/actorName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="24dp"
+                    android:layout_margin="@dimen/medium_margin"
                     android:fontFamily="@font/mplusrounded1c_bold"
                     android:text="@{item.name}"
                     android:textColor="@color/white"
                     android:textSize="@dimen/txt4"
+                    app:layout_constraintBottom_toTopOf="@+id/progress_layout"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.502"
                     app:layout_constraintStart_toEndOf="@+id/actorImg"
-                    app:layout_constraintTop_toTopOf="@+id/actorImg"
+                    app:layout_constraintTop_toTopOf="parent"
                     tools:text="Tom Hardy" />
-
-                <TextView
-                    android:id="@+id/text_person_popularity"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/actor_popularity"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/txt2"
-                    app:layout_constraintBottom_toBottomOf="@+id/progress_layout"
-                    app:layout_constraintEnd_toEndOf="@+id/actorName"
-                    app:layout_constraintHorizontal_bias="0.225"
-                    app:layout_constraintStart_toEndOf="@+id/actorImg"
-                    app:layout_constraintTop_toTopOf="@+id/progress_layout" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/progress_layout"
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/medium_margin"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="@dimen/small_margin"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/text_person_popularity"
-                    app:layout_constraintTop_toBottomOf="@+id/actorName">
+                    app:layout_constraintEnd_toEndOf="@+id/actorName"
+                    app:layout_constraintStart_toStartOf="@+id/actorName">
 
                     <com.google.android.material.progressindicator.CircularProgressIndicator
                         android:id="@+id/circularProgressIndicator"
-                        android:layout_width="16dp"
-                        android:layout_height="16dp"
+                        android:layout_width="46dp"
+                        android:layout_height="47dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="16dp"
                         android:foregroundGravity="center"
                         android:max="100"
                         android:min="0"
                         android:progress="@{item.popularity.intValue()}"
                         app:indicatorColor="@color/orange"
-                        app:indicatorDirectionCircular="counterclockwise"
+                        app:indicatorDirectionCircular="clockwise"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
