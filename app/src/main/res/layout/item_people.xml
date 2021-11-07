@@ -63,21 +63,43 @@
                     app:layout_constraintTop_toTopOf="@+id/actorImg"
                     tools:text="Tom Hardy" />
 
-                <antonkozyriatskyi.circularprogressindicator.CircularProgressIndicator
-                    android:id="@+id/person_rating_progress"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginBottom="@dimen/small_margin"
-                    android:scrollbarSize="16dp"
-                    app:indicatorSize="5dp"
-                    app:dotColor="@color/red"
-                    android:value="50dp"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/progress_layout"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="@dimen/small_margin"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="@+id/actorName"
-                    app:layout_constraintHorizontal_bias="0.523"
-                    app:layout_constraintStart_toStartOf="@+id/actorName"
-                    app:textColor="@color/orange"
-                    app:textSize="@dimen/txt3" />
+                    app:layout_constraintStart_toStartOf="@+id/actorName">
+
+                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:id="@+id/circularProgressIndicator"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:max="100"
+                        android:min="0"
+                        android:foregroundGravity="center"
+                        android:progress="@{item.popularity.intValue()}"
+                        app:indicatorColor="@color/orange"
+                        app:indicatorDirectionCircular="counterclockwise"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:trackColor="@color/app_color" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@{String.valueOf(item.popularity.intValue())+'%'}"
+                        android:textColor="@color/orange"
+                        android:textSize="@dimen/txt2"
+                        app:layout_constraintBottom_toBottomOf="@+id/circularProgressIndicator"
+                        app:layout_constraintEnd_toEndOf="@+id/circularProgressIndicator"
+                        app:layout_constraintStart_toStartOf="@+id/circularProgressIndicator"
+                        app:layout_constraintTop_toTopOf="@+id/circularProgressIndicator" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
