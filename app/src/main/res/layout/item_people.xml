@@ -100,9 +100,6 @@
                         app:layout_constraintTop_toTopOf="@+id/circularProgressIndicator" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
-
             </androidx.constraintlayout.widget.ConstraintLayout>
-
-
         </androidx.cardview.widget.CardView>
 </layout>
