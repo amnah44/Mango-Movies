@@ -3,21 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-<!--        <variable-->
-<!--            name="item"-->
-<!--            type="com.mango.movies.model.domain.genre.Genre" />-->
+        <variable
+            name="item"
+            type="com.mango.movies.model.domain.genre.Genre" />
 
-<!--        <variable-->
-<!--            name="listener"-->
-<!--            type="com.mango.movies.ui.home.HomeInteractionListener" />-->
+        <variable
+            name="listener"
+            type="com.mango.movies.ui.categoris.GenreInteractionListener" />
     </data>
 
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:layout_marginStart="@dimen/small_margin"
         android:layout_marginTop="@dimen/small_margin"
         android:layout_marginEnd="@dimen/small_margin"
+        android:onClick="@{() -> listener.onClickCategory(item)}"
         app:cardBackgroundColor="@color/category_color"
         app:cardCornerRadius="@dimen/category_card_corner_radius">
 
@@ -37,6 +38,7 @@
                 android:textColor="@color/white"
                 android:textSize="@dimen/txt4"
                 android:lines="1"
+                android:text="@{item.name}"
                 app:layout_constraintStart_toEndOf="@id/category_icon"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

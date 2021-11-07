@@ -18,6 +18,7 @@ class CategoryFragment : BaseFragment<FragmentCategoryBinding>(R.layout.fragment
     override fun setupView() {
         binding.viewModel=viewModel
         binding.recyclerMovies.adapter=MovieAndTvResultAdapter(mutableListOf(), viewModel)
+        binding.recyclerGenre.adapter=GenreAdapter(mutableListOf(), viewModel)
     }
 
 }
