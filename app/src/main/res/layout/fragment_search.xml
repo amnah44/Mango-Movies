@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="viewModel"
             type="com.mango.movies.ui.search.SearchViewModel" />
@@ -20,24 +21,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:src="@drawable/ic_error"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:src="@drawable/ic_error"
             app:showOnError="@{viewModel.searchResult}"
-
             />
 
         <ProgressBar
             android:id="@+id/progressBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_gravity="center"
             app:showOnLoading="@{viewModel.searchResult}" />
 
         <androidx.recyclerview.widget.RecyclerView
@@ -51,21 +51,20 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/searchView"
-            tools:listitem="@layout/item_search"
-            />
+            tools:listitem="@layout/item_search" />
 
 
-        <androidx.appcompat.widget.SearchView
+        <EditText
             android:id="@+id/searchView"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_marginStart="@dimen/small_margin"
             android:layout_marginTop="@dimen/medium_margin"
             android:layout_marginEnd="@dimen/medium_margin"
             android:background="@drawable/rounded_corner_view"
             android:fontFamily="@font/mplusrounded1c_bold"
             android:foregroundTint="@color/white"
-            app:queryTextListener="@{viewModel.onQueryTextListener}"
+            android:onTextChanged="@{(text, start, before, count) -> viewModel.onTextChanged(text)}"
             android:textColor="@color/white"
             android:textSize="@dimen/txt2"
             app:closeIcon="@drawable/ic_close"
