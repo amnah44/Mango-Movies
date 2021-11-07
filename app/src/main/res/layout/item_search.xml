@@ -37,6 +37,7 @@
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/movieImg"
+                    imageUrl="@{item.posterPath}"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_marginStart="@dimen/medium_margin"
@@ -50,14 +51,13 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintWidth_percent="0.2"
                     app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize15Percent"
-                    imageUrl="@{item.posterPath}"
 
                     />
 
-                <TextView
+                <ImageView
                     android:id="@+id/movieCategory"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
                     android:layout_marginStart="@dimen/small_margin"
                     android:layout_marginBottom="@dimen/medium_margin"
                     android:fontFamily="@font/inika_regular"
@@ -65,6 +65,7 @@
                     android:textSize="@dimen/txt2"
                     app:layout_constraintBottom_toBottomOf="@+id/movieImg"
                     app:layout_constraintStart_toEndOf="@+id/movieImg"
+                    app:srcCompat="@drawable/thumbs_up"
                     tools:text="Sci-Fi   Fantasy, Comedy, Crime  " />
 
                 <TextView
@@ -89,13 +90,12 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/small_margin"
                     android:fontFamily="@font/inika_regular"
+                    android:text="@{item.releaseDate}"
                     android:textColor="@color/white"
                     android:textSize="@dimen/txt4"
                     app:layout_constraintBottom_toBottomOf="@+id/movieCategory2"
                     app:layout_constraintStart_toEndOf="@+id/movieCategory2"
-                    tools:text="2021"
-                    android:text="@{item.releaseDate}"
-                    />
+                    tools:text="2021" />
 
                 <TextView
                     android:id="@+id/movieCategory2"
@@ -107,8 +107,19 @@
                     android:textSize="@dimen/txt4"
                     app:layout_constraintBottom_toTopOf="@+id/movieCategory"
                     app:layout_constraintStart_toStartOf="@+id/movieCategory"
-                    tools:text="Series"
-                    />
+                    tools:text="Series" />
+
+                <TextView
+                    android:id="@+id/movieRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:text="@{String.valueOf(item.voteAverage/2)}"
+                    tools:text="3.5"
+                    android:textColor="@color/gray"
+                    app:layout_constraintBottom_toBottomOf="@+id/movieCategory"
+                    app:layout_constraintStart_toEndOf="@+id/movieCategory"
+                    app:layout_constraintTop_toTopOf="@+id/movieCategory" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
