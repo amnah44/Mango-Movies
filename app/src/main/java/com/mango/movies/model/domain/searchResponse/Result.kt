@@ -1,8 +1,11 @@
 package com.mango.movies.model.domain.searchResponse
 
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 data class Result(
     @SerializedName("adult")
     var adult: Boolean? = false,
@@ -34,4 +37,4 @@ data class Result(
     var voteCount: Int? = 0,
     @SerializedName("media_type")
     var mediaType: Int? = 0
-)
+): Parcelable

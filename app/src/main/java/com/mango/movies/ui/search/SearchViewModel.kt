@@ -17,8 +17,11 @@ import kotlinx.coroutines.flow.collect
 
 class SearchViewModel : ViewModel(), SearchInteractionListener {
     var searchResult = MutableLiveData<State<SearchResponse?>?>()
-    override fun onClickMovie(match: Result) {
+    var selectedMovie =  MutableLiveData<Result?>()
 
+    override fun onClickMovie(movie: Result) {
+        Log.v("ALI",movie.title.toString())
+        selectedMovie.postValue(movie)
     }
 
     val onQueryTextListener: SearchView.OnQueryTextListener =

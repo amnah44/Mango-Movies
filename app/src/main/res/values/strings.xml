@@ -16,4 +16,5 @@
     <string name="home">Home</string>
     <string name="actor_rating">Rating</string>
     <string name="actor_popularity">Actor Popularity</string>
+    <string name="overview">Overview</string>
 </resources>
