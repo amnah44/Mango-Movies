@@ -19,6 +19,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
         binding.homeViewModel = viewModel
         binding.recyclerUpComingMovies.adapter = UpComingMovieAdapter(mutableListOf(), viewModel)
         binding.recyclerTopRateMovies.adapter = TopRateMovieAdapter(mutableListOf(), viewModel)
+        binding.recyclerTrendingSeries.adapter = TopRateMovieAdapter(mutableListOf(), viewModel)
     }
 
 }
