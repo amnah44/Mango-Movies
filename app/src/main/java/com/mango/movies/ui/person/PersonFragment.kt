@@ -2,6 +2,7 @@ package com.mango.movies.ui.person
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.os.persistableBundleOf
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
 import com.mango.movies.R
@@ -21,8 +22,11 @@ class PersonFragment : BaseFragment<FragmentPersonBinding>(R.layout.fragment_per
 
 
     override fun setupView() {
-        binding.viewModel = viewModel
-        binding.personRecyclerView.adapter = PersonAdapter(mutableListOf(), viewModel)
+        binding.apply {
+            viewModel = viewModel
+            personRecyclerView.adapter = PersonAdapter(mutableListOf(), viewModel)
+        }
+
 
         viewModel.personDetails.observe(viewLifecycleOwner) {
             if(it!=null){

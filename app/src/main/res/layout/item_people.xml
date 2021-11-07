@@ -34,7 +34,7 @@
                 <com.google.android.material.imageview.ShapeableImageView
                     android:onClick="@{()-> listener.onClickPerson(item)}"
                     android:id="@+id/actorImg"
-                    android:layout_width="0dp"
+                    android:layout_width="120dp"
                     android:layout_height="0dp"
                     android:layout_marginStart="@dimen/small_margin"
                     android:layout_marginTop="@dimen/small_margin"
@@ -53,45 +53,68 @@
                     android:id="@+id/actorName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/medium_margin"
-                    android:text="@{item.name}"
+                    android:layout_marginTop="24dp"
                     android:fontFamily="@font/mplusrounded1c_bold"
+                    android:text="@{item.name}"
                     android:textColor="@color/white"
                     android:textSize="@dimen/txt4"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.502"
                     app:layout_constraintStart_toEndOf="@+id/actorImg"
                     app:layout_constraintTop_toTopOf="@+id/actorImg"
                     tools:text="Tom Hardy" />
 
                 <TextView
-                    android:id="@+id/seriesNo"
+                    android:id="@+id/text_person_popularity"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/inika_regular"
-                    android:textColor="@color/gray"
-                    android:textSize="@dimen/txt3"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.65"
+                    android:text="@string/actor_popularity"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt2"
+                    app:layout_constraintBottom_toBottomOf="@+id/progress_layout"
+                    app:layout_constraintEnd_toEndOf="@+id/actorName"
+                    app:layout_constraintHorizontal_bias="0.225"
                     app:layout_constraintStart_toEndOf="@+id/actorImg"
-                    app:layout_constraintTop_toTopOf="@+id/moviesNo"
-                    tools:text="Series:24" />
+                    app:layout_constraintTop_toTopOf="@+id/progress_layout" />
 
-                <TextView
-                    android:id="@+id/moviesNo"
-                    android:layout_width="wrap_content"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/progress_layout"
+                    android:layout_width="50dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/medium_margin"
-                    android:fontFamily="@font/inika_regular"
-                    android:textColor="@color/gray"
-                    android:textSize="@dimen/txt3"
+                    android:layout_margin="@dimen/medium_margin"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.35"
-                    app:layout_constraintStart_toEndOf="@+id/actorImg"
-                    app:layout_constraintTop_toBottomOf="@+id/actorName"
-                    tools:text="Movies:24" />
+                    app:layout_constraintStart_toEndOf="@+id/text_person_popularity"
+                    app:layout_constraintTop_toBottomOf="@+id/actorName">
 
+                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:id="@+id/circularProgressIndicator"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:foregroundGravity="center"
+                        android:max="100"
+                        android:min="0"
+                        android:progress="@{item.popularity.intValue()}"
+                        app:indicatorColor="@color/orange"
+                        app:indicatorDirectionCircular="counterclockwise"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:trackColor="@color/app_color" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@{String.valueOf(item.popularity.intValue())+'%'}"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt2"
+                        app:layout_constraintBottom_toBottomOf="@+id/circularProgressIndicator"
+                        app:layout_constraintEnd_toEndOf="@+id/circularProgressIndicator"
+                        app:layout_constraintStart_toStartOf="@+id/circularProgressIndicator"
+                        app:layout_constraintTop_toTopOf="@+id/circularProgressIndicator" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
-
-
         </androidx.cardview.widget.CardView>
 </layout>
