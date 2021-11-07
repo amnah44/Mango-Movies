@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="item"
             type="com.mango.movies.model.domain.searchResponse.Result" />
@@ -102,9 +103,7 @@
             app:layout_constraintBottom_toTopOf="@id/text_director_name"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            tools:text="Dune"
-
-            />
+            tools:text="Dune" />
 
         <HorizontalScrollView
             android:layout_width="match_parent"
@@ -144,7 +143,7 @@
             android:layout_marginHorizontal="16dp"
             android:isIndicator="true"
             android:progressTint="#F13B03"
-            android:rating="@{String.valueOf(item.voteAverage)}"
+            android:rating="@{Float.valueOf(String.valueOf(item.voteAverage/2))}"
             android:scaleX="0.7"
             android:scaleY="0.7"
             android:transformPivotX="0dp"
