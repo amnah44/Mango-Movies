@@ -13,13 +13,18 @@
     </data>
 
     <androidx.cardview.widget.CardView
+        app:layout_constraintTop_toTopOf="parent"
         android:layout_width="wrap_content"
-        android:layout_height="30dp"
+        android:layout_height="wrap_content"
+        app:contentPaddingLeft="10dp"
+        app:contentPaddingRight="10dp"
+        app:contentPaddingTop="4dp"
+        app:contentPaddingBottom="4dp"
         android:layout_marginStart="@dimen/small_margin"
         android:layout_marginTop="@dimen/small_margin"
         android:layout_marginEnd="@dimen/small_margin"
         android:onClick="@{() -> listener.onClickCategory(item)}"
-        app:cardBackgroundColor="@color/category_color"
+        app:cardBackgroundColor="@color/dark_color"
         app:cardCornerRadius="@dimen/category_card_corner_radius">
 
         <androidx.constraintlayout.widget.ConstraintLayout
