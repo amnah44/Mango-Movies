@@ -73,6 +73,6 @@ object MovieRepository {
     fun getGenreMovieOrTv(genre: Int?, flag: Boolean): Flow<State<MovieAndTvByGenreResponse?>> {
         Log.i("Hamada", "inside repository ${genre.toString()}")
         return if(flag) wrapWithFlow { API.apiService.getGenreMovie(genre, Constant.api_key) }
-        else wrapWithFlow { API.apiService.getGenreTv(Constant.GENRE_KEY[genre], Constant.api_key) }
+        else wrapWithFlow { API.apiService.getGenreTv(genre, Constant.api_key) }
     }
 }
