@@ -49,14 +49,6 @@ fun <T> setRecyclerItems(view: RecyclerView, items: List<T>?) {
     }
 }
 
-@BindingAdapter("queryTextListener")
-fun setOnQueryTextListener(
-    searchView: SearchView,
-    listener: SearchView.OnQueryTextListener?
-) {
-    searchView.setOnQueryTextListener(listener)
-}
-
 @BindingAdapter(value = ["imageUrl"])
 fun ImageView.seImageFromUrl(url: String?) {
     Glide.with(this)
