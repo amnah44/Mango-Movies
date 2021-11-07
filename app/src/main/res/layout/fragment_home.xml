@@ -79,7 +79,7 @@
             android:orientation="horizontal"
             app:items="@{homeViewModel.upComingMovie.toData().movieResult}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintDimensionRatio="H,47F:28"
+            app:layout_constraintDimensionRatio="H,83:47"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -119,18 +119,17 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_top_rate_movies"
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:items="@{homeViewModel.topRateMovies.toData().movieResult}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintDimensionRatio="H,47:28"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/top_rate_movies_title"
             app:showOnSuccess="@{homeViewModel.topRateMovies}"
             tools:ignore="SpeakableTextPresentCheck"
-            tools:listitem="@layout/item_up_coming_movie" />
+            tools:listitem="@layout/item_top_rate_movie" />
 
         <ImageView
             android:id="@+id/image_error"
