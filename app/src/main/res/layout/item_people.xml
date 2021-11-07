@@ -10,7 +10,6 @@
         <variable
             name="listener"
             type="com.mango.movies.ui.person.PersonInteractionListener" />
-
     </data>
 
         <androidx.cardview.widget.CardView
@@ -64,11 +63,23 @@
                     app:layout_constraintTop_toTopOf="@+id/actorImg"
                     tools:text="Tom Hardy" />
 
+                <TextView
+                    android:id="@+id/person_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/medium_margin"
+                    android:text="@string/actor_rating"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt3"
+                    app:layout_constraintEnd_toEndOf="@+id/actorName"
+                    app:layout_constraintStart_toStartOf="@+id/actorName"
+                    app:layout_constraintTop_toBottomOf="@+id/actorName" />
+
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/progress_layout"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/small_margin"
+                    android:layout_margin="@dimen/medium_margin"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="@+id/actorName"
                     app:layout_constraintStart_toStartOf="@+id/actorName">
