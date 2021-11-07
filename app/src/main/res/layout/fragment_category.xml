@@ -102,6 +102,21 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_genre"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:layout_marginBottom="@dimen/medium_margin"
+            android:padding="8dp"
+            app:showOnSuccess="@{}"
+            app:items="@{}"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card_series"
+            tools:listitem="@layout/item_genre"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_movies"
@@ -115,7 +130,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/card_series"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_genre"
             tools:listitem="@layout/item_category" />
 
         <ImageView
