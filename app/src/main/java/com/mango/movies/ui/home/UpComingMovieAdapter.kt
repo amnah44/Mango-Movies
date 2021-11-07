@@ -9,5 +9,4 @@ class UpComingMovieAdapter(
     listener: HomeInteractionListener
 ) : BaseAdapter<MovieUpComingResult>(item, listener) {
     override val layoutId: Int = R.layout.item_up_coming_movie
-    override fun getItemCount(): Int = 8
 }
