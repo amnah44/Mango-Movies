@@ -19,4 +19,5 @@ object Constant {
     const val FAVORITES_FRAGMENT = "Favorites Fragment"
     const val SEARCH_FRAGMENT = "Search Fragment"
     const val SETTINGS_FRAGMENT = "Settings Fragment"
+    const val REVIEW_FRAGMENT = "Review Fragment"
 }
