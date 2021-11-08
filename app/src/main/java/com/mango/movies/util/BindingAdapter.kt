@@ -63,12 +63,10 @@ fun View.navigate(action: NavDirections) {
 }
 
 @BindingAdapter(value=["goOnTextChanged"])
-
 fun goOnTextChanged(view: View, flag:Boolean){
     if (flag){
         view.visibility=View.VISIBLE
     }
-
     else{
         view.visibility=View.GONE
     }
