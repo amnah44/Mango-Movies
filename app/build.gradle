@@ -79,4 +79,9 @@ dependencies {
     implementation "com.github.bumptech.glide:glide:$glide_version"
 
 
+    // lottie animation
+
+    implementation 'com.airbnb.android:lottie:4.2.0'
+
+
 }

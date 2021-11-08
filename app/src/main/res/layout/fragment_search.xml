@@ -16,29 +16,32 @@
         android:background="@color/app_color"
         tools:context=".ui.search.SearchFragment">
 
-        <ImageView
-            android:id="@+id/errorImg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:src="@drawable/ic_error"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation_error"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            app:lottie_rawRes="@raw/error_animation"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
             app:showOnError="@{viewModel.searchResult}"
-            />
-
-        <ProgressBar
-            android:id="@+id/progressBar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:showOnLoading="@{viewModel.searchResult}" />
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation_loading"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            app:lottie_rawRes="@raw/loading_animation"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:showOnLoading="@{viewModel.searchResult}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/searchRecycler"
@@ -76,6 +79,18 @@
             app:layout_constraintStart_toEndOf="@+id/return_arrow"
             app:layout_constraintTop_toTopOf="parent"
             app:searchIcon="@drawable/ic_search" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            goOnTextChanged="@{viewModel.flag}"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/search_animation"/>
 
         <ImageView
             android:id="@+id/return_arrow"

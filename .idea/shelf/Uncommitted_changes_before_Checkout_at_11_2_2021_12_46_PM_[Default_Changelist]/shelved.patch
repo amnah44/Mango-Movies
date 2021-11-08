@@ -1,0 +1,44 @@
+Index: app/src/main/java/com/mango/movies/ui/home/HomeFragment.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.mango.movies.ui.home\r\n\r\nimport android.view.LayoutInflater\r\nimport android.view.ViewGroup\r\nimport androidx.databinding.DataBindingUtil\r\nimport androidx.fragment.app.viewModels\r\nimport androidx.navigation.Navigation\r\nimport com.mango.movies.R\r\nimport com.mango.movies.databinding.FragmentHomeBinding\r\nimport com.mango.movies.ui.base.BaseFragment\r\nimport com.mango.movies.util.Constant\r\n\r\nclass HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {\r\n    override val LOG_TAG: String = Constant.HOME_FRAGMENT\r\n    override val viewModel: HomeViewModel by viewModels()\r\n    override val bindingInflater: (LayoutInflater, Int, ViewGroup?, Boolean) -> FragmentHomeBinding =\r\n        DataBindingUtil::inflate\r\n\r\n    override fun setupView() {\r\n        binding.categoryRecycler.adapter = HomeAdapter(mutableListOf(), viewModel)\r\n\r\n        viewModel.genreId.observe(viewLifecycleOwner){\r\n            val action = HomeFragmentDirections.actionHomeFragmentToCategoryFragment4(requireNotNull(it.id))\r\n            Navigation.findNavController(binding.categoryRecycler).navigate(action)\r\n        }\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/mango/movies/ui/home/HomeFragment.kt b/app/src/main/java/com/mango/movies/ui/home/HomeFragment.kt
+--- a/app/src/main/java/com/mango/movies/ui/home/HomeFragment.kt	(revision 65bee96e1f92449981e764ede9b034fc208bf44f)
++++ b/app/src/main/java/com/mango/movies/ui/home/HomeFragment.kt	(date 1635845863961)
+@@ -17,7 +17,8 @@
+         DataBindingUtil::inflate
+ 
+     override fun setupView() {
+-        binding.categoryRecycler.adapter = HomeAdapter(mutableListOf(), viewModel)
++        val adapter= HomeAdapter(mutableListOf(), viewModel)
++        binding.categoryRecycler.adapter=adapter
+ 
+         viewModel.genreId.observe(viewLifecycleOwner){
+             val action = HomeFragmentDirections.actionHomeFragmentToCategoryFragment4(requireNotNull(it.id))
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"DesignSurface\">\r\n    <option name=\"filePathToZoomLevelMap\">\r\n      <map>\r\n        <entry key=\"..\\:/Apps/Mango-Movies/app/src/main/res/layout/fragment_details.xml\" value=\"0.20416666666666666\" />\r\n        <entry key=\"..\\:/Apps/Mango-Movies/app/src/main/res/layout/fragment_home.xml\" value=\"0.20416666666666666\" />\r\n        <entry key=\"..\\:/Apps/Mango-Movies/app/src/main/res/layout/fragment_settings.xml\" value=\"0.20416666666666666\" />\r\n        <entry key=\"..\\:/Apps/Mango-Movies/app/src/main/res/layout/fragment_show_more.xml\" value=\"0.20416666666666666\" />\r\n        <entry key=\"..\\:/Apps/Mango-Movies/app/src/main/res/layout/item_actor_details.xml\" value=\"0.20416666666666666\" />\r\n        <entry key=\"..\\:/Apps/Mango-Movies/app/src/main/res/layout/item_category.xml\" value=\"0.75\" />\r\n        <entry key=\"..\\:/Apps/Mango-Movies/app/src/main/res/layout/item_favourite.xml\" value=\"0.1\" />\r\n        <entry key=\"..\\:/Apps/Mango-Movies/app/src/main/res/layout/item_people.xml\" value=\"0.1\" />\r\n        <entry key=\"..\\:/Apps/Mango-Movies/app/src/main/res/layout/item_show_more.xml\" value=\"0.20416666666666666\" />\r\n        <entry key=\"..\\:/Movies2/app/src/main/res/layout/activity_main.xml\" value=\"0.20416666666666666\" />\r\n        <entry key=\"app/src/main/res/layout/activity_movie.xml\" value=\"0.21331521739130435\" />\r\n        <entry key=\"app/src/main/res/layout/fragment_search.xml\" value=\"0.21331521739130435\" />\r\n        <entry key=\"app/src/main/res/layout/item_search.xml\" value=\"0.25\" />\r\n        <entry key=\"app/src/main/res/menu/menu_bottom_navigation.xml\" value=\"0.28229166666666666\" />\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"ExternalStorageConfigurationManager\" enabled=\"true\" />\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_11\" default=\"true\" project-jdk-name=\"11\" project-jdk-type=\"JavaSDK\" />\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 65bee96e1f92449981e764ede9b034fc208bf44f)
++++ b/.idea/misc.xml	(date 1635845673734)
+@@ -13,6 +13,13 @@
+         <entry key="..\:/Apps/Mango-Movies/app/src/main/res/layout/item_people.xml" value="0.1" />
+         <entry key="..\:/Apps/Mango-Movies/app/src/main/res/layout/item_show_more.xml" value="0.20416666666666666" />
+         <entry key="..\:/Movies2/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
++        <entry key="..\:/Users/lenovo/AndroidStudioProjects/Mango-Movies/app/src/main/res/layout/fragment_favorites.xml" value="0.16666666666666666" />
++        <entry key="..\:/Users/lenovo/AndroidStudioProjects/Mango-Movies/app/src/main/res/layout/fragment_home.xml" value="0.16666666666666666" />
++        <entry key="..\:/Users/lenovo/AndroidStudioProjects/Mango-Movies/app/src/main/res/layout/fragment_people.xml" value="0.16666666666666666" />
++        <entry key="..\:/Users/lenovo/AndroidStudioProjects/Mango-Movies/app/src/main/res/layout/fragment_search.xml" value="0.16666666666666666" />
++        <entry key="..\:/Users/lenovo/AndroidStudioProjects/Mango-Movies/app/src/main/res/layout/item_genre.xml" value="0.176" />
++        <entry key="..\:/Users/lenovo/AndroidStudioProjects/Mango-Movies/app/src/main/res/layout/item_people.xml" value="0.16666666666666666" />
++        <entry key="..\:/Users/lenovo/AndroidStudioProjects/Mango-Movies/app/src/main/res/layout/item_show_more.xml" value="0.16666666666666666" />
+         <entry key="app/src/main/res/layout/activity_movie.xml" value="0.21331521739130435" />
+         <entry key="app/src/main/res/layout/fragment_search.xml" value="0.21331521739130435" />
+         <entry key="app/src/main/res/layout/item_search.xml" value="0.25" />
