@@ -23,10 +23,10 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(R.layout.fragment_sea
     override fun setupView() {
         binding.searchRecycler.adapter = SearchAdapter(mutableListOf(), viewModel)
         viewModel.selectedMovie.observe(viewLifecycleOwner) {
-//            if (it != null) {
-//                val nav = SearchFragmentDirections.actionSearchFragmentToDetailsFragment(it)
-//                Navigation.findNavController(requireView()).navigate(nav)
-//            }
+            if (it != null) {
+                val nav = SearchFragmentDirections.actionSearchFragmentToDetailsFragment(it)
+                Navigation.findNavController(requireView()).navigate(nav)
+            }
         }
 
         binding.returnArrow.setOnClickListener { view ->
