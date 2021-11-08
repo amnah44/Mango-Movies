@@ -11,12 +11,12 @@ import com.mango.movies.model.repositiory.MovieRepository
 import com.mango.movies.ui.celebrities.details.KnownForInteractionListener
 
 
-class PersonPopularViewModel : ViewModel(),
-    PersonInteractionListener, KnownForInteractionListener {
+class CelebrityPopularViewModel : ViewModel(),
+    CelebrityInteractionListener, KnownForInteractionListener {
     val persons = MovieRepository.personPopular().asLiveData()
     val personDetails = MutableLiveData<PersonPopularResult?>()
 
-    override fun onClickPerson(person: PersonPopularResult) {
+    override fun onClickCelebrity(person: PersonPopularResult) {
         personDetails.postValue(person)
     }
 

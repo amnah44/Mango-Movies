@@ -15,7 +15,7 @@
 
         <variable
             name="viewModel"
-            type="com.mango.movies.ui.celebrities.PersonPopularViewModel" />
+            type="com.mango.movies.ui.celebrities.CelebrityPopularViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

@@ -11,7 +11,7 @@ import com.mango.movies.util.Constant
 
 class CelebrityFragment : BaseFragment<FragmentPersonBinding>(R.layout.fragment_person) {
     override val LOG_TAG: String = Constant.PEOPLE_FRAGMENT
-    override val viewModel = PersonPopularViewModel()
+    override val viewModel = CelebrityPopularViewModel()
 
     override val bindingInflater: (LayoutInflater, Int, ViewGroup?, Boolean) -> FragmentPersonBinding =
         DataBindingUtil::inflate
