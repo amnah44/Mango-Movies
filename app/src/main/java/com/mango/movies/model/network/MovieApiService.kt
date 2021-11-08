@@ -7,7 +7,6 @@ import com.mango.movies.model.domain.category.MovieAndTvByGenreResponse
 import com.mango.movies.model.domain.details.DetailsResponse
 import com.mango.movies.model.domain.genre.GenerResponse
 import com.mango.movies.model.domain.movie.details.MovieDetailsResponse
-import com.mango.movies.model.domain.movie.latest.MovieLatestResponse
 import com.mango.movies.model.domain.person.details.PersonDetailsResponse
 import com.mango.movies.model.domain.person.popular.PersonPopularResponse
 import com.mango.movies.model.domain.tv.details.TvDetailsResponse

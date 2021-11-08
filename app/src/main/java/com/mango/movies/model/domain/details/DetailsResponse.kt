@@ -7,7 +7,7 @@ import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 import com.mango.movies.model.domain.genre.Genre
 
-
+@SuppressLint("ParcelCreator")
 data class DetailsResponse(
     @SerializedName("adult")
     val adult: Boolean?,
