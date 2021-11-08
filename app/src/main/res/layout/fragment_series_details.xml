@@ -144,7 +144,7 @@
             android:layout_marginHorizontal="16dp"
             android:isIndicator="true"
             android:progressTint="#F13B03"
-            android:rating="@{String.valueOf(itemMovie.voteAverage)}"
+            android:rating="@{itemMovie.voteAverage}"
             android:scaleX="0.7"
             android:scaleY="0.7"
             android:transformPivotX="0dp"
