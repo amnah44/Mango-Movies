@@ -13,6 +13,7 @@ class HomeViewModel : ViewModel(), HomeInteractionListener {
     val topRateMovies = MovieRepository.ratedMovies().asLiveData()
     val trendingTV = MovieRepository.tvTrending().asLiveData()
     val topRateSeries = MovieRepository.topRatedTvShow().asLiveData()
+
     override fun onTopRateClick(movieTopRate: MovieTopRatedResult) {
         TODO("Not yet implemented")
     }

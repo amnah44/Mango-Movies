@@ -1,4 +1,4 @@
-package com.mango.movies.ui.person
+package com.mango.movies.ui.celebrities
 
 
 import com.mango.movies.model.domain.person.popular.PersonPopularResult

@@ -1,13 +1,11 @@
-package com.mango.movies.ui.person
+package com.mango.movies.ui.celebrities
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.os.persistableBundleOf
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
 import com.mango.movies.R
 import com.mango.movies.databinding.FragmentPersonBinding
-import com.mango.movies.model.repositiory.MovieRepository
 import com.mango.movies.ui.base.BaseFragment
 import com.mango.movies.util.Constant
 

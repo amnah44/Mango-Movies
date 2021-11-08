@@ -1,6 +1,5 @@
-package com.mango.movies.ui.person
+package com.mango.movies.ui.celebrities
 
-import androidx.navigation.Navigation
 import com.mango.movies.ui.base.BaseAdapter
 import com.mango.movies.R
 import com.mango.movies.model.domain.person.popular.PersonPopularResult

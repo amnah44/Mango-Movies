@@ -9,7 +9,7 @@
             type="com.mango.movies.model.domain.person.popular.PersonPopularResult" />
         <variable
             name="listener"
-            type="com.mango.movies.ui.person.PersonInteractionListener" />
+            type="com.mango.movies.ui.celebrities.PersonInteractionListener" />
 
     </data>
 
