@@ -1,4 +1,4 @@
-package com.mango.movies.model.domain.person.details
+package com.mango.movies.model.domain.celebrity.details
 
 
 import com.google.gson.annotations.SerializedName

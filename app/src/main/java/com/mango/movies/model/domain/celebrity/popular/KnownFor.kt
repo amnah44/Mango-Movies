@@ -1,7 +1,6 @@
-package com.mango.movies.model.domain.person.popular
+package com.mango.movies.model.domain.celebrity.popular
 
 
-import android.os.Parcel
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 import kotlinx.android.parcel.Parcelize

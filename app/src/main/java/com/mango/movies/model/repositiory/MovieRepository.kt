@@ -2,8 +2,8 @@ package com.mango.movies.model.repositiory
 
 import com.mango.movies.model.domain.category.MovieAndTvByGenreResponse
 import com.mango.movies.model.domain.genre.GenerResponse
-import com.mango.movies.model.domain.person.details.PersonDetailsResponse
-import com.mango.movies.model.domain.person.popular.PersonPopularResponse
+import com.mango.movies.model.domain.celebrity.details.PersonDetailsResponse
+import com.mango.movies.model.domain.celebrity.popular.PersonPopularResponse
 import com.mango.movies.model.domain.searchResponse.SearchResponse
 import com.mango.movies.model.network.API
 import com.mango.movies.util.Constant
