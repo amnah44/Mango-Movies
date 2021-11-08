@@ -1,30 +1,30 @@
-package com.mango.movies.ui.person
+package com.mango.movies.ui.celebrities
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
 import com.mango.movies.R
-import com.mango.movies.databinding.FragmentPersonBinding
+import com.mango.movies.databinding.FragmentCelebrityBinding
 import com.mango.movies.ui.base.BaseFragment
 import com.mango.movies.util.Constant
 
-class PersonFragment : BaseFragment<FragmentPersonBinding>(R.layout.fragment_person) {
+class CelebrityFragment : BaseFragment<FragmentCelebrityBinding>(R.layout.fragment_celebrity) {
     override val LOG_TAG: String = Constant.PEOPLE_FRAGMENT
-    override val viewModel = PersonPopularViewModel()
+    override val viewModel = CelebrityPopularViewModel()
 
-    override val bindingInflater: (LayoutInflater, Int, ViewGroup?, Boolean) -> FragmentPersonBinding =
+    override val bindingInflater: (LayoutInflater, Int, ViewGroup?, Boolean) -> FragmentCelebrityBinding =
         DataBindingUtil::inflate
 
     override fun setupView() {
         binding.apply {
             viewModel = viewModel
-            personRecyclerView.adapter = PersonAdapter(mutableListOf(), viewModel)
+            personRecyclerView.adapter = CelebrityAdapter(mutableListOf(), viewModel)
         }
 
         viewModel.personDetails.observe(viewLifecycleOwner) {
             if(it!=null){
-                val nav = PersonFragmentDirections.actionPersonFragmentToPersonDetailsFragment(it)
+                val nav = CelebrityFragmentDirections.actionCelebrityFragmentToCelebrityDetailsFragment(it)
                 Navigation.findNavController(requireView()).navigate(nav)
             }
         }

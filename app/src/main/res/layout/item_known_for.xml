@@ -8,7 +8,7 @@
             type="com.mango.movies.model.domain.KnownFor" />
         <variable
             name="listener"
-            type="com.mango.movies.ui.person.details.KnownForInteractionListener" />
+            type="com.mango.movies.ui.celebrities.details.KnownForInteractionListener" />
     </data>
 
     <androidx.cardview.widget.CardView

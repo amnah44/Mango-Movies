@@ -1,5 +1,4 @@
-package com.mango.movies.ui.person.details
-
+package com.mango.movies.ui.celebrities.details
 
 import com.mango.movies.R
 import com.mango.movies.model.domain.KnownFor

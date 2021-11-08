@@ -1,4 +1,4 @@
-package com.mango.movies.ui.person.details
+package com.mango.movies.ui.celebrities.details
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,26 +6,27 @@ import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
 import com.mango.movies.R
-import com.mango.movies.databinding.FragmentPersonDetailsBinding
+import com.mango.movies.databinding.FragmentCelebrityDetailsBinding
 import com.mango.movies.ui.base.BaseFragment
-import com.mango.movies.ui.person.PersonPopularViewModel
+import com.mango.movies.ui.celebrities.CelebrityPopularViewModel
 import com.mango.movies.util.Constant
 
-class PersonDetailsFragment :
-    BaseFragment<FragmentPersonDetailsBinding>(R.layout.fragment_person_details) {
+class CelebrityDetailsFragment :
+    BaseFragment<FragmentCelebrityDetailsBinding>(R.layout.fragment_celebrity_details) {
 
-    override val viewModel = PersonPopularViewModel()
+    override val viewModel = CelebrityPopularViewModel()
     override val LOG_TAG: String = Constant.PERSON_DETAILS_FRAGMENT
-    override val bindingInflater: (LayoutInflater, Int, ViewGroup?, Boolean) -> FragmentPersonDetailsBinding =
+    override val bindingInflater: (LayoutInflater, Int, ViewGroup?, Boolean) -> FragmentCelebrityDetailsBinding =
         DataBindingUtil::inflate
 
-    private val args: PersonDetailsFragmentArgs by navArgs()
+    private val args: CelebrityDetailsFragmentArgs by navArgs()
 
     override fun setupView() {
-        binding.item = args.personDetails
+        binding.item = args.celebrityDetails
         binding.returnArrow.setOnClickListener { view ->
             view.findNavController().popBackStack()
         }
         binding.recyclerKnownFor.adapter = KnownForAdapter(mutableListOf(), viewModel)
     }
+
 }

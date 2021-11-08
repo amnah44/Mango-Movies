@@ -6,23 +6,20 @@
     <data>
         <variable
             name="item"
-            type="com.mango.movies.model.domain.PersonPopularResult" />
-
-
+            type="com.mango.movies.model.domain.CelebrityPopularResult" />
         <variable
             name="listener"
-            type="com.mango.movies.ui.person.details.KnownForInteractionListener" />
-
+            type="com.mango.movies.ui.celebrities.details.KnownForInteractionListener" />
         <variable
             name="viewModel"
-            type="com.mango.movies.ui.person.PersonPopularViewModel" />
+            type="com.mango.movies.ui.celebrities.CelebrityPopularViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/app_color"
-        tools:context=".ui.person.details.PersonDetailsFragment">
+        tools:context=".ui.celebrities.details.CelebrityDetailsFragment">
 
 
         <ImageView

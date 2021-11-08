@@ -5,13 +5,9 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
-import androidx.navigation.findNavController
 import com.mango.movies.R
 import com.mango.movies.databinding.FragmentSearchBinding
 import com.mango.movies.ui.base.BaseFragment
-import com.mango.movies.ui.details.DetailsFragment
-import com.mango.movies.ui.person.PersonAdapter
-import com.mango.movies.ui.person.PersonFragmentDirections
 import com.mango.movies.util.Constant
 
 class SearchFragment : BaseFragment<FragmentSearchBinding>(R.layout.fragment_search) {
@@ -29,9 +25,9 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(R.layout.fragment_sea
             }
         }
 
-        binding.returnArrow.setOnClickListener { view ->
-            view.findNavController().popBackStack()
-        }
+//        binding.returnArrow.setOnClickListener { view ->
+//            view.findNavController().popBackStack()
+//        }
     }
 
     override fun onStop() {

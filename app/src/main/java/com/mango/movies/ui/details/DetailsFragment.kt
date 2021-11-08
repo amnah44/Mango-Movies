@@ -10,7 +10,6 @@ import androidx.navigation.fragment.navArgs
 import com.mango.movies.R
 import com.mango.movies.databinding.FragmentDetailsBinding
 import com.mango.movies.ui.base.BaseFragment
-import com.mango.movies.ui.person.details.PersonDetailsFragmentArgs
 import com.mango.movies.util.Constant
 
 

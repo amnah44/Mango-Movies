@@ -33,13 +33,13 @@
     </fragment>
 
     <fragment
-        android:id="@+id/personFragment"
-        android:name="com.mango.movies.ui.person.PersonFragment"
-        android:label="PersonFragment"
-        tools:layout="@layout/fragment_person">
+        android:id="@+id/celebrityFragment"
+        android:name="com.mango.movies.ui.celebrities.CelebrityFragment"
+        android:label="celebrityFragment"
+        tools:layout="@layout/fragment_celebrity">
         <action
-            android:id="@+id/action_personFragment_to_personDetailsFragment"
-            app:destination="@id/personDetailsFragment" />
+            android:id="@+id/actionCelebrityFragmentToCelebrityDetailsFragment"
+            app:destination="@id/celebrityDetailsFragment" />
     </fragment>
 
     <fragment
@@ -90,14 +90,14 @@
         tools:layout="@layout/activity_movie" />
 
     <fragment
-        android:id="@+id/personDetailsFragment"
-        android:name="com.mango.movies.ui.person.details.PersonDetailsFragment"
-        android:label="PersonDetailsFragment"
-        tools:layout="@layout/fragment_person_details">
+        android:id="@+id/celebrityDetailsFragment"
+        android:name="com.mango.movies.ui.celebrities.details.CelebrityDetailsFragment"
+        android:label="celebrityDetailsFragment"
+        tools:layout="@layout/fragment_celebrity_details">
 
         <argument
-            android:name="personDetails"
-            app:argType="com.mango.movies.model.domain.PersonPopularResult" />
+            android:name="celebrityDetails"
+            app:argType="com.mango.movies.model.domain.CelebrityPopularResult" />
     </fragment>
 
     <fragment
@@ -110,7 +110,6 @@
             android:name="movieDetails"
             app:argType="com.mango.movies.model.domain.Movie" />
     </fragment>
-
 
     <fragment
         android:id="@+id/detailsSeriesFragment"

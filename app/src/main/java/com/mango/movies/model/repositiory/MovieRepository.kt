@@ -1,11 +1,11 @@
 package com.mango.movies.model.repositiory
 
 import com.mango.movies.model.domain.BaseResponse
+import com.mango.movies.model.domain.CelebrityPopularResult
 import com.mango.movies.model.domain.Movie
 import com.mango.movies.model.domain.category.MovieAndTvByGenreResponse
 import com.mango.movies.model.domain.details.DetailsResponse
 import com.mango.movies.model.domain.genre.GenerResponse
-import com.mango.movies.model.domain.PersonPopularResult
 import com.mango.movies.model.network.API
 import com.mango.movies.util.Constant
 import com.mango.movies.util.State
@@ -14,7 +14,6 @@ import kotlinx.coroutines.flow.flow
 import retrofit2.Response
 
 object MovieRepository {
-
     private fun <T> wrapWithFlow(endPointResponse: suspend () -> Response<T>): Flow<State<T?>> {
         return flow {
             emit(State.Loading)
@@ -74,7 +73,7 @@ object MovieRepository {
         API.apiService.searchMovie(query, Constant.api_key)
     }
 
-    fun personPopular(): Flow<State<BaseResponse<PersonPopularResult>?>> =
+    fun personPopular(): Flow<State<BaseResponse<CelebrityPopularResult>?>> =
         wrapWithFlow {
             API.apiService.getPersonPopular(Constant.api_key)
         }
