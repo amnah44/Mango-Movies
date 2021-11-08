@@ -3,7 +3,7 @@ package com.mango.movies.model.domain.celebrity.popular
 
 import com.google.gson.annotations.SerializedName
 
-data class PersonPopularResponse(
+data class CelebrityResponse(
     @SerializedName("page")
     val page: Int?,
     @SerializedName("results")
