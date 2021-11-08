@@ -30,6 +30,7 @@
             android:layout_height="?attr/actionBarSize"
             android:background="@color/app_color"
             android:elevation="16dp"
+            app:itemIconSize="@dimen/large_margin"
             app:itemBackground="@color/app_color"
             app:itemIconTint="@color/orange"
             app:labelVisibilityMode="unlabeled"
