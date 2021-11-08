@@ -21,13 +21,20 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
             homeViewModel = viewModel
             recyclerUpComingMovies.adapter = UpComingMovieAdapter(mutableListOf(), viewModel)
             recyclerTopRateMovies.adapter = TopRateMovieAdapter(mutableListOf(), viewModel)
-//            recyclerTrendingSeries.adapter = TrendingSeriesAdapter(mutableListOf(), viewModel)
-//            recyclerLatestSeries.adapter = TopRateSeriesAdapter(mutableListOf(), viewModel)
+            recyclerTrendingSeries.adapter = TrendingSeriesAdapter(mutableListOf(), viewModel)
+            recyclerLatestSeries.adapter = TopRateSeriesAdapter(mutableListOf(), viewModel)
         }
 
         viewModel.movieDetails.observe(viewLifecycleOwner){
             if (it != null){
                 val action = HomeFragmentDirections.actionHomeFragmentToDetailsFragment(it)
+                Navigation.findNavController(requireView()).navigate(action)
+            }
+        }
+
+        viewModel.seriesDetails.observe(viewLifecycleOwner){
+            if (it != null){
+                val action = HomeFragmentDirections.actionHomeFragmentToDetailsSeriesFragment(it)
                 Navigation.findNavController(requireView()).navigate(action)
             }
         }
