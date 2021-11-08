@@ -12,10 +12,6 @@ import com.mango.movies.R
 import com.mango.movies.ui.base.BaseAdapter
 import android.widget.RatingBar
 
-
-
-
-
 @BindingAdapter(value = ["app:showOnLoading"])
 fun <T> showOnLoading(view: View, state: State<T>?) {
     if (state is State.Loading)
