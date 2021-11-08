@@ -72,19 +72,6 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:showOnSuccess="@{homeViewModel.upComingMovie}" />
 
-                <TextView
-                    android:id="@+id/up_coming_show_more_movies"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/medium_margin"
-                    android:fontFamily="@font/mplusrounded1c_bold"
-                    android:text="@string/show_more"
-                    android:textColor="@color/grayDark"
-                    android:textSize="@dimen/txt2"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:showOnSuccess="@{homeViewModel.upComingMovie}" />
-
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recycler_up_coming_movies"
                     android:layout_width="0dp"
@@ -112,20 +99,6 @@
                     android:textColor="@color/white"
                     android:textSize="@dimen/txt2"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/recycler_up_coming_movies"
-                    app:showOnSuccess="@{homeViewModel.topRateMovies}" />
-
-                <TextView
-                    android:id="@+id/top_rate_movies_show_more"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/medium_margin"
-                    android:layout_marginEnd="@dimen/medium_margin"
-                    android:fontFamily="@font/mplusrounded1c_bold"
-                    android:text="@string/show_more"
-                    android:textColor="@color/grayDark"
-                    android:textSize="@dimen/txt2"
-                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/recycler_up_coming_movies"
                     app:showOnSuccess="@{homeViewModel.topRateMovies}" />
 
@@ -158,20 +131,6 @@
                     app:layout_constraintTop_toBottomOf="@+id/recycler_top_rate_movies"
                     app:showOnSuccess="@{homeViewModel.trendingTV}" />
 
-                <TextView
-                    android:id="@+id/trending_series_show_more"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:fontFamily="@font/mplusrounded1c_bold"
-                    android:text="@string/show_more"
-                    android:textColor="@color/grayDark"
-                    android:textSize="@dimen/txt2"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/recycler_top_rate_movies"
-                    app:showOnSuccess="@{homeViewModel.trendingTV}" />
-
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recycler_trending_series"
                     android:layout_width="0dp"
@@ -196,20 +155,6 @@
                     android:textColor="@color/white"
                     android:textSize="@dimen/txt2"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/recycler_trending_series"
-                    app:showOnSuccess="@{homeViewModel.trendingTV}" />
-
-                <TextView
-                    android:id="@+id/trending_series_show_more2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:fontFamily="@font/mplusrounded1c_bold"
-                    android:text="@string/show_more"
-                    android:textColor="@color/grayDark"
-                    android:textSize="@dimen/txt2"
-                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/recycler_trending_series"
                     app:showOnSuccess="@{homeViewModel.trendingTV}" />
 
