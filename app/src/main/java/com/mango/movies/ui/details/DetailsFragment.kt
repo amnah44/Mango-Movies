@@ -24,9 +24,7 @@ class DetailsFragment : BaseFragment<FragmentDetailsBinding>(R.layout.fragment_d
     private val args: DetailsFragmentArgs by navArgs()
     override fun setupView() {
 
-//        binding.item = args.selectedMovie
         binding.itemMovie = args.movieDetails
-        Log.i("Amnah", args.movieDetails.id.toString())
         binding.returnArrow.setOnClickListener{ view ->
             view.findNavController().popBackStack()
         }

@@ -4,6 +4,7 @@ import com.mango.movies.model.domain.BaseResponse
 import com.mango.movies.model.domain.Movie
 import com.mango.movies.model.domain.Series
 import com.mango.movies.model.domain.category.MovieAndTvByGenreResponse
+import com.mango.movies.model.domain.details.DetailsResponse
 import com.mango.movies.model.domain.genre.GenerResponse
 import com.mango.movies.model.domain.movie.details.MovieDetailsResponse
 import com.mango.movies.model.domain.movie.latest.MovieLatestResponse
@@ -22,7 +23,7 @@ interface MovieApiService {
     suspend fun getMovieDetails(
         @Path("movie_id") movieId: Int,
         @Query("api_key") apiKey: String?,
-    ): Response<MovieDetailsResponse>
+    ): Response<DetailsResponse>
 
     @GET("movie/latest")
     suspend fun getLatestMovies(
@@ -93,13 +94,15 @@ interface MovieApiService {
     ): Response<GenerResponse>
 
     @GET("discover/movie")
-    suspend fun getGenreMovie(@Query("with_genres") genreId: Int?,
-                              @Query("api_key") apiKey: String?,
-    ):Response<MovieAndTvByGenreResponse>
+    suspend fun getGenreMovie(
+        @Query("with_genres") genreId: Int?,
+        @Query("api_key") apiKey: String?,
+    ): Response<MovieAndTvByGenreResponse>
 
     @GET("discover/tv")
-    suspend fun getGenreTv(@Query("with_genres") genreId: Int?,
-                           @Query("api_key") apiKey: String?,
-    ):Response<MovieAndTvByGenreResponse>
+    suspend fun getGenreTv(
+        @Query("with_genres") genreId: Int?,
+        @Query("api_key") apiKey: String?,
+    ): Response<MovieAndTvByGenreResponse>
 
 }
