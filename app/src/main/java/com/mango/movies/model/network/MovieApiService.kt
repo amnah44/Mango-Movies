@@ -51,7 +51,7 @@ interface MovieApiService {
     @GET("tv/latest")
     suspend fun getLatestTvShow(
         @Query("api_key") apiKey: String?,
-    ): Response<TvLatestResponse>
+    ): Response<BaseResponse<Series>>
 
     @GET("tv/top_rated")
     suspend fun getTopRatedTvShow(
