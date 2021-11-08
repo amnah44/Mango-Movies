@@ -42,7 +42,7 @@ interface MovieApiService {
     @GET("movie/upcoming")
     suspend fun getUpcomingMovies(
         @Query("api_key") apiKey: String?,
-    ): Response<BaseResponse<MovieUpComingResult>>
+    ): Response<BaseResponse<Movie>>
 
     @GET("person/{person_id}")
     suspend fun getPersonDetails(

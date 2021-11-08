@@ -32,6 +32,6 @@ class HomeViewModel : ViewModel(), HomeInteractionListener {
     }
 
     override fun onUpComingMoviesClick(moviesUpComing: Movie) {
-        TODO("Not yet implemented")
+        movieDetails.postValue(moviesUpComing)
     }
 }
