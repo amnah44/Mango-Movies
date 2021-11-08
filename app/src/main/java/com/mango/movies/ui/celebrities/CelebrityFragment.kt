@@ -28,7 +28,7 @@ class CelebrityFragment : BaseFragment<FragmentCelebrityBinding>(R.layout.fragme
 
         viewModel.personDetails.observe(viewLifecycleOwner) {
             if(it!=null){
-                val nav = CelebrityFragmentDirections.actionPersonFragmentToPersonDetailsFragment(it)
+                val nav = CelebrityFragmentDirections.actionCelebrityFragmentToCelebrityDetailsFragment(it)
                 Navigation.findNavController(requireView()).navigate(nav)
             }
         }
