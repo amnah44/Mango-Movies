@@ -48,7 +48,10 @@ class ResultViewModel() : ViewModel(),ResultInteractionListener ,GenreInteractio
 
     fun changeMovieOrSeries(){
         flag=flag?.not()
-        requiredGenre=null
+        if (flag==true)
+            requiredGenre=Genre(28,"action")
+        else
+            requiredGenre=Genre(10759,"action")
         getGenre()
         getMovie()
     }
