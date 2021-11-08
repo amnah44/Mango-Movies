@@ -1,5 +1,6 @@
 package com.mango.movies.ui.details
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
@@ -23,7 +24,9 @@ class DetailsFragment : BaseFragment<FragmentDetailsBinding>(R.layout.fragment_d
     private val args: DetailsFragmentArgs by navArgs()
     override fun setupView() {
 
-        binding.item = args.selectedMovie
+//        binding.item = args.selectedMovie
+        binding.itemMovie = args.movieDetails
+        Log.i("Amnah", args.movieDetails.id.toString())
         binding.returnArrow.setOnClickListener{ view ->
             view.findNavController().popBackStack()
         }

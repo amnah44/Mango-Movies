@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import androidx.navigation.NavDirections
+import com.mango.movies.model.domain.BaseResponse
 import com.mango.movies.model.domain.movie.details.MovieDetailsResponse
 import com.mango.movies.model.domain.movie.topRated.MovieTopRatedResult
 import com.mango.movies.model.domain.movie.upComing.MovieUpComingResult
@@ -22,16 +23,13 @@ class HomeViewModel : ViewModel(), HomeInteractionListener {
     val trendingTV = MovieRepository.tvTrending().asLiveData()
     val topRateSeries = MovieRepository.topRatedTvShow().asLiveData()
 
-    val movieDetails = MutableLiveData<State<MovieDetailsResponse?>?>()
-    private fun getMovieDetails(movie: MovieDetailsResponse){
-        viewModelScope.launch {
-            movie.id?.let { MovieRepository.movieDetails(it) }?.collect {
-                movieDetails.postValue(it)
-            }
-        }
+    val movieDetails = MutableLiveData<MovieTopRatedResult>()
+    private fun getMovieDetails(movie: MovieTopRatedResult){
+        movieDetails.postValue(movie)
     }
 
     override fun onTopRateMoviesClick(movieTopRate: MovieTopRatedResult) {
+        getMovieDetails(movieTopRate)
 
     }
 

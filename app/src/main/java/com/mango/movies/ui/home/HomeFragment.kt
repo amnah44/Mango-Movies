@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
+import androidx.navigation.Navigation
 import com.mango.movies.R
 import com.mango.movies.databinding.FragmentHomeBinding
 import com.mango.movies.ui.base.BaseFragment
@@ -25,8 +26,9 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
         }
 
         viewModel.movieDetails.observe(viewLifecycleOwner){
-            if (it?.toData() != null){
-
+            if (it != null){
+                val action = HomeFragmentDirections.actionHomeFragmentToDetailsFragment(it)
+                Navigation.findNavController(requireView()).navigate(action)
             }
         }
     }

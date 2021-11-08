@@ -1,9 +1,13 @@
 package com.mango.movies.model.domain.movie.details
 
 
+import android.annotation.SuppressLint
+import android.os.Parcel
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 import com.mango.movies.model.domain.genre.Genre
 
+@SuppressLint("ParcelCreator")
 data class MovieDetailsResponse(
     @SerializedName("adult")
     val adult: Boolean?,
@@ -55,4 +59,12 @@ data class MovieDetailsResponse(
     val voteAverage: Double?,
     @SerializedName("vote_count")
     val voteCount: Int?
-)
+) : Parcelable {
+    override fun describeContents(): Int {
+        TODO("Not yet implemented")
+    }
+
+    override fun writeToParcel(dest: Parcel?, flags: Int) {
+        TODO("Not yet implemented")
+    }
+}

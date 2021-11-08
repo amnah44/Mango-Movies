@@ -5,8 +5,11 @@
 
     <data>
         <variable
-            name="item"
+            name="itemSearch"
             type="com.mango.movies.model.domain.searchResponse.Result" />
+        <variable
+            name="itemMovie"
+            type="com.mango.movies.model.domain.movie.topRated.MovieTopRatedResult" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -17,7 +20,7 @@
 
         <ImageView
             android:id="@+id/image_movie"
-            imageUrl="@{item.posterPath}"
+            imageUrl="@{itemMovie.posterPath}"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:scaleType="centerCrop"
@@ -47,7 +50,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/medium_margin"
             android:fontFamily="@font/mplusrounded1c_bold"
-            android:text="@{item.title}"
+            android:text="@{itemMovie.title}"
             android:textColor="@color/white"
             android:textSize="@dimen/txt5"
             app:layout_constraintEnd_toEndOf="parent"
@@ -79,7 +82,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
             android:fontFamily="@font/roboto_regular"
-            android:text="@{`Original Title: ` + item.originalTitle}"
+            android:text="@{`Original Title: ` + itemMovie.originalTitle}"
             android:textColor="#6C6F77"
             android:textSize="@dimen/txt3"
             app:layout_constraintBottom_toTopOf="@id/guideline"
@@ -95,7 +98,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
             android:fontFamily="@font/roboto_regular"
-            android:text="@{item.title}"
+            android:text="@{itemMovie.title}"
             android:textColor="@color/white"
             android:textSize="@dimen/txt4"
             android:textStyle="bold"
@@ -144,7 +147,7 @@
             android:layout_marginHorizontal="16dp"
             android:isIndicator="true"
             android:progressTint="#F13B03"
-            android:rating="@{String.valueOf(item.voteAverage)}"
+            android:rating="@{String.valueOf(itemMovie.voteAverage)}"
             android:scaleX="0.7"
             android:scaleY="0.7"
             android:transformPivotX="0dp"
@@ -160,7 +163,7 @@
             android:layout_marginEnd="2dp"
             android:fontFamily="@font/roboto_regular"
             android:paddingHorizontal="4dp"
-            android:text="@{item.releaseDate}"
+            android:text="@{itemMovie.releaseDate}"
             android:textColor="@color/white"
             android:textSize="@dimen/txt2"
             app:layout_constraintEnd_toStartOf="@+id/icon_date"
@@ -228,7 +231,7 @@
             android:fontFamily="@font/roboto_regular"
             android:justificationMode="inter_word"
             android:lines="3"
-            android:text="@{item.overview}"
+            android:text="@{itemMovie.overview}"
             android:textColor="#6C6F77"
             android:textSize="@dimen/txt2"
             app:layout_constraintEnd_toEndOf="parent"
