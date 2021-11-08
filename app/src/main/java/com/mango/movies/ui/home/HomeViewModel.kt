@@ -17,19 +17,19 @@ class HomeViewModel : ViewModel(), HomeInteractionListener {
     val topRateSeries = MovieRepository.topRatedTvShow().asLiveData()
 
     override fun onTopRateMoviesClick(movieTopRate: MovieTopRatedResult) {
-        TODO("Not yet implemented")
+
     }
 
     override fun onTopRateSeriesClick(seriesTopRate: TVTopRatedResult) {
-        TODO("Not yet implemented")
+
     }
 
     override fun onTrendingClick(tvTrending: TVTrendingResult) {
-        TODO("Not yet implemented")
+
     }
 
     override fun onUpComingMoviesClick(moviesUpComing: MovieUpComingResult) {
-        TODO("Not yet implemented")
+
     }
 
 }

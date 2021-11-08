@@ -3,32 +3,35 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
+
         <variable
             name="item"
             type="com.mango.movies.model.domain.movie.upComing.MovieUpComingResult" />
+
         <variable
             name="listener"
             type="com.mango.movies.ui.home.HomeInteractionListener" />
 
     </data>
+
     <androidx.cardview.widget.CardView
         android:layout_width="162dp"
         android:layout_height="183dp"
-        app:cardCornerRadius="10dp"
-        android:layout_marginTop="@dimen/small_margin"
         android:layout_marginStart="@dimen/medium_margin"
-        >
+        android:layout_marginTop="@dimen/small_margin"
+        android:onClick="@{() -> listener.onUpComingMoviesClick(item)}"
+        app:cardCornerRadius="10dp">
+
         <ImageView
             android:id="@+id/now_playing_movies_poster"
+            imageUrl="@{item.posterPath}"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="fitXY"
-            imageUrl="@{item.posterPath}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            />
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.cardview.widget.CardView>
 
 </layout>
