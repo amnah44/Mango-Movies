@@ -64,27 +64,14 @@
                     app:layout_constraintTop_toTopOf="@+id/actorImg"
                     tools:text="Tom Hardy" />
 
-                <TextView
-                    android:id="@+id/text_person_popularity"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/actor_popularity"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/txt2"
-                    app:layout_constraintBottom_toBottomOf="@+id/progress_layout"
-                    app:layout_constraintEnd_toEndOf="@+id/actorName"
-                    app:layout_constraintHorizontal_bias="0.225"
-                    app:layout_constraintStart_toEndOf="@+id/actorImg"
-                    app:layout_constraintTop_toTopOf="@+id/progress_layout" />
-
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/progress_layout"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/medium_margin"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/text_person_popularity"
+                    app:layout_constraintEnd_toEndOf="@+id/actorName"
+                    app:layout_constraintStart_toStartOf="@+id/actorName"
                     app:layout_constraintTop_toBottomOf="@+id/actorName">
 
                     <com.google.android.material.progressindicator.CircularProgressIndicator
