@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="itemMovie"
+            type="com.mango.movies.model.domain.Series" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_color"
+        tools:context=".ui.details.DetailsFragment">
+
+        <ImageView
+            android:id="@+id/image_movie"
+            imageUrl="@{itemMovie.posterPath}"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@id/guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/test_deatil_movie" />
+
+
+        <ImageView
+            android:id="@+id/image_movie_shadow"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@id/guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/shadow_details" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:fontFamily="@font/mplusrounded1c_bold"
+            android:text="@{itemMovie.name}"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/detail_movie" />
+
+        <ImageView
+            android:id="@+id/return_arrow"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="@dimen/medium_margin"
+            android:layout_marginTop="@dimen/medium_margin"
+            app:layout_constraintBottom_toBottomOf="@id/textView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_arrow_back" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.6" />
+
+        <TextView
+            android:id="@+id/text_director_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@{`Original Title: ` + itemMovie.originalName}"
+            android:textColor="#6C6F77"
+            android:textSize="@dimen/txt3"
+            app:layout_constraintBottom_toTopOf="@id/guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Original Title: Original Title"
+
+            />
+
+        <TextView
+            android:id="@+id/text_movie_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@{itemMovie.name}"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt4"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/text_director_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Dune"
+
+            />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/text_movie_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:singleLine="true">
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:backgroundTint="#F13B03"
+                    android:fontFamily="@font/mplusrounded1c_bold"
+                    android:gravity="center"
+                    android:text="Action"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt4"
+                    app:chipEndPadding="16dp"
+                    app:chipStartPadding="16dp" />
+
+            </com.google.android.material.chip.ChipGroup>
+
+        </HorizontalScrollView>
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="@android:style/Widget.Holo.Light.RatingBar.Indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:isIndicator="true"
+            android:progressTint="#F13B03"
+            android:rating="@{String.valueOf(itemMovie.voteAverage)}"
+            android:scaleX="0.7"
+            android:scaleY="0.7"
+            android:transformPivotX="0dp"
+            android:transformPivotY="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guideline" />
+
+        <TextView
+            android:id="@+id/text_movie_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="2dp"
+            android:fontFamily="@font/roboto_regular"
+            android:paddingHorizontal="4dp"
+            android:text="@{itemMovie.firstAirDate}"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt2"
+            app:layout_constraintEnd_toStartOf="@+id/icon_date"
+            app:layout_constraintTop_toBottomOf="@+id/guideline"
+            tools:text="2021(US)" />
+
+        <ImageView
+            android:id="@+id/icon_date"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/ic_calendar"
+            app:layout_constraintBottom_toBottomOf="@id/text_movie_date"
+            app:layout_constraintEnd_toStartOf="@id/text_movie_time"
+            app:layout_constraintTop_toTopOf="@id/text_movie_date" />
+
+        <TextView
+            android:id="@+id/text_movie_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/roboto_regular"
+            android:paddingHorizontal="4dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt2"
+            app:layout_constraintEnd_toStartOf="@id/icon_time"
+            app:layout_constraintTop_toBottomOf="@id/guideline"
+            tools:text="1h:33min"
+
+            />
+
+        <ImageView
+            android:id="@+id/icon_time"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_time"
+            app:layout_constraintBottom_toBottomOf="@id/text_movie_time"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/text_movie_time" />
+
+        <TextView
+            android:id="@+id/overview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/overview"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ratingBar"
+
+            />
+
+        <TextView
+            android:id="@+id/text_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_regular"
+            android:justificationMode="inter_word"
+            android:lines="3"
+            android:text="@{itemMovie.overview}"
+            android:textColor="#6C6F77"
+            android:textSize="@dimen/txt2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/overview"
+            tools:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_related"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:orientation="horizontal"
+
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_description"
+            tools:listitem="@layout/item_details" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
