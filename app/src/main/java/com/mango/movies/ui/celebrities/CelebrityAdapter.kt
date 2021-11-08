@@ -2,9 +2,9 @@ package com.mango.movies.ui.celebrities
 
 import com.mango.movies.ui.base.BaseAdapter
 import com.mango.movies.R
-import com.mango.movies.model.domain.celebrity.popular.PersonPopularResult
+import com.mango.movies.model.domain.celebrity.popular.CelebrityPopularResult
 
-class CelebrityAdapter(items: List<PersonPopularResult>, listener: CelebrityInteractionListener?) :
-    BaseAdapter<PersonPopularResult>(items, listener) {
+class CelebrityAdapter(items: List<CelebrityPopularResult>, listener: CelebrityInteractionListener?) :
+    BaseAdapter<CelebrityPopularResult>(items, listener) {
     override val layoutId = R.layout.item_celebrity
 }

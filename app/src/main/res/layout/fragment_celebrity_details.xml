@@ -6,7 +6,7 @@
     <data>
         <variable
             name="item"
-            type="com.mango.movies.model.domain.celebrity.popular.PersonPopularResult" />
+            type="com.mango.movies.model.domain.celebrity.popular.CelebrityPopularResult" />
         <variable
             name="listener"
             type="com.mango.movies.ui.celebrities.details.KnownForInteractionListener" />
