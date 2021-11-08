@@ -20,7 +20,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
         binding.apply {
             homeViewModel = viewModel
             recyclerUpComingMovies.adapter = UpComingMovieAdapter(mutableListOf(), viewModel)
-//            recyclerTopRateMovies.adapter = TopRateMovieAdapter(mutableListOf(), viewModel)
+            recyclerTopRateMovies.adapter = TopRateMovieAdapter(mutableListOf(), viewModel)
 //            recyclerTrendingSeries.adapter = TrendingSeriesAdapter(mutableListOf(), viewModel)
 //            recyclerLatestSeries.adapter = TopRateSeriesAdapter(mutableListOf(), viewModel)
         }
