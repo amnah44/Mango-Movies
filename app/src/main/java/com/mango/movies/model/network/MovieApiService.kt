@@ -29,7 +29,7 @@ interface MovieApiService {
     suspend fun getLatestMovies(
         @Query("api_key") apiKey: String?,
         @Query("language") language: String?,
-    ): Response<MovieLatestResponse>
+    ): Response<BaseResponse<Movie>>
 
     @GET("movie/top_rated")
     suspend fun getTopRatedMovies(
