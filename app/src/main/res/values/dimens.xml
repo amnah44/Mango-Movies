@@ -16,7 +16,7 @@
     <dimen name="small_padding">8dp</dimen>
     <dimen name="chip_width">100dp</dimen>
     <dimen name="chip_height">64dp</dimen>
-    <dimen name="custom_margin">110dp</dimen>
+    <dimen name="custom_margin">108dp</dimen>
 
 
 </resources>
