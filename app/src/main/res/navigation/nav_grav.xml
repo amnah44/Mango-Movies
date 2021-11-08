@@ -19,10 +19,16 @@
         <action
             android:id="@+id/action_homeFragment_to_showMoreFragment"
             app:destination="@id/showMoreFragment" />
+
         <action
             android:id="@+id/action_homeFragment_to_detailsFragment"
             app:destination="@id/detailsFragment"
-            app:popUpToInclusive="false"/>
+            app:popUpToInclusive="false" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_details_Series_Fragment"
+            app:destination="@id/detailsSeriesFragment"
+            app:popUpToInclusive="false" />
 
     </fragment>
 
@@ -76,6 +82,7 @@
             android:id="@+id/action_showMoreFragment_to_detailsFragment"
             app:destination="@id/detailsFragment" />
     </fragment>
+
     <activity
         android:id="@+id/movieActivity"
         android:name="com.mango.movies.ui.MovieActivity"
@@ -98,13 +105,20 @@
         android:name="com.mango.movies.ui.details.DetailsFragment"
         android:label="DetailsFragment"
         tools:layout="@layout/fragment_details">
-<!--        <argument-->
-<!--            android:name="selectedMovie"-->
-<!--            app:argType="com.mango.movies.model.domain.searchResponse.Result" />-->
+
         <argument
             android:name="movieDetails"
             app:argType="com.mango.movies.model.domain.Movie" />
+    </fragment>
 
 
+    <fragment
+        android:id="@+id/detailsSeriesFragment"
+        android:name="com.mango.movies.ui.series.DetailsSeriesFragment"
+        android:label="DetailsFragment"
+        tools:layout="@layout/fragment_series_details">
+        <argument
+            android:name="seriesDetails"
+            app:argType="com.mango.movies.model.domain.Series" />
     </fragment>
 </navigation>
