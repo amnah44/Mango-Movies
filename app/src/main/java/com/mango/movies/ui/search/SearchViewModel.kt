@@ -16,6 +16,11 @@ import kotlinx.coroutines.flow.collect
 class SearchViewModel : ViewModel(), SearchInteractionListener {
     var searchResult = MutableLiveData<State<SearchResponse?>?>()
     var selectedMovie =  MutableLiveData<Result?>()
+    var flag=MutableLiveData<Boolean>()
+
+    init {
+        flag.postValue(true)
+    }
 
     override fun onClickMovie(movie: Result) {
         Log.v("ALI",movie.title.toString())
@@ -23,6 +28,7 @@ class SearchViewModel : ViewModel(), SearchInteractionListener {
     }
 
     fun onTextChanged(text: CharSequence?) {
+        flag.postValue(false)
         // TODO do something with text
         viewModelScope.launch {
             MovieRepository.searchMovie(text.toString()).collect {

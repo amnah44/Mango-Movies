@@ -1,5 +1,6 @@
 package com.mango.movies.util
 
+import android.opengl.Visibility
 import android.view.View
 import android.widget.ImageView
 import androidx.appcompat.widget.SearchView
@@ -62,5 +63,17 @@ fun ImageView.seImageFromUrl(url: String?) {
 fun View.navigate(action: NavDirections) {
     this.setOnClickListener {
         Navigation.findNavController(this).navigate(action)
+    }
+}
+
+@BindingAdapter(value=["goOnTextChanged"])
+
+fun goOnTextChanged(view: View, flag:Boolean){
+    if (flag){
+        view.visibility=View.VISIBLE
+    }
+
+    else{
+        view.visibility=View.GONE
     }
 }
