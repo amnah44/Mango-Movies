@@ -21,8 +21,8 @@
         app:contentPaddingRight="8dp"
         app:contentPaddingTop="2dp"
         app:contentPaddingBottom="2dp"
-        android:layout_marginStart="@dimen/small_margin"
-        android:layout_marginEnd="@dimen/small_margin"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
         android:onClick="@{() -> listener.onClickCategory(item)}"
         app:cardBackgroundColor="@color/dark_color"
         app:cardCornerRadius="@dimen/category_card_corner_radius">
