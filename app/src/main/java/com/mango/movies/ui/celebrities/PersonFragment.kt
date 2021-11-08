@@ -22,7 +22,7 @@ class PersonFragment : BaseFragment<FragmentPersonBinding>(R.layout.fragment_per
     override fun setupView() {
         binding.apply {
             viewModel = viewModel
-            personRecyclerView.adapter = PersonAdapter(mutableListOf(), viewModel)
+            personRecyclerView.adapter = CelebrityAdapter(mutableListOf(), viewModel)
         }
 
 
