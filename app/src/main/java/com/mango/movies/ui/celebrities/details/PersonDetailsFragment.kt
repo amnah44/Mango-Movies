@@ -4,6 +4,7 @@ package com.mango.movies.ui.celebrities.details
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
 import com.mango.movies.R
 import com.mango.movies.databinding.FragmentPersonDetailsBinding

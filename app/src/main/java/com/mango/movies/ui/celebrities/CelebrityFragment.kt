@@ -5,15 +5,15 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
 import com.mango.movies.R
-import com.mango.movies.databinding.FragmentPersonBinding
+import com.mango.movies.databinding.FragmentCelebrityBinding
 import com.mango.movies.ui.base.BaseFragment
 import com.mango.movies.util.Constant
 
-class CelebrityFragment : BaseFragment<FragmentPersonBinding>(R.layout.fragment_person) {
+class CelebrityFragment : BaseFragment<FragmentCelebrityBinding>(R.layout.fragment_celebrity) {
     override val LOG_TAG: String = Constant.PEOPLE_FRAGMENT
     override val viewModel = CelebrityPopularViewModel()
 
-    override val bindingInflater: (LayoutInflater, Int, ViewGroup?, Boolean) -> FragmentPersonBinding =
+    override val bindingInflater: (LayoutInflater, Int, ViewGroup?, Boolean) -> FragmentCelebrityBinding =
         DataBindingUtil::inflate
 
 
