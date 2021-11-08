@@ -82,12 +82,12 @@
 
     <fragment
         android:id="@+id/personDetailsFragment"
-        android:name="com.mango.movies.ui.celebrities.details.PersonDetailsFragment"
+        android:name="com.mango.movies.ui.celebrities.CelebrityFragment"
         android:label="PersonDetailsFragment"
         tools:layout="@layout/fragment_person_details">
 
         <argument
-            android:name="personDetails"
+            android:name="celebrityDetails"
             app:argType="com.mango.movies.model.domain.person.popular.PersonPopularResult" />
     </fragment>
 

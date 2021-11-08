@@ -25,9 +25,9 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(R.layout.fragment_sea
             }
         }
 
-        binding.returnArrow.setOnClickListener { view ->
-            view.findNavController().popBackStack()
-        }
+//        binding.returnArrow.setOnClickListener { view ->
+//            view.findNavController().popBackStack()
+//        }
     }
 
     override fun onStop() {
