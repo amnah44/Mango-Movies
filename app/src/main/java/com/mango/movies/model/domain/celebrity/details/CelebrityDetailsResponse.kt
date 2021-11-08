@@ -3,7 +3,7 @@ package com.mango.movies.model.domain.celebrity.details
 
 import com.google.gson.annotations.SerializedName
 
-data class PersonDetailsResponse(
+data class CelebrityDetailsResponse(
     @SerializedName("adult")
     val adult: Boolean?,
     @SerializedName("also_known_as")
