@@ -1,5 +1,6 @@
 package com.mango.movies.model.network
 
+import com.mango.movies.util.Constant.BASE_REVIEW_URL
 import com.mango.movies.util.Constant.BASE_URL
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -20,4 +21,12 @@ object API {
         .build()
 
     val apiService: MovieApiService = retrofit.create(MovieApiService::class.java)
+
+    private val reviewRetrofit = Retrofit.Builder()
+        .baseUrl(BASE_REVIEW_URL)
+        .addConverterFactory(GsonConverterFactory.create())
+        .client(myClient)
+        .build()
+
+    val reviewApiServices: ReviewApiServices = reviewRetrofit.create(ReviewApiServices::class.java)
 }
