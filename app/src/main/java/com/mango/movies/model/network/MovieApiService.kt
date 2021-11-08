@@ -1,11 +1,11 @@
 package com.mango.movies.model.network
 
 import com.mango.movies.model.domain.BaseResponse
+import com.mango.movies.model.domain.Movie
 import com.mango.movies.model.domain.category.MovieAndTvByGenreResponse
 import com.mango.movies.model.domain.genre.GenerResponse
 import com.mango.movies.model.domain.movie.details.MovieDetailsResponse
 import com.mango.movies.model.domain.movie.latest.MovieLatestResponse
-import com.mango.movies.model.domain.movie.topRated.MovieTopRatedResult
 import com.mango.movies.model.domain.movie.upComing.MovieUpComingResult
 import com.mango.movies.model.domain.person.details.PersonDetailsResponse
 import com.mango.movies.model.domain.person.popular.PersonPopularResponse
@@ -37,7 +37,7 @@ interface MovieApiService {
     @GET("movie/top_rated")
     suspend fun getTopRatedMovies(
         @Query("api_key") apiKey: String?,
-    ): Response<BaseResponse<MovieTopRatedResult>>
+    ): Response<BaseResponse<Movie>>
 
     @GET("movie/upcoming")
     suspend fun getUpcomingMovies(

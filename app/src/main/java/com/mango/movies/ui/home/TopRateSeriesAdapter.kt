@@ -1,8 +1,6 @@
 package com.mango.movies.ui.home
 
 import com.mango.movies.R
-import com.mango.movies.model.domain.movie.topRated.MovieTopRatedResult
-import com.mango.movies.model.domain.tv.popular.TvPopularResponse
 import com.mango.movies.model.domain.tv.topRated.TVTopRatedResult
 import com.mango.movies.ui.base.BaseAdapter
 

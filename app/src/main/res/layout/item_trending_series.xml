@@ -6,7 +6,7 @@
 
         <variable
             name="item"
-            type="com.mango.movies.model.domain.tv.trending.TVTrendingResult" />
+            type="com.mango.movies.model.domain.Movie" />
 
         <variable
             name="listener"

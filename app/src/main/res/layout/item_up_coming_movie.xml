@@ -6,7 +6,7 @@
 
         <variable
             name="item"
-            type="com.mango.movies.model.domain.movie.upComing.MovieUpComingResult" />
+            type="com.mango.movies.model.domain.Movie" />
 
         <variable
             name="listener"

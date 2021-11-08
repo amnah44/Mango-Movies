@@ -3,10 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-
         <variable
             name="item"
-            type="com.mango.movies.model.domain.movie.topRated.MovieTopRatedResult" />
+            type="com.mango.movies.model.domain.Movie" />
 
         <variable
             name="listener"

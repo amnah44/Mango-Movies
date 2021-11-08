@@ -1,12 +1,11 @@
-package com.mango.movies.model.domain.movie.topRated
-
+package com.mango.movies.model.domain
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-data class MovieTopRatedResult(
+data class Movie(
     @SerializedName("adult")
     val adult: Boolean?,
     @SerializedName("backdrop_path")
@@ -23,6 +22,8 @@ data class MovieTopRatedResult(
     val overview: String?,
     @SerializedName("popularity")
     val popularity: Double?,
+    @SerializedName("name")
+    val name: String?,
     @SerializedName("poster_path")
     val posterPath: String?,
     @SerializedName("release_date")

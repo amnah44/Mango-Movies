@@ -5,11 +5,8 @@
 
     <data>
         <variable
-            name="itemSearch"
-            type="com.mango.movies.model.domain.searchResponse.Result" />
-        <variable
             name="itemMovie"
-            type="com.mango.movies.model.domain.movie.topRated.MovieTopRatedResult" />
+            type="com.mango.movies.model.domain.Movie" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

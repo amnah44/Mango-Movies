@@ -103,7 +103,7 @@
 <!--            app:argType="com.mango.movies.model.domain.searchResponse.Result" />-->
         <argument
             android:name="movieDetails"
-            app:argType="com.mango.movies.model.domain.movie.topRated.MovieTopRatedResult" />
+            app:argType="com.mango.movies.model.domain.Movie" />
 
 
     </fragment>
