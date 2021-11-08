@@ -1,12 +1,12 @@
 package com.mango.movies.ui.home
 
 import com.mango.movies.R
-import com.mango.movies.model.domain.tv.topRated.TVTopRatedResult
+import com.mango.movies.model.domain.Series
 import com.mango.movies.ui.base.BaseAdapter
 
 class TopRateSeriesAdapter(
-    item: List<TVTopRatedResult>,
+    item: List<Series>,
     listener: HomeInteractionListener
-) : BaseAdapter<TVTopRatedResult>(item, listener) {
+) : BaseAdapter<Series>(item, listener) {
     override val layoutId: Int = R.layout.item_top_rate_series
 }
