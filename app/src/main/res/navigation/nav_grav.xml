@@ -16,9 +16,6 @@
         <action
             android:id="@+id/action_homeFragment_to_searchFragment"
             app:destination="@id/searchFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_showMoreFragment"
-            app:destination="@id/showMoreFragment" />
 
         <action
             android:id="@+id/action_homeFragment_to_detailsFragment"
@@ -69,17 +66,6 @@
             app:argType="integer" />
         <action
             android:id="@+id/action_categoryFragment_to_detailsFragment"
-            app:destination="@id/detailsFragment" />
-    </fragment>
-
-
-    <fragment
-        android:id="@+id/showMoreFragment"
-        android:name="com.mango.movies.ui.showmore.ShowMoreFragment"
-        android:label="ShowMoreFragment"
-        tools:layout="@layout/fragment_show_more">
-        <action
-            android:id="@+id/action_showMoreFragment_to_detailsFragment"
             app:destination="@id/detailsFragment" />
     </fragment>
 
