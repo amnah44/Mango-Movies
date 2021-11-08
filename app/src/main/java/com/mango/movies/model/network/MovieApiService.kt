@@ -50,7 +50,7 @@ interface MovieApiService {
     suspend fun getTvShowDetails(
         @Path("tv_id") tvId: Int,
         @Query("api_key") apiKey: String?,
-    ): Response<TvDetailsResponse>
+    ): Response<DetailsResponse>
 
     @GET("tv/latest")
     suspend fun getLatestTvShow(
