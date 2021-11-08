@@ -1,10 +1,11 @@
 package com.mango.movies.model.repositiory
 
+import com.mango.movies.model.domain.BaseResponse
+import com.mango.movies.model.domain.Movie
 import com.mango.movies.model.domain.category.MovieAndTvByGenreResponse
 import com.mango.movies.model.domain.genre.GenerResponse
 import com.mango.movies.model.domain.person.details.PersonDetailsResponse
 import com.mango.movies.model.domain.person.popular.PersonPopularResponse
-import com.mango.movies.model.domain.searchResponse.SearchResponse
 import com.mango.movies.model.network.API
 import com.mango.movies.util.Constant
 import com.mango.movies.util.State
@@ -69,7 +70,7 @@ object MovieRepository {
         API.apiService.getTrendingTV(mediaType = "tv", timeWindow = "week", Constant.api_key)
     }
 
-    fun searchMovie(query: String): Flow<State<SearchResponse?>> = wrapWithFlow {
+    fun searchMovie(query: String): Flow<State<BaseResponse<Movie>?>> = wrapWithFlow {
         API.apiService.searchMovie(query, Constant.api_key)
     }
 
