@@ -11,7 +11,6 @@ import com.mango.movies.model.domain.person.details.PersonDetailsResponse
 import com.mango.movies.model.domain.person.popular.PersonPopularResponse
 import com.mango.movies.model.domain.tv.details.TvDetailsResponse
 import com.mango.movies.model.domain.tv.latest.TvLatestResponse
-import com.mango.movies.model.domain.tv.popular.TvPopularResponse
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -57,11 +56,6 @@ interface MovieApiService {
     suspend fun getLatestTvShow(
         @Query("api_key") apiKey: String?,
     ): Response<TvLatestResponse>
-
-    @GET("tv/popular")
-    suspend fun getPopularTvShow(
-        @Query("api_key") apiKey: String?,
-    ): Response<TvPopularResponse>
 
     @GET("tv/top_rated")
     suspend fun getTopRatedTvShow(
