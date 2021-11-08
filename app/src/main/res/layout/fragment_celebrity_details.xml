@@ -7,12 +7,9 @@
         <variable
             name="item"
             type="com.mango.movies.model.domain.person.popular.PersonPopularResult" />
-
-
         <variable
             name="listener"
             type="com.mango.movies.ui.celebrities.details.KnownForInteractionListener" />
-
         <variable
             name="viewModel"
             type="com.mango.movies.ui.celebrities.CelebrityPopularViewModel" />
@@ -22,7 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/app_color"
-        tools:context=".ui.celebrities.details.PersonDetailsFragment">
+        tools:context=".ui.celebrities.details.CelebrityDetailsFragment">
 
 
         <ImageView
