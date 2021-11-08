@@ -44,16 +44,19 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
+        <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/animation_error"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:background="@color/red"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            app:lottie_rawRes="@raw/error_animation"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
             app:showOnError="@{viewModel.persons}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
 
         <ProgressBar
             android:id="@+id/progress_load"
