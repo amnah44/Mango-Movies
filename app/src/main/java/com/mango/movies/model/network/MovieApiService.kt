@@ -44,7 +44,7 @@ interface MovieApiService {
     suspend fun getPersonDetails(
         @Path("person_id") personId: Int,
         @Query("api_key") apiKey: String?,
-    ): Response<PersonDetailsResponse>
+    ): Response<DetailsResponse>
 
     @GET("tv/{tv_id}")
     suspend fun getTvShowDetails(

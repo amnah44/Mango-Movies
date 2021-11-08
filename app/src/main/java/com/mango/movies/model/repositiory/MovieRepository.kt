@@ -3,6 +3,7 @@ package com.mango.movies.model.repositiory
 import com.mango.movies.model.domain.BaseResponse
 import com.mango.movies.model.domain.Movie
 import com.mango.movies.model.domain.category.MovieAndTvByGenreResponse
+import com.mango.movies.model.domain.details.DetailsResponse
 import com.mango.movies.model.domain.genre.GenerResponse
 import com.mango.movies.model.domain.person.details.PersonDetailsResponse
 import com.mango.movies.model.domain.person.popular.PersonPopularResponse
@@ -79,7 +80,7 @@ object MovieRepository {
             API.apiService.getPersonPopular(Constant.api_key)
         }
 
-    fun personDetails(personId: Int): Flow<State<PersonDetailsResponse?>> =
+    fun personDetails(personId: Int): Flow<State<DetailsResponse?>> =
         wrapWithFlow {
             API.apiService.getPersonDetails(personId, Constant.api_key)
         }
