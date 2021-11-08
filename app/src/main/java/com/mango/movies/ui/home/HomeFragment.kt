@@ -16,12 +16,13 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
         DataBindingUtil::inflate
 
     override fun setupView() {
-        binding.homeViewModel = viewModel
-        binding.recyclerUpComingMovies.adapter = UpComingMovieAdapter(mutableListOf(), viewModel)
-        binding.recyclerTopRateMovies.adapter = TopRateMovieAdapter(mutableListOf(), viewModel)
-        binding.recyclerTrendingSeries.adapter = TrendingSeriesAdapter(mutableListOf(), viewModel)
-        binding.recyclerLatestSeries.adapter = TopRateSeriesAdapter(mutableListOf(), viewModel)
-
+        binding.apply {
+            homeViewModel = viewModel
+            recyclerUpComingMovies.adapter = UpComingMovieAdapter(mutableListOf(), viewModel)
+            recyclerTopRateMovies.adapter = TopRateMovieAdapter(mutableListOf(), viewModel)
+            recyclerTrendingSeries.adapter = TrendingSeriesAdapter(mutableListOf(), viewModel)
+            recyclerLatestSeries.adapter = TopRateSeriesAdapter(mutableListOf(), viewModel)
+        }
     }
 
 }
