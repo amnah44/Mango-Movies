@@ -6,7 +6,7 @@ import com.mango.movies.model.domain.Series
 import com.mango.movies.model.domain.category.MovieAndTvByGenreResponse
 import com.mango.movies.model.domain.details.DetailsResponse
 import com.mango.movies.model.domain.genre.GenerResponse
-import com.mango.movies.model.domain.person.popular.PersonPopularResult
+import com.mango.movies.model.domain.PersonPopularResult
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path

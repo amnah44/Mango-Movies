@@ -6,7 +6,7 @@
     <data>
         <variable
             name="item"
-            type="com.mango.movies.model.domain.person.popular.PersonPopularResult" />
+            type="com.mango.movies.model.domain.PersonPopularResult" />
 
 
         <variable

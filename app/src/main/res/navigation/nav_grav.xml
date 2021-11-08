@@ -97,7 +97,7 @@
 
         <argument
             android:name="personDetails"
-            app:argType="com.mango.movies.model.domain.person.popular.PersonPopularResult" />
+            app:argType="com.mango.movies.model.domain.PersonPopularResult" />
     </fragment>
 
     <fragment

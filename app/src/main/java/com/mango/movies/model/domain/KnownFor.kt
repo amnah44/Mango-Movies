@@ -1,4 +1,4 @@
-package com.mango.movies.model.domain.person.popular
+package com.mango.movies.model.domain
 
 
 import android.os.Parcel

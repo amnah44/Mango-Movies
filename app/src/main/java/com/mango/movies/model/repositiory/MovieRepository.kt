@@ -5,8 +5,7 @@ import com.mango.movies.model.domain.Movie
 import com.mango.movies.model.domain.category.MovieAndTvByGenreResponse
 import com.mango.movies.model.domain.details.DetailsResponse
 import com.mango.movies.model.domain.genre.GenerResponse
-import com.mango.movies.model.domain.person.popular.PersonPopularResponse
-import com.mango.movies.model.domain.person.popular.PersonPopularResult
+import com.mango.movies.model.domain.PersonPopularResult
 import com.mango.movies.model.network.API
 import com.mango.movies.util.Constant
 import com.mango.movies.util.State

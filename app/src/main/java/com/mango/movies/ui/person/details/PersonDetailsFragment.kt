@@ -1,18 +1,12 @@
 package com.mango.movies.ui.person.details
 
-
-import android.annotation.SuppressLint
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
-import com.bumptech.glide.Glide
 import com.mango.movies.R
 import com.mango.movies.databinding.FragmentPersonDetailsBinding
-import com.mango.movies.model.domain.person.popular.PersonPopularResult
-import com.mango.movies.model.repositiory.MovieRepository
 import com.mango.movies.ui.base.BaseFragment
 import com.mango.movies.ui.person.PersonPopularViewModel
 import com.mango.movies.util.Constant
@@ -34,5 +28,4 @@ class PersonDetailsFragment :
         }
         binding.recyclerKnownFor.adapter = KnownForAdapter(mutableListOf(), viewModel)
     }
-
 }
