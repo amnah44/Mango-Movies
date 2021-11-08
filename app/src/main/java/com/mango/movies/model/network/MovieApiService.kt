@@ -2,6 +2,7 @@ package com.mango.movies.model.network
 
 import com.mango.movies.model.domain.BaseResponse
 import com.mango.movies.model.domain.Movie
+import com.mango.movies.model.domain.Series
 import com.mango.movies.model.domain.category.MovieAndTvByGenreResponse
 import com.mango.movies.model.domain.genre.GenerResponse
 import com.mango.movies.model.domain.movie.details.MovieDetailsResponse
@@ -69,14 +70,14 @@ interface MovieApiService {
     @GET("tv/top_rated")
     suspend fun getTopRatedTvShow(
         @Query("api_key") apiKey: String?,
-    ): Response<BaseResponse<TVTopRatedResult>>
+    ): Response<BaseResponse<Series>>
 
     @GET("trending/{media_type}/{time_window}")
     suspend fun getTrendingTV(
         @Path("media_type") mediaType: String?,
         @Path("time_window") timeWindow: String?,
         @Query("api_key") apiKey: String?
-    ): Response<BaseResponse<TVTrendingResult>>
+    ): Response<BaseResponse<Series>>
 
     @GET("search/movie")
     suspend fun searchMovie(
