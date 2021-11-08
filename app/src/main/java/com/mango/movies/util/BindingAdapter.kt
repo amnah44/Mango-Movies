@@ -50,7 +50,7 @@ fun <T> setRecyclerItems(view: RecyclerView, items: List<T>?) {
 fun ImageView.seImageFromUrl(url: String?) {
     Glide.with(this)
         .load(Constant.BASE_PERSON_IMAGE_URL + url)
-        .placeholder(R.drawable.ic_place_holder)
+        .placeholder(R.drawable.ic_film_fill)
         .error(R.drawable.ic_error)
         .into(this)
 }
