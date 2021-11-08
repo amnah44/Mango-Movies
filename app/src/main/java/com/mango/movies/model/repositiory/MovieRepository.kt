@@ -6,6 +6,7 @@ import com.mango.movies.model.domain.category.MovieAndTvByGenreResponse
 import com.mango.movies.model.domain.details.DetailsResponse
 import com.mango.movies.model.domain.genre.GenerResponse
 import com.mango.movies.model.domain.person.popular.PersonPopularResponse
+import com.mango.movies.model.domain.person.popular.PersonPopularResult
 import com.mango.movies.model.network.API
 import com.mango.movies.util.Constant
 import com.mango.movies.util.State
@@ -74,7 +75,7 @@ object MovieRepository {
         API.apiService.searchMovie(query, Constant.api_key)
     }
 
-    fun personPopular(): Flow<State<PersonPopularResponse?>> =
+    fun personPopular(): Flow<State<BaseResponse<PersonPopularResult>?>> =
         wrapWithFlow {
             API.apiService.getPersonPopular(Constant.api_key)
         }

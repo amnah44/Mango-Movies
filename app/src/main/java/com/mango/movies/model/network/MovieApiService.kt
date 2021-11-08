@@ -6,8 +6,7 @@ import com.mango.movies.model.domain.Series
 import com.mango.movies.model.domain.category.MovieAndTvByGenreResponse
 import com.mango.movies.model.domain.details.DetailsResponse
 import com.mango.movies.model.domain.genre.GenerResponse
-import com.mango.movies.model.domain.person.popular.PersonPopularResponse
-import com.mango.movies.model.domain.tv.latest.TvLatestResponse
+import com.mango.movies.model.domain.person.popular.PersonPopularResult
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -75,7 +74,7 @@ interface MovieApiService {
     @GET("person/popular")
     suspend fun getPersonPopular(
         @Query("api_key") apiKey: String?,
-    ): Response<PersonPopularResponse>
+    ): Response<BaseResponse<PersonPopularResult>>
 
 
     @GET("genre/movie/list")
