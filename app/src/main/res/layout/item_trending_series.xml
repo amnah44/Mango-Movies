@@ -16,9 +16,8 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="219dp"
-        android:layout_height="122dp"
+        android:layout_height="136dp"
         android:layout_marginStart="@dimen/medium_margin"
-        android:layout_marginTop="@dimen/small_margin"
         android:onClick="@{() -> listener.onTrendingClick(item)}"
         app:cardCornerRadius="10dp">
 

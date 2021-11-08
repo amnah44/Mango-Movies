@@ -18,8 +18,6 @@
         android:layout_height="122dp"
         android:onClick="@{() -> listener.onTopRateMoviesClick(item)}"
         android:layout_marginStart="@dimen/medium_margin"
-        android:layout_marginTop="@dimen/small_margin"
-        android:layout_marginBottom="@dimen/small_margin"
         app:cardCornerRadius="10dp">
 
         <ImageView

@@ -18,7 +18,6 @@
         android:layout_width="162dp"
         android:layout_height="183dp"
         android:layout_marginStart="@dimen/medium_margin"
-        android:layout_marginTop="@dimen/small_margin"
         android:onClick="@{() -> listener.onUpComingMoviesClick(item)}"
         app:cardCornerRadius="10dp">
 
