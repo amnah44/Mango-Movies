@@ -45,14 +45,6 @@ fun <T> setRecyclerItems(view: RecyclerView, items: List<T>?) {
     }
 }
 
-@BindingAdapter("queryTextListener")
-fun setOnQueryTextListener(
-    searchView: SearchView,
-    listener: SearchView.OnQueryTextListener?
-) {
-    searchView.setOnQueryTextListener(listener)
-}
-
 @BindingAdapter(value = ["imageUrl"])
 fun ImageView.seImageFromUrl(url: String?) {
     Glide.with(this)
@@ -66,13 +58,5 @@ fun ImageView.seImageFromUrl(url: String?) {
 fun View.navigate(action: NavDirections) {
     this.setOnClickListener {
         Navigation.findNavController(this).navigate(action)
-    }
-}
-
-@BindingAdapter("android:rating")
-fun setRating(view: RatingBar?, rating: String) {
-    if (view != null) {
-        val rate = rating.toFloat()
-        view.rating = rate
     }
 }
