@@ -25,6 +25,7 @@
             android:layout_marginEnd="@dimen/medium_margin"
             app:cardBackgroundColor="@color/dark_color"
             app:cardCornerRadius="25dp"
+            app:contentPaddingRight="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -61,9 +62,11 @@
                     android:fontFamily="@font/inika_regular"
                     android:textColor="@color/grayDark"
                     android:textSize="@dimen/txt2"
+                    android:maxLines="2"
                     android:text="@{item.title  + item.release_date}"
                     app:layout_constraintBottom_toBottomOf="@+id/image_movie"
                     app:layout_constraintStart_toEndOf="@+id/image_movie"
+                    app:layout_constraintTop_toBottomOf="@id/progressBar_rating"
                     tools:text="Text,text" />
 
                 <RatingBar
@@ -89,6 +92,7 @@
                     android:id="@+id/text_movie_tv_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:maxLines="2"
                     android:layout_marginTop="@dimen/small_margin"
                     android:fontFamily="@font/mplusrounded1c_bold"
                     android:textColor="@color/white"
