@@ -22,6 +22,9 @@
         <action
             android:id="@+id/action_homeFragment_to_detailsFragment"
             app:destination="@id/detailsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_detailsFragment2"
+            app:destination="@id/detailsFragment" />
     </fragment>
 
     <fragment
@@ -99,5 +102,8 @@
         <argument
             android:name="selectedMovie"
             app:argType="com.mango.movies.model.domain.searchResponse.Result" />
+        <argument
+            android:name="topRateMovieDetails"
+            app:argType="com.mango.movies.model.domain.movie.topRated.MovieTopRatedResult" />
     </fragment>
 </navigation>

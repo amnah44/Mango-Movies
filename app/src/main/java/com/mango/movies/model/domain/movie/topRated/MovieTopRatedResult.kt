@@ -1,8 +1,11 @@
 package com.mango.movies.model.domain.movie.topRated
 
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 data class MovieTopRatedResult(
     @SerializedName("adult")
     val adult: Boolean?,
@@ -32,4 +35,4 @@ data class MovieTopRatedResult(
     val voteAverage: Double?,
     @SerializedName("vote_count")
     val voteCount: Int?
-)
+): Parcelable
