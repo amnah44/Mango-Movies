@@ -74,6 +74,7 @@
             android:id="@+id/action_showMoreFragment_to_detailsFragment"
             app:destination="@id/detailsFragment" />
     </fragment>
+
     <activity
         android:id="@+id/movieActivity"
         android:name="com.mango.movies.ui.MovieActivity"
