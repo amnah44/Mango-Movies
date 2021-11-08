@@ -31,7 +31,6 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/card_series"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -39,36 +38,34 @@
             app:contentPaddingRight="20dp"
             app:contentPaddingTop="8dp"
             app:contentPaddingBottom="8dp"
-            android:layout_marginStart="@dimen/small_margin"
-            android:layout_marginEnd="128dp"
             android:layout_marginTop="8dp"
+            android:layout_marginStart="@dimen/custom_margin"
             app:cardBackgroundColor="@color/dark_color"
             app:cardCornerRadius="32dp">
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/text_series"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/mplusrounded1c_bold"
-                android:lines="1"
-                android:onClick="@{() -> viewModel.changeMovieOrSeries()}"
-                android:text="@string/series"
-                android:textColor="@color/white"
-                android:textSize="@dimen/txt3"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/text_series"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mplusrounded1c_bold"
+                    android:lines="1"
+                    android:onClick="@{() -> viewModel.changeMovieOrSeries()}"
+                    android:text="@string/series"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt3"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/card_movie"
-            app:layout_constraintStart_toEndOf="@id/card_series"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/card_series"
             android:layout_width="wrap_content"
@@ -77,7 +74,7 @@
             app:contentPaddingRight="20dp"
             app:contentPaddingTop="8dp"
             app:contentPaddingBottom="8dp"
-            android:layout_marginStart="@dimen/small_margin"
+            android:layout_marginEnd="@dimen/custom_margin"
             app:cardBackgroundColor="@color/dark_color"
             app:cardCornerRadius="32dp">
             <androidx.constraintlayout.widget.ConstraintLayout
