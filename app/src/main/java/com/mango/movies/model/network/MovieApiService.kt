@@ -7,15 +7,11 @@ import com.mango.movies.model.domain.category.MovieAndTvByGenreResponse
 import com.mango.movies.model.domain.genre.GenerResponse
 import com.mango.movies.model.domain.movie.details.MovieDetailsResponse
 import com.mango.movies.model.domain.movie.latest.MovieLatestResponse
-import com.mango.movies.model.domain.movie.upComing.MovieUpComingResult
 import com.mango.movies.model.domain.person.details.PersonDetailsResponse
 import com.mango.movies.model.domain.person.popular.PersonPopularResponse
-import com.mango.movies.model.domain.searchResponse.SearchResponse
 import com.mango.movies.model.domain.tv.details.TvDetailsResponse
 import com.mango.movies.model.domain.tv.latest.TvLatestResponse
 import com.mango.movies.model.domain.tv.popular.TvPopularResponse
-import com.mango.movies.model.domain.tv.topRated.TVTopRatedResult
-import com.mango.movies.model.domain.tv.trending.TVTrendingResult
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -83,7 +79,7 @@ interface MovieApiService {
     suspend fun searchMovie(
         @Query("query") query: String,
         @Query("api_key") apiKey: String?,
-    ): Response<SearchResponse>
+    ): Response<BaseResponse<Movie>>
 
 
     @GET("person/popular")
