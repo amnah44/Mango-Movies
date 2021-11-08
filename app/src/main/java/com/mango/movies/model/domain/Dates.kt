@@ -1,4 +1,4 @@
-package com.mango.movies.model.domain.movie.upComing
+package com.mango.movies.model.domain
 
 
 import com.google.gson.annotations.SerializedName
