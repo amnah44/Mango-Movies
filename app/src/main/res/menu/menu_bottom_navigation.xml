@@ -9,7 +9,7 @@
         android:title=""
         android:icon="@drawable/category_action"
         />
-    <item android:id="@+id/personFragment"
+    <item android:id="@+id/celebrityFragment"
         android:title=""
         android:icon="@drawable/person_action"
         />
