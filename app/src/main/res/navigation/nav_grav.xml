@@ -25,8 +25,8 @@
     </fragment>
 
     <fragment
-        android:id="@+id/personFragment"
-        android:name="com.mango.movies.ui.celebrities.PersonFragment"
+        android:id="@+id/celebrityFragment"
+        android:name="com.mango.movies.ui.celebrities.CelebrityFragment"
         android:label="PersonFragment"
         tools:layout="@layout/fragment_person">
         <action

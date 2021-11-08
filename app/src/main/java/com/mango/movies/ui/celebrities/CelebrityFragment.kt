@@ -9,7 +9,7 @@ import com.mango.movies.databinding.FragmentPersonBinding
 import com.mango.movies.ui.base.BaseFragment
 import com.mango.movies.util.Constant
 
-class PersonFragment : BaseFragment<FragmentPersonBinding>(R.layout.fragment_person) {
+class CelebrityFragment : BaseFragment<FragmentPersonBinding>(R.layout.fragment_person) {
     override val LOG_TAG: String = Constant.PEOPLE_FRAGMENT
     override val viewModel = PersonPopularViewModel()
 
@@ -28,7 +28,7 @@ class PersonFragment : BaseFragment<FragmentPersonBinding>(R.layout.fragment_per
 
         viewModel.personDetails.observe(viewLifecycleOwner) {
             if(it!=null){
-                val nav = PersonFragmentDirections.actionPersonFragmentToPersonDetailsFragment(it)
+                val nav = CelebrityFragmentDirections.actionPersonFragmentToPersonDetailsFragment(it)
                 Navigation.findNavController(requireView()).navigate(nav)
             }
         }
