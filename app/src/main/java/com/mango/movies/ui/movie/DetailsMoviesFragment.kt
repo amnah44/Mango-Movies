@@ -14,7 +14,7 @@ import com.mango.movies.util.Constant
 
 class DetailsMoviesFragment : BaseFragment<FragmentMoviesDetailsBinding>(R.layout.fragment_movies_details) {
     override val LOG_TAG: String = Constant.DETAILS_FRAGMENT
-    override val viewModel: DetailsViewModel by viewModels()
+    override val viewModel: DetailsMoviesViewModel by viewModels()
     override val bindingInflater: (LayoutInflater, Int, ViewGroup?, Boolean) -> FragmentMoviesDetailsBinding = DataBindingUtil::inflate
     private val args: DetailsMoviesFragmentArgs by navArgs()
 

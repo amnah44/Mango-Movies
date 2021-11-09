@@ -10,7 +10,7 @@ import com.mango.movies.util.State
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
-class DetailsViewModel: ViewModel() , MovieInteractionListener {
+class DetailsMoviesViewModel: ViewModel() , MovieInteractionListener {
     var similarMovies = MutableLiveData<State<BaseResponse<Movie>?>?>()
     var selectedMovie =  MutableLiveData<Movie?>()
 
