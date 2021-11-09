@@ -10,7 +10,7 @@
 
             <variable
                 name="viewModel"
-                type="com.mango.movies.ui.movie.details.DetailsViewModel" />
+                type="com.mango.movies.ui.movie.DetailsViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

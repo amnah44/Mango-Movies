@@ -1,6 +1,5 @@
-package com.mango.movies.ui.movie.details
+package com.mango.movies.ui.movie
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
@@ -11,9 +10,7 @@ import androidx.navigation.fragment.navArgs
 import com.mango.movies.R
 import com.mango.movies.databinding.FragmentDetailsBinding
 import com.mango.movies.ui.base.BaseFragment
-
 import com.mango.movies.util.Constant
-
 
 class DetailsFragment : BaseFragment<FragmentDetailsBinding>(R.layout.fragment_details) {
     override val LOG_TAG: String = Constant.DETAILS_FRAGMENT
@@ -22,7 +19,7 @@ class DetailsFragment : BaseFragment<FragmentDetailsBinding>(R.layout.fragment_d
     override val bindingInflater: (LayoutInflater, Int, ViewGroup?, Boolean) -> FragmentDetailsBinding = DataBindingUtil::inflate
 
 
-    private val args: DetailsFragmentArgs by navArgs()
+    private val args: com.mango.movies.ui.movie.DetailsFragmentArgs by navArgs()
     override fun setupView() {
 
         val movie = args.movieDetails
@@ -38,7 +35,7 @@ class DetailsFragment : BaseFragment<FragmentDetailsBinding>(R.layout.fragment_d
         viewModel.selectedMovie.observe(viewLifecycleOwner) {
             if (it != null) {
                 val nav =
-                    DetailsFragmentDirections.actionDetailsFragmentToDetailsFragment(
+                    com.mango.movies.ui.movie.DetailsFragmentDirections.actionDetailsFragmentToDetailsFragment(
                         it
                     )
                 Navigation.findNavController(requireView()).navigate(nav)
