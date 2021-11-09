@@ -117,4 +117,9 @@
             android:id="@+id/action_detailsSeriesFragment_to_detailsSeriesFragment"
             app:destination="@id/detailsSeriesFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/reviewFragment"
+        android:name="com.mango.movies.ui.review.ReviewFragment"
+        android:label="ReviewFragment"
+        tools:layout="@layout/fragment_review"/>
 </navigation>
