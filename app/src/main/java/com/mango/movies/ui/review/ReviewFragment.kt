@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModel
+import androidx.navigation.Navigation
 import com.mango.movies.R
 import com.mango.movies.databinding.FragmentReviewBinding
 import com.mango.movies.ui.base.BaseFragment
@@ -20,6 +21,10 @@ class ReviewFragment: BaseFragment<FragmentReviewBinding>(R.layout.fragment_revi
         binding.apply {
             reviewViewModel = viewModel
             reviewsRecycler.adapter = ReviewAdapter(mutableListOf(), viewModel)
+            searchReviewButton.setOnClickListener{
+                val action = ReviewFragmentDirections.actionReviewFragmentToSearchReviewFragment2()
+                Navigation.findNavController(requireView()).navigate(action)
+            }
         }
     }
 }
