@@ -26,15 +26,15 @@ class SearchViewModel : ViewModel(), MovieInteractionListener {
 
     fun onTextChanged(text: CharSequence?) {
         flag.postValue(false)
-        if (!text.isNullOrEmpty()) {
+        if (text.isNullOrEmpty()) {
+            flag.postValue(true)
+            searchResult.postValue(null)
+        } else {
             viewModelScope.launch {
                 MovieRepository.searchMovie(text.toString()).collect {
                     searchResult.postValue(it)
                 }
             }
-        }else{
-            flag.postValue(true)
-            searchResult.postValue(null)
         }
     }
 
