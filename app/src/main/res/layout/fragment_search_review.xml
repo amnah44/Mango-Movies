@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/app_color"
-        tools:context=".ui.review.searchReview.ReviewFragment">
+        tools:context=".ui.review.searchReview.SearchReviewFragment">
 
         <EditText
             android:id="@+id/search_review_text"
