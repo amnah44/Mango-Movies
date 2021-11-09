@@ -1,4 +1,4 @@
-package com.mango.movies.ui.search
+package com.mango.movies.ui.movie.search
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -20,7 +20,10 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(R.layout.fragment_sea
         binding.searchRecycler.adapter = SearchAdapter(mutableListOf(), viewModel)
         viewModel.selectedMovie.observe(viewLifecycleOwner) {
             if (it != null) {
-                val nav = SearchFragmentDirections.actionSearchFragmentToDetailsFragment(it)
+                val nav =
+                   SearchFragmentDirections.actionSearchFragmentToDetailsFragment(
+                        it
+                    )
                 Navigation.findNavController(requireView()).navigate(nav)
             }
         }

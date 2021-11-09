@@ -1,4 +1,4 @@
-package com.mango.movies.ui.search
+package com.mango.movies.ui.movie.search
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
@@ -7,11 +7,12 @@ import androidx.lifecycle.viewModelScope
 import com.mango.movies.model.domain.BaseResponse
 import com.mango.movies.model.domain.Movie
 import com.mango.movies.model.repositiory.MovieRepository
+import com.mango.movies.ui.movie.MovieInteractionListener
 import com.mango.movies.util.State
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.flow.collect
 
-class SearchViewModel : ViewModel(), SearchInteractionListener {
+class SearchViewModel : ViewModel(), MovieInteractionListener {
     var searchResult = MutableLiveData<State<BaseResponse<Movie>?>?>()
     var selectedMovie =  MutableLiveData<Movie?>()
     var flag = MutableLiveData<Boolean>()
