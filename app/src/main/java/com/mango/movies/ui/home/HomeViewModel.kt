@@ -32,19 +32,4 @@ class HomeViewModel : ViewModel(), SeriesInteractionListener, MovieInteractionLi
         getMovieDetails(movie)
     }
 
-//    override fun onTopRateMoviesClick(movieTopRate: Movie) {
-//        getMovieDetails(movieTopRate)
-//    }
-//
-//    override fun onTopRateSeriesClick(seriesTopRate: Series) {
-//        seriesDetails.postValue(seriesTopRate)
-//    }
-//
-//    override fun onTrendingClick(tvTrending: Series) {
-//        seriesDetails.postValue(tvTrending)
-//    }
-//
-//    override fun onUpComingMoviesClick(moviesUpComing: Movie) {
-//        movieDetails.postValue(moviesUpComing)
-//    }
 }
