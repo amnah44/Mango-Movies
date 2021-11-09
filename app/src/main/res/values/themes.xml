@@ -61,5 +61,10 @@
         <item name="background">@color/white</item>
     </style>
 
+    <style name="search_edit_text_color">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:tint">@color/black</item>
+        <item name="android:background">@drawable/rounded_corner_view_light</item>
+    </style>
 
 </resources>
