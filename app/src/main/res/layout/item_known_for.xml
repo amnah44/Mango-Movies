@@ -22,13 +22,14 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/small_margin"
         android:padding="10dp"
+        style="@style/recycler_view_search"
         app:cardElevation="@dimen/cardview_default_elevation">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:onClick="@{()-> listener.getKnownFor(itemMovie,itemSeries)}"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/app_color">
+            style="@style/recycler_view_search">
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/movieImg"

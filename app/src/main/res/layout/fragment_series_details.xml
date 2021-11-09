@@ -12,7 +12,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/app_color"
+        style="@style/fragment_container"
         tools:context=".ui.details.DetailsFragment">
 
         <ImageView
@@ -161,7 +161,7 @@
             android:fontFamily="@font/roboto_regular"
             android:paddingHorizontal="4dp"
             android:text="@{itemMovie.firstAirDate}"
-            android:textColor="@color/white"
+            style="@style/text_color"
             android:textSize="@dimen/txt2"
             app:layout_constraintEnd_toStartOf="@+id/icon_date"
             app:layout_constraintTop_toBottomOf="@+id/guideline"
@@ -173,6 +173,7 @@
             android:layout_height="12dp"
             android:layout_marginEnd="8dp"
             android:src="@drawable/ic_calendar"
+            style="@style/image_color"
             app:layout_constraintBottom_toBottomOf="@id/text_movie_date"
             app:layout_constraintEnd_toStartOf="@id/text_movie_time"
             app:layout_constraintTop_toTopOf="@id/text_movie_date" />
@@ -184,7 +185,7 @@
             android:layout_marginTop="8dp"
             android:fontFamily="@font/roboto_regular"
             android:paddingHorizontal="4dp"
-            android:textColor="@color/white"
+            style="@style/text_color"
             android:textSize="@dimen/txt2"
             app:layout_constraintEnd_toStartOf="@id/icon_time"
             app:layout_constraintTop_toBottomOf="@id/guideline"
@@ -199,6 +200,7 @@
             android:layout_marginStart="2dp"
             android:layout_marginEnd="16dp"
             android:src="@drawable/ic_time"
+            style="@style/image_color"
             app:layout_constraintBottom_toBottomOf="@id/text_movie_time"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/text_movie_time" />
@@ -211,7 +213,7 @@
             android:layout_marginTop="16dp"
             android:fontFamily="@font/roboto_regular"
             android:text="@string/overview"
-            android:textColor="@color/white"
+            style="@style/text_color"
             android:textSize="@dimen/txt4"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ratingBar"
@@ -229,7 +231,6 @@
             android:justificationMode="inter_word"
             android:lines="3"
             android:text="@{itemMovie.overview}"
-            android:textColor="#6C6F77"
             android:textSize="@dimen/txt2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

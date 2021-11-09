@@ -1,7 +1,9 @@
 package com.mango.movies.ui.home
 
+import android.content.res.Configuration
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
@@ -23,6 +25,16 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
             recyclerTopRateMovies.adapter = TopRateMovieAdapter(mutableListOf(), viewModel)
             recyclerTrendingSeries.adapter = TrendingSeriesAdapter(mutableListOf(), viewModel)
             recyclerLatestSeries.adapter = TopRateSeriesAdapter(mutableListOf(), viewModel)
+                binding.imageTheme.setOnClickListener{
+                    when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
+                        Configuration.UI_MODE_NIGHT_YES ->{
+                            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+                        }
+                        Configuration.UI_MODE_NIGHT_NO ->{
+                            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+                        }
+                    }
+                }
         }
 
         viewModel.movieDetails.observe(viewLifecycleOwner){

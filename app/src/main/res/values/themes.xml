@@ -67,4 +67,15 @@
         <item name="android:background">@drawable/rounded_corner_view_light</item>
     </style>
 
+    <!--Recycler view item -->
+    <style name="recycler_view_search">
+        <item name="cardBackgroundColor">@color/white</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <!--Image color -->
+    <style name="image_color">
+        <item name="android:tint">@color/black</item>
+    </style>
+
 </resources>
