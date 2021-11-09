@@ -58,7 +58,7 @@ fun ImageView.setReviewImageFromUrl(url: String?) {
     url?.let { Log.v("image", "anu $it") }
     Glide.with(this)
         .load(url)
-        .placeholder(R.drawable.ic_place_holder)
+        .placeholder(R.drawable.ic_film_fill)
         .error(R.drawable.ic_error)
         .into(this)
 }
