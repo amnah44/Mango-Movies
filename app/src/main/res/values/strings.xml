@@ -16,4 +16,6 @@
     <string name="actor_rating">Rating</string>
     <string name="actor_popularity">Actor Popularity</string>
     <string name="overview">Overview</string>
+    <string name="tv_trending">Tv trending</string>
+    <string name="popular_movies">Popular Movies</string>
 </resources>
