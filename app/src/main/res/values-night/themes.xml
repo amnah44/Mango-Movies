@@ -42,4 +42,12 @@
         <item name="android:textColor">@color/white</item>
     </style>
 
+    <style name="search_icon_color">
+        <item name="android:tint">@color/white</item>
+    </style>
+
+    <style name="bottom_navigation_bar_color">
+        <item name="android:itemBackground">@color/app_color</item>
+        <item name="background">@color/app_color</item>
+    </style>
 </resources>
