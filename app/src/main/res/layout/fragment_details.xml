@@ -48,23 +48,12 @@
             android:layout_marginTop="@dimen/medium_margin"
             android:fontFamily="@font/mplusrounded1c_bold"
             android:text="@{itemMovie.title}"
-            android:textColor="@color/white"
+           style="@style/text_color"
             android:textSize="@dimen/txt5"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="@string/detail_movie" />
-
-        <ImageView
-            android:id="@+id/return_arrow"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_marginStart="@dimen/medium_margin"
-            android:layout_marginTop="@dimen/medium_margin"
-            app:layout_constraintBottom_toBottomOf="@id/textView"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_arrow_back" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline"
