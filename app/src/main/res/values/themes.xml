@@ -33,6 +33,11 @@
         <item name="android:src">@drawable/ic_dark_mode</item>
     </style>
 
+    <style name="fragment_container" >
+        <item name="background">@color/white</item>
+        <item name="android:textColor">@color/dark_color</item>
+    </style>
+
      <style name="SearchViewStyle" parent="Theme.Movies">
          <item name="android:editTextColor">@android:color/white</item>
          <item name="android:textColorHint">@android:color/white</item>
