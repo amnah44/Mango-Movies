@@ -10,7 +10,7 @@
 
         <variable
             name="listener"
-            type="com.mango.movies.ui.tv.series.SeriesInteractionListener" />
+            type="com.mango.movies.ui.series.SeriesInteractionListener" />
 
     </data>
 

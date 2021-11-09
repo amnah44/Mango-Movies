@@ -103,7 +103,7 @@
 
     <fragment
         android:id="@+id/detailsSeriesFragment"
-        android:name="com.mango.movies.ui.tv.series.DetailsSeriesFragment"
+        android:name="com.mango.movies.ui.series.DetailsSeriesFragment"
         android:label="DetailsFragment"
         tools:layout="@layout/fragment_series_details">
         <argument

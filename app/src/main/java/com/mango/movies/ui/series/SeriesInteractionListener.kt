@@ -1,4 +1,4 @@
-package com.mango.movies.ui.tv.series
+package com.mango.movies.ui.series
 
 import com.mango.movies.model.domain.Series
 import com.mango.movies.ui.base.BaseInteractionListener

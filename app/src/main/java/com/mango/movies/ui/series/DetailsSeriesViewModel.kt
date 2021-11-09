@@ -1,4 +1,4 @@
-package com.mango.movies.ui.tv.series
+package com.mango.movies.ui.series
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -10,7 +10,7 @@ import com.mango.movies.util.State
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
-class DetailsSeriesViewModel: ViewModel(),SeriesInteractionListener {
+class DetailsSeriesViewModel: ViewModel(), SeriesInteractionListener {
 
     var similarSeries = MutableLiveData<State<BaseResponse<Series>?>?>()
     var selectedSeries =  MutableLiveData<Series?>()

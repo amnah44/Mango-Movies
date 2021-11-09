@@ -1,4 +1,4 @@
-package com.mango.movies.ui.tv.series
+package com.mango.movies.ui.series
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -12,10 +12,12 @@ import com.mango.movies.databinding.FragmentSeriesDetailsBinding
 import com.mango.movies.ui.base.BaseFragment
 import com.mango.movies.util.Constant
 
-class DetailsSeriesFragment : BaseFragment<FragmentSeriesDetailsBinding>(R.layout.fragment_series_details) {
+class DetailsSeriesFragment :
+    BaseFragment<FragmentSeriesDetailsBinding>(R.layout.fragment_series_details) {
     override val LOG_TAG: String = Constant.DETAILS_FRAGMENT
     override val viewModel: DetailsSeriesViewModel by viewModels()
-    override val bindingInflater: (LayoutInflater, Int, ViewGroup?, Boolean) -> FragmentSeriesDetailsBinding = DataBindingUtil::inflate
+    override val bindingInflater: (LayoutInflater, Int, ViewGroup?, Boolean) -> FragmentSeriesDetailsBinding =
+        DataBindingUtil::inflate
     private val args: DetailsSeriesFragmentArgs by navArgs()
 
     override fun setupView() {
@@ -23,13 +25,15 @@ class DetailsSeriesFragment : BaseFragment<FragmentSeriesDetailsBinding>(R.layou
         viewModel.getSimilarSeries(series.id!!)
         binding.recyclerRelated.adapter = SimilarSeriesAdapter(mutableListOf(), viewModel)
         binding.itemSeries = series
-        binding.returnArrow.setOnClickListener{ view ->
+        binding.returnArrow.setOnClickListener { view ->
             view.findNavController().popBackStack()
         }
         viewModel.selectedSeries.observe(viewLifecycleOwner) {
             if (it != null) {
                 val nav =
-                    DetailsSeriesFragmentDirections.actionDetailsSeriesFragmentToDetailsSeriesFragment(it)
+                    DetailsSeriesFragmentDirections.actionDetailsSeriesFragmentToDetailsSeriesFragment(
+                        it
+                    )
                 Navigation.findNavController(requireView()).navigate(nav)
             }
         }
