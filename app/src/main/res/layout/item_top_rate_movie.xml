@@ -9,14 +9,14 @@
 
         <variable
             name="listener"
-            type="com.mango.movies.ui.home.HomeInteractionListener" />
+            type="com.mango.movies.ui.movie.MovieInteractionListener" />
 
     </data>
 
     <androidx.cardview.widget.CardView
         android:layout_width="86dp"
         android:layout_height="122dp"
-        android:onClick="@{() -> listener.onTopRateMoviesClick(item)}"
+        android:onClick="@{() -> listener.onClickMovie(item)}"
         android:layout_marginStart="@dimen/medium_margin"
         app:cardCornerRadius="10dp">
 

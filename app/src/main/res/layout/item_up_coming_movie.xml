@@ -9,7 +9,7 @@
 
         <variable
             name="listener"
-            type="com.mango.movies.ui.home.HomeInteractionListener" />
+            type="com.mango.movies.ui.movie.MovieInteractionListener" />
 
     </data>
 
@@ -17,7 +17,7 @@
         android:layout_width="162dp"
         android:layout_height="183dp"
         android:layout_marginStart="@dimen/medium_margin"
-        android:onClick="@{() -> listener.onUpComingMoviesClick(item)}"
+        android:onClick="@{() -> listener.onClickMovie(item)}"
         app:cardCornerRadius="10dp">
 
         <ImageView

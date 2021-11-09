@@ -5,11 +5,11 @@
     <data>
         <variable
             name="item"
-            type="com.mango.movies.model.domain.Movie" />
+            type="com.mango.movies.model.domain.Series" />
 
         <variable
             name="listener"
-            type="com.mango.movies.ui.movie.MovieInteractionListener" />
+            type="com.mango.movies.ui.tv.series.SeriesInteractionListener" />
     </data>
 
     <com.google.android.material.imageview.ShapeableImageView
@@ -21,7 +21,7 @@
         android:background="@color/app_color"
         android:src="@drawable/test"
         app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize15Percent"
-        android:onClick="@{()-> listener.onClickMovie(item)}"
+        android:onClick="@{()-> listener.onSeriesClick(item)}"
         imageUrl="@{item.posterPath}"
         />
 </layout>

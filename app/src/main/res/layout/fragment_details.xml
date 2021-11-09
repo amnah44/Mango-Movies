@@ -7,13 +7,17 @@
         <variable
             name="itemMovie"
             type="com.mango.movies.model.domain.Movie" />
+
+            <variable
+                name="viewModel"
+                type="com.mango.movies.ui.movie.details.DetailsViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/app_color"
-        tools:context=".ui.details.DetailsFragment">
+        tools:context=".ui.movie.search.details.DetailsFragment">
 
         <ImageView
             android:id="@+id/image_movie"
@@ -242,7 +246,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
             android:orientation="horizontal"
-
+            app:items="@{viewModel.similarMovies.toData().movieResult}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

@@ -47,7 +47,7 @@
 
     <fragment
         android:id="@+id/searchFragment"
-        android:name="com.mango.movies.ui.search.SearchFragment"
+        android:name="com.mango.movies.ui.movie.search.SearchFragment"
         android:label="SettingsFragment"
         tools:layout="@layout/fragment_search">
 
@@ -88,22 +88,30 @@
 
     <fragment
         android:id="@+id/detailsFragment"
-        android:name="com.mango.movies.ui.details.DetailsFragment"
+        android:name="com.mango.movies.ui.movie.details.DetailsFragment"
         android:label="DetailsFragment"
         tools:layout="@layout/fragment_details">
 
         <argument
             android:name="movieDetails"
             app:argType="com.mango.movies.model.domain.Movie" />
+
+        <action
+            android:id="@+id/action_detailsFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
     </fragment>
 
     <fragment
         android:id="@+id/detailsSeriesFragment"
-        android:name="com.mango.movies.ui.series.DetailsSeriesFragment"
+        android:name="com.mango.movies.ui.tv.series.DetailsSeriesFragment"
         android:label="DetailsFragment"
         tools:layout="@layout/fragment_series_details">
         <argument
             android:name="seriesDetails"
             app:argType="com.mango.movies.model.domain.Series" />
+
+        <action
+            android:id="@+id/action_detailsSeriesFragment_to_detailsSeriesFragment"
+            app:destination="@id/detailsSeriesFragment" />
     </fragment>
 </navigation>
