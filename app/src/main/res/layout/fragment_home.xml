@@ -13,7 +13,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/app_color">
+        style="@style/fragment_container">
 
         <TextView
             android:id="@+id/home_fragment"
@@ -22,9 +22,9 @@
             android:layout_marginTop="@dimen/medium_margin"
             android:layout_marginBottom="@dimen/medium_margin"
             android:layout_weight="1"
+            style="@style/text_color"
             android:fontFamily="@font/mplusrounded1c_bold"
             android:text="@string/home"
-            android:textColor="@color/white"
             android:textSize="@dimen/txt4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
