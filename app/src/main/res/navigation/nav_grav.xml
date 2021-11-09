@@ -95,6 +95,10 @@
         <argument
             android:name="movieDetails"
             app:argType="com.mango.movies.model.domain.Movie" />
+
+        <action
+            android:id="@+id/action_detailsFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
     </fragment>
 
     <fragment
