@@ -8,11 +8,11 @@ import com.mango.movies.R
 import com.mango.movies.databinding.FragmentCelebrityBinding
 import com.mango.movies.ui.base.BaseFragment
 import com.mango.movies.util.Constant
+import com.mango.movies.util.EventObserve
 
 class CelebrityFragment : BaseFragment<FragmentCelebrityBinding>(R.layout.fragment_celebrity) {
     override val LOG_TAG: String = Constant.PEOPLE_FRAGMENT
     override val viewModel = CelebrityPopularViewModel()
-
     override val bindingInflater: (LayoutInflater, Int, ViewGroup?, Boolean) -> FragmentCelebrityBinding =
         DataBindingUtil::inflate
 
@@ -21,17 +21,10 @@ class CelebrityFragment : BaseFragment<FragmentCelebrityBinding>(R.layout.fragme
             viewModel = viewModel
             personRecyclerView.adapter = CelebrityAdapter(mutableListOf(), viewModel)
         }
-
-        viewModel.personDetails.observe(viewLifecycleOwner) {
-            if(it!=null){
-                val nav = CelebrityFragmentDirections.actionCelebrityFragmentToCelebrityDetailsFragment(it)
-                Navigation.findNavController(requireView()).navigate(nav)
-            }
-        }
-    }
-
-    override fun onStop() {
-        super.onStop()
-        viewModel.personDetails.value = null
+        viewModel.personEvent.observe(this, EventObserve {
+            val nav =
+                CelebrityFragmentDirections.actionCelebrityFragmentToCelebrityDetailsFragment(it)
+            Navigation.findNavController(requireView()).navigate(nav)
+        })
     }
 }
