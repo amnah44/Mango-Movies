@@ -13,7 +13,7 @@
         android:title=""
         android:icon="@drawable/celebrity_action"
         />
-    <item android:id="@+id/settingsFragment"
+    <item android:id="@+id/reviewFragment"
         android:title=""
         android:icon="@drawable/settings_action"
         />
