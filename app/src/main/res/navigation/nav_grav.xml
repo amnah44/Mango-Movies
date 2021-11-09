@@ -84,6 +84,12 @@
         <argument
             android:name="celebrityDetails"
             app:argType="com.mango.movies.model.domain.CelebrityPopularResult" />
+        <action
+            android:id="@+id/action_celebrityDetailsFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+        <action
+            android:id="@+id/action_celebrityDetailsFragment_to_detailsSeriesFragment"
+            app:destination="@id/detailsSeriesFragment" />
     </fragment>
 
     <fragment

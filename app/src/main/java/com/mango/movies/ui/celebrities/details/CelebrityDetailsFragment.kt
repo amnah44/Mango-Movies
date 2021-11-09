@@ -3,12 +3,14 @@ package com.mango.movies.ui.celebrities.details
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
 import com.mango.movies.R
 import com.mango.movies.databinding.FragmentCelebrityDetailsBinding
 import com.mango.movies.ui.base.BaseFragment
 import com.mango.movies.ui.celebrities.CelebrityPopularViewModel
+import com.mango.movies.ui.home.HomeFragmentDirections
 import com.mango.movies.util.Constant
 
 class CelebrityDetailsFragment :
@@ -27,6 +29,25 @@ class CelebrityDetailsFragment :
             view.findNavController().popBackStack()
         }
         binding.recyclerKnownFor.adapter = KnownForAdapter(mutableListOf(), viewModel)
+
+        viewModel.movieDetails.observe(viewLifecycleOwner) {
+            if (it != null) {
+                val action =
+                    CelebrityDetailsFragmentDirections.actionCelebrityDetailsFragmentToDetailsFragment(
+                        it
+                    )
+                Navigation.findNavController(requireView()).navigate(action)
+            }
+        }
+        viewModel.seriesDetails.observe(viewLifecycleOwner) {
+            if (it != null) {
+                val action =
+                    CelebrityDetailsFragmentDirections.actionCelebrityDetailsFragmentToDetailsSeriesFragment(
+                        it
+                    )
+                Navigation.findNavController(requireView()).navigate(action)
+            }
+        }
     }
 
 }
