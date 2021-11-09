@@ -20,10 +20,11 @@ class CategoryFragment : BaseFragment<FragmentCategoryBinding>(R.layout.fragment
         DataBindingUtil::inflate
 
     override fun setupView() {
-        binding.viewModel = viewModel
-        binding.recyclerMovies.adapter = MovieAndTvResultAdapter(mutableListOf(), viewModel)
-        binding.recyclerGenre.adapter = GenreAdapter(mutableListOf(), viewModel)
-
+        binding.apply {
+            viewModel = viewModel
+            recyclerMovies.adapter = MovieAndTvResultAdapter(mutableListOf(), viewModel)
+            recyclerGenre.adapter = GenreAdapter(mutableListOf(), viewModel)
+        }
         viewModel.selectedMovieEvent.observe(this, EventObserve {
             if (it is State.Success) {
                 val action = CategoryFragmentDirections.actionCategoryFragmentToDetailsFragment(
