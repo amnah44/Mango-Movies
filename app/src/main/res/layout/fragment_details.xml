@@ -7,6 +7,10 @@
         <variable
             name="itemMovie"
             type="com.mango.movies.model.domain.Movie" />
+
+            <variable
+                name="viewModel"
+                type="com.mango.movies.ui.details.DetailsViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -242,7 +246,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
             android:orientation="horizontal"
-
+            app:items="@{viewModel.similarMovies.toData().movieResult}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
