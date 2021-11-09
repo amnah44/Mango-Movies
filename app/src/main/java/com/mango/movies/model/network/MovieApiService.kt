@@ -111,7 +111,7 @@ interface MovieApiService {
 
 
     @GET("tv/{tv_id}/similar")
-    suspend fun getSimilarTv(
+    suspend fun getSimilarSeries(
         @Path("tv_id") tvId: Int?,
         @Query("api_key") apiKey: String?,
     ): Response<BaseResponse<Series>>

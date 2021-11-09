@@ -82,9 +82,9 @@ object MovieRepository {
             API.apiService.getSimilarMovie(movieId, Constant.api_key)
         }
 
-    fun getSimilarTv(tvId: Int): Flow<State<BaseResponse<Series>?>> =
+    fun getSimilarSeries(tvId: Int): Flow<State<BaseResponse<Series>?>> =
         wrapWithFlow {
-            API.apiService.getSimilarTv(tvId, Constant.api_key)
+            API.apiService.getSimilarSeries(tvId, Constant.api_key)
         }
 
 
