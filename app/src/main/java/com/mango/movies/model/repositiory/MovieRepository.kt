@@ -31,6 +31,9 @@ object MovieRepository {
 
     }
 
+
+
+
     fun movieDetails(movieId: Int) =
         wrapWithFlow {
             API.apiService.getMovieDetails(movieId, Constant.api_key)
@@ -72,6 +75,13 @@ object MovieRepository {
     fun searchMovie(query: String): Flow<State<BaseResponse<Movie>?>> = wrapWithFlow {
         API.apiService.searchMovie(query, Constant.api_key)
     }
+
+    fun getSimilarMovie(movieId: Int): Flow<State<BaseResponse<Movie>?>> =
+        wrapWithFlow {
+            API.apiService.getSimilarMovie(movieId, Constant.api_key)
+        }
+
+
 
     fun personPopular(): Flow<State<BaseResponse<CelebrityPopularResult>?>> =
         wrapWithFlow {
