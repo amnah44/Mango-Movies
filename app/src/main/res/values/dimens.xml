@@ -17,6 +17,7 @@
     <dimen name="chip_width">100dp</dimen>
     <dimen name="chip_height">64dp</dimen>
     <dimen name="custom_margin">108dp</dimen>
+    <dimen name="medium_margin_xx">28dp</dimen>
 
 
 </resources>
