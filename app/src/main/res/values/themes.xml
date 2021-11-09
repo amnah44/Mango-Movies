@@ -29,6 +29,10 @@
         <item name="cornerSize">8%</item>
     </style>
 
+    <style name="img_dark">
+        <item name="android:src">@drawable/ic_dark_mode</item>
+    </style>
+
      <style name="SearchViewStyle" parent="Theme.Movies">
          <item name="android:editTextColor">@android:color/white</item>
          <item name="android:textColorHint">@android:color/white</item>

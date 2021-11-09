@@ -38,5 +38,13 @@
             app:layout_constraintStart_toStartOf="parent"
             app:menu="@menu/menu_bottom_navigation" />
 
+        <ImageView
+            style="@style/img_dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/medium_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/orange" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
