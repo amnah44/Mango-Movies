@@ -64,11 +64,6 @@ interface MovieApiService {
         @Query("api_key") apiKey: String?
     ): Response<BaseResponse<Series>>
 
-    @GET("search/movie")
-    suspend fun searchMovie(
-        @Query("query") query: String,
-        @Query("api_key") apiKey: String?,
-    ): Response<BaseResponse<Movie>>
 
     @GET("person/popular")
     suspend fun getPersonPopular(
@@ -96,5 +91,18 @@ interface MovieApiService {
         @Query("with_genres") genreId: Int?,
         @Query("api_key") apiKey: String?,
     ): Response<MovieAndTvByGenreResponse>
+
+
+    @GET("movie/{movie_id}/similar")
+    suspend fun getSimilarMovie(
+        @Path("movie_id") movieId: Int?,
+        @Query("api_key") apiKey: String?
+    ):Response<BaseResponse<Movie>>
+
+    @GET("search/movie")
+    suspend fun searchMovie(
+        @Query("query") query: String,
+        @Query("api_key") apiKey: String?,
+    ): Response<BaseResponse<Movie>>
 
 }
