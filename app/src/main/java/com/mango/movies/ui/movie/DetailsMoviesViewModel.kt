@@ -6,13 +6,14 @@ import androidx.lifecycle.viewModelScope
 import com.mango.movies.model.domain.BaseResponse
 import com.mango.movies.model.domain.Movie
 import com.mango.movies.model.repositiory.MovieRepository
+import com.mango.movies.util.Event
 import com.mango.movies.util.State
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
 class DetailsMoviesViewModel: ViewModel() , MovieInteractionListener {
     var similarMovies = MutableLiveData<State<BaseResponse<Movie>?>?>()
-    var selectedMovie =  MutableLiveData<Movie?>()
+    val selectedMovieEvent = MutableLiveData<Event<Movie>>()
 
     fun getSimilarMovie(movieId: Int) {
        viewModelScope.launch {
@@ -23,6 +24,6 @@ class DetailsMoviesViewModel: ViewModel() , MovieInteractionListener {
     }
 
     override fun onClickMovie(movie: Movie) {
-        selectedMovie.postValue(movie)
+        selectedMovieEvent.postValue(Event(movie))
     }
 }

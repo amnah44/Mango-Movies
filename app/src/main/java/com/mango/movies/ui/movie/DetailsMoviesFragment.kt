@@ -11,6 +11,7 @@ import com.mango.movies.R
 import com.mango.movies.databinding.FragmentMoviesDetailsBinding
 import com.mango.movies.ui.base.BaseFragment
 import com.mango.movies.util.Constant
+import com.mango.movies.util.EventObserve
 
 class DetailsMoviesFragment : BaseFragment<FragmentMoviesDetailsBinding>(R.layout.fragment_movies_details) {
     override val LOG_TAG: String = Constant.DETAILS_FRAGMENT
@@ -29,14 +30,12 @@ class DetailsMoviesFragment : BaseFragment<FragmentMoviesDetailsBinding>(R.layou
             view.findNavController().popBackStack()
         }
 
-        viewModel.selectedMovie.observe(viewLifecycleOwner) {
-            if (it != null) {
-                val nav =
-                    DetailsMoviesFragmentDirections.actionDetailsFragmentToDetailsFragment(
-                        it
-                    )
-                Navigation.findNavController(requireView()).navigate(nav)
-            }
-        }
+        viewModel.selectedMovieEvent.observe(this, EventObserve{
+            val nav =
+                DetailsMoviesFragmentDirections.actionDetailsFragmentToDetailsFragment(
+                    it
+                )
+            Navigation.findNavController(requireView()).navigate(nav)
+        })
     }
 }
