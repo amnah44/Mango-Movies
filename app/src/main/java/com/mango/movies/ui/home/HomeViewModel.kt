@@ -11,8 +11,6 @@ import com.mango.movies.ui.movie.MovieInteractionListener
 import com.mango.movies.ui.tv.series.SeriesInteractionListener
 
 class HomeViewModel : ViewModel(), SeriesInteractionListener, MovieInteractionListener {
-    val action: NavDirections get() = HomeFragmentDirections.actionHomeFragmentToSearchFragment()
-
     val upComingMovie = MovieRepository.upcomingMovies().asLiveData()
     val topRateMovies = MovieRepository.ratedMovies().asLiveData()
     val trendingTV = MovieRepository.tvTrending().asLiveData()

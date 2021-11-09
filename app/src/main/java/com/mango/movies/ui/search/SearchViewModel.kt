@@ -1,4 +1,4 @@
-package com.mango.movies.ui.movie.search
+package com.mango.movies.ui.search
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData

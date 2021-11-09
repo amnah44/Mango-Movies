@@ -1,4 +1,4 @@
-package com.mango.movies.ui.movie.search
+package com.mango.movies.ui.search
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

@@ -1,4 +1,4 @@
-package com.mango.movies.ui.movie.search
+package com.mango.movies.ui.search
 import com.mango.movies.R
 import com.mango.movies.model.domain.Movie
 import com.mango.movies.ui.base.BaseAdapter

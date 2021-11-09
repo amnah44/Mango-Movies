@@ -47,7 +47,7 @@
 
     <fragment
         android:id="@+id/searchFragment"
-        android:name="com.mango.movies.ui.movie.search.SearchFragment"
+        android:name="com.mango.movies.ui.search.SearchFragment"
         android:label="SettingsFragment"
         tools:layout="@layout/fragment_search">
 
