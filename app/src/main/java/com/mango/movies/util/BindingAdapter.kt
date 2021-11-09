@@ -1,5 +1,6 @@
 package com.mango.movies.util
 
+import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import androidx.appcompat.widget.SearchView
@@ -49,6 +50,16 @@ fun <T> setRecyclerItems(view: RecyclerView, items: List<T>?) {
 fun ImageView.seImageFromUrl(url: String?) {
     Glide.with(this)
         .load(Constant.BASE_PERSON_IMAGE_URL + url)
+        .placeholder(R.drawable.ic_place_holder)
+        .error(R.drawable.ic_error)
+        .into(this)
+}
+
+@BindingAdapter(value = ["reviewImageUrl"])
+fun ImageView.setReviewImageFromUrl(url: String?) {
+    url?.let { Log.v("image", "anu $it") }
+    Glide.with(this)
+        .load(url)
         .placeholder(R.drawable.ic_place_holder)
         .error(R.drawable.ic_error)
         .into(this)
