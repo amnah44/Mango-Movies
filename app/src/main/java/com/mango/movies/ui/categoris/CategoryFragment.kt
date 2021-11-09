@@ -20,5 +20,4 @@ class CategoryFragment : BaseFragment<FragmentCategoryBinding>(R.layout.fragment
         binding.recyclerMovies.adapter=MovieAndTvResultAdapter(mutableListOf(), viewModel)
         binding.recyclerGenre.adapter=GenreAdapter(mutableListOf(), viewModel)
     }
-
 }
