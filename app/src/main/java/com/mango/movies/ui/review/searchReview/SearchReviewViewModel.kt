@@ -9,7 +9,7 @@ import com.mango.movies.util.State
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
-class SearchReviewViewModel: ViewModel() {
+class SearchReviewViewModel: ViewModel(), SearchReviewInteractionListener {
     val searchReview = MutableLiveData<State<ReviewResponse?>?>()
     val flag = MutableLiveData<Boolean>()
 

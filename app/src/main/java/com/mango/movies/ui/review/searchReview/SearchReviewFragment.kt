@@ -4,7 +4,6 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModel
 import com.mango.movies.R
 import com.mango.movies.databinding.FragmentSearchReviewBinding
 import com.mango.movies.ui.base.BaseFragment
@@ -17,6 +16,9 @@ class SearchReviewFragment: BaseFragment<FragmentSearchReviewBinding>(R.layout.f
         DataBindingUtil::inflate
 
     override fun setupView() {
-        TODO("Not yet implemented")
+        binding.apply {
+            searchReviewViewModel = viewModel
+            searchReviewRecycler.adapter = SearchReviewAdapter(mutableListOf(), viewModel)
+        }
     }
 }
