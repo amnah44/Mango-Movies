@@ -52,23 +52,25 @@
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginStart="@dimen/medium_margin"
-            app:layout_constraintBottom_toBottomOf="@+id/image_actor"
+            android:layout_marginTop="@dimen/medium_margin"
+            app:layout_constraintBottom_toBottomOf="@+id/text_actor_name"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.12"
             app:srcCompat="@drawable/ic_arrow_back" />
 
         <TextView
             android:id="@+id/text_actor_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="83dp"
+            android:layout_margin="@dimen/medium_margin"
             android:fontFamily="@font/mplusrounded1c_bold"
             android:text="@{item.name}"
             android:textColor="@color/white"
             android:textSize="@dimen/txt6"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/return_arrow"
+            app:layout_constraintTop_toTopOf="@+id/image_actor"
             tools:text="Ryan Reynolds" />
 
         <TextView
