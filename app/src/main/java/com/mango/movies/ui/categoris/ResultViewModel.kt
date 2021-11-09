@@ -16,23 +16,23 @@ import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import com.mango.movies.model.domain.category.Result
 import com.mango.movies.model.domain.details.DetailsResponse
+import com.mango.movies.util.Event
 
 class ResultViewModel() : ViewModel(),ResultInteractionListener ,GenreInteractionListener{
-    var requiredGenre: Genre?=null
-    var flag=true
     val  genreMovieList= MutableLiveData<State<MovieAndTvByGenreResponse?>>()
     val genres =MutableLiveData<State<GenerResponse?>>()
-    var selectedMovie =  MutableLiveData<State<Movie?>>()
-    var selectSeries= MutableLiveData<State<Series?>>()
+    val selectedMovieEvent = MutableLiveData<Event<State<Movie?>>>()
+    val selectedSeriesEvent = MutableLiveData<Event<State<Series?>>>()
+    var requiredGenre: Genre?=null
+    var flag=true
 
-    val genreId=MutableLiveData<Genre>()
-
+//    val genreId=MutableLiveData<Genre>()
     init {
-        requiredGenre=Genre(28,"action")
+//        requiredGenre=Genre(28,"action")
         getGenre()
         getMovie()
     }
-    fun getMovie(){
+    private fun getMovie(){
         viewModelScope.launch {
             MovieRepository.getGenreMovieOrTv(requiredGenre?.id,flag).collect {
                 genreMovieList.postValue(it)
@@ -40,7 +40,7 @@ class ResultViewModel() : ViewModel(),ResultInteractionListener ,GenreInteractio
         }
     }
 
-    fun getGenre(){
+    private fun getGenre(){
         viewModelScope.launch {
             MovieRepository.genres(flag).collect {
                 genres.postValue(it)
@@ -48,16 +48,12 @@ class ResultViewModel() : ViewModel(),ResultInteractionListener ,GenreInteractio
         }
     }
 
-
-
-
-
     fun changeMovieOrSeries(switchFlag:Boolean){
         flag=switchFlag
-        if (flag==true)
-            requiredGenre=Genre(28,"action")
+        requiredGenre = if (flag)
+            Genre(28,"action")
         else
-            requiredGenre=Genre(10759,"action")
+            Genre(10759,"action")
         getGenre()
         getMovie()
     }
@@ -66,7 +62,7 @@ class ResultViewModel() : ViewModel(),ResultInteractionListener ,GenreInteractio
         if(flag){
            viewModelScope.launch {
                MovieRepository.movieDetails(result.id).collect {
-                   selectedMovie.postValue(it)
+                   selectedMovieEvent.postValue(Event(it))
                }
            }
         }
@@ -74,7 +70,7 @@ class ResultViewModel() : ViewModel(),ResultInteractionListener ,GenreInteractio
         else{
             viewModelScope.launch {
                 MovieRepository.tvShowDetails(result.id).collect {
-                    selectSeries.postValue(it)
+                    selectedSeriesEvent.postValue(Event(it))
                 }
             }
         }

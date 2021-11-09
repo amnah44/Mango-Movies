@@ -15,11 +15,9 @@ class MovieAndTvResultAdapter(
 
 }
 
-
 interface ResultInteractionListener: BaseInteractionListener {
     fun onClickItem(result: Result)
 }
-
 
 class GenreAdapter(
     item: List<Genre>,

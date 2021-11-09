@@ -12,7 +12,6 @@ import com.mango.movies.util.Event
 class CelebrityPopularViewModel : ViewModel(),
     CelebrityInteractionListener, KnownForInteractionListener {
     val persons = MovieRepository.personPopular().asLiveData()
-    val personDetails = MutableLiveData<CelebrityPopularResult?>()
     val personEvent = MutableLiveData<Event<CelebrityPopularResult>>()
 
     override fun onClickCelebrity(celebrity: CelebrityPopularResult) {
