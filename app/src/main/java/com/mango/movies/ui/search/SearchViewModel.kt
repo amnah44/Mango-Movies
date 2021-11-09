@@ -8,13 +8,17 @@ import com.mango.movies.model.domain.Movie
 import com.mango.movies.model.repositiory.MovieRepository
 import com.mango.movies.ui.movie.MovieInteractionListener
 import com.mango.movies.util.State
-import kotlinx.coroutines.launch
 import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.launch
 
 class SearchViewModel : ViewModel(), MovieInteractionListener {
     var searchResult = MutableLiveData<State<BaseResponse<Movie>?>?>()
-    var selectedMovie =  MutableLiveData<Movie?>()
+    var selectedMovie = MutableLiveData<Movie?>()
     var flag = MutableLiveData<Boolean>()
+
+    init {
+        flag.postValue(true)
+    }
 
     override fun onClickMovie(movie: Movie) {
         selectedMovie.postValue(movie)
@@ -22,10 +26,15 @@ class SearchViewModel : ViewModel(), MovieInteractionListener {
 
     fun onTextChanged(text: CharSequence?) {
         flag.postValue(false)
-        viewModelScope.launch {
-            MovieRepository.searchMovie(text.toString()).collect {
-                searchResult.postValue(it)
+        if (!text.isNullOrEmpty()) {
+            viewModelScope.launch {
+                MovieRepository.searchMovie(text.toString()).collect {
+                    searchResult.postValue(it)
+                }
             }
+        }else{
+            flag.postValue(true)
+            searchResult.postValue(null)
         }
     }
 
