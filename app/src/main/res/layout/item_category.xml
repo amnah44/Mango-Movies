@@ -26,6 +26,7 @@
             app:cardBackgroundColor="@color/dark_color"
             app:cardCornerRadius="25dp"
             app:contentPaddingRight="8dp"
+            android:onClick="@{() -> listener.onClickItem(item)}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
