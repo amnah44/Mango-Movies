@@ -12,6 +12,7 @@
         android:theme="@style/Theme.Movies">
         <activity
             android:name=".ui.MovieActivity"
+            android:windowSoftInputMode="adjustPan"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
