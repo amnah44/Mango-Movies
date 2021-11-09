@@ -17,6 +17,9 @@ class ReviewFragment: BaseFragment<FragmentReviewBinding>(R.layout.fragment_revi
         DataBindingUtil::inflate
 
     override fun setupView() {
-
+        binding.apply {
+            reviewViewModel = viewModel
+            reviewsRecycler.adapter = ReviewAdapter(mutableListOf(), viewModel)
+        }
     }
 }
