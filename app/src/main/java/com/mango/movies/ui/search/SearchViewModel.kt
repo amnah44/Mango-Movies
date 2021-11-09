@@ -1,6 +1,5 @@
 package com.mango.movies.ui.search
 
-import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -18,13 +17,11 @@ class SearchViewModel : ViewModel(), MovieInteractionListener {
     var flag = MutableLiveData<Boolean>()
 
     override fun onClickMovie(movie: Movie) {
-        Log.v("ALI",movie.title.toString())
         selectedMovie.postValue(movie)
     }
 
     fun onTextChanged(text: CharSequence?) {
         flag.postValue(false)
-        // TODO do something with text
         viewModelScope.launch {
             MovieRepository.searchMovie(text.toString()).collect {
                 searchResult.postValue(it)

@@ -20,7 +20,6 @@
         <item name="android:windowBackground">@color/black</item>
     </style>
 
-
     <!-- Shareable image style -->
     <style name="ShapeAppearanceOverlay.App.CornerSize15Percent" parent="">
         <item name="cornerSize">8%</item>
