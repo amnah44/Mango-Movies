@@ -29,7 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/app_color"
-            app:itemIconSize="@dimen/large_margin"
+            app:itemIconSize="@dimen/medium_margin_xx"
             app:itemBackground="@color/app_color"
             app:itemIconTint="@color/orange"
             app:labelVisibilityMode="unlabeled"
