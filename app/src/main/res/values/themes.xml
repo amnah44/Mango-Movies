@@ -45,14 +45,17 @@
          <item name="android:textColorHint">@android:color/white</item>
     </style>
 
+    <!--Text color -->
     <style name="text_color">
         <item name="android:textColor">@color/black</item>
     </style>
 
+    <!-- Search icon color -->
     <style name="search_icon_color">
         <item name="android:tint">@color/black</item>
     </style>
 
+    <!-- Navigation bar color -->
     <style name="bottom_navigation_bar_color">
         <item name="android:itemBackground">@color/white</item>
         <item name="background">@color/white</item>
