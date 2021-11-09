@@ -39,10 +39,12 @@
             app:menu="@menu/menu_bottom_navigation" />
 
         <ImageView
+            android:id="@+id/image_theme"
             style="@style/img_dark"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/medium_margin"
+            android:onClick="changeTheme"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:tint="@color/orange" />

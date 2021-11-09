@@ -18,4 +18,23 @@
         <item name="android:src">@drawable/ic_light_mode</item>
     </style>
 
+    <!-- Text style of textView -->
+    <style name="style_text">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/txt3</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="style_constraint_layout">
+        <item name="android:elevation">@dimen/small_padding</item>
+    </style>
+
+    <style name="fragment_container" >
+        <item name="background">@color/dark_color</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="black">
+        <item name="android:textColor">@color/white</item>
+    </style>
 </resources>
