@@ -48,6 +48,18 @@
             app:layout_constraintTop_toTopOf="@+id/search_review_text"
             app:srcCompat="@drawable/ic_arrow_back" />
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/search_review_recycler"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/medium_margin"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/search_review_text"
+            tools:listitem="@layout/item_review"/>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
