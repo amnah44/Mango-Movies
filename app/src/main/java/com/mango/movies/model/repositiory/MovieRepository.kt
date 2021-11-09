@@ -5,7 +5,6 @@ import com.mango.movies.model.domain.CelebrityPopularResult
 import com.mango.movies.model.domain.Movie
 import com.mango.movies.model.domain.Series
 import com.mango.movies.model.domain.category.MovieAndTvByGenreResponse
-import com.mango.movies.model.domain.details.DetailsResponse
 import com.mango.movies.model.domain.genre.GenerResponse
 import com.mango.movies.model.network.API
 import com.mango.movies.model.repositiory.FlowWrapper.wrapWithFlow
@@ -59,10 +58,9 @@ object MovieRepository {
             API.apiService.getPersonPopular(Constant.api_key)
         }
 
-    fun genres(flag: Boolean): Flow<State<GenerResponse?>> {
-        return if (flag) wrapWithFlow { API.apiService.getMovieGenre(Constant.api_key) }
+    fun genres(flag: Boolean): Flow<State<GenerResponse?>> =
+        if (flag) wrapWithFlow { API.apiService.getMovieGenre(Constant.api_key) }
         else wrapWithFlow { API.apiService.getTvGenre(Constant.api_key) }
-    }
 
     fun getGenreMovieOrTv(
         genre: Int?, flag: Boolean
