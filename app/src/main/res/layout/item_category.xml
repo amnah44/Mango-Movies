@@ -15,7 +15,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/app_color">
+        style="@style/fragment_container">
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -23,7 +23,7 @@
             android:layout_marginStart="@dimen/medium_margin"
             android:layout_marginTop="@dimen/small_margin"
             android:layout_marginEnd="@dimen/medium_margin"
-            app:cardBackgroundColor="@color/dark_color"
+            style="@style/fragment_container"
             app:cardCornerRadius="25dp"
             app:contentPaddingRight="8dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -33,7 +33,8 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                style="@style/fragment_container">
 
                 <com.google.android.material.imageview.ShapeableImageView
 
@@ -59,7 +60,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/small_margin"
                     android:fontFamily="@font/inika_regular"
-                    android:textColor="@color/grayDark"
+                    style="@style/text_color"
                     android:textSize="@dimen/txt2"
                     android:maxLines="2"
                     android:lines="2"
@@ -95,7 +96,7 @@
                     android:maxLines="2"
                     android:layout_marginTop="@dimen/small_margin"
                     android:fontFamily="@font/mplusrounded1c_bold"
-                    android:textColor="@color/white"
+                    style="@style/text_color"
                     android:textSize="@dimen/txt4"
                     android:text="@{item.title}"
                     app:layout_constraintStart_toStartOf="@+id/text_release_date"

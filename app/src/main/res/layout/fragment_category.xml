@@ -13,7 +13,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/app_color"
+        style="@style/fragment_container"
         tools:context=".ui.categoris.CategoryFragment">
 
 
@@ -40,7 +40,7 @@
             app:contentPaddingBottom="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginStart="@dimen/custom_margin"
-            app:cardBackgroundColor="@color/dark_color"
+            style="@style/fragment_container"
             app:cardCornerRadius="32dp">
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -54,7 +54,7 @@
                     android:lines="1"
                     android:onClick="@{() -> viewModel.changeMovieOrSeries()}"
                     android:text="@string/series"
-                    android:textColor="@color/white"
+                    style="@style/text_color"
                     android:textSize="@dimen/txt3"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -75,7 +75,7 @@
             app:contentPaddingTop="8dp"
             app:contentPaddingBottom="8dp"
             android:layout_marginEnd="@dimen/custom_margin"
-            app:cardBackgroundColor="@color/dark_color"
+            style="@style/fragment_container"
             app:cardCornerRadius="32dp">
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -89,7 +89,7 @@
                     android:lines="1"
                     android:onClick="@{() -> viewModel.changeMovieOrSeries()}"
                     android:text="@string/movies"
-                    android:textColor="@color/white"
+                    style="@style/text_color"
                     android:textSize="@dimen/txt3"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
