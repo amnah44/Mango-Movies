@@ -75,12 +75,11 @@ dependencies {
     //Glide implementation
     def glide_version = "4.11.0"
     annotationProcessor "com.github.bumptech.glide:compiler:$glide_version"
+
     //noinspection GradleDependency
     implementation "com.github.bumptech.glide:glide:$glide_version"
 
-
     // lottie animation
-
     implementation 'com.airbnb.android:lottie:4.2.0'
 
 
