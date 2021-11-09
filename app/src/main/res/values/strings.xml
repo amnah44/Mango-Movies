@@ -18,4 +18,5 @@
     <string name="overview">Overview</string>
     <string name="tv_trending">Tv trending</string>
     <string name="popular_movies">Popular Movies</string>
+    <string name="action">Action</string>
 </resources>

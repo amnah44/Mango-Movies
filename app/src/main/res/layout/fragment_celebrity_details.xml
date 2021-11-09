@@ -18,7 +18,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/app_color"
+        style="@style/fragment_container"
         tools:context=".ui.celebrities.details.CelebrityDetailsFragment">
 
 
@@ -52,9 +52,10 @@
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginStart="@dimen/medium_margin"
-            android:layout_marginTop="@dimen/medium_margin"
+            app:layout_constraintBottom_toBottomOf="@+id/image_actor"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.12"
             app:srcCompat="@drawable/ic_arrow_back" />
 
         <TextView
@@ -77,7 +78,7 @@
             android:layout_marginTop="7dp"
             android:fontFamily="@font/roboto_regular"
             android:text="@string/knownFor"
-            android:textColor="@color/white"
+            style="@style/text_color"
             android:textSize="@dimen/txt4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

@@ -12,7 +12,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/app_color"
+        style="@style/fragment_container"
         tools:context=".ui.details.DetailsFragment">
 
         <ImageView
@@ -48,7 +48,7 @@
             android:layout_marginTop="@dimen/medium_margin"
             android:fontFamily="@font/mplusrounded1c_bold"
             android:text="@{itemMovie.title}"
-           style="@style/text_color"
+            android:textColor="@color/white"
             android:textSize="@dimen/txt5"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -96,6 +96,7 @@
             />
 
         <HorizontalScrollView
+            android:id="@+id/horizontalScrollView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toTopOf="@id/text_movie_name"
@@ -109,14 +110,14 @@
                 app:singleLine="true">
 
                 <com.google.android.material.chip.Chip
+                    style="@style/text_color"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="16dp"
                     android:backgroundTint="#F13B03"
                     android:fontFamily="@font/mplusrounded1c_bold"
                     android:gravity="center"
-                    android:text="Action"
-                    android:textColor="@color/white"
+                    android:text="@string/action"
                     android:textSize="@dimen/txt4"
                     app:chipEndPadding="16dp"
                     app:chipStartPadding="16dp" />
@@ -150,7 +151,7 @@
             android:fontFamily="@font/roboto_regular"
             android:paddingHorizontal="4dp"
             android:text="@{itemMovie.releaseDate}"
-            android:textColor="@color/white"
+            style="@style/text_color"
             android:textSize="@dimen/txt2"
             app:layout_constraintEnd_toStartOf="@+id/icon_date"
             app:layout_constraintTop_toBottomOf="@+id/guideline"
@@ -173,7 +174,7 @@
             android:layout_marginTop="8dp"
             android:fontFamily="@font/roboto_regular"
             android:paddingHorizontal="4dp"
-            android:textColor="@color/white"
+            style="@style/text_color"
             android:textSize="@dimen/txt2"
             app:layout_constraintEnd_toStartOf="@id/icon_time"
             app:layout_constraintTop_toBottomOf="@id/guideline"
@@ -231,7 +232,6 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
             android:orientation="horizontal"
-
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -239,5 +239,15 @@
             app:layout_constraintTop_toBottomOf="@+id/text_description"
             tools:listitem="@layout/item_details" />
 
+        <ImageView
+            android:id="@+id/return_arrow"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="@dimen/medium_margin"
+            app:layout_constraintBottom_toTopOf="@+id/horizontalScrollView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.196"
+            app:srcCompat="@drawable/ic_arrow_back" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
