@@ -33,6 +33,7 @@
             android:layout_marginTop="@dimen/small_margin"
             android:layout_marginBottom="@dimen/small_margin"
             android:scaleType="centerCrop"
+            reviewImageUrl="@{item.multimedia.src}"
             android:src="@drawable/review_img"
             app:layout_constraintDimensionRatio="H,75:25"
             app:layout_constraintStart_toStartOf="parent"
