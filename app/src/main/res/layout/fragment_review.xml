@@ -14,7 +14,7 @@
         tools:context=".ui.review.ReviewFragment">
 
         <TextView
-            android:id="@+id/home_fragment"
+            android:id="@+id/movies_reviews"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/medium_margin"
@@ -27,6 +27,18 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/reviews_recycler"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/medium_margin"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/movies_reviews"
+            tools:listitem="@layout/item_review"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
