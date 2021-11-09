@@ -9,7 +9,7 @@ class SearchReviewAdapter(
     item: List<ReviewResult>,
     listener: SearchReviewInteractionListener?
 ) : BaseAdapter<ReviewResult>(item, listener) {
-    override val layoutId: Int = R.layout.item_search
+    override val layoutId: Int = R.layout.item_review
 }
 
 interface SearchReviewInteractionListener: BaseInteractionListener
