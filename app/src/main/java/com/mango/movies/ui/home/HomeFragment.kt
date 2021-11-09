@@ -23,10 +23,10 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
             recyclerTopRateMovies.adapter = TopRateMovieAdapter(mutableListOf(), viewModel)
             recyclerTrendingSeries.adapter = TrendingSeriesAdapter(mutableListOf(), viewModel)
             recyclerTopRateSeries.adapter = TopRateSeriesAdapter(mutableListOf(), viewModel)
-//            searchViewBtn.setOnClickListener {
-//                val action = HomeFragmentDirections.actionHomeFragmentToSearchFragment()
-//                Navigation.findNavController(requireView()).navigate(action)
-//            }
+            searchViewBtn.setOnClickListener {
+                val action = HomeFragmentDirections.actionHomeFragmentToSearchFragment()
+                Navigation.findNavController(requireView()).navigate(action)
+            }
         }
 
         viewModel.movieDetails.observe(viewLifecycleOwner){
