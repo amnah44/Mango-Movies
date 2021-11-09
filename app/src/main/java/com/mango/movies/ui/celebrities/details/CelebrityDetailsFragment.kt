@@ -29,6 +29,7 @@ class CelebrityDetailsFragment :
             view.findNavController().popBackStack()
         }
         binding.recyclerKnownFor.adapter = KnownForAdapter(mutableListOf(), viewModel)
+        binding.viewModel = viewModel
 
         viewModel.movieDetails.observe(viewLifecycleOwner) {
             if (it != null) {

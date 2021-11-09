@@ -1,5 +1,4 @@
 package com.mango.movies.ui.celebrities
-
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData

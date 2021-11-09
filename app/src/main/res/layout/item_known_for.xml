@@ -7,6 +7,12 @@
             name="item"
             type="com.mango.movies.model.domain.KnownFor" />
         <variable
+            name="itemMovie"
+            type="com.mango.movies.model.domain.Movie" />
+        <variable
+            name="itemSeries"
+            type="com.mango.movies.model.domain.Series" />
+        <variable
             name="listener"
             type="com.mango.movies.ui.celebrities.details.KnownForInteractionListener" />
     </data>
@@ -14,11 +20,12 @@
     <androidx.cardview.widget.CardView
         android:layout_width="115dp"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/medium_margin"
+        android:layout_margin="@dimen/small_margin"
         android:padding="10dp"
         app:cardElevation="@dimen/cardview_default_elevation">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:onClick="@{()-> listener.getKnownFor(itemMovie,itemSeries)}"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/app_color">

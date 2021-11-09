@@ -17,7 +17,6 @@
             android:onClick="@{()-> listener.onClickCelebrity(item)}"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style=""
             app:layout_constraintEnd_toEndOf="parent"
             app:cardElevation="@dimen/cardview_default_elevation"
             android:layout_marginStart="@dimen/small_margin"
@@ -34,7 +33,7 @@
                 <com.google.android.material.imageview.ShapeableImageView
                     android:onClick="@{()-> listener.onClickCelebrity(item)}"
                     android:id="@+id/actorImg"
-                    android:layout_width="120dp"
+                    android:layout_width="140dp"
                     android:layout_height="0dp"
                     android:layout_marginStart="@dimen/small_margin"
                     android:layout_marginTop="@dimen/small_margin"
