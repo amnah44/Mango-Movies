@@ -26,9 +26,7 @@ class ResultViewModel() : ViewModel(),ResultInteractionListener ,GenreInteractio
     var requiredGenre: Genre?=null
     var flag=true
 
-//    val genreId=MutableLiveData<Genre>()
     init {
-//        requiredGenre=Genre(28,"action")
         getGenre()
         getMovie()
     }

@@ -33,7 +33,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
             val action = HomeFragmentDirections.actionHomeFragmentToDetailsFragment(it)
             Navigation.findNavController(requireView()).navigate(action)
         })
-
         viewModel.seriesEvent.observe(this, EventObserve {
             val action = HomeFragmentDirections.actionHomeFragmentToDetailsSeriesFragment(it)
             Navigation.findNavController(requireView()).navigate(action)
