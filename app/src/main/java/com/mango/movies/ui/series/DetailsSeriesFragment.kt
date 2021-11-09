@@ -11,6 +11,7 @@ import com.mango.movies.R
 import com.mango.movies.databinding.FragmentSeriesDetailsBinding
 import com.mango.movies.ui.base.BaseFragment
 import com.mango.movies.util.Constant
+import com.mango.movies.util.EventObserve
 
 class DetailsSeriesFragment :
     BaseFragment<FragmentSeriesDetailsBinding>(R.layout.fragment_series_details) {
@@ -28,14 +29,12 @@ class DetailsSeriesFragment :
         binding.returnArrow.setOnClickListener { view ->
             view.findNavController().popBackStack()
         }
-        viewModel.selectedSeries.observe(viewLifecycleOwner) {
-            if (it != null) {
-                val nav =
-                    DetailsSeriesFragmentDirections.actionDetailsSeriesFragmentToDetailsSeriesFragment(
-                        it
-                    )
-                Navigation.findNavController(requireView()).navigate(nav)
-            }
-        }
+        viewModel.selectedSeriesEvent.observe(this, EventObserve {
+            val nav =
+                DetailsSeriesFragmentDirections.actionDetailsSeriesFragmentToDetailsSeriesFragment(
+                    it
+                )
+            Navigation.findNavController(requireView()).navigate(nav)
+        })
     }
 }
