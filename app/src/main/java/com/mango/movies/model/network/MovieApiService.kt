@@ -5,7 +5,6 @@ import com.mango.movies.model.domain.CelebrityPopularResult
 import com.mango.movies.model.domain.Movie
 import com.mango.movies.model.domain.Series
 import com.mango.movies.model.domain.category.MovieAndTvByGenreResponse
-import com.mango.movies.model.domain.details.DetailsResponse
 import com.mango.movies.model.domain.genre.GenerResponse
 import retrofit2.Response
 import retrofit2.http.GET
@@ -19,12 +18,6 @@ interface MovieApiService {
         @Query("api_key") apiKey: String?,
     ): Response<Movie>
 
-    @GET("movie/latest")
-    suspend fun getLatestMovies(
-        @Query("api_key") apiKey: String?,
-        @Query("language") language: String?,
-    ): Response<BaseResponse<Movie>>
-
     @GET("movie/top_rated")
     suspend fun getTopRatedMovies(
         @Query("api_key") apiKey: String?,
@@ -35,22 +28,11 @@ interface MovieApiService {
         @Query("api_key") apiKey: String?,
     ): Response<BaseResponse<Movie>>
 
-    @GET("person/{person_id}")
-    suspend fun getPersonDetails(
-        @Path("person_id") personId: Int,
-        @Query("api_key") apiKey: String?,
-    ): Response<DetailsResponse>
-
     @GET("tv/{tv_id}")
     suspend fun getTvShowDetails(
         @Path("tv_id") tvId: Int,
         @Query("api_key") apiKey: String?,
     ): Response<Series>
-
-    @GET("tv/latest")
-    suspend fun getLatestTvShow(
-        @Query("api_key") apiKey: String?,
-    ): Response<BaseResponse<Series>>
 
     @GET("tv/top_rated")
     suspend fun getTopRatedTvShow(
@@ -63,7 +45,6 @@ interface MovieApiService {
         @Path("time_window") timeWindow: String?,
         @Query("api_key") apiKey: String?
     ): Response<BaseResponse<Series>>
-
 
     @GET("person/popular")
     suspend fun getPersonPopular(
@@ -92,15 +73,11 @@ interface MovieApiService {
         @Query("api_key") apiKey: String?,
     ): Response<MovieAndTvByGenreResponse>
 
-
-
     @GET("search/movie")
     suspend fun searchMovie(
         @Query("query") query: String,
         @Query("api_key") apiKey: String?,
     ): Response<BaseResponse<Movie>>
-
-
 
     @GET("movie/{movie_id}/similar")
     suspend fun getSimilarMovie(
@@ -108,13 +85,9 @@ interface MovieApiService {
         @Query("api_key") apiKey: String?,
     ): Response<BaseResponse<Movie>>
 
-
-
     @GET("tv/{tv_id}/similar")
     suspend fun getSimilarSeries(
         @Path("tv_id") tvId: Int?,
         @Query("api_key") apiKey: String?,
     ): Response<BaseResponse<Series>>
-
-
 }
