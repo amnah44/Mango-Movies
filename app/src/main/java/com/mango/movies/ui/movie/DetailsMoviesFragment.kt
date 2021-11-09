@@ -8,20 +8,17 @@ import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
 import com.mango.movies.R
-import com.mango.movies.databinding.FragmentDetailsBinding
+import com.mango.movies.databinding.FragmentMoviesDetailsBinding
 import com.mango.movies.ui.base.BaseFragment
 import com.mango.movies.util.Constant
 
-class DetailsFragment : BaseFragment<FragmentDetailsBinding>(R.layout.fragment_details) {
+class DetailsMoviesFragment : BaseFragment<FragmentMoviesDetailsBinding>(R.layout.fragment_movies_details) {
     override val LOG_TAG: String = Constant.DETAILS_FRAGMENT
-
     override val viewModel: DetailsViewModel by viewModels()
-    override val bindingInflater: (LayoutInflater, Int, ViewGroup?, Boolean) -> FragmentDetailsBinding = DataBindingUtil::inflate
+    override val bindingInflater: (LayoutInflater, Int, ViewGroup?, Boolean) -> FragmentMoviesDetailsBinding = DataBindingUtil::inflate
+    private val args: DetailsMoviesFragmentArgs by navArgs()
 
-
-    private val args: com.mango.movies.ui.movie.DetailsFragmentArgs by navArgs()
     override fun setupView() {
-
         val movie = args.movieDetails
         viewModel.getSimilarMovie(movie.id!!)
 
@@ -35,7 +32,7 @@ class DetailsFragment : BaseFragment<FragmentDetailsBinding>(R.layout.fragment_d
         viewModel.selectedMovie.observe(viewLifecycleOwner) {
             if (it != null) {
                 val nav =
-                    com.mango.movies.ui.movie.DetailsFragmentDirections.actionDetailsFragmentToDetailsFragment(
+                    DetailsMoviesFragmentDirections.actionDetailsFragmentToDetailsFragment(
                         it
                     )
                 Navigation.findNavController(requireView()).navigate(nav)

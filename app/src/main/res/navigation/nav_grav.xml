@@ -88,9 +88,9 @@
 
     <fragment
         android:id="@+id/detailsFragment"
-        android:name="com.mango.movies.ui.movie.DetailsFragment"
+        android:name="com.mango.movies.ui.movie.DetailsMoviesFragment"
         android:label="DetailsFragment"
-        tools:layout="@layout/fragment_details">
+        tools:layout="@layout/fragment_movies_details">
 
         <argument
             android:name="movieDetails"
