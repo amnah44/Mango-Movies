@@ -1,12 +1,18 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <data>
 
+    <data>
+        <variable
+            name="item"
+            type="com.mango.movies.model.domain.Movie" />
+
+        <variable
+            name="listener"
+            type="com.mango.movies.ui.search.SearchInteractionListener" />
     </data>
 
     <com.google.android.material.imageview.ShapeableImageView
-
         android:id="@+id/movieImg"
         android:layout_height="124dp"
         android:layout_width="100dp"
@@ -14,5 +20,8 @@
         android:layout_marginEnd="16dp"
         android:background="@color/app_color"
         android:src="@drawable/test"
-        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize15Percent" />
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize15Percent"
+        android:onClick="@{()-> listener.onClickMovie(item)}"
+        imageUrl="@{item.posterPath}"
+        />
 </layout>
