@@ -3,7 +3,7 @@ package com.mango.movies.model.domain.review
 
 import com.google.gson.annotations.SerializedName
 
-data class Result(
+data class ReviewResult(
     @SerializedName("byline")
     val byline: String?,
     @SerializedName("critics_pick")

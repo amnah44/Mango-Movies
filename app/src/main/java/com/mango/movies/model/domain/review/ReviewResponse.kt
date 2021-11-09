@@ -11,7 +11,7 @@ data class ReviewResponse(
     @SerializedName("num_results")
     val numResults: Int?,
     @SerializedName("results")
-    val results: List<Result>?,
+    val results: List<ReviewResult>?,
     @SerializedName("status")
     val status: String?
 )
