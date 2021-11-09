@@ -14,7 +14,7 @@ import kotlinx.coroutines.flow.collect
 class SearchViewModel : ViewModel(), SearchInteractionListener {
     var searchResult = MutableLiveData<State<BaseResponse<Movie>?>?>()
     var selectedMovie =  MutableLiveData<Movie?>()
-    var flag=MutableLiveData<Boolean>()
+    var flag = MutableLiveData<Boolean>()
 
     override fun onClickMovie(movie: Movie) {
         Log.v("ALI",movie.title.toString())
