@@ -120,4 +120,9 @@
             android:name="seriesDetails"
             app:argType="com.mango.movies.model.domain.Series" />
     </fragment>
+    <fragment
+        android:id="@+id/reviewFragment"
+        android:name="com.mango.movies.ui.review.ReviewFragment"
+        android:label="ReviewFragment"
+        tools:layout="@layout/fragment_review"/>
 </navigation>

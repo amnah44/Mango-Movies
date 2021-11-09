@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Apps/Mango-Movies/app/src/main/res/layout/activity_movie.xml" value="0.20416666666666666" />
         <entry key="..\:/Apps/Mango-Movies/app/src/main/res/layout/fragment_category.xml" value="0.1925925925925926" />
         <entry key="..\:/Apps/Mango-Movies/app/src/main/res/layout/fragment_celebrity.xml" value="0.20416666666666666" />
         <entry key="..\:/Apps/Mango-Movies/app/src/main/res/layout/fragment_celebrity_details.xml" value="0.20416666666666666" />
@@ -28,6 +29,7 @@
         <entry key="..\:/Apps/Mango-Movies/app/src/main/res/layout/item_top_rate_series.xml" value="0.20416666666666666" />
         <entry key="..\:/Apps/Mango-Movies/app/src/main/res/layout/item_trending_series.xml" value="0.20416666666666666" />
         <entry key="..\:/Apps/Mango-Movies/app/src/main/res/layout/item_up_coming_movie.xml" value="0.20416666666666666" />
+        <entry key="..\:/Apps/Mango-Movies/app/src/main/res/menu/menu_bottom_navigation.xml" value="0.20416666666666666" />
         <entry key="..\:/Movies2/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
       </map>
     </option>
