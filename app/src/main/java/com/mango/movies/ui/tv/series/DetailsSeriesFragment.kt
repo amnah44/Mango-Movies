@@ -30,7 +30,7 @@ class DetailsSeriesFragment : BaseFragment<FragmentSeriesDetailsBinding>(R.layou
         viewModel.getSimilarSeries(series.id!!)
 
         binding.recyclerRelated.adapter = SimilarSeriesAdapter(mutableListOf(), viewModel)
-
+        binding.itemSeries = series
         binding.returnArrow.setOnClickListener{ view ->
             view.findNavController().popBackStack()
         }
