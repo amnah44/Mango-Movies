@@ -4,7 +4,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-
+        <variable
+            name="searchReviewViewModel"
+            type="com.mango.movies.ui.review.searchReview.SearchReviewViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -29,6 +31,7 @@
             android:paddingRight="@dimen/medium_margin"
             android:textColor="@color/white"
             android:textSize="@dimen/txt3"
+            android:onTextChanged="@{(text, start, before, count)-> searchReviewViewModel.onTextChanged(text)}"
             app:closeIcon="@drawable/ic_close"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/return_arrow"
