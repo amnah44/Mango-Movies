@@ -162,7 +162,7 @@
                     app:showOnSuccess="@{homeViewModel.trendingTV}" />
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recycler_latest_series"
+                    android:id="@+id/recycler_top_rate_series"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
@@ -171,11 +171,9 @@
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/popular_movies_title"
-                    app:showOnSuccess="@{homeViewModel.trendingTV}"
+                    app:showOnSuccess="@{homeViewModel.topRateSeries}"
                     tools:ignore="SpeakableTextPresentCheck"
-                    tools:listitem="@layout/item_trending_series" />
-
-
+                    tools:listitem="@layout/item_top_rate_series" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </ScrollView>

@@ -10,7 +10,7 @@
 
         <variable
             name="listener"
-            type="com.mango.movies.ui.home.HomeInteractionListener" />
+            type="com.mango.movies.ui.tv.series.SeriesInteractionListener" />
 
     </data>
 
@@ -20,7 +20,7 @@
         android:layout_marginStart="@dimen/medium_margin"
         android:layout_marginTop="@dimen/small_margin"
         android:layout_marginBottom="@dimen/small_margin"
-        android:onClick="@{() -> listener.onTopRateSeriesClick(item)}"
+        android:onClick="@{() -> listener.onSeriesClick(item)}"
         app:cardCornerRadius="10dp">
 
         <ImageView

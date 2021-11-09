@@ -6,14 +6,14 @@
     <data>
         <variable
             name="viewModel"
-            type="com.mango.movies.ui.search.SearchViewModel" />
+            type="com.mango.movies.ui.movie.search.SearchViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/app_color"
-        tools:context=".ui.search.SearchFragment">
+        tools:context=".ui.movie.search.SearchFragment">
 
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/animation_error"

@@ -7,8 +7,10 @@ import androidx.navigation.NavDirections
 import com.mango.movies.model.domain.Movie
 import com.mango.movies.model.domain.Series
 import com.mango.movies.model.repositiory.MovieRepository
+import com.mango.movies.ui.movie.MovieInteractionListener
+import com.mango.movies.ui.tv.series.SeriesInteractionListener
 
-class HomeViewModel : ViewModel(), HomeInteractionListener {
+class HomeViewModel : ViewModel(), SeriesInteractionListener, MovieInteractionListener {
     val action: NavDirections get() = HomeFragmentDirections.actionHomeFragmentToSearchFragment()
 
     val upComingMovie = MovieRepository.upcomingMovies().asLiveData()
@@ -22,19 +24,27 @@ class HomeViewModel : ViewModel(), HomeInteractionListener {
         movieDetails.postValue(movie)
     }
 
-    override fun onTopRateMoviesClick(movieTopRate: Movie) {
-        getMovieDetails(movieTopRate)
+    override fun onSeriesClick(series: Series) {
+        seriesDetails.postValue(series)
     }
 
-    override fun onTopRateSeriesClick(seriesTopRate: Series) {
-        seriesDetails.postValue(seriesTopRate)
+    override fun onClickMovie(movie: Movie) {
+        getMovieDetails(movie)
     }
 
-    override fun onTrendingClick(tvTrending: Series) {
-        seriesDetails.postValue(tvTrending)
-    }
-
-    override fun onUpComingMoviesClick(moviesUpComing: Movie) {
-        movieDetails.postValue(moviesUpComing)
-    }
+//    override fun onTopRateMoviesClick(movieTopRate: Movie) {
+//        getMovieDetails(movieTopRate)
+//    }
+//
+//    override fun onTopRateSeriesClick(seriesTopRate: Series) {
+//        seriesDetails.postValue(seriesTopRate)
+//    }
+//
+//    override fun onTrendingClick(tvTrending: Series) {
+//        seriesDetails.postValue(tvTrending)
+//    }
+//
+//    override fun onUpComingMoviesClick(moviesUpComing: Movie) {
+//        movieDetails.postValue(moviesUpComing)
+//    }
 }

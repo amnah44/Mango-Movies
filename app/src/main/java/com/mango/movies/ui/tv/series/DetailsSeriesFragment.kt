@@ -1,15 +1,17 @@
-package com.mango.movies.ui.series
+package com.mango.movies.ui.tv.series
 
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
+import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
 import com.mango.movies.R
 import com.mango.movies.databinding.FragmentSeriesDetailsBinding
 import com.mango.movies.ui.base.BaseFragment
+import com.mango.movies.ui.movie.details.DetailsFragmentDirections
 import com.mango.movies.util.Constant
 
 
@@ -23,12 +25,22 @@ class DetailsSeriesFragment : BaseFragment<FragmentSeriesDetailsBinding>(R.layou
     private val args: DetailsSeriesFragmentArgs by navArgs()
     override fun setupView() {
 
-        binding.itemMovie = args.seriesDetails
-        Log.i("Amnah", args.seriesDetails.id.toString())
+
+        val series = args.seriesDetails
+        viewModel.getSimilarSeries(series.id!!)
+
+        binding.recyclerRelated.adapter = SimilarSeriesAdapter(mutableListOf(), viewModel)
+        binding.itemSeries = series
         binding.returnArrow.setOnClickListener{ view ->
             view.findNavController().popBackStack()
         }
+
+        viewModel.selectedSeries.observe(viewLifecycleOwner) {
+            if (it != null) {
+                val nav =
+                    DetailsSeriesFragmentDirections.actionDetailsSeriesFragmentToDetailsSeriesFragment(it)
+                Navigation.findNavController(requireView()).navigate(nav)
+            }
+        }
     }
-
-
 }
