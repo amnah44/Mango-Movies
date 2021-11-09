@@ -9,7 +9,7 @@
 
         <variable
             name="listener"
-            type="com.mango.movies.ui.search.SearchInteractionListener" />
+            type="com.mango.movies.ui.movie.MovieInteractionListener" />
     </data>
 
     <com.google.android.material.imageview.ShapeableImageView

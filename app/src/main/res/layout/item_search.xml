@@ -10,7 +10,7 @@
 
         <variable
             name="listener"
-            type="com.mango.movies.ui.search.SearchInteractionListener" />
+            type="com.mango.movies.ui.movie.MovieInteractionListener" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
