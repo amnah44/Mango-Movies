@@ -18,6 +18,7 @@ class HomeViewModel : ViewModel(), HomeInteractionListener {
 
     val movieDetails = MutableLiveData<Movie>()
     val seriesDetails = MutableLiveData<Series>()
+
     private fun getMovieDetails(movie: Movie){
         movieDetails.postValue(movie)
     }
