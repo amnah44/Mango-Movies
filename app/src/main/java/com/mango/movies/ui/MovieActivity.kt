@@ -14,12 +14,10 @@ class MovieActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         _binding = DataBindingUtil.setContentView(this, R.layout.activity_movie)
-
     }
 
     override fun onResume() {
         super.onResume()
-
         val navController = findNavController(R.id.parent_container)
         _binding.bottomNav.setupWithNavController(navController)
     }

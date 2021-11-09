@@ -26,6 +26,7 @@ class SearchViewModel : ViewModel(), MovieInteractionListener {
 
     fun onTextChanged(text: CharSequence?) {
         flag.postValue(false)
+
         if (text.isNullOrEmpty()) {
             flag.postValue(true)
             searchResult.postValue(null)

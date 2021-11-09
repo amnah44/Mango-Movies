@@ -67,5 +67,4 @@ object MovieRepository {
     ): Flow<State<MovieAndTvByGenreResponse?>> =
         if (flag) wrapWithFlow { API.apiService.getGenreMovie(genre, Constant.api_key) }
         else wrapWithFlow { API.apiService.getGenreTv(genre, Constant.api_key) }
-
 }

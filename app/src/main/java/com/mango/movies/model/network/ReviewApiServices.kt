@@ -9,5 +9,5 @@ interface ReviewApiServices {
     @GET("reviews/picks.json")
     suspend fun getMovieReviews(
         @Query("api-key") apiKey: String?
-    ):Response<ReviewResponse>
+    ): Response<ReviewResponse>
 }

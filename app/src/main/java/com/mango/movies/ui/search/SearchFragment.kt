@@ -22,7 +22,7 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(R.layout.fragment_sea
         viewModel.selectedMovie.observe(viewLifecycleOwner) {
             if (it != null) {
                 val nav =
-                   SearchFragmentDirections.actionSearchFragmentToDetailsFragment(
+                    SearchFragmentDirections.actionSearchFragmentToDetailsFragment(
                         it
                     )
                 Navigation.findNavController(requireView()).navigate(nav)
