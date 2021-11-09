@@ -61,6 +61,18 @@
             app:layout_constraintTop_toBottomOf="@id/search_review_text"
             tools:listitem="@layout/item_review"/>
 
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation_error"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            app:lottie_rawRes="@raw/error_animation"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:showOnError="@{searchReviewViewModel.searchReview}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
