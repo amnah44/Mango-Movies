@@ -9,6 +9,7 @@ import com.mango.movies.R
 import com.mango.movies.databinding.FragmentHomeBinding
 import com.mango.movies.ui.base.BaseFragment
 import com.mango.movies.util.Constant
+import com.mango.movies.util.EventObserve
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
     override val LOG_TAG: String = Constant.HOME_FRAGMENT
@@ -29,15 +30,14 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
             }
         }
 
-        viewModel.movieDetails.observe(viewLifecycleOwner){
-            if (it != null){
-                val action = HomeFragmentDirections.actionHomeFragmentToDetailsFragment(it)
-                Navigation.findNavController(requireView()).navigate(action)
-            }
-        }
+        viewModel.movieEvent.observe(this, EventObserve {
+            val action = HomeFragmentDirections.actionHomeFragmentToDetailsFragment(it)
+            Navigation.findNavController(requireView()).navigate(action)
 
-        viewModel.seriesDetails.observe(viewLifecycleOwner){
-            if (it != null){
+        })
+
+        viewModel.seriesDetails.observe(viewLifecycleOwner) {
+            if (it != null) {
                 val action = HomeFragmentDirections.actionHomeFragmentToDetailsSeriesFragment(it)
                 Navigation.findNavController(requireView()).navigate(action)
             }
