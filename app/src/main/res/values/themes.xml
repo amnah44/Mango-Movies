@@ -34,5 +34,9 @@
          <item name="android:textColorHint">@android:color/white</item>
     </style>
 
+    <style name="customChipStyle" parent="Widget.MaterialComponents.Chip.Filter">
+        <item name="chipBackgroundColor" >@color/checked_chip</item>
+    </style>
+
 
 </resources>

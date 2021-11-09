@@ -39,6 +39,27 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.chip.Chip
+                android:id="@+id/card_movie"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/card_series"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:contentPaddingLeft="20dp"
+                app:contentPaddingRight="20dp"
+                app:contentPaddingTop="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:checkable="true"
+                android:checked="true"
+                style="@style/customChipStyle"
+                android:onClick="@{() -> viewModel.changeMovieOrSeries(true)}"
+                android:textSize="@dimen/txt3"
+                android:fontFamily="@font/mplusrounded1c_bold"
+                app:contentPaddingBottom="8dp"
+                android:textColor="@color/white"
+                android:text="@string/movies" />
+
+            <com.google.android.material.chip.Chip
                 android:id="@+id/card_series"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -49,32 +70,14 @@
                 app:contentPaddingTop="8dp"
                 app:contentPaddingBottom="8dp"
                 android:layout_marginTop="8dp"
+                android:clickable="true"
                 android:checkable="true"
+                android:focusable="true"
                 android:text="@string/series"
+                style="@style/customChipStyle"
                 android:textColor="@color/white"
-                android:onCheckedChanged="@{() -> viewModel.changeMovieOrSeries(false)}"
-                app:chipBackgroundColor="@color/dark_color"
-                app:cardCornerRadius="32dp"/>
+                android:onClick="@{() -> viewModel.changeMovieOrSeries(false)}" />
 
-
-
-            <com.google.android.material.chip.Chip
-                android:id="@+id/card_movie"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@id/card_series"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:contentPaddingLeft="20dp"
-                app:contentPaddingRight="20dp"
-                app:contentPaddingTop="8dp"
-                android:checkable="true"
-                android:onCheckedChanged="@{() -> viewModel.changeMovieOrSeries(true)}"
-                android:textSize="@dimen/txt3"
-                android:fontFamily="@font/mplusrounded1c_bold"
-                app:contentPaddingBottom="8dp"
-                android:textColor="@color/white"
-                android:text="@string/movies"
-                app:chipBackgroundColor="@color/dark_color"/>
         </com.google.android.material.chip.ChipGroup>
 
 
