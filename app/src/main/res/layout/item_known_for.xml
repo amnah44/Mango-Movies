@@ -29,7 +29,6 @@
                 android:layout_height="150dp"
                 android:background="@color/app_color"
                 android:scaleType="centerCrop"
-                android:src="@drawable/test"
                 imageUrl="@{item.imageUrl}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

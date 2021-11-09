@@ -12,6 +12,5 @@
         android:scaleType="centerCrop"
         android:layout_marginEnd="16dp"
         android:background="@color/app_color"
-        android:src="@drawable/test"
         app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize15Percent" />
 </layout>

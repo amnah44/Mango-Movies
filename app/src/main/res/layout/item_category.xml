@@ -45,7 +45,6 @@
                     android:layout_marginTop="@dimen/medium_margin"
                     android:layout_marginBottom="@dimen/medium_margin"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/test"
                     imageUrl="@{item.imageUrl}"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintDimensionRatio="H,60:84"

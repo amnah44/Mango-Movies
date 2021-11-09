@@ -40,7 +40,6 @@
                     android:layout_marginTop="@dimen/small_margin"
                     android:layout_marginBottom="@dimen/small_margin"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/actor"
                     imageUrl="@{item.profilePath}"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintDimensionRatio="H,77:84"
