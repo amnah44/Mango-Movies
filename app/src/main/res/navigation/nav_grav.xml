@@ -122,4 +122,9 @@
         android:name="com.mango.movies.ui.review.ReviewFragment"
         android:label="ReviewFragment"
         tools:layout="@layout/fragment_review"/>
+    <fragment
+        android:id="@+id/searchReviewFragment2"
+        android:name="com.mango.movies.ui.review.searchReview.SearchReviewFragment"
+        android:label="SearchReviewFragment"
+        tools:layout="@layout/fragment_search_review"/>
 </navigation>
