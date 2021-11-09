@@ -63,13 +63,6 @@ fun ImageView.setReviewImageFromUrl(url: String?) {
         .into(this)
 }
 
-@BindingAdapter("navigate")
-fun View.navigate(action: NavDirections) {
-    this.setOnClickListener {
-        Navigation.findNavController(this).navigate(action)
-    }
-}
-
 @BindingAdapter(value=["goOnTextChanged"])
 fun goOnTextChanged(view: View, flag:Boolean){
     if (flag){
