@@ -19,10 +19,6 @@ object MovieRepository {
             API.apiService.getMovieDetails(movieId, Constant.api_key)
         }
 
-    fun latestMovies() = wrapWithFlow {
-        API.apiService.getLatestMovies(Constant.api_key, "en-US")
-    }
-
     fun ratedMovies() = wrapWithFlow {
         API.apiService.getTopRatedMovies(Constant.api_key)
     }
@@ -35,14 +31,6 @@ object MovieRepository {
         wrapWithFlow {
             API.apiService.getTvShowDetails(tvId, Constant.api_key)
         }
-
-    fun latestTV() = wrapWithFlow {
-        API.apiService.getLatestTvShow(Constant.api_key)
-    }
-
-    fun popularTvShow() = wrapWithFlow {
-        API.apiService.getLatestTvShow(Constant.api_key)
-    }
 
     fun topRatedTvShow() = wrapWithFlow {
         API.apiService.getTopRatedTvShow(Constant.api_key)
@@ -66,16 +54,9 @@ object MovieRepository {
             API.apiService.getSimilarSeries(tvId, Constant.api_key)
         }
 
-
-
     fun personPopular(): Flow<State<BaseResponse<CelebrityPopularResult>?>> =
         wrapWithFlow {
             API.apiService.getPersonPopular(Constant.api_key)
-        }
-
-    fun personDetails(personId: Int): Flow<State<DetailsResponse?>> =
-        wrapWithFlow {
-            API.apiService.getPersonDetails(personId, Constant.api_key)
         }
 
     fun genres(flag: Boolean): Flow<State<GenerResponse?>> {
