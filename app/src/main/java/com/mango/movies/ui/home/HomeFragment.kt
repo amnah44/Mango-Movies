@@ -29,19 +29,15 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
                 Navigation.findNavController(requireView()).navigate(action)
             }
         }
-
         viewModel.movieEvent.observe(this, EventObserve {
             val action = HomeFragmentDirections.actionHomeFragmentToDetailsFragment(it)
             Navigation.findNavController(requireView()).navigate(action)
-
         })
 
-        viewModel.seriesDetails.observe(viewLifecycleOwner) {
-            if (it != null) {
-                val action = HomeFragmentDirections.actionHomeFragmentToDetailsSeriesFragment(it)
-                Navigation.findNavController(requireView()).navigate(action)
-            }
-        }
+        viewModel.seriesEvent.observe(this, EventObserve {
+            val action = HomeFragmentDirections.actionHomeFragmentToDetailsSeriesFragment(it)
+            Navigation.findNavController(requireView()).navigate(action)
+        })
     }
 
 }
