@@ -3,6 +3,7 @@ package com.mango.movies.model.repositiory
 import com.mango.movies.model.domain.BaseResponse
 import com.mango.movies.model.domain.CelebrityPopularResult
 import com.mango.movies.model.domain.Movie
+import com.mango.movies.model.domain.Series
 import com.mango.movies.model.domain.category.MovieAndTvByGenreResponse
 import com.mango.movies.model.domain.details.DetailsResponse
 import com.mango.movies.model.domain.genre.GenerResponse
@@ -79,6 +80,11 @@ object MovieRepository {
     fun getSimilarMovie(movieId: Int): Flow<State<BaseResponse<Movie>?>> =
         wrapWithFlow {
             API.apiService.getSimilarMovie(movieId, Constant.api_key)
+        }
+
+    fun getSimilarTv(tvId: Int): Flow<State<BaseResponse<Series>?>> =
+        wrapWithFlow {
+            API.apiService.getSimilarTv(tvId, Constant.api_key)
         }
 
 

@@ -3,10 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/HDD 2020/Android Project/Mango-Movies/app/src/main/res/layout/fragment_celebrity.xml" value="0.20520833333333333" />
         <entry key="..\:/HDD 2020/Android Project/Mango-Movies/app/src/main/res/layout/fragment_details.xml" value="0.20923913043478262" />
+        <entry key="..\:/HDD 2020/Android Project/Mango-Movies/app/src/main/res/layout/fragment_home.xml" value="0.20520833333333333" />
         <entry key="..\:/HDD 2020/Android Project/Mango-Movies/app/src/main/res/layout/fragment_search.xml" value="0.23822463768115942" />
+        <entry key="..\:/HDD 2020/Android Project/Mango-Movies/app/src/main/res/layout/fragment_series_details.xml" value="0.20923913043478262" />
         <entry key="..\:/HDD 2020/Android Project/Mango-Movies/app/src/main/res/layout/item_details.xml" value="0.20923913043478262" />
         <entry key="..\:/HDD 2020/Android Project/Mango-Movies/app/src/main/res/layout/item_search.xml" value="0.23822463768115942" />
+        <entry key="..\:/HDD 2020/Android Project/Mango-Movies/app/src/main/res/layout/item_series_details.xml" value="0.20923913043478262" />
+        <entry key="..\:/HDD 2020/Android Project/Mango-Movies/app/src/main/res/layout/item_top_rate_movie.xml" value="0.20520833333333333" />
+        <entry key="..\:/HDD 2020/Android Project/Mango-Movies/app/src/main/res/layout/item_top_rate_series.xml" value="0.20520833333333333" />
+        <entry key="..\:/HDD 2020/Android Project/Mango-Movies/app/src/main/res/layout/item_trending_series.xml" value="0.20520833333333333" />
+        <entry key="..\:/HDD 2020/Android Project/Mango-Movies/app/src/main/res/layout/item_up_coming_movie.xml" value="0.20520833333333333" />
         <entry key="..\:/Mango-Movies/app/src/main/res/drawable/favorite_action.xml" value="0.2169230769230769" />
         <entry key="..\:/Mango-Movies/app/src/main/res/drawable/home_action.xml" value="0.2169230769230769" />
         <entry key="..\:/Mango-Movies/app/src/main/res/drawable/ic_home_fill.xml" value="0.2169230769230769" />
