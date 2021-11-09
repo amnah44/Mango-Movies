@@ -1,4 +1,4 @@
-package com.mango.movies.ui.series
+package com.mango.movies.ui.tv.series
 
 import android.util.Log
 import android.view.LayoutInflater

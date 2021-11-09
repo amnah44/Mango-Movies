@@ -1,8 +1,6 @@
-package com.mango.movies.ui.series
+package com.mango.movies.ui.tv.series
 
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.asLiveData
-import com.mango.movies.model.repositiory.MovieRepository
 
 class DetailsSeriesViewModel: ViewModel() {
 //    val movieDetails = repository.movieDetails(123).asLiveData()
