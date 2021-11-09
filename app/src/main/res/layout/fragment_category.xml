@@ -16,18 +16,6 @@
         android:background="@color/app_color"
         tools:context=".ui.categoris.CategoryFragment">
 
-
-
-        <ImageView
-            android:id="@+id/image_back"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_margin="@dimen/medium_margin"
-            android:layout_marginStart="@dimen/medium_margin"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_arrow_back"/>
-
         <com.google.android.material.chip.ChipGroup
             android:id="@+id/chip_group_movie_tv"
             app:singleSelection="true"
