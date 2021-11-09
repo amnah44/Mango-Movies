@@ -50,4 +50,6 @@
         <item name="android:itemBackground">@color/app_color</item>
         <item name="background">@color/app_color</item>
     </style>
+
+
 </resources>
