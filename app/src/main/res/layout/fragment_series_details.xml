@@ -39,7 +39,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/shadow_details_dark" />
+            style="@style/shadow_style"/>
 
         <TextView
             android:id="@+id/textView"
@@ -80,13 +80,12 @@
             android:layout_marginHorizontal="16dp"
             android:fontFamily="@font/roboto_regular"
             android:text="@{`Original Title: ` + itemMovie.originalName}"
-            android:textColor="#6C6F77"
+            style="@style/text_color"
             android:textSize="@dimen/txt3"
             app:layout_constraintBottom_toTopOf="@id/guideline"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             tools:text="Original Title: Original Title"
-
             />
 
         <TextView
@@ -96,7 +95,7 @@
             android:layout_marginHorizontal="16dp"
             android:fontFamily="@font/roboto_regular"
             android:text="@{itemMovie.name}"
-            android:textColor="@color/white"
+            style="@style/text_color"
             android:textSize="@dimen/txt4"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/text_director_name"
