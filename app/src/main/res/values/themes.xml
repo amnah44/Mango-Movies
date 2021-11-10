@@ -35,7 +35,7 @@
 
 
     <style name="fragment_container" >
-        <item name="background">@color/white</item>
+        <item name="android:background">@color/light_white</item>
         <item name="android:textColor">@color/black</item>
     </style>
 
@@ -78,4 +78,7 @@
         <item name="android:tint">@color/black</item>
     </style>
 
+    <style name="shadow_style">
+        <item name="srcCompat">@drawable/shadow_details_light</item>
+    </style>
 </resources>

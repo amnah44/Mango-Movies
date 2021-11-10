@@ -39,7 +39,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/shadow_details" />
+            app:srcCompat="@drawable/shadow_details_dark" />
 
         <TextView
             android:id="@+id/textView"

@@ -30,7 +30,7 @@
     </style>
 
     <style name="fragment_container" >
-        <item name="background">@color/app_color</item>
+        <item name="android:background">@color/app_color</item>
         <item name="android:textColor">@color/white</item>
     </style>
 
@@ -68,5 +68,9 @@
     <!--Image color -->
     <style name="image_color">
         <item name="android:tint">@color/white</item>
+    </style>
+
+    <style name="shadow_style">
+        <item name="srcCompat">@drawable/shadow_details_dark</item>
     </style>
 </resources>
