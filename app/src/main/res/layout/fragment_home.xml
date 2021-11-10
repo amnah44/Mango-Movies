@@ -39,7 +39,7 @@
             android:layout_marginEnd="16dp"
             android:layout_weight="1"
             style="@style/search_icon_color"
-            android:src="@drawable/ic_search"
+            android:src="@drawable/ic_search_light"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 

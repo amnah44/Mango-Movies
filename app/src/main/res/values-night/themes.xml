@@ -56,7 +56,8 @@
 
     <style name="search_edit_text_color">
         <item name="android:textColor">@color/white</item>
-        <item name="android:tint">@color/white</item>
+        <item name="android:drawableEnd">@drawable/ic_close_light</item>
+        <item name="android:drawableStart">@drawable/ic_search_light</item>
         <item name="android:background">@drawable/rounded_corner_view_dark</item>
     </style>
 
