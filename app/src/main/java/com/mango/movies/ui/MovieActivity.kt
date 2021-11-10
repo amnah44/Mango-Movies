@@ -12,6 +12,7 @@ class MovieActivity : AppCompatActivity() {
     private lateinit var _binding: ActivityMovieBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        setTheme(R.style.style_splash)
         super.onCreate(savedInstanceState)
         _binding = DataBindingUtil.setContentView(this, R.layout.activity_movie)
     }

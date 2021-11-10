@@ -18,7 +18,17 @@
         <!-- Hint text color -->
         <item name="android:textColorHint">@color/white</item>
         <item name="android:windowBackground">@color/black</item>
+
+
     </style>
+
+
+    <!--Splash screen -->
+    <style name="style_splash" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_resource</item>
+        <item name="android:statusBarColor">@color/ic_launcher_background</item>
+    </style>
+
 
     <!-- Shareable image style -->
     <style name="ShapeAppearanceOverlay.App.CornerSize15Percent" parent="">
