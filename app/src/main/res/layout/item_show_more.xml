@@ -19,7 +19,7 @@
         android:layout_marginStart="@dimen/small_margin"
         android:layout_marginTop="@dimen/small_margin"
         android:layout_marginEnd="@dimen/small_margin"
-        style="@style/recycler_view_search"
+        style="@style/recycler_view_item"
         app:cardCornerRadius="10dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout

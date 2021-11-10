@@ -18,7 +18,7 @@
         android:layout_width="219dp"
         android:layout_height="136dp"
         android:layout_marginStart="@dimen/medium_margin"
-        style="@style/recycler_view_search"
+        style="@style/recycler_view_item"
         android:onClick="@{() -> listener.onTrendingClick(item)}"
         app:cardCornerRadius="10dp">
 

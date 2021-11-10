@@ -35,8 +35,8 @@
 
 
     <style name="fragment_container" >
-        <item name="background">@color/dark_color</item>
-        <item name="android:textColor">@color/white</item>
+        <item name="background">@color/white</item>
+        <item name="android:textColor">@color/black</item>
     </style>
 
 
@@ -68,7 +68,7 @@
     </style>
 
     <!--Recycler view item -->
-    <style name="recycler_view_search">
+    <style name="recycler_view_item">
         <item name="cardBackgroundColor">@color/white</item>
         <item name="android:textColor">@color/black</item>
     </style>
