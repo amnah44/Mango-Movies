@@ -29,7 +29,7 @@
             app:contentPaddingBottom="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginStart="@dimen/custom_margin"
-            style="@style/fragment_container"
+            style="@style/recycler_view_item"
             app:cardCornerRadius="32dp">
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -64,7 +64,7 @@
             app:contentPaddingTop="8dp"
             app:contentPaddingBottom="8dp"
             android:layout_marginEnd="@dimen/custom_margin"
-            style="@style/fragment_container"
+            style="@style/recycler_view_item"
             app:cardCornerRadius="32dp">
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
