@@ -15,8 +15,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/fragment_container">
+        android:layout_height="wrap_content">
 
         <androidx.cardview.widget.CardView
             android:onClick="@{()-> listener.onClickMovie(item)}"
@@ -25,16 +24,15 @@
             android:layout_marginStart="@dimen/medium_margin"
             android:layout_marginTop="@dimen/small_margin"
             android:layout_marginEnd="@dimen/medium_margin"
-            style="@style/recycler_view_item"
             app:cardCornerRadius="25dp"
+            style="@style/recycler_view_item"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                style="@style/fragment_container">
+                android:layout_height="match_parent">
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/movieImg"
