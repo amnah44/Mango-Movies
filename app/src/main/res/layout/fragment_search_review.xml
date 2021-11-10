@@ -99,5 +99,6 @@
             app:lottie_loop="true"
             app:lottie_rawRes="@raw/search_animation"/>
 
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
