@@ -82,11 +82,11 @@
                         android:min="0"
                         android:progress="@{item.popularity.intValue()}"
                         app:indicatorColor="@color/orange"
-                        app:indicatorDirectionCircular="counterclockwise"
+                        app:indicatorDirectionCircular="clockwise"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:trackColor="@color/app_color" />
+                        app:trackColor="@color/grayDark" />
 
                     <TextView
                         style="@style/text_color"
