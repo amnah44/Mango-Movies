@@ -13,6 +13,10 @@ class SearchReviewViewModel: ViewModel(), SearchReviewInteractionListener {
     val searchReview = MutableLiveData<State<ReviewResponse?>?>()
     val flag = MutableLiveData<Boolean>()
 
+    init {
+        flag.postValue(true)
+    }
+
     fun onTextChanged(text: CharSequence?) {
         flag.postValue(false)
         viewModelScope.launch{
