@@ -9,15 +9,25 @@ import com.mango.movies.util.State
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
-class SearchReviewViewModel: ViewModel(), SearchReviewInteractionListener {
+class SearchReviewViewModel : ViewModel(), SearchReviewInteractionListener {
     val searchReview = MutableLiveData<State<ReviewResponse?>?>()
     val flag = MutableLiveData<Boolean>()
 
+    init {
+        flag.postValue(true)
+    }
+
     fun onTextChanged(text: CharSequence?) {
         flag.postValue(false)
-        viewModelScope.launch{
-            ReviewRepository.searchMovieReview(text.toString()).collect{
-                searchReview.postValue(it)
+
+        if (text.isNullOrEmpty()) {
+            flag.postValue(true)
+            searchReview.postValue(null)
+        } else {
+            viewModelScope.launch {
+                ReviewRepository.searchMovieReview(text.toString()).collect {
+                    searchReview.postValue(it)
+                }
             }
         }
     }
