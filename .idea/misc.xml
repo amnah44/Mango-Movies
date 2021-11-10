@@ -10,14 +10,19 @@
         <entry key="..\:/Mango-Movies/app/src/main/res/drawable/ic_backarrow_details.xml" value="0.2074074074074074" />
         <entry key="..\:/Mango-Movies/app/src/main/res/drawable/ic_home_fill.xml" value="0.2169230769230769" />
         <entry key="..\:/Mango-Movies/app/src/main/res/drawable/ic_home_out_fill.xml" value="0.2169230769230769" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/drawable/ic_person_fill.xml" value="0.1" />
         <entry key="..\:/Mango-Movies/app/src/main/res/drawable/ic_person_out_fill.xml" value="0.2169230769230769" />
         <entry key="..\:/Mango-Movies/app/src/main/res/drawable/ic_place_holder.xml" value="0.18425925925925926" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/drawable/ic_review_fill.xml" value="0.1" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/drawable/ic_review_out_fill.xml" value="0.1" />
         <entry key="..\:/Mango-Movies/app/src/main/res/drawable/ic_search.xml" value="0.2203125" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/drawable/ic_search_light.xml" value="0.2203125" />
         <entry key="..\:/Mango-Movies/app/src/main/res/drawable/people_action.xml" value="0.2169230769230769" />
         <entry key="..\:/Mango-Movies/app/src/main/res/drawable/person_action.xml" value="0.2169230769230769" />
         <entry key="..\:/Mango-Movies/app/src/main/res/drawable/setting_action.xml" value="0.2169230769230769" />
         <entry key="..\:/Mango-Movies/app/src/main/res/drawable/settings_action.xml" value="0.2169230769230769" />
-        <entry key="..\:/Mango-Movies/app/src/main/res/layout/activity_movie.xml" value="0.18425925925925926" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/layout/activity_movie.xml" value="0.33" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/layout/fragment_category.xml" value="0.20416666666666666" />
         <entry key="..\:/Mango-Movies/app/src/main/res/layout/fragment_celebrity.xml" value="0.20416666666666666" />
         <entry key="..\:/Mango-Movies/app/src/main/res/layout/fragment_details.xml" value="0.20416666666666666" />
         <entry key="..\:/Mango-Movies/app/src/main/res/layout/fragment_favorites.xml" value="0.20416666666666666" />
