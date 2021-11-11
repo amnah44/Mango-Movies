@@ -24,6 +24,7 @@ class SearchReviewViewModel : ViewModel(), SearchReviewInteractionListener {
             flag.postValue(true)
             searchReview.postValue(null)
         } else {
+            flag.postValue(false)
             viewModelScope.launch {
                 ReviewRepository.searchMovieReview(text.toString()).collect {
                     searchReview.postValue(it)
