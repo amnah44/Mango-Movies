@@ -59,16 +59,26 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:text="@string/detail_movie" />
 
-        <ImageView
-            android:id="@+id/return_arrow"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_marginStart="@dimen/medium_margin"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_marginTop="@dimen/medium_margin"
-            app:layout_constraintBottom_toBottomOf="@id/textView"
+            android:layout_marginStart="@dimen/medium_margin"
+            android:background="@drawable/rounded_corner_view"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_arrow_back" />
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/return_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:foregroundGravity="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/ic_arrow_back" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline"
