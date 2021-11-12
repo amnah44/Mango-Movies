@@ -54,6 +54,10 @@
         <entry key="..\:/Mango-Movies/app/src/main/res/menu/menu_bottom_navigation.xml" value="0.20416666666666666" />
         <entry key="..\:/Mango-Movies/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2169230769230769" />
         <entry key="..\:/Movies2/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Basheer Developer/Desktop/Mango Movie App/Mango-Movies/app/src/main/res/layout/fragment_celebrity_details.xml" value="0.21693840579710144" />
+        <entry key="..\:/Users/Basheer Developer/Desktop/Mango Movie App/Mango-Movies/app/src/main/res/layout/fragment_home.xml" value="0.21693840579710144" />
+        <entry key="..\:/Users/Basheer Developer/Desktop/Mango Movie App/Mango-Movies/app/src/main/res/layout/fragment_search.xml" value="0.21693840579710144" />
+        <entry key="..\:/Users/Basheer Developer/Desktop/Mango Movie App/Mango-Movies/app/src/main/res/layout/item_celebrity.xml" value="0.21693840579710144" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.27685185185185185" />
         <entry key="app/src/main/res/drawable/category_action.xml" value="0.2984375" />
         <entry key="app/src/main/res/drawable/home_action.xml" value="0.2984375" />
