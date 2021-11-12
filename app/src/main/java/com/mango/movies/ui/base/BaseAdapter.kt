@@ -38,10 +38,10 @@ abstract class BaseAdapter<T>(
     }
 
     fun setItems(newItems : List<T>){
-//        val moviesDiffUtils = DiffUtil.calculateDiff(MoviesDiffUtils(items, newItems))
+        val moviesDiffUtil = DiffUtil.calculateDiff(MoviesDiffUtils(items, newItems))
         items = newItems
-//        moviesDiffUtils.dispatchUpdatesTo(this)
-        notifyDataSetChanged()
+        moviesDiffUtil.dispatchUpdatesTo(this)
+
     }
 
     fun getItems() = items
