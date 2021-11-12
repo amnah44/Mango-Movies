@@ -3,6 +3,7 @@ package com.mango.movies.ui.search
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
@@ -13,7 +14,7 @@ import com.mango.movies.util.Constant
 
 class SearchFragment : BaseFragment<FragmentSearchBinding>(R.layout.fragment_search) {
     override val LOG_TAG: String = Constant.SEARCH_FRAGMENT
-    override val viewModel: SearchViewModel by viewModels()
+    override val viewModel by activityViewModels<SearchViewModel>()
     override val bindingInflater: (LayoutInflater, Int, ViewGroup?, Boolean) -> FragmentSearchBinding =
         DataBindingUtil::inflate
 
