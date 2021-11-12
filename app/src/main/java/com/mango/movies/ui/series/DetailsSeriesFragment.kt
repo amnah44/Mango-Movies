@@ -3,6 +3,7 @@ package com.mango.movies.ui.series
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
@@ -16,7 +17,7 @@ import com.mango.movies.util.EventObserve
 class DetailsSeriesFragment :
     BaseFragment<FragmentSeriesDetailsBinding>(R.layout.fragment_series_details) {
     override val LOG_TAG: String = Constant.DETAILS_FRAGMENT
-    override val viewModel: DetailsSeriesViewModel by viewModels()
+    override val viewModel by activityViewModels<DetailsSeriesViewModel>()
     override val bindingInflater: (LayoutInflater, Int, ViewGroup?, Boolean) -> FragmentSeriesDetailsBinding =
         DataBindingUtil::inflate
     private val args: DetailsSeriesFragmentArgs by navArgs()
