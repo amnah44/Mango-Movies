@@ -16,6 +16,7 @@ class MovieTabFragment:BaseFragment<FragmentTabMovieBinding>(R.layout.fragment_t
     override val bindingInflater: (LayoutInflater, Int, ViewGroup?, Boolean) -> FragmentTabMovieBinding=DataBindingUtil::inflate
 
     override fun setupView() {
+        binding.viewModel=viewModel
         TODO("Not yet implemented")
     }
 

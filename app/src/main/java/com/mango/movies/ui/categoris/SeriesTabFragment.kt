@@ -16,6 +16,7 @@ class SeriesTabFragment:BaseFragment<FragmentTabSeriesBinding>(R.layout.fragment
     override val bindingInflater: (LayoutInflater, Int, ViewGroup?, Boolean) -> FragmentTabSeriesBinding=DataBindingUtil::inflate
 
     override fun setupView() {
+        binding.viewModel=viewModel
         TODO("Not yet implemented")
     }
 }
