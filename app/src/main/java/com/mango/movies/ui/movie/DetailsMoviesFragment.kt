@@ -23,10 +23,11 @@ class DetailsMoviesFragment : BaseFragment<FragmentMoviesDetailsBinding>(R.layou
         val movie = args.movieDetails
         movie.id?.let { viewModel.getSimilarMovie(it) }
 
-        binding.apply {
-            recyclerRelated.adapter = SimilarMovieAdapter(mutableListOf(), viewModel)
-            itemMovie = movie
-            returnArrow.setOnClickListener{ view ->
+        binding.let {
+            it.viewModel = viewModel
+            it.recyclerRelated.adapter = SimilarMovieAdapter(mutableListOf(), viewModel)
+            it.itemMovie = movie
+            it.returnArrow.setOnClickListener{ view ->
                 view.findNavController().popBackStack()
             }
         }
