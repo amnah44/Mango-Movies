@@ -1,5 +1,6 @@
 package com.mango.movies.ui.home
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
@@ -15,16 +16,21 @@ class HomeViewModel : ViewModel(), SeriesInteractionListener, MovieInteractionLi
     val topRateMovies = Repository.ratedMovies().asLiveData()
     val trendingTV = Repository.tvTrending().asLiveData()
     val topRateSeries = Repository.topRatedTvShow().asLiveData()
-    val movieEvent = MutableLiveData<Event<Movie>>()
-    val seriesEvent = MutableLiveData<Event<Series>>()
+    private val _movieEvent = MutableLiveData<Event<Movie>>()
+    val movieEvent: LiveData<Event<Movie>>
+        get() = _movieEvent
+    private val _seriesEvent = MutableLiveData<Event<Series>>()
+    val seriesEvent: LiveData<Event<Series>>
+        get() = _seriesEvent
+
 
     override fun onSeriesClick(series: Series) {
-        seriesEvent.postValue(
+        _seriesEvent.postValue(
             Event(series)
         )
     }
     override fun onClickMovie(movie: Movie) {
-        movieEvent.postValue(
+        _movieEvent.postValue(
             Event(movie)
         )
     }
