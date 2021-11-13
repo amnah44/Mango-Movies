@@ -17,10 +17,10 @@ class SearchReviewFragment: BaseFragment<FragmentSearchReviewBinding>(R.layout.f
         DataBindingUtil::inflate
 
     override fun setupView() {
-        binding.apply {
-            searchReviewViewModel = viewModel
-            searchReviewRecycler.adapter = SearchReviewAdapter(mutableListOf(), viewModel)
-            returnArrow.setOnClickListener { view ->
+        binding.let {
+            it.viewModel = viewModel
+            it.searchReviewRecycler.adapter = SearchReviewAdapter(mutableListOf(), viewModel)
+            it.returnArrow.setOnClickListener { view ->
                 view.findNavController().popBackStack()
             }
         }
