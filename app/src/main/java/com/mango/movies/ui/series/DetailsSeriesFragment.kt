@@ -23,7 +23,7 @@ class DetailsSeriesFragment :
 
     override fun setupView() {
         val series = args.seriesDetails
-        viewModel.getSimilarSeries(series.id!!)
+        series.id?.let { viewModel.getSimilarSeries(it) }
         binding.recyclerRelated.adapter = SimilarSeriesAdapter(mutableListOf(), viewModel)
         binding.itemSeries = series
         binding.returnArrow.setOnClickListener { view ->
