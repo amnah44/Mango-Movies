@@ -148,7 +148,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/medium_margin"
-                    android:layout_marginTop="24dp"
                     android:fontFamily="@font/mplusrounded1c_bold"
                     android:text="@string/top_rate_series"
                     android:textColor="@color/white"
