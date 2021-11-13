@@ -3,6 +3,45 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Apps/Mango-Movies/app/src/main/res/drawable-v24/ic_category_fill_inside.xml" value="0.2203125" />
+        <entry key="..\:/Apps/Mango-Movies/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2203125" />
+        <entry key="..\:/Apps/Mango-Movies/app/src/main/res/drawable-xxhdpi/ic_film_fill.xml" value="0.2203125" />
+        <entry key="..\:/Apps/Mango-Movies/app/src/main/res/drawable/category_action.xml" value="0.2203125" />
+        <entry key="..\:/Apps/Mango-Movies/app/src/main/res/drawable/celebrity_action.xml" value="0.2203125" />
+        <entry key="..\:/Apps/Mango-Movies/app/src/main/res/drawable/checked_chip.xml" value="0.2203125" />
+        <entry key="..\:/Apps/Mango-Movies/app/src/main/res/drawable/home_action.xml" value="0.2203125" />
+        <entry key="..\:/Apps/Mango-Movies/app/src/main/res/drawable/ic_arrow_back.xml" value="0.2203125" />
+        <entry key="..\:/Apps/Mango-Movies/app/src/main/res/drawable/ic_calendar.xml" value="0.2203125" />
+        <entry key="..\:/Apps/Mango-Movies/app/src/main/res/drawable/ic_category_outline.xml" value="0.2203125" />
+        <entry key="..\:/Apps/Mango-Movies/app/src/main/res/drawable/ic_close.xml" value="0.2203125" />
+        <entry key="..\:/Apps/Mango-Movies/app/src/main/res/drawable/ic_error.xml" value="0.2203125" />
+        <entry key="..\:/Apps/Mango-Movies/app/src/main/res/drawable/ic_home_fill.xml" value="0.2203125" />
+        <entry key="..\:/Apps/Mango-Movies/app/src/main/res/drawable/ic_home_out_fill.xml" value="0.2203125" />
+        <entry key="..\:/Apps/Mango-Movies/app/src/main/res/drawable/ic_person_fill.xml" value="0.2203125" />
+        <entry key="..\:/Apps/Mango-Movies/app/src/main/res/drawable/ic_person_out_fill.xml" value="0.2203125" />
+        <entry key="..\:/Apps/Mango-Movies/app/src/main/res/drawable/ic_place_holder.xml" value="0.2203125" />
+        <entry key="..\:/Apps/Mango-Movies/app/src/main/res/drawable/ic_review_fill.xml" value="0.2203125" />
+        <entry key="..\:/Apps/Mango-Movies/app/src/main/res/drawable/ic_review_out_fill.xml" value="0.2203125" />
+        <entry key="..\:/Apps/Mango-Movies/app/src/main/res/drawable/ic_search.xml" value="0.2203125" />
+        <entry key="..\:/Apps/Mango-Movies/app/src/main/res/drawable/ic_settings_fill.xml" value="0.2203125" />
+        <entry key="..\:/Apps/Mango-Movies/app/src/main/res/drawable/ic_settings_out_fill.xml" value="0.2203125" />
+        <entry key="..\:/Apps/Mango-Movies/app/src/main/res/drawable/ic_time.xml" value="0.2203125" />
+        <entry key="..\:/Apps/Mango-Movies/app/src/main/res/drawable/review_action.xml" value="0.2203125" />
+        <entry key="..\:/Apps/Mango-Movies/app/src/main/res/drawable/rounded_corner_view.xml" value="0.2203125" />
+        <entry key="..\:/Apps/Mango-Movies/app/src/main/res/drawable/settings_action.xml" value="0.2203125" />
+        <entry key="..\:/Apps/Mango-Movies/app/src/main/res/drawable/shadow_details.xml" value="0.2203125" />
+        <entry key="..\:/Apps/Mango-Movies/app/src/main/res/drawable/shadow_for_review.xml" value="0.2203125" />
+        <entry key="..\:/Apps/Mango-Movies/app/src/main/res/drawable/track.xml" value="0.2203125" />
+        <entry key="..\:/Apps/Mango-Movies/app/src/main/res/layout/fragment_celebrity_details.xml" value="0.20416666666666666" />
+        <entry key="..\:/Apps/Mango-Movies/app/src/main/res/layout/fragment_search.xml" value="0.20416666666666666" />
+        <entry key="..\:/Apps/Mango-Movies/app/src/main/res/layout/fragment_search_review.xml" value="0.20416666666666666" />
+        <entry key="..\:/Apps/Mango-Movies/app/src/main/res/layout/item_actor_details.xml" value="0.20416666666666666" />
+        <entry key="..\:/Apps/Mango-Movies/app/src/main/res/layout/item_review.xml" value="0.5" />
+        <entry key="..\:/Apps/Mango-Movies/app/src/main/res/layout/item_search.xml" value="0.20416666666666666" />
+        <entry key="..\:/Apps/Mango-Movies/app/src/main/res/layout/item_top_rate_series.xml" value="0.20416666666666666" />
+        <entry key="..\:/Apps/Mango-Movies/app/src/main/res/layout/item_up_coming_movie.xml" value="0.20416666666666666" />
+        <entry key="..\:/Apps/Mango-Movies/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2203125" />
+        <entry key="..\:/Apps/Mango-Movies/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2203125" />
         <entry key="..\:/Mango-Movies/app/src/main/res/drawable-xxhdpi/ic_film_fill.xml" value="0.1" />
         <entry key="..\:/Mango-Movies/app/src/main/res/drawable/favorite_action.xml" value="0.2169230769230769" />
         <entry key="..\:/Mango-Movies/app/src/main/res/drawable/home_action.xml" value="0.2169230769230769" />
@@ -10,19 +49,14 @@
         <entry key="..\:/Mango-Movies/app/src/main/res/drawable/ic_backarrow_details.xml" value="0.2074074074074074" />
         <entry key="..\:/Mango-Movies/app/src/main/res/drawable/ic_home_fill.xml" value="0.2169230769230769" />
         <entry key="..\:/Mango-Movies/app/src/main/res/drawable/ic_home_out_fill.xml" value="0.2169230769230769" />
-        <entry key="..\:/Mango-Movies/app/src/main/res/drawable/ic_person_fill.xml" value="0.1" />
         <entry key="..\:/Mango-Movies/app/src/main/res/drawable/ic_person_out_fill.xml" value="0.2169230769230769" />
         <entry key="..\:/Mango-Movies/app/src/main/res/drawable/ic_place_holder.xml" value="0.18425925925925926" />
-        <entry key="..\:/Mango-Movies/app/src/main/res/drawable/ic_review_fill.xml" value="0.1" />
-        <entry key="..\:/Mango-Movies/app/src/main/res/drawable/ic_review_out_fill.xml" value="0.1" />
         <entry key="..\:/Mango-Movies/app/src/main/res/drawable/ic_search.xml" value="0.2203125" />
-        <entry key="..\:/Mango-Movies/app/src/main/res/drawable/ic_search_light.xml" value="0.2203125" />
         <entry key="..\:/Mango-Movies/app/src/main/res/drawable/people_action.xml" value="0.2169230769230769" />
         <entry key="..\:/Mango-Movies/app/src/main/res/drawable/person_action.xml" value="0.2169230769230769" />
         <entry key="..\:/Mango-Movies/app/src/main/res/drawable/setting_action.xml" value="0.2169230769230769" />
         <entry key="..\:/Mango-Movies/app/src/main/res/drawable/settings_action.xml" value="0.2169230769230769" />
-        <entry key="..\:/Mango-Movies/app/src/main/res/layout/activity_movie.xml" value="0.33" />
-        <entry key="..\:/Mango-Movies/app/src/main/res/layout/fragment_category.xml" value="0.20416666666666666" />
+        <entry key="..\:/Mango-Movies/app/src/main/res/layout/activity_movie.xml" value="0.18425925925925926" />
         <entry key="..\:/Mango-Movies/app/src/main/res/layout/fragment_celebrity.xml" value="0.20416666666666666" />
         <entry key="..\:/Mango-Movies/app/src/main/res/layout/fragment_details.xml" value="0.20416666666666666" />
         <entry key="..\:/Mango-Movies/app/src/main/res/layout/fragment_favorites.xml" value="0.20416666666666666" />
