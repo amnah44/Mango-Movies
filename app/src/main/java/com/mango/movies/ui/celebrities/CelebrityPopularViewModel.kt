@@ -5,13 +5,13 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import com.mango.movies.model.domain.CelebrityPopularResult
 import com.mango.movies.model.domain.details.DetailsResponse
-import com.mango.movies.model.repositiory.MovieRepository
+import com.mango.movies.model.repositiory.Repository
 import com.mango.movies.ui.celebrities.details.KnownForInteractionListener
 import com.mango.movies.util.Event
 
 class CelebrityPopularViewModel : ViewModel(),
     CelebrityInteractionListener, KnownForInteractionListener {
-    val persons = MovieRepository.personPopular().asLiveData()
+    val persons = Repository.personPopular().asLiveData()
     val personEvent = MutableLiveData<Event<CelebrityPopularResult>>()
 
     override fun onClickCelebrity(celebrity: CelebrityPopularResult) {

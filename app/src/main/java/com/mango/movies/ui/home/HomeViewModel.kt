@@ -5,16 +5,16 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import com.mango.movies.model.domain.Movie
 import com.mango.movies.model.domain.Series
-import com.mango.movies.model.repositiory.MovieRepository
+import com.mango.movies.model.repositiory.Repository
 import com.mango.movies.ui.movie.MovieInteractionListener
 import com.mango.movies.ui.series.SeriesInteractionListener
 import com.mango.movies.util.Event
 
 class HomeViewModel : ViewModel(), SeriesInteractionListener, MovieInteractionListener {
-    val upComingMovie = MovieRepository.upcomingMovies().asLiveData()
-    val topRateMovies = MovieRepository.ratedMovies().asLiveData()
-    val trendingTV = MovieRepository.tvTrending().asLiveData()
-    val topRateSeries = MovieRepository.topRatedTvShow().asLiveData()
+    val upComingMovie = Repository.upcomingMovies().asLiveData()
+    val topRateMovies = Repository.ratedMovies().asLiveData()
+    val trendingTV = Repository.tvTrending().asLiveData()
+    val topRateSeries = Repository.topRatedTvShow().asLiveData()
     val movieEvent = MutableLiveData<Event<Movie>>()
     val seriesEvent = MutableLiveData<Event<Series>>()
 

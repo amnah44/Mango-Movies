@@ -12,7 +12,7 @@ import com.mango.movies.util.Constant
 import com.mango.movies.util.State
 import kotlinx.coroutines.flow.Flow
 
-object MovieRepository {
+object Repository {
     fun movieDetails(movieId: Int) =
         wrapWithFlow {
             API.apiService.getMovieDetails(movieId, Constant.api_key)

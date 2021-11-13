@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.mango.movies.model.domain.BaseResponse
 import com.mango.movies.model.domain.Movie
-import com.mango.movies.model.repositiory.MovieRepository
+import com.mango.movies.model.repositiory.Repository
 import com.mango.movies.util.Event
 import com.mango.movies.util.State
 import kotlinx.coroutines.flow.collect
@@ -17,7 +17,7 @@ class DetailsMoviesViewModel: ViewModel() , MovieInteractionListener {
 
     fun getSimilarMovie(movieId: Int) {
        viewModelScope.launch {
-            MovieRepository.getSimilarMovie(movieId).collect {
+            Repository.getSimilarMovie(movieId).collect {
                 similarMovies.postValue(it)
             }
         }
