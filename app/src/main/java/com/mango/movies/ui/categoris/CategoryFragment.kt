@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import com.google.android.material.tabs.TabLayout
 import com.mango.movies.R
@@ -12,12 +13,13 @@ import com.mango.movies.databinding.FragmentCategoryBinding
 import com.mango.movies.ui.base.BaseFragment
 import com.mango.movies.ui.categoris.movieTab.MovieTabFragment
 import com.mango.movies.ui.categoris.seriesTab.SeriesTabFragment
+import com.mango.movies.ui.home.HomeViewModel
 import com.mango.movies.util.Constant
 
 class CategoryFragment : BaseFragment<FragmentCategoryBinding>(R.layout.fragment_category) {
     val fragmentList= listOf(MovieTabFragment(), SeriesTabFragment())
     override val LOG_TAG: String = Constant.CATEGORY_FRAGMENT
-    override val viewModel: ResultViewModel by viewModels()
+    override val viewModel: ResultViewModel by activityViewModels()
     override val bindingInflater: (LayoutInflater, Int, ViewGroup?, Boolean) -> FragmentCategoryBinding =
         DataBindingUtil::inflate
 
