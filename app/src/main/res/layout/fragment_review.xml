@@ -5,7 +5,7 @@
 
     <data>
         <variable
-            name="reviewViewModel"
+            name="viewModel"
             type="com.mango.movies.ui.review.ReviewViewModel" />
     </data>
 
@@ -46,13 +46,13 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginTop="@dimen/medium_margin"
-            app:items="@{reviewViewModel.review.toData().results}"
+            app:items="@{viewModel.review.toData().results}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/movies_reviews"
-            app:showOnSuccess="@{reviewViewModel.review}"
+            app:showOnSuccess="@{viewModel.review}"
             tools:listitem="@layout/item_review"/>
 
         <com.airbnb.lottie.LottieAnimationView
@@ -62,7 +62,7 @@
             app:lottie_rawRes="@raw/error_animation"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
-            app:showOnError="@{reviewViewModel.review}"
+            app:showOnError="@{viewModel.review}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -75,7 +75,7 @@
             app:lottie_rawRes="@raw/loading_animation"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
-            app:showOnLoading="@{reviewViewModel.review}"
+            app:showOnLoading="@{viewModel.review}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
