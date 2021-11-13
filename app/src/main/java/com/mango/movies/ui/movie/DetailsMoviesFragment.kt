@@ -22,7 +22,7 @@ class DetailsMoviesFragment : BaseFragment<FragmentMoviesDetailsBinding>(R.layou
 
     override fun setupView() {
         val movie = args.movieDetails
-        viewModel.getSimilarMovie(movie.id!!)
+        movie.id?.let { viewModel.getSimilarMovie(it) }
         binding.recyclerRelated.adapter = SimilarMovieAdapter(mutableListOf(), viewModel)
         binding.itemMovie = movie
         binding.returnArrow.setOnClickListener{ view ->
