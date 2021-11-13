@@ -17,10 +17,10 @@ class ReviewFragment: BaseFragment<FragmentReviewBinding>(R.layout.fragment_revi
         DataBindingUtil::inflate
 
     override fun setupView() {
-        binding.apply {
-            reviewViewModel = viewModel
-            reviewsRecycler.adapter = ReviewAdapter(mutableListOf(), viewModel)
-            searchReviewButton.setOnClickListener{
+        binding.let {
+            it.viewModel = viewModel
+            it.reviewsRecycler.adapter = ReviewAdapter(mutableListOf(), viewModel)
+            it.searchReviewButton.setOnClickListener{
                 val action = ReviewFragmentDirections.actionReviewFragmentToSearchReviewFragment2()
                 Navigation.findNavController(requireView()).navigate(action)
             }
