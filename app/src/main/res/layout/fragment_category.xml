@@ -41,19 +41,7 @@
 
 
 
-<!--        <androidx.recyclerview.widget.RecyclerView-->
-<!--            android:id="@+id/recycler_genre"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginTop="@dimen/small_margin"-->
-<!--            app:showOnSuccess="@{viewModel.genres}"-->
-<!--            app:items="@{viewModel.genres.toData().genres}"-->
-<!--            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
-<!--            android:orientation="horizontal"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@id/chip_group_movie_tv"-->
-<!--            tools:listitem="@layout/item_genre"/>-->
+
 
 <!--        <androidx.recyclerview.widget.RecyclerView-->
 <!--            android:id="@+id/recycler_movies"-->
