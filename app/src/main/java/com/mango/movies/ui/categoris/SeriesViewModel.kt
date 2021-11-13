@@ -10,6 +10,6 @@ import com.mango.movies.util.State
 
 class SeriesViewModel:ViewModel() {
     val selectedSeriesEvent = MutableLiveData<Event<State<Series?>>>()
-    val  genreMovieList= MutableLiveData<State<MovieAndTvByGenreResponse?>>()
-    var requiredGenre: Genre?=null
+    val  genreSeriesList= MutableLiveData<State<MovieAndTvByGenreResponse?>>()
+    var requiredGenre=Genre(10759,"action")
 }
