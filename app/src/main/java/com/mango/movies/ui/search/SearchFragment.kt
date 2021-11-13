@@ -18,9 +18,10 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(R.layout.fragment_sea
         DataBindingUtil::inflate
 
     override fun setupView() {
-        binding.apply {
-            searchRecycler.adapter = SearchAdapter(mutableListOf(), viewModel)
-            returnArrow.setOnClickListener { view ->
+        binding.let {
+            it.viewModel = viewModel
+            it.searchRecycler.adapter = SearchAdapter(mutableListOf(), viewModel)
+            it.returnArrow.setOnClickListener { view ->
                 view.findNavController().popBackStack()
             }
         }
