@@ -18,4 +18,5 @@ object Constant {
     const val REVIEW_FRAGMENT = "Review Fragment"
     const val SEARCH_REVIEW_FRAGMENT = "Search Review Fragment"
     const val MOVIE_TAB_FRAGMENT="tab movie fragment"
+    const val SERIES_TAB_FRAGMENT="tab series fragment"
 }
