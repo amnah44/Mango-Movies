@@ -150,7 +150,7 @@
                     android:layout_marginStart="@dimen/medium_margin"
                     android:layout_marginTop="24dp"
                     android:fontFamily="@font/mplusrounded1c_bold"
-                    android:text="Popular Movies"
+                    android:text="@string/top_rate_series"
                     android:textColor="@color/white"
                     android:textSize="@dimen/txt2"
                     app:layout_constraintStart_toStartOf="parent"
