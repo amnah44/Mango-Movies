@@ -27,6 +27,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             style="@style/customTabStyle"
             app:tabTextColor="@color/white"
+            app:tabTextAppearance="@style/customTextAppereance"
             android:background="@color/gray"/>
 
 
