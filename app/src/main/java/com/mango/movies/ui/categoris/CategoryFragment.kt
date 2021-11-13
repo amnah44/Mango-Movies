@@ -30,6 +30,7 @@ class CategoryFragment : BaseFragment<FragmentCategoryBinding>(R.layout.fragment
         seriesTab.setText("series")
         binding.myTabsLayout.addTab(seriesTab)
 
+        setCurrenTabFragment(binding.myTabsLayout.selectedTabPosition)
         binding.myTabsLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener{
             override fun onTabSelected(tab: TabLayout.Tab?) {
                 setCurrenTabFragment(tab?.position)
