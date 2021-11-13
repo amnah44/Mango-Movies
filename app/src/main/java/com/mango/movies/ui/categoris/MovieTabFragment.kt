@@ -5,10 +5,13 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModel
+import androidx.navigation.Navigation
 import com.mango.movies.R
 import com.mango.movies.databinding.FragmentTabMovieBinding
 import com.mango.movies.ui.base.BaseFragment
 import com.mango.movies.util.Constant
+import com.mango.movies.util.EventObserve
+import com.mango.movies.util.State
 
 class MovieTabFragment:BaseFragment<FragmentTabMovieBinding>(R.layout.fragment_tab_movie){
     override val LOG_TAG: String= Constant.MOVIE_TAB_FRAGMENT
@@ -17,7 +20,17 @@ class MovieTabFragment:BaseFragment<FragmentTabMovieBinding>(R.layout.fragment_t
 
     override fun setupView() {
         binding.viewModel=viewModel
-        TODO("Not yet implemented")
+        binding.recyclerMovies.adapter = MovieAndTvResultAdapter(mutableListOf(), viewModel)
+        binding.recyclerGenre.adapter = GenreAdapter(mutableListOf(), viewModel)
+        viewModel.selectedMovieEvent.observe(this, EventObserve {
+            if (it is State.Success) {
+                val action = CategoryFragmentDirections.actionCategoryFragmentToDetailsFragment(
+                    requireNotNull(it.toData())
+                )
+                Navigation.findNavController(requireView()).navigate(action)
+            }
+        })
+
     }
 
 }
