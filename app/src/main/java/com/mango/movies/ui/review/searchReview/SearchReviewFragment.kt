@@ -20,9 +20,9 @@ class SearchReviewFragment: BaseFragment<FragmentSearchReviewBinding>(R.layout.f
         binding.apply {
             searchReviewViewModel = viewModel
             searchReviewRecycler.adapter = SearchReviewAdapter(mutableListOf(), viewModel)
-        }
-        binding.returnArrow.setOnClickListener { view ->
-            view.findNavController().popBackStack()
+            returnArrow.setOnClickListener { view ->
+                view.findNavController().popBackStack()
+            }
         }
     }
 }
