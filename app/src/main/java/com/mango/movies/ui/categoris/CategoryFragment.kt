@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import com.google.android.material.tabs.TabLayout
@@ -32,7 +33,7 @@ class CategoryFragment : BaseFragment<FragmentCategoryBinding>(R.layout.fragment
         seriesTab.setText("series")
         binding.myTabsLayout.addTab(seriesTab)
 
-        setCurrenTabFragment(binding.myTabsLayout.selectedTabPosition)
+        replaceFragment(MovieTabFragment())
         binding.myTabsLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener{
             override fun onTabSelected(tab: TabLayout.Tab?) {
                 setCurrenTabFragment(tab?.position)
@@ -52,9 +53,9 @@ class CategoryFragment : BaseFragment<FragmentCategoryBinding>(R.layout.fragment
 
     private fun setCurrenTabFragment(position: Int?) {
         when(position){
-            0 -> replaceFragment(fragmentList[0])
-            1 -> replaceFragment(fragmentList[1])
-            else -> replaceFragment(fragmentList[0])
+            0 -> replaceFragment(MovieTabFragment())
+            1 -> replaceFragment(SeriesTabFragment())
+            else -> replaceFragment(MovieTabFragment())
         }
 
     }
@@ -62,6 +63,7 @@ class CategoryFragment : BaseFragment<FragmentCategoryBinding>(R.layout.fragment
     private fun replaceFragment(fragment: Fragment) {
         val transaction=requireActivity().supportFragmentManager.beginTransaction()
         transaction.replace(R.id.frame_layout, fragment)
+        transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
         transaction.commit()
     }
 }
