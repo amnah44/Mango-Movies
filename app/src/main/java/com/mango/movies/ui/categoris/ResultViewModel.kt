@@ -1,5 +1,6 @@
 package com.mango.movies.ui.categoris
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -16,10 +17,18 @@ import com.mango.movies.model.domain.category.Result
 import com.mango.movies.util.Event
 
 class ResultViewModel() : ViewModel(),ResultInteractionListener ,GenreInteractionListener{
-    val  genreMovieList= MutableLiveData<State<MovieAndTvByGenreResponse?>>()
-    val genres =MutableLiveData<State<GenerResponse?>>()
-    val selectedMovieEvent = MutableLiveData<Event<State<Movie?>>>()
-    val selectedSeriesEvent = MutableLiveData<Event<State<Series?>>>()
+    private val _genreMovieList = MutableLiveData<State<MovieAndTvByGenreResponse?>>()
+    val genreMovieList: LiveData<State<MovieAndTvByGenreResponse?>>
+        get() = _genreMovieList
+    private val _genres = MutableLiveData<State<GenerResponse?>>()
+    val genres: LiveData<State<GenerResponse?>>
+        get() = _genres
+    private val _selectedMovieEvent = MutableLiveData<Event<State<Movie?>>>()
+    val selectedMovieEvent: LiveData<Event<State<Movie?>>>
+        get() = _selectedMovieEvent
+    private val _selectedSeriesEvent = MutableLiveData<Event<State<Series?>>>()
+    val selectedSeriesEvent: LiveData<Event<State<Series?>>>
+        get() = _selectedSeriesEvent
     var requiredGenre: Genre?=null
     var flag=true
 
@@ -30,7 +39,7 @@ class ResultViewModel() : ViewModel(),ResultInteractionListener ,GenreInteractio
     private fun getMovie(){
         viewModelScope.launch {
             Repository.getGenreMovieOrTv(requiredGenre?.id,flag).collect {
-                genreMovieList.postValue(it)
+                _genreMovieList.postValue(it)
             }
         }
     }
@@ -38,7 +47,7 @@ class ResultViewModel() : ViewModel(),ResultInteractionListener ,GenreInteractio
     private fun getGenre(){
         viewModelScope.launch {
             Repository.genres(flag).collect {
-                genres.postValue(it)
+                _genres.postValue(it)
             }
         }
     }
@@ -57,7 +66,7 @@ class ResultViewModel() : ViewModel(),ResultInteractionListener ,GenreInteractio
         if(flag){
            viewModelScope.launch {
                Repository.movieDetails(result.id).collect {
-                   selectedMovieEvent.postValue(Event(it))
+                   _selectedMovieEvent.postValue(Event(it))
                }
            }
         }
@@ -65,7 +74,7 @@ class ResultViewModel() : ViewModel(),ResultInteractionListener ,GenreInteractio
         else{
             viewModelScope.launch {
                 Repository.tvShowDetails(result.id).collect {
-                    selectedSeriesEvent.postValue(Event(it))
+                    _selectedSeriesEvent.postValue(Event(it))
                 }
             }
         }
