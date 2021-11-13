@@ -4,6 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.mango.movies.model.domain.review.ReviewResponse
+import com.mango.movies.model.repositiory.Repository
 import com.mango.movies.util.State
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
@@ -25,7 +26,7 @@ class SearchReviewViewModel : ViewModel(), SearchReviewInteractionListener {
         } else {
             flag.postValue(false)
             viewModelScope.launch {
-                ReviewRepository.searchMovieReview(text.toString()).collect {
+                Repository.searchMovieReview(text.toString()).collect {
                     searchReview.postValue(it)
                 }
             }
