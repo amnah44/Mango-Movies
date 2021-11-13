@@ -23,11 +23,13 @@ class CelebrityDetailsFragment :
     private val args: CelebrityDetailsFragmentArgs by navArgs()
 
     override fun setupView() {
-        binding.item = args.celebrityDetails
-        binding.returnArrow.setOnClickListener { view ->
-            view.findNavController().popBackStack()
+        binding.let{
+            it.viewModel = viewModel
+            it.item = args.celebrityDetails
+            it.recyclerKnownFor.adapter = KnownForAdapter(mutableListOf(), viewModel)
+            it.returnArrow.setOnClickListener { view ->
+                view.findNavController().popBackStack()
+            }
         }
-        binding.recyclerKnownFor.adapter = KnownForAdapter(mutableListOf(), viewModel)
     }
-
 }
