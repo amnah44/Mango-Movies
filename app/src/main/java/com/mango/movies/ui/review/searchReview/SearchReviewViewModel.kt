@@ -1,5 +1,6 @@
 package com.mango.movies.ui.review.searchReview
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -10,24 +11,28 @@ import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
 class SearchReviewViewModel : ViewModel(), SearchReviewInteractionListener {
-    val searchReview = MutableLiveData<State<ReviewResponse?>?>()
-    val flag = MutableLiveData<Boolean>()
+    private val _searchReview = MutableLiveData<State<ReviewResponse?>?>()
+    val searchReview: LiveData<State<ReviewResponse?>?>
+        get() =  _searchReview
+    private val _flag = MutableLiveData<Boolean>()
+    val flag: LiveData<Boolean>
+        get() = _flag
 
     init {
-        flag.postValue(true)
+        _flag.postValue(true)
     }
 
     fun onTextChanged(text: CharSequence?) {
-        flag.postValue(false)
+        _flag.postValue(false)
 
         if (text.isNullOrEmpty()) {
-            flag.postValue(true)
-            searchReview.postValue(null)
+            _flag.postValue(true)
+            _searchReview.postValue(null)
         } else {
-            flag.postValue(false)
+            _flag.postValue(false)
             viewModelScope.launch {
                 Repository.searchMovieReview(text.toString()).collect {
-                    searchReview.postValue(it)
+                    _searchReview.postValue(it)
                 }
             }
         }
