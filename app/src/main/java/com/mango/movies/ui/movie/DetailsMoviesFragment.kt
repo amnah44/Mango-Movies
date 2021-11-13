@@ -23,11 +23,15 @@ class DetailsMoviesFragment : BaseFragment<FragmentMoviesDetailsBinding>(R.layou
     override fun setupView() {
         val movie = args.movieDetails
         movie.id?.let { viewModel.getSimilarMovie(it) }
-        binding.recyclerRelated.adapter = SimilarMovieAdapter(mutableListOf(), viewModel)
-        binding.itemMovie = movie
-        binding.returnArrow.setOnClickListener{ view ->
-            view.findNavController().popBackStack()
+
+        binding.apply {
+            recyclerRelated.adapter = SimilarMovieAdapter(mutableListOf(), viewModel)
+            itemMovie = movie
+            returnArrow.setOnClickListener{ view ->
+                view.findNavController().popBackStack()
+            }
         }
+
         viewModel.selectedMovieEvent.observe(this, EventObserve{
             val nav =
                 DetailsMoviesFragmentDirections.actionDetailsFragmentToDetailsFragment(
