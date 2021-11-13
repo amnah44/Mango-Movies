@@ -4,6 +4,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
@@ -16,6 +17,7 @@ import com.mango.movies.util.EventObserve
 import com.mango.movies.util.State
 
 class CategoryFragment : BaseFragment<FragmentCategoryBinding>(R.layout.fragment_category) {
+    val fragmentList= listOf(MovieTabFragment(), SeriesTabFragment())
     override val LOG_TAG: String = Constant.CATEGORY_FRAGMENT
     override val viewModel: ResultViewModel by viewModels()
     override val bindingInflater: (LayoutInflater, Int, ViewGroup?, Boolean) -> FragmentCategoryBinding =
@@ -32,7 +34,7 @@ class CategoryFragment : BaseFragment<FragmentCategoryBinding>(R.layout.fragment
 
         binding.myTabsLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener{
             override fun onTabSelected(tab: TabLayout.Tab?) {
-
+                setCurrenTabFragment(tab?.position)
             }
 
             override fun onTabUnselected(tab: TabLayout.Tab?) {
@@ -45,5 +47,20 @@ class CategoryFragment : BaseFragment<FragmentCategoryBinding>(R.layout.fragment
 
         })
 
+    }
+
+    private fun setCurrenTabFragment(position: Int?) {
+        when(position){
+            0 -> replaceFragment(fragmentList[0])
+            1 -> replaceFragment(fragmentList[1])
+            else -> replaceFragment(fragmentList[0])
+        }
+
+    }
+
+    private fun replaceFragment(fragment: Fragment) {
+        val transaction=requireActivity().supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.frame_layout, fragment)
+        transaction.commit()
     }
 }

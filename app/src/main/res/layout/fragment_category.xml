@@ -28,12 +28,13 @@
             style="@style/customTabStyle"
             app:tabTextColor="@color/white"
             app:tabTextAppearance="@style/customTextAppereance"
-            android:background="@color/gray"/>
+            android:background="@color/app_color"/>
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/frame_layout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:name="com.mango.movies.ui.categoris.MovieTabFragment"/>
 
 
 
