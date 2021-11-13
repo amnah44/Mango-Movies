@@ -30,6 +30,12 @@
             app:tabTextAppearance="@style/customTextAppereance"
             android:background="@color/gray"/>
 
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/frame_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
 
 
 
