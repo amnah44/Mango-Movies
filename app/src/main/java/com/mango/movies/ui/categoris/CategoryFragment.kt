@@ -21,6 +21,12 @@ class CategoryFragment : BaseFragment<FragmentCategoryBinding>(R.layout.fragment
 
     override fun setupView() {
         binding.viewModel = viewModel
+        val movieTab=binding.myTabsLayout.newTab()
+        movieTab.setText("Movie")
+        binding.myTabsLayout.addTab(movieTab)
+        val seriesTab=binding.myTabsLayout.newTab()
+        seriesTab.setText("series")
+        binding.myTabsLayout.addTab(seriesTab)
 
     }
 }
