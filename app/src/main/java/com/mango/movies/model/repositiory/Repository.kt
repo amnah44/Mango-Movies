@@ -8,12 +8,29 @@ import com.mango.movies.model.domain.category.MovieAndTvByGenreResponse
 import com.mango.movies.model.domain.genre.GenerResponse
 import com.mango.movies.model.domain.review.ReviewResponse
 import com.mango.movies.model.network.API
-import com.mango.movies.model.repositiory.FlowWrapper.wrapWithFlow
 import com.mango.movies.util.Constant
 import com.mango.movies.util.State
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flow
+import retrofit2.Response
 
 object Repository {
+    fun <T> wrapWithFlow(endPointResponse: suspend () -> Response<T>): Flow<State<T?>> {
+        return flow {
+            emit(State.Loading)
+            try {
+                val result = endPointResponse()
+                if (result.isSuccessful) {
+                    emit(State.Success(result.body()))
+                } else {
+                    emit(State.Error(result.message()))
+                }
+            } catch (e: Exception) {
+                State.Error(e.message.toString())
+            }
+        }
+    }
+
     fun movieDetails(movieId: Int) =
         wrapWithFlow {
             API.apiService.getMovieDetails(movieId, Constant.api_key)
