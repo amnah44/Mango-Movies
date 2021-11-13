@@ -32,11 +32,20 @@
         <entry key="..\:/Apps/Mango-Movies/app/src/main/res/drawable/shadow_details.xml" value="0.2203125" />
         <entry key="..\:/Apps/Mango-Movies/app/src/main/res/drawable/shadow_for_review.xml" value="0.2203125" />
         <entry key="..\:/Apps/Mango-Movies/app/src/main/res/drawable/track.xml" value="0.2203125" />
+        <entry key="..\:/Apps/Mango-Movies/app/src/main/res/layout/activity_movie.xml" value="0.20416666666666666" />
+        <entry key="..\:/Apps/Mango-Movies/app/src/main/res/layout/fragment_category.xml" value="0.20416666666666666" />
         <entry key="..\:/Apps/Mango-Movies/app/src/main/res/layout/fragment_celebrity_details.xml" value="0.20416666666666666" />
+        <entry key="..\:/Apps/Mango-Movies/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/Apps/Mango-Movies/app/src/main/res/layout/fragment_movies_details.xml" value="0.20416666666666666" />
+        <entry key="..\:/Apps/Mango-Movies/app/src/main/res/layout/fragment_review.xml" value="0.20416666666666666" />
         <entry key="..\:/Apps/Mango-Movies/app/src/main/res/layout/fragment_search.xml" value="0.20416666666666666" />
         <entry key="..\:/Apps/Mango-Movies/app/src/main/res/layout/fragment_search_review.xml" value="0.20416666666666666" />
         <entry key="..\:/Apps/Mango-Movies/app/src/main/res/layout/fragment_series_details.xml" value="0.20416666666666666" />
         <entry key="..\:/Apps/Mango-Movies/app/src/main/res/layout/item_actor_details.xml" value="0.20416666666666666" />
+        <entry key="..\:/Apps/Mango-Movies/app/src/main/res/layout/item_category.xml" value="0.20416666666666666" />
+        <entry key="..\:/Apps/Mango-Movies/app/src/main/res/layout/item_celebrity.xml" value="0.20416666666666666" />
+        <entry key="..\:/Apps/Mango-Movies/app/src/main/res/layout/item_genre.xml" value="0.20416666666666666" />
+        <entry key="..\:/Apps/Mango-Movies/app/src/main/res/layout/item_known_for.xml" value="0.20416666666666666" />
         <entry key="..\:/Apps/Mango-Movies/app/src/main/res/layout/item_review.xml" value="0.5" />
         <entry key="..\:/Apps/Mango-Movies/app/src/main/res/layout/item_search.xml" value="0.20416666666666666" />
         <entry key="..\:/Apps/Mango-Movies/app/src/main/res/layout/item_top_rate_series.xml" value="0.20416666666666666" />
