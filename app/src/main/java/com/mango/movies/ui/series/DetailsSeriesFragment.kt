@@ -24,10 +24,12 @@ class DetailsSeriesFragment :
     override fun setupView() {
         val series = args.seriesDetails
         series.id?.let { viewModel.getSimilarSeries(it) }
-        binding.recyclerRelated.adapter = SimilarSeriesAdapter(mutableListOf(), viewModel)
-        binding.itemSeries = series
-        binding.returnArrow.setOnClickListener { view ->
-            view.findNavController().popBackStack()
+        binding.apply {
+            recyclerRelated.adapter = SimilarSeriesAdapter(mutableListOf(), viewModel)
+            itemSeries = series
+            returnArrow.setOnClickListener { view ->
+                view.findNavController().popBackStack()
+            }
         }
         viewModel.selectedSeriesEvent.observe(this, EventObserve {
             val nav =
