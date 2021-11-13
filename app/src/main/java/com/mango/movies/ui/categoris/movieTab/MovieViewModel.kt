@@ -41,8 +41,10 @@ class MovieViewModel:ViewModel(), GenreInteractionListener, ResultInteractionLis
 
     override fun onClickItem(result: Result) {
                 viewModelScope.launch {
-                    MovieRepository.movieDetails(result.id).collect {
-                        selectedMovieEvent.postValue(Event(it))
+                    result.id?.let {
+                        MovieRepository.movieDetails(it).collect {
+                            selectedMovieEvent.postValue(Event(it))
+                        }
                     }
                 }
 

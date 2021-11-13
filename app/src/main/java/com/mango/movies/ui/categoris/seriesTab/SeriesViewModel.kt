@@ -41,8 +41,10 @@ class SeriesViewModel:ViewModel() , GenreInteractionListener, ResultInteractionL
 
     override fun onClickItem(result: Result) {
             viewModelScope.launch {
-                MovieRepository.tvShowDetails(result.id).collect {
-                    selectedSeriesEvent.postValue(Event(it))
+                result.id?.let {
+                    MovieRepository.tvShowDetails(it).collect {
+                        selectedSeriesEvent.postValue(Event(it))
+                    }
                 }
             }
 
