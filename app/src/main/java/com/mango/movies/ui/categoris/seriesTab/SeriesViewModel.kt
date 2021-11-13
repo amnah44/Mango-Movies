@@ -1,4 +1,4 @@
-package com.mango.movies.ui.categoris
+package com.mango.movies.ui.categoris.seriesTab
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -9,12 +9,14 @@ import com.mango.movies.model.domain.category.MovieAndTvByGenreResponse
 import com.mango.movies.model.domain.category.Result
 import com.mango.movies.model.domain.genre.Genre
 import com.mango.movies.model.repositiory.MovieRepository
+import com.mango.movies.ui.categoris.GenreInteractionListener
+import com.mango.movies.ui.categoris.ResultInteractionListener
 import com.mango.movies.util.Event
 import com.mango.movies.util.State
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
-class SeriesViewModel:ViewModel() ,GenreInteractionListener, ResultInteractionListener{
+class SeriesViewModel:ViewModel() , GenreInteractionListener, ResultInteractionListener {
     val selectedSeriesEvent = MutableLiveData<Event<State<Series?>>>()
     val  genreSeriesList= MutableLiveData<State<MovieAndTvByGenreResponse?>>()
     val genres = MovieRepository.genres(false).asLiveData()

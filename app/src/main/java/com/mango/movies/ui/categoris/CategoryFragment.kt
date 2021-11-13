@@ -6,15 +6,13 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.navigation.Navigation
-import androidx.navigation.findNavController
 import com.google.android.material.tabs.TabLayout
 import com.mango.movies.R
 import com.mango.movies.databinding.FragmentCategoryBinding
 import com.mango.movies.ui.base.BaseFragment
+import com.mango.movies.ui.categoris.movieTab.MovieTabFragment
+import com.mango.movies.ui.categoris.seriesTab.SeriesTabFragment
 import com.mango.movies.util.Constant
-import com.mango.movies.util.EventObserve
-import com.mango.movies.util.State
 
 class CategoryFragment : BaseFragment<FragmentCategoryBinding>(R.layout.fragment_category) {
     val fragmentList= listOf(MovieTabFragment(), SeriesTabFragment())

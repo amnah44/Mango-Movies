@@ -1,14 +1,16 @@
-package com.mango.movies.ui.categoris
+package com.mango.movies.ui.categoris.movieTab
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModel
 import androidx.navigation.Navigation
 import com.mango.movies.R
 import com.mango.movies.databinding.FragmentTabMovieBinding
 import com.mango.movies.ui.base.BaseFragment
+import com.mango.movies.ui.categoris.CategoryFragmentDirections
+import com.mango.movies.ui.categoris.GenreAdapter
+import com.mango.movies.ui.categoris.MovieAndTvResultAdapter
 import com.mango.movies.util.Constant
 import com.mango.movies.util.EventObserve
 import com.mango.movies.util.State
