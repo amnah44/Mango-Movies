@@ -6,6 +6,7 @@ import com.mango.movies.model.domain.Movie
 import com.mango.movies.model.domain.Series
 import com.mango.movies.model.domain.category.MovieAndTvByGenreResponse
 import com.mango.movies.model.domain.genre.GenerResponse
+import com.mango.movies.model.domain.review.ReviewResponse
 import com.mango.movies.model.network.API
 import com.mango.movies.model.repositiory.FlowWrapper.wrapWithFlow
 import com.mango.movies.util.Constant
@@ -67,4 +68,12 @@ object Repository {
     ): Flow<State<MovieAndTvByGenreResponse?>> =
         if (flag) wrapWithFlow { API.apiService.getGenreMovie(genre, Constant.api_key) }
         else wrapWithFlow { API.apiService.getGenreTv(genre, Constant.api_key) }
+
+    fun movieReview() = wrapWithFlow {
+        API.reviewApiServices.getMovieReviews(Constant.api_key_review)
+    }
+
+    fun searchMovieReview(query: String): Flow<State<ReviewResponse?>> = wrapWithFlow {
+        API.reviewApiServices.searchMovieReviews(query, Constant.api_key_review)
+    }
 }
