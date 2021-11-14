@@ -2,7 +2,7 @@ package com.mango.movies.model.domain.category
 
 import com.google.gson.annotations.SerializedName
 
-data class Result(
+data class MovieAndTvDetails(
     @SerializedName("adult")
     val adult: Boolean?,
     @SerializedName("backdrop_path")

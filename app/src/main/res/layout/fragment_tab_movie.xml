@@ -33,7 +33,7 @@
             android:layout_height="0dp"
             android:layout_marginTop="@dimen/small_margin"
             app:showOnSuccess="@{viewModel.genreMovieList}"
-            app:items="@{viewModel.genreMovieList.toData().results}"
+            app:items="@{viewModel.genreMovieList.toData().movieAndTvDetails}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"

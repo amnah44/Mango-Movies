@@ -3,7 +3,7 @@ package com.mango.movies.ui.categoris.seriesTab
 import androidx.lifecycle.*
 import com.mango.movies.model.domain.Series
 import com.mango.movies.model.domain.category.MovieAndTvByGenreResponse
-import com.mango.movies.model.domain.category.Result
+import com.mango.movies.model.domain.category.MovieAndTvDetails
 import com.mango.movies.model.domain.genre.GenerResponse
 import com.mango.movies.model.domain.genre.Genre
 import com.mango.movies.model.repositiory.MovieRepository
@@ -43,9 +43,9 @@ class SeriesViewModel:ViewModel() , GenreInteractionListener, ResultInteractionL
         getSeries()
     }
 
-    override fun onClickItem(result: Result) {
+    override fun onClickItem(movieAndTvDetails: MovieAndTvDetails) {
             viewModelScope.launch {
-                result.id?.let {
+                movieAndTvDetails.id?.let {
                     MovieRepository.tvShowDetails(it).collect {
                         _selectedSeriesEvent.postValue(Event(it))
                     }

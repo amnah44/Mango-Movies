@@ -1,22 +1,21 @@
 package com.mango.movies.ui.categoris
 
 import com.mango.movies.R
-import com.mango.movies.model.domain.Movie
 import com.mango.movies.ui.base.BaseAdapter
 import com.mango.movies.ui.base.BaseInteractionListener
-import com.mango.movies.model.domain.category.Result
+import com.mango.movies.model.domain.category.MovieAndTvDetails
 import com.mango.movies.model.domain.genre.Genre
 
 class MovieAndTvResultAdapter(
-    item:List<Result>,
+    item:List<MovieAndTvDetails>,
     listener:ResultInteractionListener
-):BaseAdapter<Result>(item,listener){
+):BaseAdapter<MovieAndTvDetails>(item,listener){
     override val layoutId: Int = R.layout.item_category
 
 }
 
 interface ResultInteractionListener: BaseInteractionListener {
-    fun onClickItem(result: Result)
+    fun onClickItem(movieAndTvDetails: MovieAndTvDetails)
 }
 
 class GenreAdapter(
