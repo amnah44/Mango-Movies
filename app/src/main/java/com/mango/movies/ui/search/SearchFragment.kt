@@ -4,7 +4,6 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
-import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import com.mango.movies.R
@@ -19,7 +18,14 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(R.layout.fragment_sea
         DataBindingUtil::inflate
 
     override fun setupView() {
-        binding.searchRecycler.adapter = SearchAdapter(mutableListOf(), viewModel)
+        binding.let {
+            it.viewModel = viewModel
+            it.searchRecycler.adapter = SearchAdapter(mutableListOf(), viewModel)
+            it.returnArrow.setOnClickListener { view ->
+                view.findNavController().popBackStack()
+            }
+        }
+
         viewModel.selectedMovie.observe(viewLifecycleOwner) {
             if (it != null) {
                 val nav =
@@ -28,9 +34,6 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(R.layout.fragment_sea
                     )
                 Navigation.findNavController(requireView()).navigate(nav)
             }
-        }
-        binding.returnArrow.setOnClickListener { view ->
-            view.findNavController().popBackStack()
         }
     }
 

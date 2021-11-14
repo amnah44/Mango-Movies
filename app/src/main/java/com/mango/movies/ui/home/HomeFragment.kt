@@ -19,13 +19,13 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
         DataBindingUtil::inflate
 
     override fun setupView() {
-        binding.apply {
-            homeViewModel = viewModel
-            recyclerUpComingMovies.adapter = UpComingMovieAdapter(mutableListOf(), viewModel)
-            recyclerTopRateMovies.adapter = TopRateMovieAdapter(mutableListOf(), viewModel)
-            recyclerTrendingSeries.adapter = TrendingSeriesAdapter(mutableListOf(), viewModel)
-            recyclerTopRateSeries.adapter = TopRateSeriesAdapter(mutableListOf(), viewModel)
-            searchViewBtn.setOnClickListener {
+        binding.let {
+            it.viewModel = viewModel
+            it.recyclerUpComingMovies.adapter = UpComingMovieAdapter(mutableListOf(), viewModel)
+            it.recyclerTopRateMovies.adapter = TopRateMovieAdapter(mutableListOf(), viewModel)
+            it.recyclerTrendingSeries.adapter = TrendingSeriesAdapter(mutableListOf(), viewModel)
+            it.recyclerTopRateSeries.adapter = TopRateSeriesAdapter(mutableListOf(), viewModel)
+            it.searchViewBtn.setOnClickListener {
                 val action = HomeFragmentDirections.actionHomeFragmentToSearchFragment()
                 Navigation.findNavController(requireView()).navigate(action)
             }

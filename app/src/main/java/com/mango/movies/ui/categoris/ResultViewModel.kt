@@ -2,20 +2,17 @@ package com.mango.movies.ui.categoris
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import com.mango.movies.model.domain.Movie
 import com.mango.movies.model.domain.Series
 import com.mango.movies.model.domain.category.MovieAndTvByGenreResponse
 import com.mango.movies.model.domain.genre.GenerResponse
 import com.mango.movies.model.domain.genre.Genre
-import com.mango.movies.model.repositiory.MovieRepository
+import com.mango.movies.model.repositiory.Repository
 import com.mango.movies.util.State
-import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import com.mango.movies.model.domain.category.Result
-import com.mango.movies.model.domain.details.DetailsResponse
 import com.mango.movies.util.Event
 
 class ResultViewModel() : ViewModel(),ResultInteractionListener ,GenreInteractionListener{
@@ -32,7 +29,7 @@ class ResultViewModel() : ViewModel(),ResultInteractionListener ,GenreInteractio
     }
     private fun getMovie(){
         viewModelScope.launch {
-            MovieRepository.getGenreMovieOrTv(requiredGenre?.id,flag).collect {
+            Repository.getGenreMovieOrTv(requiredGenre?.id,flag).collect {
                 genreMovieList.postValue(it)
             }
         }
@@ -40,7 +37,7 @@ class ResultViewModel() : ViewModel(),ResultInteractionListener ,GenreInteractio
 
     private fun getGenre(){
         viewModelScope.launch {
-            MovieRepository.genres(flag).collect {
+            Repository.genres(flag).collect {
                 genres.postValue(it)
             }
         }
@@ -58,16 +55,16 @@ class ResultViewModel() : ViewModel(),ResultInteractionListener ,GenreInteractio
 
     override fun onClickItem(result: Result) {
         if(flag){
-           viewModelScope.launch {
-               MovieRepository.movieDetails(result.id).collect {
-                   selectedMovieEvent.postValue(Event(it))
-               }
-           }
+            viewModelScope.launch {
+                Repository.movieDetails(result.id).collect {
+                    selectedMovieEvent.postValue(Event(it))
+                }
+            }
         }
 
         else{
             viewModelScope.launch {
-                MovieRepository.tvShowDetails(result.id).collect {
+                Repository.tvShowDetails(result.id).collect {
                     selectedSeriesEvent.postValue(Event(it))
                 }
             }

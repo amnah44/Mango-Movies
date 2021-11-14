@@ -4,7 +4,6 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
-import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
@@ -22,12 +21,17 @@ class DetailsMoviesFragment : BaseFragment<FragmentMoviesDetailsBinding>(R.layou
 
     override fun setupView() {
         val movie = args.movieDetails
-        viewModel.getSimilarMovie(movie.id!!)
-        binding.recyclerRelated.adapter = SimilarMovieAdapter(mutableListOf(), viewModel)
-        binding.itemMovie = movie
-        binding.returnArrow.setOnClickListener{ view ->
-            view.findNavController().popBackStack()
+        movie.id?.let { viewModel.getSimilarMovie(it) }
+
+        binding.let {
+            it.viewModel = viewModel
+            it.recyclerRelated.adapter = SimilarMovieAdapter(mutableListOf(), viewModel)
+            it.itemMovie = movie
+            it.returnArrow.setOnClickListener{ view ->
+                view.findNavController().popBackStack()
+            }
         }
+
         viewModel.selectedMovieEvent.observe(this, EventObserve{
             val nav =
                 DetailsMoviesFragmentDirections.actionDetailsFragmentToDetailsFragment(
