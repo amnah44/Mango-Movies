@@ -18,18 +18,21 @@ class SeriesViewModel:ViewModel() , GenreInteractionListener, ResultInteractionL
     private val _selectedSeriesEvent = MutableLiveData<Event<State<Series?>>>()
     val selectedSeriesEvent: LiveData<Event<State<Series?>>>
         get()=_selectedSeriesEvent
+
     private val  _genreSeriesList= MutableLiveData<State<MovieAndTvByGenreResponse?>>()
     val genreSeriesList:LiveData<State<MovieAndTvByGenreResponse?>>
         get()=_genreSeriesList
+
     private val _genres = MovieRepository.genres(false).asLiveData()
     val genres:LiveData<State<GenerResponse?>>
         get()=_genres
+
     private var _requiredGenre=Genre(10759,"action")
 
     init {
-
         getSeries()
     }
+
     fun getSeries(){
         viewModelScope.launch {
             MovieRepository.getGenreMovieOrTv(_requiredGenre?.id, false).collect {
@@ -51,7 +54,6 @@ class SeriesViewModel:ViewModel() , GenreInteractionListener, ResultInteractionL
                     }
                 }
             }
-
     }
 
 }

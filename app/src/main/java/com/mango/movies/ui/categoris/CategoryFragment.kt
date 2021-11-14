@@ -23,19 +23,21 @@ class CategoryFragment : BaseFragment<FragmentCategoryBinding>(R.layout.fragment
 
     override fun setupView() {
         binding.viewModel = viewModel
+
         val movieTab=binding.myTabsLayout.newTab()
         movieTab.text = "Movie"
         binding.myTabsLayout.addTab(movieTab)
+
         val seriesTab=binding.myTabsLayout.newTab()
         seriesTab.text = "series"
         binding.myTabsLayout.addTab(seriesTab)
 
         replaceFragment(MovieTabFragment())
+
         binding.myTabsLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener{
             override fun onTabSelected(tab: TabLayout.Tab?) {
                 setCurrentTabFragment(tab?.position)
             }
-
             override fun onTabUnselected(tab: TabLayout.Tab?) {
                 Log.i("Mohammed","Ali")
             }
@@ -43,7 +45,6 @@ class CategoryFragment : BaseFragment<FragmentCategoryBinding>(R.layout.fragment
             override fun onTabReselected(tab: TabLayout.Tab?) {
                 Log.i("Mohammed","Ali")
             }
-
         })
 
     }

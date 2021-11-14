@@ -18,13 +18,18 @@ class MovieViewModel:ViewModel(), GenreInteractionListener, ResultInteractionLis
     private val _selectedMovieEvent = MutableLiveData<Event<State<Movie?>>>()
     val selectedMovieEvent: LiveData<Event<State<Movie?>>>
         get()=_selectedMovieEvent
+
     private val  _genreMovieList= MutableLiveData<State<MovieAndTvByGenreResponse?>>()
     val genreMovieList:LiveData<State<MovieAndTvByGenreResponse?>>
         get()=_genreMovieList
+
     private val _genres =MovieRepository.genres(true).asLiveData()
     val genres: LiveData<State<GenerResponse?>>
         get()=_genres
+
     private var _requiredGenre=Genre(28,"action")
+
+
     init {
         getMovie()
     }
@@ -50,7 +55,6 @@ class MovieViewModel:ViewModel(), GenreInteractionListener, ResultInteractionLis
                         }
                     }
                 }
-
 
     }
 

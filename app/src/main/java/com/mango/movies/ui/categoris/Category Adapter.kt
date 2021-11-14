@@ -1,5 +1,6 @@
 package com.mango.movies.ui.categoris
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -39,8 +40,7 @@ class GenreAdapter(
             )
     }
 
-
-    override fun onBindViewHolder(holder: GenreViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: GenreViewHolder, @SuppressLint("RecyclerView") position: Int) {
         val currentGenre = item[position]
         holder.binding.item=currentGenre
         holder.binding.listener=listener
@@ -50,7 +50,6 @@ class GenreAdapter(
             holder.binding.cardGenre.setCardBackgroundColor(ContextCompat.getColor(holder.itemView.context, R.color.orange))
         }
 
-
         holder.binding.cardGenre.setOnClickListener {
             listener.onClickCategory(currentGenre)
             val previousItem = selectedItem
@@ -59,8 +58,6 @@ class GenreAdapter(
             notifyItemChanged(position)
         }
     }
-
-
 
     override fun getItemCount()=item.size
 
@@ -72,11 +69,7 @@ class GenreAdapter(
         item = newItems
         notifyDataSetChanged()
     }
-
-
-
 }
-
 
 interface GenreInteractionListener : BaseInteractionListener {
     fun onClickCategory(genre: Genre)
