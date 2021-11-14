@@ -33,9 +33,9 @@ class SeriesViewModel:ViewModel() , GenreInteractionListener, ResultInteractionL
         getSeries()
     }
 
-    fun getSeries(){
+    private fun getSeries(){
         viewModelScope.launch {
-            MovieRepository.getGenreMovieOrTv(_requiredGenre?.id, false).collect {
+            MovieRepository.getGenreMovieOrTv(_requiredGenre.id, false).collect {
                 _genreSeriesList.postValue(it)
             }
         }

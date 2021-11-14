@@ -34,9 +34,9 @@ class MovieViewModel:ViewModel(), GenreInteractionListener, ResultInteractionLis
         getMovie()
     }
 
-    fun getMovie(){
+    private fun getMovie(){
         viewModelScope.launch {
-            MovieRepository.getGenreMovieOrTv(_requiredGenre?.id, true).collect {
+            MovieRepository.getGenreMovieOrTv(_requiredGenre.id, true).collect {
                 _genreMovieList.postValue(it)
             }
         }
