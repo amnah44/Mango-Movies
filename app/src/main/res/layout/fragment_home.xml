@@ -163,6 +163,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/small_margin"
                     android:orientation="horizontal"
+                    android:layout_marginBottom="@dimen/medium_margin"
                     app:items="@{viewModel.topRateSeries.toData().itemsResult}"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     app:layout_constraintEnd_toEndOf="parent"
