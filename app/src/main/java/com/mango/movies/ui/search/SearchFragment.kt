@@ -28,13 +28,11 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(R.layout.fragment_sea
         }
 
         viewModel.selectedMovieEvent.observe(this, EventObserve{
-            if (it != null) {
-                val nav =
-                    SearchFragmentDirections.actionSearchFragmentToDetailsFragment(
-                        it
-                    )
-                Navigation.findNavController(requireView()).navigate(nav)
-            }
+            val nav =
+                SearchFragmentDirections.actionSearchFragmentToDetailsFragment(
+                    it
+                )
+            Navigation.findNavController(requireView()).navigate(nav)
         })
     }
 
