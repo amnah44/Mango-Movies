@@ -10,6 +10,7 @@ import com.mango.movies.model.repositiory.Repository
 import com.mango.movies.ui.movie.MovieInteractionListener
 import com.mango.movies.util.State
 import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.launch
 
 class SearchViewModel : ViewModel(), MovieInteractionListener {
@@ -39,7 +40,7 @@ class SearchViewModel : ViewModel(), MovieInteractionListener {
             _searchResult.postValue(null)
         } else {
             viewModelScope.launch {
-                Repository.searchMovie(text.toString()).collect {
+                Repository.searchMovie(text.toString()).debounce(1000).collect {
                     _searchResult.postValue(it)
                 }
             }
