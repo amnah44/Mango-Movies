@@ -8,6 +8,7 @@ import com.mango.movies.model.domain.review.ReviewResponse
 import com.mango.movies.model.repositiory.Repository
 import com.mango.movies.util.State
 import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.launch
 
 class SearchReviewViewModel : ViewModel(), SearchReviewInteractionListener {
@@ -31,7 +32,7 @@ class SearchReviewViewModel : ViewModel(), SearchReviewInteractionListener {
         } else {
             _flag.postValue(false)
             viewModelScope.launch {
-                Repository.searchMovieReview(text.toString()).collect {
+                Repository.searchMovieReview(text.toString()).debounce(1000).collect {
                     _searchReview.postValue(it)
                 }
             }
