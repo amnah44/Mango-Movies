@@ -6,7 +6,7 @@
     <data>
 
         <variable
-            name="homeViewModel"
+            name="viewModel"
             type="com.mango.movies.ui.home.HomeViewModel" />
     </data>
 
@@ -67,22 +67,21 @@
                     android:textSize="@dimen/txt2"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:showOnSuccess="@{homeViewModel.upComingMovie}" />
+                    app:showOnSuccess="@{viewModel.upComingMovie}" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recycler_up_coming_movies"
                     android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:orientation="horizontal"
-                    app:items="@{homeViewModel.upComingMovie.toData().movieResult}"
+                    app:items="@{viewModel.upComingMovie.toData().itemsResult}"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    app:layout_constraintDimensionRatio="H,83:40"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/up_coming_movies_title"
-                    app:showOnSuccess="@{homeViewModel.upComingMovie}"
+                    app:showOnSuccess="@{viewModel.upComingMovie}"
                     tools:ignore="SpeakableTextPresentCheck"
                     tools:listitem="@layout/item_up_coming_movie" />
 
@@ -91,14 +90,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="24dp"
+                    android:layout_marginTop="@dimen/medium_margin"
                     android:fontFamily="@font/mplusrounded1c_bold"
                     android:text="@string/top_rating_movies"
                     android:textColor="@color/white"
                     android:textSize="@dimen/txt2"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/recycler_up_coming_movies"
-                    app:showOnSuccess="@{homeViewModel.topRateMovies}" />
+                    app:showOnSuccess="@{viewModel.topRateMovies}" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recycler_top_rate_movies"
@@ -106,13 +105,13 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:orientation="horizontal"
-                    app:items="@{homeViewModel.topRateMovies.toData().movieResult}"
+                    app:items="@{viewModel.topRateMovies.toData().itemsResult}"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/top_rate_movies_title"
-                    app:showOnSuccess="@{homeViewModel.topRateMovies}"
+                    app:showOnSuccess="@{viewModel.topRateMovies}"
                     tools:ignore="SpeakableTextPresentCheck"
                     tools:listitem="@layout/item_top_rate_movie" />
 
@@ -121,14 +120,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/medium_margin"
-                    android:layout_marginTop="24dp"
+                    android:layout_marginTop="@dimen/medium_margin"
                     android:fontFamily="@font/mplusrounded1c_bold"
-                    android:text="Tv trending"
+                    android:text="@string/tv_trending"
                     android:textColor="@color/white"
                     android:textSize="@dimen/txt2"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/recycler_top_rate_movies"
-                    app:showOnSuccess="@{homeViewModel.trendingTV}" />
+                    app:showOnSuccess="@{viewModel.trendingTV}" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recycler_trending_series"
@@ -136,39 +135,41 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:orientation="horizontal"
-                    app:items="@{homeViewModel.trendingTV.toData().movieResult}"
+                    app:items="@{viewModel.trendingTV.toData().itemsResult}"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/trending_series_title"
-                    app:showOnSuccess="@{homeViewModel.trendingTV}"
+                    app:showOnSuccess="@{viewModel.trendingTV}"
                     tools:ignore="SpeakableTextPresentCheck"
                     tools:listitem="@layout/item_trending_series" />
 
                 <TextView
-                    android:id="@+id/popular_movies_title"
+                    android:id="@+id/top_rate_series_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/medium_margin"
                     android:layout_marginTop="24dp"
                     android:fontFamily="@font/mplusrounded1c_bold"
-                    android:text="Popular Movies"
+                    android:text="@string/top_rate_series"
                     android:textColor="@color/white"
                     android:textSize="@dimen/txt2"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/recycler_trending_series"
-                    app:showOnSuccess="@{homeViewModel.trendingTV}" />
+                    app:showOnSuccess="@{viewModel.trendingTV}" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recycler_top_rate_series"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="@dimen/small_margin"
                     android:orientation="horizontal"
-                    app:items="@{homeViewModel.topRateSeries.toData().movieResult}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="@dimen/medium_margin"
+                    app:items="@{viewModel.topRateSeries.toData().itemsResult}"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/popular_movies_title"
-                    app:showOnSuccess="@{homeViewModel.topRateSeries}"
+                    app:layout_constraintTop_toBottomOf="@+id/top_rate_series_title"
+                    app:showOnSuccess="@{viewModel.topRateSeries}"
                     tools:ignore="SpeakableTextPresentCheck"
                     tools:listitem="@layout/item_top_rate_series" />
 
@@ -182,7 +183,7 @@
             app:lottie_rawRes="@raw/error_animation"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
-            app:showOnError="@{homeViewModel.upComingMovie}"
+            app:showOnError="@{viewModel.upComingMovie}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -195,7 +196,7 @@
             app:lottie_rawRes="@raw/loading_animation"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
-            app:showOnLoading="@{homeViewModel.upComingMovie}"
+            app:showOnLoading="@{viewModel.upComingMovie}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

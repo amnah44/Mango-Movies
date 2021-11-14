@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.mango.movies.BR
 
@@ -37,8 +38,10 @@ abstract class BaseAdapter<T>(
     }
 
     fun setItems(newItems : List<T>){
+        val moviesDiffUtil = DiffUtil.calculateDiff(MoviesDiffUtils(items, newItems))
         items = newItems
-        notifyDataSetChanged()
+        moviesDiffUtil.dispatchUpdatesTo(this)
+
     }
 
     fun getItems() = items

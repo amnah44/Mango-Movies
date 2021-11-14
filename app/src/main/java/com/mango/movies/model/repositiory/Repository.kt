@@ -6,13 +6,31 @@ import com.mango.movies.model.domain.Movie
 import com.mango.movies.model.domain.Series
 import com.mango.movies.model.domain.category.MovieAndTvByGenreResponse
 import com.mango.movies.model.domain.genre.GenerResponse
+import com.mango.movies.model.domain.review.ReviewResponse
 import com.mango.movies.model.network.API
-import com.mango.movies.model.repositiory.FlowWrapper.wrapWithFlow
 import com.mango.movies.util.Constant
 import com.mango.movies.util.State
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flow
+import retrofit2.Response
 
-object MovieRepository {
+object Repository {
+    fun <T> wrapWithFlow(endPointResponse: suspend () -> Response<T>): Flow<State<T?>> {
+        return flow {
+            emit(State.Loading)
+            try {
+                val result = endPointResponse()
+                if (result.isSuccessful) {
+                    emit(State.Success(result.body()))
+                } else {
+                    emit(State.Error(result.message()))
+                }
+            } catch (e: Exception) {
+                State.Error(e.message.toString())
+            }
+        }
+    }
+
     fun movieDetails(movieId: Int) =
         wrapWithFlow {
             API.apiService.getMovieDetails(movieId, Constant.api_key)
@@ -67,4 +85,12 @@ object MovieRepository {
     ): Flow<State<MovieAndTvByGenreResponse?>> =
         if (flag) wrapWithFlow { API.apiService.getGenreMovie(genre, Constant.api_key) }
         else wrapWithFlow { API.apiService.getGenreTv(genre, Constant.api_key) }
+
+    fun movieReview() = wrapWithFlow {
+        API.reviewApiServices.getMovieReviews(Constant.api_key_review)
+    }
+
+    fun searchMovieReview(query: String): Flow<State<ReviewResponse?>> = wrapWithFlow {
+        API.reviewApiServices.searchMovieReviews(query, Constant.api_key_review)
+    }
 }

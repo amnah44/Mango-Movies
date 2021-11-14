@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="itemMovie"
             type="com.mango.movies.model.domain.Movie" />
 
-            <variable
-                name="viewModel"
-                type="com.mango.movies.ui.movie.DetailsMoviesViewModel" />
+        <variable
+            name="viewModel"
+            type="com.mango.movies.ui.movie.DetailsMoviesViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -28,8 +29,7 @@
             app:layout_constraintBottom_toTopOf="@id/guideline"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-             />
+            app:layout_constraintTop_toTopOf="parent" />
 
 
         <ImageView
@@ -246,7 +246,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
             android:orientation="horizontal"
-            app:items="@{viewModel.similarMovies.toData().movieResult}"
+            app:items="@{viewModel.similarMovies.toData().itemsResult}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

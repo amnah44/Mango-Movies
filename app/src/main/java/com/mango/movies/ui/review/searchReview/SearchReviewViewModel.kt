@@ -1,23 +1,40 @@
 package com.mango.movies.ui.review.searchReview
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.mango.movies.model.domain.review.ReviewResponse
-import com.mango.movies.model.repositiory.ReviewRepository
+import com.mango.movies.model.repositiory.Repository
 import com.mango.movies.util.State
 import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.launch
 
-class SearchReviewViewModel: ViewModel(), SearchReviewInteractionListener {
-    val searchReview = MutableLiveData<State<ReviewResponse?>?>()
-    val flag = MutableLiveData<Boolean>()
+class SearchReviewViewModel : ViewModel(), SearchReviewInteractionListener {
+    private val _searchReview = MutableLiveData<State<ReviewResponse?>?>()
+    val searchReview: LiveData<State<ReviewResponse?>?>
+        get() =  _searchReview
+    private val _flag = MutableLiveData<Boolean>()
+    val flag: LiveData<Boolean>
+        get() = _flag
+
+    init {
+        _flag.postValue(true)
+    }
 
     fun onTextChanged(text: CharSequence?) {
-        flag.postValue(false)
-        viewModelScope.launch{
-            ReviewRepository.searchMovieReview(text.toString()).collect{
-                searchReview.postValue(it)
+        _flag.postValue(false)
+
+        if (text.isNullOrEmpty()) {
+            _flag.postValue(true)
+            _searchReview.postValue(null)
+        } else {
+            _flag.postValue(false)
+            viewModelScope.launch {
+                Repository.searchMovieReview(text.toString()).debounce(1000).collect {
+                    _searchReview.postValue(it)
+                }
             }
         }
     }

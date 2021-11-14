@@ -5,7 +5,7 @@
 
     <data>
         <variable
-            name="searchReviewViewModel"
+            name="viewModel"
             type="com.mango.movies.ui.review.searchReview.SearchReviewViewModel" />
     </data>
 
@@ -31,7 +31,7 @@
             android:paddingRight="@dimen/medium_margin"
             android:textColor="@color/white"
             android:textSize="@dimen/txt3"
-            android:onTextChanged="@{(text, start, before, count)-> searchReviewViewModel.onTextChanged(text)}"
+            android:onTextChanged="@{(text, start, before, count)-> viewModel.onTextChanged(text)}"
             app:closeIcon="@drawable/ic_close"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/return_arrow"
@@ -53,7 +53,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginTop="@dimen/medium_margin"
-            app:items="@{searchReviewViewModel.searchReview.toData().results}"
+            app:items="@{viewModel.searchReview.toData().results}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -68,7 +68,7 @@
             app:lottie_rawRes="@raw/error_animation"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
-            app:showOnError="@{searchReviewViewModel.searchReview}"
+            app:showOnError="@{viewModel.searchReview}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -81,7 +81,7 @@
             app:lottie_rawRes="@raw/loading_animation"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
-            app:showOnLoading="@{searchReviewViewModel.searchReview}"
+            app:showOnLoading="@{viewModel.searchReview}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -94,10 +94,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            goOnTextChanged="@{searchReviewViewModel.flag}"
+            goOnTextChanged="@{viewModel.flag}"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
             app:lottie_rawRes="@raw/search_animation"/>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

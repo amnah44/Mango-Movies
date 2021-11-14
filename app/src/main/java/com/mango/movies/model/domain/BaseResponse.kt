@@ -8,7 +8,7 @@ data class BaseResponse<T>(
     @SerializedName("page")
     val page: Int?,
     @SerializedName("results")
-    val movieResult: List<T>?,
+    val itemsResult: List<T>?,
     @SerializedName("total_pages")
     val totalPages: Int?,
     @SerializedName("total_results")
