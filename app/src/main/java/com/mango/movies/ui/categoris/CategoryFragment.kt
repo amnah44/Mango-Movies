@@ -24,34 +24,34 @@ class CategoryFragment : BaseFragment<FragmentCategoryBinding>(R.layout.fragment
     override fun setupView() {
         binding.viewModel = viewModel
         val movieTab=binding.myTabsLayout.newTab()
-        movieTab.setText("Movie")
+        movieTab.text = "Movie"
         binding.myTabsLayout.addTab(movieTab)
         val seriesTab=binding.myTabsLayout.newTab()
-        seriesTab.setText("series")
+        seriesTab.text = "series"
         binding.myTabsLayout.addTab(seriesTab)
 
         replaceFragment(MovieTabFragment())
         binding.myTabsLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener{
             override fun onTabSelected(tab: TabLayout.Tab?) {
-                setCurrenTabFragment(tab?.position)
+                setCurrentTabFragment(tab?.position)
             }
 
             override fun onTabUnselected(tab: TabLayout.Tab?) {
-                Log.i("hddd","gggg")
+                Log.i("Mohammed","Ali")
             }
 
             override fun onTabReselected(tab: TabLayout.Tab?) {
-                Log.i("hddd","gggg")
+                Log.i("Mohammed","Ali")
             }
 
         })
 
     }
 
-    private fun setCurrenTabFragment(position: Int?) {
+    private fun setCurrentTabFragment(position: Int?) {
         when(position){
-            0 -> replaceFragment(MovieTabFragment())
-            1 -> replaceFragment(SeriesTabFragment())
+            MOVIE_TAB_POSITION -> replaceFragment(MovieTabFragment())
+            SERIES_TAB_POSITION -> replaceFragment(SeriesTabFragment())
             else -> replaceFragment(MovieTabFragment())
         }
 
@@ -62,5 +62,11 @@ class CategoryFragment : BaseFragment<FragmentCategoryBinding>(R.layout.fragment
         transaction.replace(R.id.frame_layout, fragment)
         transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
         transaction.commit()
+    }
+
+    companion object{
+        const val MOVIE_TAB_POSITION=0
+        const val SERIES_TAB_POSITION=1
+
     }
 }
