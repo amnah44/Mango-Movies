@@ -6,7 +6,7 @@ import com.mango.movies.model.domain.category.MovieAndTvByGenreResponse
 import com.mango.movies.model.domain.category.MovieAndTvDetails
 import com.mango.movies.model.domain.genre.GenerResponse
 import com.mango.movies.model.domain.genre.Genre
-import com.mango.movies.model.repositiory.MovieRepository
+import com.mango.movies.model.repositiory.Repository
 import com.mango.movies.ui.categoris.GenreInteractionListener
 import com.mango.movies.ui.categoris.ResultInteractionListener
 import com.mango.movies.util.Event
@@ -23,7 +23,7 @@ class SeriesViewModel:ViewModel() , GenreInteractionListener, ResultInteractionL
     val genreSeriesList:LiveData<State<MovieAndTvByGenreResponse?>>
         get()=_genreSeriesList
 
-    private val _genres = MovieRepository.genres(false).asLiveData()
+    private val _genres = Repository.genres(false).asLiveData()
     val genres:LiveData<State<GenerResponse?>>
         get()=_genres
 
@@ -35,7 +35,7 @@ class SeriesViewModel:ViewModel() , GenreInteractionListener, ResultInteractionL
 
     private fun getSeries(){
         viewModelScope.launch {
-            MovieRepository.getGenreMovieOrTv(_requiredGenre.id, false).collect {
+            Repository.getGenreMovieOrTv(_requiredGenre.id, false).collect {
                 _genreSeriesList.postValue(it)
             }
         }
@@ -48,8 +48,8 @@ class SeriesViewModel:ViewModel() , GenreInteractionListener, ResultInteractionL
 
     override fun onClickItem(movieAndTvDetails: MovieAndTvDetails) {
             viewModelScope.launch {
-                movieAndTvDetails.id?.let {
-                    MovieRepository.tvShowDetails(it).collect {
+                movieAndTvDetails.id?.let { it ->
+                    Repository.tvShowDetails(it).collect {
                         _selectedSeriesEvent.postValue(Event(it))
                     }
                 }
