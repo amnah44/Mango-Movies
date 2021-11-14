@@ -24,7 +24,7 @@
         android:layout_marginStart="4dp"
         android:layout_marginEnd="4dp"
         android:onClick="@{() -> listener.onClickCategory(item)}"
-        app:cardBackgroundColor="@color/dark_color"
+        app:cardBackgroundColor="@color/item_genre_color"
         app:cardCornerRadius="@dimen/category_card_corner_radius">
 
         <androidx.constraintlayout.widget.ConstraintLayout
