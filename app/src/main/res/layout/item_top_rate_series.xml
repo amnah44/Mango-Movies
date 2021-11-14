@@ -23,8 +23,8 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
-            android:layout_width="95dp"
-            android:layout_height="132dp"
+            android:layout_width="124dp"
+            android:layout_height="152dp"
             android:onClick="@{() -> listener.onSeriesClick(item)}"
             app:cardCornerRadius="10dp"
             app:layout_constraintEnd_toEndOf="parent"

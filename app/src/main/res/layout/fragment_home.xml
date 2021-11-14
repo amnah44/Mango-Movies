@@ -162,8 +162,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/small_margin"
-                    android:layout_marginBottom="@dimen/medium_margin"
                     android:orientation="horizontal"
+                    android:layout_marginBottom="@dimen/medium_margin"
                     app:items="@{viewModel.topRateSeries.toData().itemsResult}"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -179,27 +179,27 @@
             android:id="@+id/animation_error"
             android:layout_width="100dp"
             android:layout_height="50dp"
+            app:lottie_rawRes="@raw/error_animation"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:showOnError="@{viewModel.upComingMovie}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:lottie_autoPlay="true"
-            app:lottie_loop="true"
-            app:lottie_rawRes="@raw/error_animation"
-            app:showOnError="@{viewModel.upComingMovie}" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/animation_loading"
             android:layout_width="100dp"
             android:layout_height="50dp"
+            app:lottie_rawRes="@raw/loading_animation"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:showOnLoading="@{viewModel.upComingMovie}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:lottie_autoPlay="true"
-            app:lottie_loop="true"
-            app:lottie_rawRes="@raw/loading_animation"
-            app:showOnLoading="@{viewModel.upComingMovie}" />
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
