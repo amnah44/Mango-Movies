@@ -24,7 +24,6 @@
         app:contentPaddingBottom="2dp"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="4dp"
-        android:onClick="@{() -> listener.onClickCategory(item)}"
         app:cardCornerRadius="@dimen/category_card_corner_radius">
 
         <androidx.constraintlayout.widget.ConstraintLayout

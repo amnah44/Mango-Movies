@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/xlarge_margin"
             app:showOnSuccess="@{viewModel.genres}"
-            app:items="@{viewModel.genres.toData().genres}"
+            app:items2="@{viewModel.genres.toData().genres}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"

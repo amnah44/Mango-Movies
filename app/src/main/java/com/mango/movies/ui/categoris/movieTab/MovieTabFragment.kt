@@ -8,6 +8,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
 import com.mango.movies.R
 import com.mango.movies.databinding.FragmentTabMovieBinding
+import com.mango.movies.model.domain.genre.Genre
 import com.mango.movies.ui.base.BaseFragment
 import com.mango.movies.ui.categoris.CategoryFragmentDirections
 import com.mango.movies.ui.categoris.GenreAdapter
@@ -24,7 +25,7 @@ class MovieTabFragment:BaseFragment<FragmentTabMovieBinding>(R.layout.fragment_t
     override fun setupView() {
         binding.viewModel=viewModel
         binding.recyclerMovies.adapter = MovieAndTvResultAdapter(mutableListOf(), viewModel)
-        binding.recyclerGenre.adapter = GenreAdapter(mutableListOf(), viewModel)
+        binding.recyclerGenre.adapter = GenreAdapter(mutableListOf(Genre(1, "Cat"),Genre(2, "Bird")), viewModel)
         viewModel.selectedMovieEvent.observe(this, EventObserve {
             if (it is State.Success) {
                 val action = CategoryFragmentDirections.actionCategoryFragmentToDetailsFragment(
