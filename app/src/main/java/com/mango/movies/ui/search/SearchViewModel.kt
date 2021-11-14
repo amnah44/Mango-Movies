@@ -18,9 +18,7 @@ class SearchViewModel : ViewModel(), MovieInteractionListener {
     private var _searchResult = MutableLiveData<State<BaseResponse<Movie>?>?>()
     val searchResult: LiveData<State<BaseResponse<Movie>?>?>
         get() = _searchResult
-//    private var _selectedMovie = MutableLiveData<Movie?>()
-//    val selectedMovie: LiveData<Movie?>
-//        get() = _selectedMovie
+
     val selectedMovieEvent = MutableLiveData<Event<Movie>>()
     private var _flag = MutableLiveData<Boolean>()
     val flag: LiveData<Boolean>
