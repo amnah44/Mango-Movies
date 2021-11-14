@@ -16,7 +16,6 @@ import com.mango.movies.ui.categoris.seriesTab.SeriesTabFragment
 import com.mango.movies.util.Constant
 
 class CategoryFragment : BaseFragment<FragmentCategoryBinding>(R.layout.fragment_category) {
-    val fragmentList= listOf(MovieTabFragment(), SeriesTabFragment())
     override val LOG_TAG: String = Constant.CATEGORY_FRAGMENT
     override val viewModel: ResultViewModel by activityViewModels()
     override val bindingInflater: (LayoutInflater, Int, ViewGroup?, Boolean) -> FragmentCategoryBinding =
