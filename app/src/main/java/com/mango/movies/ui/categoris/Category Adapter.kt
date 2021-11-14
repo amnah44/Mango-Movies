@@ -1,5 +1,6 @@
 package com.mango.movies.ui.categoris
 
+import androidx.core.content.ContextCompat
 import com.mango.movies.R
 import com.mango.movies.ui.base.BaseAdapter
 import com.mango.movies.ui.base.BaseInteractionListener
@@ -23,6 +24,21 @@ class GenreAdapter(
     listener: GenreInteractionListener
 ) : BaseAdapter<Genre>(item, listener) {
     override val layoutId: Int = R.layout.item_genre
+    var index=0
+    override fun onBindViewHolder(holder: BaseViewHolder, position: Int) {
+
+        super.onBindViewHolder(holder, position)
+        holder.itemView.setOnClickListener {
+            index=position
+            notifyDataSetChanged()
+        }
+            if(holder is ItemViewHolder)
+                if(index==position)
+                    holder.binding.root.setBackgroundColor(ContextCompat.getColor(holder.itemView.context, R.color.orange))
+                else
+                    holder.binding.root.setBackgroundColor(ContextCompat.getColor(holder.itemView.context, R.color.dark_color))
+
+    }
 }
 
 interface GenreInteractionListener : BaseInteractionListener {
