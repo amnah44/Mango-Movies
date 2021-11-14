@@ -161,7 +161,7 @@
                     android:id="@+id/recycler_top_rate_series"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="@dimen/small_margin"
                     android:orientation="horizontal"
                     app:items="@{viewModel.topRateSeries.toData().itemsResult}"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
