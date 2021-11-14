@@ -144,7 +144,7 @@
                     tools:listitem="@layout/item_trending_series" />
 
                 <TextView
-                    android:id="@+id/popular_movies_title"
+                    android:id="@+id/top_rate_series_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/medium_margin"
@@ -167,7 +167,7 @@
                     app:items="@{viewModel.topRateSeries.toData().itemsResult}"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/popular_movies_title"
+                    app:layout_constraintTop_toBottomOf="@+id/top_rate_series_title"
                     app:showOnSuccess="@{viewModel.topRateSeries}"
                     tools:ignore="SpeakableTextPresentCheck"
                     tools:listitem="@layout/item_top_rate_series" />
