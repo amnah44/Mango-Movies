@@ -1,11 +1,16 @@
 package com.mango.movies.model.domain.category
 
-import com.mango.movies.model.domain.category.Result
+import com.google.gson.annotations.SerializedName
 
 data class MovieAndTvByGenreResponse(
-    val id: Int,
-    val page: Int,
-    val results: List<Result>,
-    val total_pages: Int,
-    val total_results: Int
+    @SerializedName("id")
+    val id: Int?,
+    @SerializedName("page")
+    val page: Int?,
+    @SerializedName("results")
+    val movieAndTvDetails: List<MovieAndTvDetails>?,
+    @SerializedName("total_pages")
+    val total_pages: Int?,
+    @SerializedName("total_results")
+    val total_results: Int?
 )

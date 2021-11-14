@@ -9,7 +9,9 @@ import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.mango.movies.R
+import com.mango.movies.model.domain.genre.Genre
 import com.mango.movies.ui.base.BaseAdapter
+import com.mango.movies.ui.categoris.GenreAdapter
 
 @BindingAdapter(value = ["app:showOnLoading"])
 fun <T> showOnLoading(view: View, state: State<T>?) {
@@ -41,6 +43,15 @@ fun <T> setRecyclerItems(view: RecyclerView, items: List<T>?) {
         (view.adapter as BaseAdapter<T>?)?.setItems(items)
     } else {
         (view.adapter as BaseAdapter<T>?)?.setItems(emptyList())
+    }
+}
+
+@BindingAdapter(value = ["app:items2"])
+fun <T> setRecyclerItems2(view: RecyclerView, items: List<Genre>?) {
+    if (items != null) {
+        (view.adapter as GenreAdapter)?.setItems(items)
+    } else {
+        (view.adapter as GenreAdapter)?.setItems(emptyList())
     }
 }
 

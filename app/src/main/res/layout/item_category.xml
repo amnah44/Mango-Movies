@@ -6,7 +6,7 @@
     <data>
         <variable
         name="item"
-        type="com.mango.movies.model.domain.category.Result"/>
+        type="com.mango.movies.model.domain.category.MovieAndTvDetails"/>
         <variable
             name="listener"
             type="com.mango.movies.ui.categoris.ResultInteractionListener" />

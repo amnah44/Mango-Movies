@@ -14,6 +14,7 @@
     </data>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/card_genre"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -23,8 +24,6 @@
         app:contentPaddingBottom="2dp"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="4dp"
-        android:onClick="@{() -> listener.onClickCategory(item)}"
-        app:cardBackgroundColor="@color/dark_color"
         app:cardCornerRadius="@dimen/category_card_corner_radius">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -37,28 +36,19 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/small_margin"
                 android:paddingEnd="@dimen/small_padding"
+                android:layout_marginStart="@dimen/small_margin"
                 android:layout_marginBottom="@dimen/small_margin"
                 android:fontFamily="@font/mplusrounded1c_bold"
                 android:textColor="@color/white"
                 android:textSize="@dimen/txt2"
                 android:lines="1"
                 android:text="@{item.name}"
-                app:layout_constraintStart_toEndOf="@id/category_icon"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 tools:text="Action"/>
 
-            <ImageView
-                android:id="@+id/category_icon"
-                android:layout_width="16dp"
-                android:layout_height="16dp"
-                android:layout_marginStart="@dimen/small_margin"
-                android:layout_marginEnd="4dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@id/category_name"
-                app:layout_constraintEnd_toStartOf="@id/category_name"
-                android:src="@drawable/category_image"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

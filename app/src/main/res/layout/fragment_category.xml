@@ -16,143 +16,24 @@
         android:background="@color/app_color"
         tools:context=".ui.categoris.CategoryFragment">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card_series"
-            app:layout_constraintEnd_toEndOf="parent"
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/myTabsLayout"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:contentPaddingLeft="20dp"
-            app:contentPaddingRight="20dp"
-            app:contentPaddingTop="8dp"
-            app:contentPaddingBottom="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="@dimen/custom_margin"
-            app:cardBackgroundColor="@color/dark_color"
-            app:cardCornerRadius="32dp">
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:id="@+id/text_series"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/mplusrounded1c_bold"
-                    android:lines="1"
-                    android:onClick="@{() -> viewModel.changeMovieOrSeries(false)}"
-                    android:text="@string/series"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/txt3"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card_movie"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/card_series"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:contentPaddingLeft="20dp"
-            app:contentPaddingRight="20dp"
-            app:contentPaddingTop="8dp"
-            app:contentPaddingBottom="8dp"
-            android:layout_marginStart="@dimen/custom_margin"
-            app:cardBackgroundColor="@color/dark_color"
-            app:cardCornerRadius="32dp">
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:id="@+id/text_movies"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/mplusrounded1c_bold"
-                    android:lines="1"
-                    android:onClick="@{() -> viewModel.changeMovieOrSeries(true)}"
-                    android:text="@string/movies"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/txt3"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
-
-
-
-
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_genre"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/small_margin"
-            app:showOnSuccess="@{viewModel.genres}"
-            app:items="@{viewModel.genres.toData().genres}"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/card_series"
-            tools:listitem="@layout/item_genre"/>
+            style="@style/customTabStyle"
+            app:tabTextColor="@color/white"
+            app:tabTextAppearance="@style/customTextAppereance"
+            android:background="@color/app_color"/>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_movies"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="@dimen/small_margin"
-            app:showOnSuccess="@{viewModel.genreMovieList}"
-            app:items="@{viewModel.genreMovieList.toData().results}"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/recycler_genre"
-            tools:listitem="@layout/item_category" />
-
-        <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/animation_error"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            app:lottie_rawRes="@raw/error_animation"
-            app:lottie_autoPlay="true"
-            app:lottie_loop="true"
-            app:showOnError="@{viewModel.genreMovieList}"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
-        <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/animation_loading"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            app:lottie_rawRes="@raw/loading_animation"
-            app:lottie_autoPlay="true"
-            app:lottie_loop="true"
-            app:showOnLoading="@{viewModel.genreMovieList}"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
-
-
-
-
-
-
-
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/frame_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
 
 
