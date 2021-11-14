@@ -10,6 +10,7 @@ import com.mango.movies.R
 import com.mango.movies.databinding.FragmentSearchBinding
 import com.mango.movies.ui.base.BaseFragment
 import com.mango.movies.util.Constant
+import com.mango.movies.util.EventObserve
 
 class SearchFragment : BaseFragment<FragmentSearchBinding>(R.layout.fragment_search) {
     override val LOG_TAG: String = Constant.SEARCH_FRAGMENT
@@ -26,7 +27,7 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(R.layout.fragment_sea
             }
         }
 
-        viewModel.selectedMovie.observe(viewLifecycleOwner) {
+        viewModel.selectedMovieEvent.observe(this, EventObserve{
             if (it != null) {
                 val nav =
                     SearchFragmentDirections.actionSearchFragmentToDetailsFragment(
@@ -34,7 +35,7 @@ class SearchFragment : BaseFragment<FragmentSearchBinding>(R.layout.fragment_sea
                     )
                 Navigation.findNavController(requireView()).navigate(nav)
             }
-        }
+        })
     }
 
 }

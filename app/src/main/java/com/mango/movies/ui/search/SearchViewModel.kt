@@ -8,6 +8,7 @@ import com.mango.movies.model.domain.BaseResponse
 import com.mango.movies.model.domain.Movie
 import com.mango.movies.model.repositiory.Repository
 import com.mango.movies.ui.movie.MovieInteractionListener
+import com.mango.movies.util.Event
 import com.mango.movies.util.State
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.debounce
@@ -17,9 +18,10 @@ class SearchViewModel : ViewModel(), MovieInteractionListener {
     private var _searchResult = MutableLiveData<State<BaseResponse<Movie>?>?>()
     val searchResult: LiveData<State<BaseResponse<Movie>?>?>
         get() = _searchResult
-    private var _selectedMovie = MutableLiveData<Movie?>()
-    val selectedMovie: LiveData<Movie?>
-        get() = _selectedMovie
+//    private var _selectedMovie = MutableLiveData<Movie?>()
+//    val selectedMovie: LiveData<Movie?>
+//        get() = _selectedMovie
+    val selectedMovieEvent = MutableLiveData<Event<Movie>>()
     private var _flag = MutableLiveData<Boolean>()
     val flag: LiveData<Boolean>
         get() = _flag
@@ -29,7 +31,7 @@ class SearchViewModel : ViewModel(), MovieInteractionListener {
     }
 
     override fun onClickMovie(movie: Movie) {
-        _selectedMovie.postValue(movie)
+        selectedMovieEvent.postValue(Event(movie))
     }
 
     fun onTextChanged(text: CharSequence?) {
