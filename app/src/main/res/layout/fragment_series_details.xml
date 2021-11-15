@@ -84,7 +84,7 @@
             android:layout_marginHorizontal="@dimen/medium_margin"
             android:fontFamily="@font/roboto_regular"
             android:text="@{`Original Title: ` + itemSeries.originalName}"
-            android:textColor="#6C6F77"
+            android:textColor="@color/gray_6"
             android:textSize="@dimen/txt3"
             app:layout_constraintBottom_toTopOf="@id/guideline"
             app:layout_constraintEnd_toEndOf="parent"
