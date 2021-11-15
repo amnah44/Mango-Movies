@@ -112,7 +112,7 @@
                 android:paddingStart="8dp"
                 android:paddingEnd="8dp"
                 android:fontFamily="@font/mplusrounded1c_light"
-                android:text="@{item.summaryShort}"
+                android:text="@{`Summary: ` + item.summaryShort}"
                 android:textColor="@color/white"
                 android:textSize="@dimen/txt2"
                 app:layout_constraintBottom_toBottomOf="parent"
