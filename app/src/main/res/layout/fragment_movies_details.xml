@@ -115,7 +115,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/medium_margin"
             android:isIndicator="true"
-            android:progressTint="#F13B03"
+            android:progressTint="@color/orange"
             android:rating="@{itemMovie.voteAverage}"
             android:scaleX="0.7"
             android:scaleY="0.7"
