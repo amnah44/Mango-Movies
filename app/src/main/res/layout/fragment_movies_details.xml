@@ -90,7 +90,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             tools:text="Original Title: Original Title"
-
             />
 
         <TextView
@@ -107,7 +106,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             tools:text="Dune"
-
             />
 
         <RatingBar
@@ -152,32 +150,6 @@
             app:layout_constraintTop_toTopOf="@id/text_movie_date" />
 
         <TextView
-            android:id="@+id/text_movie_time"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:fontFamily="@font/roboto_regular"
-            android:paddingHorizontal="4dp"
-            android:textColor="@color/white"
-            android:textSize="@dimen/txt2"
-            app:layout_constraintEnd_toStartOf="@id/icon_time"
-            app:layout_constraintTop_toBottomOf="@id/guideline"
-            tools:text="1h:33min"
-
-            />
-
-        <ImageView
-            android:id="@+id/icon_time"
-            android:layout_width="12dp"
-            android:layout_height="12dp"
-            android:layout_marginStart="2dp"
-            android:layout_marginEnd="16dp"
-            android:src="@drawable/ic_time"
-            app:layout_constraintBottom_toBottomOf="@id/text_movie_time"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/text_movie_time" />
-
-        <TextView
             android:id="@+id/overview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -188,9 +160,7 @@
             android:textColor="@color/white"
             android:textSize="@dimen/txt4"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ratingBar"
-
-            />
+            app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
 
         <TextView
             android:id="@+id/text_description"
