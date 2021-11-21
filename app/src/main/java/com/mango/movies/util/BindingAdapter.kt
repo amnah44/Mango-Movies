@@ -83,3 +83,15 @@ fun goOnTextChanged(view: View, flag:Boolean){
         view.visibility=View.GONE
     }
 }
+
+@BindingAdapter(value=["isRecyclerEmpty"])
+fun <T> isRecyclerEmpty(view: View, value: List<T>?){
+
+  if (value!!.isEmpty()){
+        view.visibility=View.VISIBLE
+    }
+    else{
+        view.visibility=View.GONE
+    }
+}
+
